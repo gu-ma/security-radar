@@ -57,6 +57,53 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(rows[0]["exposure"], "not assessed")
         self.assertEqual(alerts[0]["id"], "CVE-2026-123710")
 
+    def test_first_seen_survives_repeated_collections(self):
+        first = datetime(2026, 11, 13, 9, 48, tzinfo=timezone.utc)
+        second = datetime(2026, 11, 13, 10, 25, tzinfo=timezone.utc)
+        third = datetime(2026, 11, 13, 11, 26, tzinfo=timezone.utc)
+        initial, _ = process(now=first, previous=[], fetched=[self.cve],
+                             watchlist=["Docker"])
+        self.assertEqual(initial[0]["first_seen"], "2026-11-13T09:48:00Z")
+        revised, _ = process(now=second, previous=initial, fetched=[self.cve],
+                             watchlist=["Docker"])
+        self.assertEqual(revised[0]["first_seen"], "2026-11-13T09:48:00Z")
+        self.assertEqual(revised[0]["last_seen"], "2026-11-13T10:25:00Z")
+        latest, _ = process(now=third, previous=revised, fetched=[self.cve],
+                            watchlist=["Docker"])
+        self.assertEqual(latest[0]["first_seen"], "2026-11-13T09:48:00Z")
+        self.assertEqual(latest[0]["last_seen"], "2026-11-13T11:26:00Z")
+
+    def test_last_seen_only_updates_if_source_returns_record(self):
+        first = datetime(2026, 11, 13, 9, 48, tzinfo=timezone.utc)
+        later = datetime(2026, 11, 13, 11, 26, tzinfo=timezone.utc)
+        initial, _ = process(now=first, previous=[], fetched=[self.cve],
+                             watchlist=["Docker"])
+        rows, _ = process(now=later, previous=initial, fetched=[],
+                          watchlist=["Docker"])
+        self.assertEqual(rows[0]["first_seen"], initial[0]["first_seen"])
+        self.assertEqual(rows[0]["last_seen"], initial[0]["last_seen"])
+
+    def test_alias_bridge_keeps_earliest_first_seen(self):
+        a = make_advisory(identifier="GHSA-abcd-efgh-ijkl", title="Docker issue",
+                          source="GitHub Advisory Database",
+                          url="https://github.com/advisories/GHSA-abcd-efgh-ijkl")
+        b = make_advisory(identifier="CVE-2026-123", title="Docker issue",
+                          source="NIST NVD",
+                          url="https://nvd.nist.gov/vuln/detail/CVE-2026-123")
+        a["first_seen"] = "2026-11-13T09:48:00Z"
+        a["last_seen"] = "2026-11-13T09:48:00Z"
+        b["first_seen"] = "2026-11-13T10:25:00Z"
+        b["last_seen"] = "2026-11-13T10:25:00Z"
+        bridge = make_advisory(identifier="CVE-2026-123",
+                               aliases=["GHSA-abcd-efgh-ijkl"],
+                               title="Docker issue", source="GitHub Advisory Database",
+                               url="https://github.com/advisories/GHSA-abcd-efgh-ijkl")
+        rows, _ = process(now=self.now, previous=[a, b], fetched=[bridge],
+                          watchlist=["Docker"])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["first_seen"], "2026-11-13T09:48:00Z")
+        self.assertEqual(rows[0]["last_seen"], "2026-11-13T10:25:00Z")
+
     def test_cross_source_alias_merges(self):
         ghsa = make_advisory(
             identifier="CVE-2026-123", aliases=["GHSA-aaaa-bbbb-cccc"],

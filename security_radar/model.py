@@ -82,8 +82,13 @@ def merge(old: dict, new: dict, now: str) -> dict:
         out["title"] = new["title"]
     out["published"] = min(filter(None, [old.get("published"), new.get("published")]), default="")
     out["modified"] = max(old.get("modified", ""), new.get("modified", ""))
-    out["first_seen"] = old.get("first_seen", now)
-    out["last_seen"] = now
+    # These are observation timestamps, not upstream publication dates.
+    # A cross-source alias merge may join two previously stored records.
+    # Preserve the earliest first observation and the latest actual observation.
+    firsts = [x for x in (old.get("first_seen"), new.get("first_seen")) if x]
+    lasts = [x for x in (old.get("last_seen"), new.get("last_seen")) if x]
+    out["first_seen"] = min(firsts) if firsts else now
+    out["last_seen"] = max(lasts) if lasts else now
     return out
 
 

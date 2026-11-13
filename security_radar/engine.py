@@ -30,26 +30,37 @@ def coalesce(records: list[dict], existing: list[dict], now: str) -> dict[str, d
     by_id: dict[str, dict] = {}
     aliases: dict[str, str] = {}
 
-    def insert(row: dict):
-        keys = [row["id"]] + row.get("aliases", [])
-        target = next((aliases[key] for key in keys if key in aliases), row["id"])
-        previous = by_id.get(target, {"id": target, "aliases": [target]})
-        updated = merge(previous, row, now)
-        by_id[target] = updated
-        for key in updated["aliases"]:
+    def insert(row: dict, *, observed: bool):
+        item = dict(row)
+        keys = list(dict.fromkeys([item["id"]] + item.get("aliases", [])))
+        item["aliases"] = keys
+        # Existing records retain their stored observation timestamps.
+        # Only an advisory genuinely returned by a collector is seen NOW.
+        item["first_seen"] = item.get("first_seen") or now
+        if observed:
+            item["last_seen"] = now
+        else:
+            item["last_seen"] = item.get("last_seen") or item["first_seen"]
+
+        targets = list(dict.fromkeys(aliases[key] for key in keys if key in aliases))
+        target = targets[0] if targets else item["id"]
+        if target in by_id:
+            by_id[target] = merge(by_id[target], item, now)
+        else:
+            # Do not merge existing rows with an empty placeholder. Doing so
+            # previously replaced first_seen with the current run timestamp.
+            by_id[target] = item
+        # Alias bridging can combine two records previously stored separately.
+        for duplicate_key in targets[1:]:
+            if duplicate_key != target and duplicate_key in by_id:
+                by_id[target] = merge(by_id[target], by_id.pop(duplicate_key), now)
+        for key in by_id[target]["aliases"]:
             aliases[key] = target
-        # If two older rows were already stored separately, join them.
-        for key in keys:
-            duplicate = by_id.get(key)
-            if key != target and duplicate is not None:
-                by_id[target] = merge(by_id.pop(key), by_id[target], now)
-                for name in by_id[target]["aliases"]:
-                    aliases[name] = target
 
     for record in existing:
-        insert(record)
+        insert(record, observed=False)
     for record in records:
-        insert(record)
+        insert(record, observed=True)
     return by_id
 
 
