@@ -2,736 +2,698 @@
   "alerts": [
     {
       "affected": [
-        "hitachi replication manager",
-        "linux linux kernel",
-        "microsoft windows",
-        "oracle solaris"
+        "node-opcua",
+        "node-opcua-address-space",
+        "node-opcua-server"
       ],
       "aliases": [
-        "CVE-2022-4146"
-      ],
-      "attention_score": 75,
-      "cvss": 9.8,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2022-4146",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Linux",
-        "Microsoft"
-      ],
-      "modified": "2026-11-10T12:10:00.177",
-      "priority": "review",
-      "published": "2023-07-18T03:15:55.067",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4146"
-        }
-      ],
-      "summary": "Expression Language Injection vulnerability in Hitachi Replication Manager on Windows, Linux, Solaris allows Code Injection.This issue affects Hitachi Replication Manager: before 8.8.5-02.",
-      "title": "Expression Language Injection vulnerability in Hitachi Replication Manager on Windows, Linux, Solaris allows Code Injection.This issue affects Hitachi"
-    },
-    {
-      "affected": [
-        "microsoft windows 10 21h2",
-        "microsoft windows 10 22h2",
-        "microsoft windows 11 21h2",
-        "microsoft windows 11 22h2",
-        "microsoft windows server 2022"
-      ],
-      "aliases": [
-        "CVE-2023-38186"
-      ],
-      "attention_score": 75,
-      "cvss": 9.8,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2023-38186",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Microsoft"
-      ],
-      "modified": "2026-11-10T13:10:00.363",
-      "priority": "review",
-      "published": "2023-08-08T18:15:23.140",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38186"
-        }
-      ],
-      "summary": "Windows Mobile Device Management Elevation of Privilege Vulnerability",
-      "title": "Windows Mobile Device Management Elevation of Privilege Vulnerability"
-    },
-    {
-      "affected": [
-        "netapp brocade fabric operating system",
-        "netapp hci bootstrap os",
-        "netapp solidfire element os",
-        "openbsd openssh"
-      ],
-      "aliases": [
-        "CVE-2023-28531"
-      ],
-      "attention_score": 75,
-      "cvss": 9.8,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2023-28531",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "OpenSSH"
-      ],
-      "modified": "2026-11-10T13:17:19.610",
-      "priority": "review",
-      "published": "2023-03-17T04:15:14.553",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28531"
-        }
-      ],
-      "summary": "ssh-add in OpenSSH before 9.3 adds smartcard keys to ssh-agent without the intended per-hop destination constraints. The earliest affected version is 8.9.",
-      "title": "ssh-add in OpenSSH before 9.3 adds smartcard keys to ssh-agent without the intended per-hop destination constraints. The earliest affected version is"
-    },
-    {
-      "affected": [
-        "python pillow"
-      ],
-      "aliases": [
-        "CVE-2026-112902"
-      ],
-      "attention_score": 55,
-      "cvss": 8.3,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-112902",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Python"
-      ],
-      "modified": "2026-11-10T18:36:51.110",
-      "priority": "review",
-      "published": "2026-11-05T21:18:36.713",
-      "severity": "high",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112902"
-        }
-      ],
-      "summary": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to TIFFSetField() that do not match libtiff’s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0.",
-      "title": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to  TIFFSetField()  that do not match libt"
-    },
-    {
-      "affected": [],
-      "aliases": [
-        "CVE-2026-120002"
-      ],
-      "attention_score": 75,
-      "cvss": 9.9,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-120002",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Microsoft"
-      ],
-      "modified": "2026-11-10T19:20:26.207",
-      "priority": "review",
-      "published": "2026-11-10T19:20:26.080",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120002"
-        }
-      ],
-      "summary": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
-      "title": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network."
-    },
-    {
-      "affected": [
-        "gnome glib",
-        "redhat enterprise linux"
-      ],
-      "aliases": [
-        "CVE-2025-14087"
-      ],
-      "attention_score": 75,
-      "cvss": 9.8,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2025-14087",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Linux"
-      ],
-      "modified": "2026-11-10T20:17:19.727",
-      "priority": "review",
-      "published": "2025-12-10T09:15:47.053",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14087"
-        }
-      ],
-      "summary": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
-      "title": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potentia"
-    },
-    {
-      "affected": [
-        "gnome glib",
-        "redhat cert-manager operator",
-        "redhat codeready linux builder",
-        "redhat codeready linux builder eus",
-        "redhat discovery",
-        "redhat enterprise linux",
-        "redhat enterprise linux aus",
-        "redhat enterprise linux els",
-        "redhat enterprise linux eus",
-        "redhat enterprise linux server tus",
-        "redhat enterprise linux update services for sap solutions",
-        "redhat insights-proxy",
-        "redhat openshift ai",
-        "redhat update infrastructure"
-      ],
-      "aliases": [
-        "CVE-2026-58016"
+        "CVE-2026-95860",
+        "GHSA-xggf-m53x-jc3f"
       ],
       "attention_score": 75,
       "cvss": 9.1,
-      "ecosystems": [],
+      "ecosystems": [
+        "npm"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-58016",
-      "last_seen": "2026-11-13T10:25:09Z",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-95860",
+      "last_seen": "2026-11-13T10:26:52Z",
       "matched_topics": [
-        "Linux"
+        "npm"
       ],
-      "modified": "2026-11-10T20:19:22.460",
+      "modified": "2026-11-10T15:57:14Z",
       "priority": "review",
-      "published": "2026-06-30T13:19:17.840",
+      "published": "2026-11-10T15:56:52Z",
       "severity": "critical",
       "sources": [
         {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58016"
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-xggf-m53x-jc3f"
         }
       ],
-      "summary": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a `node` element nested within other elements like `method`, `signal`, `property` or `arg`. This issue can cause an unsigned integer overflow and lead to an out-of-bounds read, resulting in a denial of service.",
-      "title": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malfor"
+      "summary": "## Summary An unauthenticated (**Anonymous**) client can **Write** protected Variables and **Call** privileged Methods on any Node that lacks explicit per-node permissions. This follows the inheritance model defined by OPC UA Part 3, §5.2.9, where nodes without an explicit `RolePermissions` attribute inherit the namespace `DefaultRolePermissions`. OPC 10000-3 §4.8.3 mandates a **default-deny** evaluation (`Bad_UserAccessDenied` when the operation bits are not set); `node-opcua` instead **grants all permissions**. The root cause is a combination of an authorization **fail-open** and a **disconnect** between the configuration API and the runtime enforcement path. --- ## Affected configuration This advisory covers two cases that are not equally severe: 1. No RolePermissions declared anywhere - resolution is permissive. This is node-opcua's documented behaviour for a server with no access co",
+      "title": "node-opcua: Namespace-Level RBAC Fail-Open - Anonymous Write/Call Bypass via Unbound `DefaultRolePermissions"
     },
     {
       "affected": [
-        "7-zip p7zip",
-        "andybalholm brotli",
-        "anthropic bun",
-        "apache arrow",
-        "clickhouse clickhouse",
-        "debian debian linux",
-        "duckdb duckdb",
-        "envoyproxy envoy",
-        "google brotli",
-        "google woff2",
-        "istio istio",
-        "mcmilk 7-zip-zstd",
-        "microsoft .net",
-        "nodejs node.js",
-        "python-hyper brotlicffi",
-        "siemens common configurator",
-        "siemens comos walkinside",
-        "siemens data flow monitoring",
-        "siemens dataxess configurator",
-        "siemens edge opc ua server configurator",
-        "siemens flow creator configurator",
-        "siemens hyperlynx",
-        "siemens industrial edge cloud connector configurator",
-        "siemens industrial edge databus configurator",
-        "siemens industrial edge hub",
-        "siemens industrial edge management cloud",
-        "siemens innexis architecture native acceleration",
-        "siemens insights hub",
-        "siemens opcenter connect electronics",
-        "siemens opcenter connect manufacturing operations management",
-        "siemens opcenter execution core",
-        "siemens opcenter execution discrete",
-        "siemens opcenter execution foundation",
-        "siemens opcenter execution pharma",
-        "siemens opcenter execution process",
-        "siemens opcenter intelligence",
-        "siemens opcenter quality",
-        "siemens opcenter rd\\&l",
-        "siemens opcenter x",
-        "siemens pads professional",
-        "siemens pave360 automotive",
-        "siemens process preparation x",
-        "siemens ruggedcom ape1808",
-        "siemens ruggedcom ape1808 firmware",
-        "siemens simatic braumat",
-        "siemens simatic profiling tool",
-        "siemens simatic sistar",
-        "siemens simatic wincc",
-        "siemens simatic wincc companion",
-        "siemens simatic wincc runtime",
-        "siemens simatic wincc unified for industrial edge",
-        "siemens simatic wincc unified pc runtime",
-        "siemens simatic wincc unified siqence",
-        "siemens simcenter executable digital twin",
-        "siemens simcenter studio",
-        "siemens teamcenter",
-        "siemens tia administrator",
-        "siemens tia project-server web administration tool",
-        "siemens user management component",
-        "siemens xpedition designer"
+        "@nuxt/content"
       ],
       "aliases": [
-        "CVE-2026-111497"
+        "CVE-2026-102650",
+        "GHSA-xxrh-5hgg-gj4h"
       ],
-      "attention_score": 75,
-      "cvss": 9.2,
-      "ecosystems": [],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "npm"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-111497",
-      "last_seen": "2026-11-13T10:25:09Z",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-102650",
+      "last_seen": "2026-11-13T10:26:52Z",
       "matched_topics": [
-        "Linux",
-        "Microsoft",
+        "npm"
+      ],
+      "modified": "2026-11-10T15:57:17Z",
+      "priority": "review",
+      "published": "2026-11-10T15:57:12Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-xxrh-5hgg-gj4h"
+        }
+      ],
+      "summary": "### Summary The `POST /__nuxt_content/:collection/query` endpoint in `@nuxt/content` accepts an attacker-controlled `sql` field from the HTTP request body and executes it against a local SQLite database after passing it through an insufficient validator (`assertSafeQuery`). The validator only blocks a small set of SQL command keywords and does not reject expensive SQLite built-in functions such as `randomblob()`, `zeroblob()`, `hex()`, or `length()`. An unauthenticated remote attacker can craft a single request that forces SQLite to allocate hundreds of megabytes of memory and perform CPU-intensive work, causing server-wide denial of service. This endpoint is enabled by default for every collection and requires no authentication. ### Details The vulnerability spans three source files: **Route registration — `src/module.ts:207-208`** The Nuxt Content module registers a public HTTP POST ha",
+      "title": "Nuxt Content: Unauthenticated SQLite Function DoS via Content Query API"
+    },
+    {
+      "affected": [
+        "gpustack"
+      ],
+      "aliases": [
+        "CVE-2026-103002",
+        "GHSA-3hch-x692-6qj3"
+      ],
+      "attention_score": 55,
+      "cvss": 8.8,
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-103002",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Kubernetes"
+      ],
+      "modified": "2026-11-10T15:57:22Z",
+      "priority": "review",
+      "published": "2026-11-10T15:57:20Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-3hch-x692-6qj3"
+        }
+      ],
+      "summary": "### Impact An authenticated non-administrative user could access a Kubernetes cluster they are not authorized to access through GPUStack's Kubernetes API proxy. The `cluster_apiserver_proxy` handler did not perform a resource-level authorization check before forwarding requests to the selected cluster. Requests were forwarded through a worker using its Kubernetes ServiceAccount credentials. Depending on the permissions granted to that ServiceAccount, an attacker could read sensitive Kubernetes resources, create or modify workloads, or delete resources and disrupt services. Creating attacker-controlled workloads could result in code execution in the target cluster. Exploitation requires a Kubernetes-provider cluster with a reachable worker. The operations available to the attacker are limited by the worker's ServiceAccount permissions. ### Patches Fixed in `gpustack` `v2.2.2`. ### Workaro",
+      "title": "GPUStack: Missing authorization on several cluster and resource endpoints allows cross-user access and cluster takeover"
+    },
+    {
+      "affected": [
+        "node-forge"
+      ],
+      "aliases": [
+        "CVE-2026-119192",
+        "GHSA-6qrw-m8cv-hcxf"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-119192",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-10T15:57:35Z",
+      "priority": "review",
+      "published": "2026-11-10T15:57:34Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-6qrw-m8cv-hcxf"
+        }
+      ],
+      "summary": "### Summary RSASSA-PKCS1-v1_5 signature verification (`publicKey.verify()` with the default scheme, also used by X.509 certificate and PKCS#7 verification) accepted non-canonical BER encodings of the DigestInfo, such as NULL parameters with content and non-minimal lengths. These leave attacker-controlled bytes inside an accepted DigestInfo, which allows signatures to be forged without the private key for RSA keys with a low public exponent (e=3). Fixed in node-forge 1.4.1. ### Details In `lib/rsa.js`, `key.verify()` with the default `RSASSA-PKCS1-V1_5` scheme removes the padding, parses the recovered DigestInfo with the lenient BER parser `asn1.fromDer()` and checks its structure with `asn1.validate()` against `digestInfoValidator`. Neither requires a canonical DER encoding, so verification accepted, among others: - NULL parameters with content bytes (e.g. `05 40 <64 bytes>`) - non-NULL ",
+      "title": "Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding"
+    },
+    {
+      "affected": [
+        "node-forge"
+      ],
+      "aliases": [
+        "CVE-2026-119191",
+        "GHSA-rhr8-3pm8-cq29"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-119191",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
         "Node.js",
-        "Python"
+        "npm"
       ],
-      "modified": "2026-11-10T20:25:59.130",
+      "modified": "2026-11-10T15:57:42Z",
       "priority": "review",
-      "published": "2026-10-22T14:17:37.190",
-      "severity": "critical",
+      "published": "2026-11-10T15:57:41Z",
+      "severity": "high",
       "sources": [
         {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-rhr8-3pm8-cq29"
         }
       ],
-      "summary": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream. Users need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
-      "title": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote"
+      "summary": "### Summary `asn1.fromDer()` decodes the contents of BIT STRINGs as ASN.1 by default. That decode ignored the `maxDepth` recursion limit (an incomplete fix of CVE-2025-66031) and also decoded nested BIT STRINGs, keeping a full copy of the decoded contents at each level, so small crafted DER or PEM inputs (certificates, keys, PKCS structures) use excessive CPU time and memory and can abort the Node.js process. Fixed in node-forge 1.4.1. ### Details `asn1.fromDer()` attempts by default to decode the contents of primitive BIT STRINGs as ASN.1 (`decodeBitStrings`, default `true`). Two flaws in that decode in `lib/asn1.js` allow resource exhaustion: 1. `_fromDer()` started the BIT STRING decode with a new options object, `{strict: true, decodeBitStrings: true}`, that did not include `maxDepth`. Inside that decode the depth check compared against `undefined` and never triggered, so the recursi",
+      "title": "Forge: ASN.1 resource exhaustion via BIT STRING decoding in asn1.fromDer"
     },
     {
       "affected": [
-        "apple macos",
-        "linux linux kernel",
-        "microsoft .net",
-        "microsoft .net framework",
-        "microsoft visual studio 2017",
-        "microsoft visual studio 2019",
-        "microsoft visual studio 2022",
-        "microsoft visual studio 2026",
-        "microsoft windows",
-        "microsoft windows 10 1607",
-        "microsoft windows 10 1809",
-        "microsoft windows 10 21h2",
-        "microsoft windows 10 22h2",
-        "microsoft windows 11 23h2",
-        "microsoft windows 11 24h2",
-        "microsoft windows 11 25h2",
-        "microsoft windows 11 26h1",
-        "microsoft windows server 2012",
-        "microsoft windows server 2016",
-        "microsoft windows server 2019",
-        "microsoft windows server 2022",
-        "microsoft windows server 2025"
+        "@ohif/extension-dicom-pdf"
       ],
       "aliases": [
-        "CVE-2026-47304"
+        "CVE-2026-118670",
+        "GHSA-xwgp-w3pj-q5h3"
+      ],
+      "attention_score": 55,
+      "cvss": 8.8,
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-118670",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-10T15:57:54Z",
+      "priority": "review",
+      "published": "2026-11-10T15:57:51Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-xwgp-w3pj-q5h3"
+        }
+      ],
+      "summary": "### Summary An XSS (Cross-Site Scripting) vulnerability occurs when an attacker is able to inject their own JavaScript code into a web page's source, which is subsequently processed by the victim's browser. A common cause of this vulnerability is the failure to validate user-supplied data before displaying it within the vulnerable application without proper filtering. To exploit the vulnerability, an attacker must input HTML code into a vulnerable parameter containing structures that trigger the execution of JavaScript. The DOM XSS variant occurs when user-supplied data is processed by a client-side script; if this data is not handled correctly by the script itself, it becomes possible to inject additional JavaScript commands. **Attacker model:** Any actor who can get a DICOM object in front of a victim — email a `.dcm` for local viewing, upload to a shared PACS, or operate/compromise a ",
+      "title": "OHIF Viewers: DOM-Based Cross Site Scripting (XSS) through MIME type of document"
+    },
+    {
+      "affected": [
+        "DIRAC"
+      ],
+      "aliases": [
+        "CVE-2026-61668",
+        "GHSA-vg99-gr89-qhw9"
+      ],
+      "attention_score": 55,
+      "cvss": 8.1,
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-61668",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-10T19:37:06Z",
+      "priority": "review",
+      "published": "2026-07-13T18:37:51Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-vg99-gr89-qhw9"
+        }
+      ],
+      "summary": "### Summary The second stage pilot (pilot.tar) is downloaded by the initial wrapper script without any verification of the webservers' SSL certificate and the contained script is subsequently executed. The checksum is tested, but the reference checksum file is downloaded over the same unvalidated channel. ### Details The pilot wrapper downloads and executes the main second stage pilot script, but the SSL validation on this connection is explicitly disabled (to match old python < 2.7.9 behaviour): https://github.com/DIRACGrid/DIRAC/blob/integration/src/DIRAC/WorkloadManagementSystem/Utilities/PilotWrapper.py#L292-L296 This means that the second stage pilot code is not verified in any way and could potentially be altered by a man-in-the-middle attack to execute arbitrary code in the pilot context (i.e. with access to the pilot proxy/credentials). The HTTPS connection should be validated ag",
+      "title": "DIRAC: Pilot code downloaded over unverified HTTPS connection"
+    },
+    {
+      "affected": [
+        "mongoose"
+      ],
+      "aliases": [
+        "CVE-2026-125120",
+        "GHSA-pcrw-h46h-c93h"
       ],
       "attention_score": 75,
       "cvss": 9.8,
-      "ecosystems": [],
+      "ecosystems": [
+        "npm"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-47304",
-      "last_seen": "2026-11-13T10:25:09Z",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-125120",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-10T19:37:33Z",
+      "priority": "review",
+      "published": "2026-11-10T19:37:32Z",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-pcrw-h46h-c93h"
+        }
+      ],
+      "summary": "### Impact `sanitizeFilter` is Mongoose's mechanism for protecting against query selector injection attacks. In older versions of Mongoose, `sanitizeFilter` was not applied for `countDocuments()` queries. ### Patches Patches have been released for all supported Mongoose major release lines. Please upgrade to the following versions depending on which major version of Mongoose applications are using. 1. `^9.9.2` 2. `^8.24.3` 3. `^7.8.12` 4. `^6.13.11` ### Workarounds Middleware: ```javascript mongoose.plugin(function() { schema.pre('countDocuments', function() { // This will always apply `sanitizeFilter` on `countDocuments` mongoose.sanitizeFilter(this.getFilter()); }); }); ```",
+      "title": "Mongoose: sanitizeFilter not applied on countDocuments"
+    },
+    {
+      "affected": [
+        "mongoose"
+      ],
+      "aliases": [
+        "CVE-2026-125119",
+        "GHSA-gg4r-jv3p-qx3c"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-125119",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-10T19:56:12Z",
+      "priority": "review",
+      "published": "2026-11-10T19:56:12Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-gg4r-jv3p-qx3c"
+        }
+      ],
+      "summary": "### Summary sanitizeFilter exists to stop query selector injection: it wraps operator objects such as `{ $ne: null }` in filter values in `$eq`, so they are matched literally. Set on a connection with `mongoose.connect()` or `createConnection(uri, { sanitizeFilter: true })`, the connection reports it as enabled but queries never apply it. An application that relies on the connection-level option and passes an attacker-controlled object into a filter therefore remains open to selector injection, and a password value of `{ $ne: null }` returns the account record without the password. ### Details `NativeConnection#createClient()` at `lib/drivers/node-mongodb-native/connection.js:270-272` moves `options.sanitizeFilter` into `Connection.config` and deletes the original option. `Query#_castConditions()` at `lib/query.js:2413-2423` checks `Connection.options`, the global `options`, and the per-",
+      "title": "Mongoose: Connection-level sanitizeFilter not applied"
+    },
+    {
+      "affected": [
+        "mongoose"
+      ],
+      "aliases": [
+        "CVE-2026-125117",
+        "GHSA-8332-j7wj-wjw4"
+      ],
+      "attention_score": 55,
+      "cvss": 8.2,
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-125117",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-10T20:56:18Z",
+      "priority": "review",
+      "published": "2026-11-10T20:56:16Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-8332-j7wj-wjw4"
+        }
+      ],
+      "summary": "### Summary Three Mongoose code paths copy data into objects by property name without checking whether the property is the object's own or inherited from its prototype: 1. Loading a document from the database (`init()`, also used by `Model.hydrate()`) 2. Setting a dotted path on a document (`$__set`, used by `new Model(obj)`, `doc.set()` and `doc.$set()`) 3. Merging update documents (`utils.mergeClone`, used by `findOneAndReplace()`, chained update calls and `Query.prototype.merge()`) When a key names an inherited property, such as `toString` or `valueOf`, or a document internal such as `$__schema`, Mongoose writes into the shared object behind that property. The data comes from the attacker. - **Denial of service.** For example, `{ \"toString\": { \"call\": 1 } }` overwrites `Object.prototype.toString.call`. Mongoose and most other libraries rely on `Object.prototype.toString.call()`. After",
+      "title": "Mongoose walks into inherited properties when hydrating, setting, and merging, allowing overwrites of built-in functions (denial of service) and shared schema state"
+    },
+    {
+      "affected": [
+        "Microsoft.AspNetCore.SignalR.StackExchangeRedis"
+      ],
+      "aliases": [
+        "GHSA-gxg8-5rwf-cg43"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-gxg8-5rwf-cg43",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T22:06:16Z",
+      "priority": "review",
+      "published": "2026-11-10T21:32:51Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-gxg8-5rwf-cg43"
+        }
+      ],
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-wr8v-9x5q-ggcm. This link is maintained to preserve external references. ## Original Description Missing release of memory after effective lifetime in ASP.NET Core allows an unauthorized attacker to deny service over a network.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114147 - ASP.NET Core Denial of Service Vulnerability"
+    },
+    {
+      "affected": [
+        "Microsoft.AspNetCore.Server.HttpSys"
+      ],
+      "aliases": [
+        "GHSA-49q5-vjx7-5gwr"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-49q5-vjx7-5gwr",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T22:07:41Z",
+      "priority": "review",
+      "published": "2026-11-10T21:32:51Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-49q5-vjx7-5gwr"
+        }
+      ],
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-3893-7fxc-qvff. This link is maintained to preserve external references. ## Original Description Uncontrolled resource consumption in ASP.NET Core allows an unauthorized attacker to deny service over a network.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114154 - ASP.NET Core Denial of Service Vulnerability"
+    },
+    {
+      "affected": [
+        "Microsoft.AspNetCore.App.Runtime.win-arm64"
+      ],
+      "aliases": [
+        "GHSA-95x6-7hq8-2c37"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-95x6-7hq8-2c37",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T22:16:48Z",
+      "priority": "review",
+      "published": "2026-11-10T21:32:52Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-95x6-7hq8-2c37"
+        }
+      ],
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-7phj-vgxq-r67h. This link is maintained to preserve external references. ## Original Description Concurrent execution using shared resource with improper synchronization ('race condition') in ASP.NET Core allows an authorized attacker to elevate privileges locally.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-114157 - ASP.NET Core Security Feature Bypass Vulnerability"
+    },
+    {
+      "affected": [
+        "Aspire.Cli"
+      ],
+      "aliases": [
+        "GHSA-hfpm-4fc4-g2wc"
+      ],
+      "attention_score": 55,
+      "cvss": 7.3,
+      "ecosystems": [
+        "nuget"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-hfpm-4fc4-g2wc",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T22:17:42Z",
+      "priority": "review",
+      "published": "2026-11-10T21:33:43Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-hfpm-4fc4-g2wc"
+        }
+      ],
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-m63f-xhvm-6mv5. This link is maintained to preserve external references. ## Original Description Creation of temporary file in directory with insecure permissions in .NET Aspire allows an authorized attacker to elevate privileges locally.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability"
+    },
+    {
+      "affected": [
+        "Aspire.Cli"
+      ],
+      "aliases": [
+        "GHSA-fgfw-85w4-gx99"
+      ],
+      "attention_score": 55,
+      "cvss": 7.3,
+      "ecosystems": [
+        "nuget"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-fgfw-85w4-gx99",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T22:30:51Z",
+      "priority": "review",
+      "published": "2026-11-10T21:33:44Z",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-fgfw-85w4-gx99"
+        }
+      ],
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-q6jf-24jf-m3cg. This link is maintained to preserve external references. ## Original Description Insertion of sensitive information into log file in .NET Aspire allows an authorized attacker to disclose information locally.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability"
+    },
+    {
+      "affected": [
+        "react-server-dom-parcel",
+        "react-server-dom-turbopack",
+        "react-server-dom-webpack"
+      ],
+      "aliases": [
+        "CVE-2026-126187",
+        "GHSA-xqc2-xf4c-x3h3"
+      ],
+      "attention_score": 75,
+      "cvss": null,
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-126187",
+      "last_seen": "2026-11-13T10:26:52Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-10T22:44:13Z",
+      "priority": "review",
+      "published": "2026-11-10T22:44:12Z",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-xqc2-xf4c-x3h3"
+        }
+      ],
+      "summary": "### Impact Crafted payloads targeting frameworks supporting React Server Components can lead to remote code execution. This only affects extremely rare cases where responses transport multiple typed arrays and an attacker-controlled value. Updating immediately is recommended. The vulnerability exists in versions 19.0.0 through 19.0.8, 19.1.0 through 19.1.9, 19.2.0 through 19.2.8 and 19.3.0 of: - react-server-dom-webpack - react-server-dom-parcel - react-server-dom-turbopack ### Patches Fixes were back ported to versions 19.0.09, 19.1.10, 19.2.9, and 19.3.1. If applications are using any of the above packages please upgrade to any of the fixed versions immediately. If an app’s React code does not use a server, the app is not affected by this vulnerability. If an app does not use a framework, bundler, or bundler plugin that supports React Server Components, the app is not affected by this ",
+      "title": "React: Unauthenticated Remote Code Execution in React Server Components"
+    },
+    {
+      "affected": [
+        "Microsoft.AspNetCore.App.Runtime.linux-arm",
+        "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+        "Microsoft.AspNetCore.App.Runtime.linux-musl-arm",
+        "Microsoft.AspNetCore.App.Runtime.linux-musl-arm64",
+        "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+        "Microsoft.AspNetCore.App.Runtime.linux-x64",
+        "Microsoft.AspNetCore.App.Runtime.osx-arm64",
+        "Microsoft.AspNetCore.App.Runtime.osx-x64",
+        "Microsoft.AspNetCore.App.Runtime.win-arm64",
+        "Microsoft.AspNetCore.App.Runtime.win-x64",
+        "Microsoft.AspNetCore.App.Runtime.win-x86",
+        "Microsoft.AspNetCore.WebUtilities"
+      ],
+      "aliases": [
+        "CVE-2026-114149",
+        "GHSA-x33c-w48q-qrgc"
+      ],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-114149",
+      "last_seen": "2026-11-13T10:26:52Z",
       "matched_topics": [
         "Linux",
         "Microsoft"
       ],
-      "modified": "2026-11-10T23:17:24.943",
+      "modified": "2026-11-10T23:06:34Z",
       "priority": "review",
-      "published": "2026-07-14T19:17:08.830",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47304"
-        }
-      ],
-      "summary": "Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network.",
-      "title": "Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network."
-    },
-    {
-      "affected": [
-        "gnome libsoup",
-        "redhat enterprise linux"
-      ],
-      "aliases": [
-        "CVE-2026-102560"
-      ],
-      "attention_score": 75,
-      "cvss": 9.8,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-102560",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Linux"
-      ],
-      "modified": "2026-11-11T13:17:12.573",
-      "priority": "review",
-      "published": "2026-09-29T18:17:08.750",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102560"
-        }
-      ],
-      "summary": "A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations used for GByteArray growth could wrap, causing zlib to write past the allocated buffer and resulting in a heap buffer overflow.",
-      "title": "A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations use"
-    },
-    {
-      "affected": [
-        "Red Hat Quay"
-      ],
-      "aliases": [
-        "CVE-2026-110697"
-      ],
-      "attention_score": 75,
-      "cvss": 9.9,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-110697",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Quay"
-      ],
-      "modified": "2026-11-11T14:00:00Z",
-      "priority": "review",
-      "published": "2026-11-11T14:00:00Z",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "Red Hat Security Data API",
-          "url": "https://access.redhat.com/security/cve/CVE-2026-110697"
-        }
-      ],
-      "summary": "Red Hat Quay security advisory CVE-2026-110697",
-      "title": "Red Hat Quay security advisory CVE-2026-110697"
-    },
-    {
-      "affected": [
-        "Red Hat Quay"
-      ],
-      "aliases": [
-        "CVE-2026-123710"
-      ],
-      "attention_score": 75,
-      "cvss": 9.8,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-123710",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Quay"
-      ],
-      "modified": "2026-11-11T14:00:00Z",
-      "priority": "review",
-      "published": "2026-11-11T14:00:00Z",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "Red Hat Security Data API",
-          "url": "https://access.redhat.com/security/cve/CVE-2026-123710"
-        }
-      ],
-      "summary": "Red Hat Quay security advisory CVE-2026-123710",
-      "title": "Red Hat Quay security advisory CVE-2026-123710"
-    },
-    {
-      "affected": [
-        "nhost nhost\\/auth"
-      ],
-      "aliases": [
-        "CVE-2026-41574"
-      ],
-      "attention_score": 75,
-      "cvss": 9.3,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-41574",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Microsoft"
-      ],
-      "modified": "2026-11-11T20:10:00.273",
-      "priority": "review",
-      "published": "2026-05-08T15:16:40.580",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41574"
-        }
-      ],
-      "summary": "Nhost is an open source Firebase alternative with GraphQL. Prior to version 0.49.1, Nhost automatically links an incoming OAuth identity to an existing Nhost account when the email addresses match. This is only safe when the email has been verified by the OAuth provider. Nhost's controller trusts a profile.EmailVerified boolean that is set by each provider adapter. The vulnerability is that several provider adapters do not correctly populate this field they either silently drop a verified field the provider API actually returns (Discord), or they fall back to accepting unconfirmed emails and marking them as verified (Bitbucket). Two Microsoft providers (AzureAD, EntraID) derive the email from non-ownership-proving fields like the user principal name, then mark it verified. The result is that an attacker can present an email they don't own to Nhost, have the OAuth identity merged into the",
-      "title": "Nhost is an open source Firebase alternative with GraphQL. Prior to version 0.49.1, Nhost automatically links an incoming OAuth identity to an existin"
-    },
-    {
-      "affected": [
-        "lightningai pytorch lightning"
-      ],
-      "aliases": [
-        "CVE-2026-44484"
-      ],
-      "attention_score": 75,
-      "cvss": 9.3,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-44484",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "PyTorch"
-      ],
-      "modified": "2026-11-11T20:10:00.273",
-      "priority": "review",
-      "published": "2026-05-14T15:16:48.933",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44484"
-        }
-      ],
-      "summary": "PyTorch Lightning is a deep learning framework to pretrain and finetune AI models. Versions 2.6.2 and 2.6.2 have introduced functionality consistent with a credential harvesting mechanism.",
-      "title": "PyTorch Lightning is a deep learning framework to pretrain and finetune AI models. Versions 2.6.2 and 2.6.2 have introduced functionality consistent w"
-    },
-    {
-      "affected": [
-        "wazuh wazuh"
-      ],
-      "aliases": [
-        "CVE-2026-30893"
-      ],
-      "attention_score": 75,
-      "cvss": 9.9,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-30893",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Python"
-      ],
-      "modified": "2026-11-11T21:10:00.200",
-      "priority": "review",
-      "published": "2026-04-29T19:16:23.200",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30893"
-        }
-      ],
-      "summary": "Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.4.0 to before version 4.14.4, a path traversal vulnerability in Wazuh's cluster synchronization extraction routine allows an authenticated cluster peer to write arbitrary files outside the intended extraction directory on other cluster nodes. This can be escalated to code execution in the Wazuh service context by overwriting Python modules loaded by Wazuh components (proof of concept available as separate attachment). In deployments where the cluster daemon runs with elevated privileges, system-level compromise is possible. This issue has been patched in version 4.14.4.",
-      "title": "Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.4.0 to before version 4.14.4, a path trav"
-    },
-    {
-      "affected": [
-        "microsoft windows",
-        "ollama ollama"
-      ],
-      "aliases": [
-        "CVE-2026-42248"
-      ],
-      "attention_score": 55,
-      "cvss": 7.7,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-42248",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Microsoft"
-      ],
-      "modified": "2026-11-11T21:10:00.200",
-      "priority": "review",
-      "published": "2026-04-29T12:16:18.917",
+      "published": "2026-11-10T23:06:32Z",
       "severity": "high",
       "sources": [
         {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42248"
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-x33c-w48q-qrgc"
         }
       ],
-      "summary": "Ollama for Windows does not perform integrity or authenticity verification of downloaded update executables. Unlike other platforms, the Windows implementation of the update verification routine unconditionally returns success so no digital signature or trust validation is performed before staging or executing update payloads, enabling attacker‑supplied executables to be accepted and later executed by the application. Critically, Ollama for Windows performs silent automatic updates, so the malicious payload may be installed automatically without user awareness. Maintainers of this project were notified early about this vulnerability, but didn't respond with the details of vulnerability or vulnerable version range. Versions from 0.12.10 to 0.17.5 were tested and confirmed as vulnerable, other versions were not tested but might also be vulnerable.",
-      "title": "Ollama for Windows does not perform integrity or authenticity verification of downloaded update executables. Unlike other platforms, the Windows imple"
+      "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in ASP.NET Core. This advisory provides guidance on updating affected applications and components. Multipart form processing can bypass the configured header-count limit and consume excessive resources. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/511 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.5 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-770 ## Affected Platforms - **Platforms:** Windows, Linux, macOS - **Architectures:** All ## <a name=\"affected-packages\"></a>Affected Packages The tables list affected version ranges and fixed package versions. Runtime and standalone deliveries are listed separately. ### .NET 8.0 - affected r",
+      "title": "Microsoft Security Advisory CVE-2026-114149 - ASP.NET Core Denial of Service Vulnerability"
     },
     {
       "affected": [
-        "microsoft windows",
-        "ollama ollama"
+        "Aspire.Hosting",
+        "Aspire.Hosting.AppHost"
       ],
       "aliases": [
-        "CVE-2026-42249"
+        "CVE-2026-120006",
+        "GHSA-f7vh-h5g3-7jrh"
       ],
       "attention_score": 55,
-      "cvss": 7.7,
-      "ecosystems": [],
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-42249",
-      "last_seen": "2026-11-13T10:25:09Z",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "CVE-2026-120006",
+      "last_seen": "2026-11-13T10:26:52Z",
       "matched_topics": [
         "Microsoft"
       ],
-      "modified": "2026-11-11T21:10:00.200",
+      "modified": "2026-11-10T23:24:49Z",
       "priority": "review",
-      "published": "2026-04-29T12:16:19.113",
+      "published": "2026-11-10T23:24:48Z",
       "severity": "high",
       "sources": [
         {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42249"
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-f7vh-h5g3-7jrh"
         }
       ],
-      "summary": "Ollama for Windows contains a Remote Code Execution vulnerability in its update mechanism due to improper handling of attacker‑controlled HTTP response headers. When downloading updates, the application constructs local file paths using values derived from HTTP headers without validation. These values are passed directly to filepath.Join, allowing path traversal sequences (../) to be resolved and enabling files to be written outside the intended update staging directory. An attacker who can influence update responses can exploit this flaw to write arbitrary executables to attacker‑chosen locations accessible to the current user, including the Windows Startup directory. This allows execution of arbitrary executables. Critically, when chained with CVE‑2026‑42248 (Missing Signature Verification for Updates), an attacker can deliver malicious payloads that are written to sensitive locations ",
-      "title": "Ollama for Windows contains a Remote Code Execution vulnerability in its update mechanism due to improper handling of attacker‑controlled HTTP respons"
+      "summary": "## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Aspire. This advisory provides guidance on updating affected applications and components. Disclosure of an Aspire Dashboard authentication cookie to a linked service can allow an attacker-controlled container to replay the authenticated session and execute code as the host developer. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/503 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.5 - **Vector:** `CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H` - **Weakness:** CWE-201 (Insertion of Sensitive Information Into Sent Data) ## Affected Platforms - **Platforms:** macOS - **Architectures:** x64, Arm64 ## <a name=\"affected-packages\"></a>Affected Packages ### Standalone Aspire Package | Affected version ",
+      "title": "Microsoft Security Advisory CVE-2026-120006 - Aspire Elevation of Privilege Vulnerability"
     },
     {
       "affected": [
-        "ddev ddev"
+        "Microsoft.TestPlatform.CLI"
       ],
       "aliases": [
-        "CVE-2026-32885"
+        "GHSA-r33q-3g5w-gqx6"
       ],
-      "attention_score": 75,
-      "cvss": 9.1,
-      "ecosystems": [],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-32885",
-      "last_seen": "2026-11-13T10:25:09Z",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-r33q-3g5w-gqx6",
+      "last_seen": "2026-11-13T10:26:52Z",
       "matched_topics": [
-        "Node.js"
+        "Microsoft"
       ],
-      "modified": "2026-11-11T23:10:00.263",
+      "modified": "2026-11-11T00:11:55Z",
       "priority": "review",
-      "published": "2026-04-22T17:16:34.770",
-      "severity": "critical",
+      "published": "2026-11-10T21:32:22Z",
+      "severity": "high",
       "sources": [
         {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32885"
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-r33q-3g5w-gqx6"
         }
       ],
-      "summary": "DDEV is an open-source tool for running local web development environments for PHP and Node.js. Versions prior to 1.25.2 have unsanitized extraction in both `Untar()` and `Unzip()` functions in `pkg/archive/archive.go`. Downloads and extracts archives from remote sources without path validation. Version 1.25.2 patches the issue.",
-      "title": "DDEV is an open-source tool for running local web development environments for PHP and Node.js. Versions prior to 1.25.2 have unsanitized extraction i"
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-6856-87hx-p5x7. This link is maintained to preserve external references. ## Original Description Improper access control in .NET allows an authorized attacker to elevate privileges locally.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-105544 - .NET Elevation of Privilege Vulnerability"
     },
     {
       "affected": [
-        "axios axios"
+        "Microsoft.AspNetCore.App.Runtime.linux-arm"
       ],
       "aliases": [
-        "CVE-2026-42043"
+        "GHSA-wrm2-c2h2-4w82"
       ],
-      "attention_score": 75,
-      "cvss": 10.0,
-      "ecosystems": [],
+      "attention_score": 55,
+      "cvss": 7.5,
+      "ecosystems": [
+        "nuget"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-42043",
-      "last_seen": "2026-11-13T10:25:09Z",
+      "first_seen": "2026-11-13T10:26:52Z",
+      "id": "GHSA-wrm2-c2h2-4w82",
+      "last_seen": "2026-11-13T10:26:52Z",
       "matched_topics": [
-        "Node.js"
+        "Linux",
+        "Microsoft"
       ],
-      "modified": "2026-11-11T23:10:00.263",
+      "modified": "2026-11-11T00:21:10Z",
       "priority": "review",
-      "published": "2026-04-24T18:16:31.457",
-      "severity": "critical",
+      "published": "2026-11-10T21:32:29Z",
+      "severity": "high",
       "sources": [
         {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42043"
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-wrm2-c2h2-4w82"
         }
       ],
-      "summary": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios request can use any address in the 127.0.0.0/8 range (other than 127.0.0.1) to completely bypass the NO_PROXY protection. This vulnerability is due to an incomplete for CVE-2025-62718, This vulnerability is fixed in 1.15.1 and 0.31.1.",
-      "title": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios"
-    },
-    {
-      "affected": [
-        "axios axios"
-      ],
-      "aliases": [
-        "CVE-2026-42044"
-      ],
-      "attention_score": 75,
-      "cvss": 9.1,
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-13T10:25:09Z",
-      "id": "CVE-2026-42044",
-      "last_seen": "2026-11-13T10:25:09Z",
-      "matched_topics": [
-        "Node.js"
-      ],
-      "modified": "2026-11-11T23:10:00.263",
-      "priority": "review",
-      "published": "2026-04-24T18:16:31.613",
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42044"
-        }
-      ],
-      "summary": "Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.15.2, he Axios library is vulnerable to a Prototype Pollution \"Gadget\" attack that allows any Object.prototype pollution in the application's dependency tree to be escalated into surgical, invisible modification of all JSON API responses — including privilege escalation, balance manipulation, and authorization bypass. The default transformResponse function at lib/defaults/index.js:124 calls JSON.parse(data, this.parseReviver), where this is the merged config object. Because parseReviver is not present in Axios defaults, not validated by assertOptions, and not subject to any constraints, a polluted Object.prototype.parseReviver function is called for every key-value pair in every JSON response, allowing the attacker to selectively modify individual values while leaving the rest of the response intact.",
-      "title": "Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.15.2, he Axios library is vulnerable to a Prototype Pollution"
+      "summary": "## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-r3qf-p3jm-8h4p. This link is maintained to preserve external references. ## Original Description Inefficient algorithmic complexity in ASP.NET Core allows an unauthorized attacker to deny service over a network.",
+      "title": "Duplicate Advisory: Microsoft Security Advisory CVE-2026-109478 - ASP.NET Core Denial of Service Vulnerability"
     }
   ],
-  "generated_at": "2026-11-13T10:25:09Z",
+  "generated_at": "2026-11-13T10:26:52Z",
   "initial_baseline": false,
   "note": "Watchlist match is not verified local exposure."
 }
