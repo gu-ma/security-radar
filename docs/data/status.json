@@ -1,33 +1,33 @@
 {
-  "last_run": "2026-11-13T10:26:52Z",
-  "last_successful_run": "2026-11-13T10:26:52Z",
+  "last_run": "2026-11-13T10:46:13Z",
+  "last_successful_run": "2026-11-13T10:46:13Z",
   "message": "Source outages are displayed and do not erase older records.",
-  "new_relevant_alerts": 20,
+  "new_relevant_alerts": 0,
   "partial": false,
   "source_errors": [],
   "sources": {
     "cisa_kev": {
       "count": 6,
       "error": "",
-      "last_success": "2026-11-13T10:26:52Z",
+      "last_success": "2026-11-13T10:46:13Z",
       "state": "ok"
     },
     "github_advisories": {
       "count": 157,
       "error": "",
-      "last_success": "2026-11-13T10:26:52Z",
+      "last_success": "2026-11-13T10:46:13Z",
       "state": "ok"
     },
     "nist_nvd": {
       "count": 133,
       "error": "",
-      "last_success": "2026-11-13T10:26:52Z",
+      "last_success": "2026-11-13T10:46:13Z",
       "state": "ok"
     },
     "redhat_quay": {
       "count": 5,
       "error": "",
-      "last_success": "2026-11-13T10:26:52Z",
+      "last_success": "2026-11-13T10:46:13Z",
       "state": "ok"
     }
   },
