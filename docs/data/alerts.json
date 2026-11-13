@@ -1,6 +1,737 @@
 {
-  "alerts": [],
-  "generated_at": "2026-11-13T09:58:20Z",
+  "alerts": [
+    {
+      "affected": [
+        "hitachi replication manager",
+        "linux linux kernel",
+        "microsoft windows",
+        "oracle solaris"
+      ],
+      "aliases": [
+        "CVE-2022-4146"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2022-4146",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Linux",
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T12:10:00.177",
+      "priority": "review",
+      "published": "2023-07-18T03:15:55.067",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4146"
+        }
+      ],
+      "summary": "Expression Language Injection vulnerability in Hitachi Replication Manager on Windows, Linux, Solaris allows Code Injection.This issue affects Hitachi Replication Manager: before 8.8.5-02.",
+      "title": "Expression Language Injection vulnerability in Hitachi Replication Manager on Windows, Linux, Solaris allows Code Injection.This issue affects Hitachi"
+    },
+    {
+      "affected": [
+        "microsoft windows 10 21h2",
+        "microsoft windows 10 22h2",
+        "microsoft windows 11 21h2",
+        "microsoft windows 11 22h2",
+        "microsoft windows server 2022"
+      ],
+      "aliases": [
+        "CVE-2023-38186"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2023-38186",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T13:10:00.363",
+      "priority": "review",
+      "published": "2023-08-08T18:15:23.140",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38186"
+        }
+      ],
+      "summary": "Windows Mobile Device Management Elevation of Privilege Vulnerability",
+      "title": "Windows Mobile Device Management Elevation of Privilege Vulnerability"
+    },
+    {
+      "affected": [
+        "netapp brocade fabric operating system",
+        "netapp hci bootstrap os",
+        "netapp solidfire element os",
+        "openbsd openssh"
+      ],
+      "aliases": [
+        "CVE-2023-28531"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2023-28531",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "OpenSSH"
+      ],
+      "modified": "2026-11-10T13:17:19.610",
+      "priority": "review",
+      "published": "2023-03-17T04:15:14.553",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28531"
+        }
+      ],
+      "summary": "ssh-add in OpenSSH before 9.3 adds smartcard keys to ssh-agent without the intended per-hop destination constraints. The earliest affected version is 8.9.",
+      "title": "ssh-add in OpenSSH before 9.3 adds smartcard keys to ssh-agent without the intended per-hop destination constraints. The earliest affected version is"
+    },
+    {
+      "affected": [
+        "python pillow"
+      ],
+      "aliases": [
+        "CVE-2026-112902"
+      ],
+      "attention_score": 55,
+      "cvss": 8.3,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-112902",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-10T18:36:51.110",
+      "priority": "review",
+      "published": "2026-11-05T21:18:36.713",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112902"
+        }
+      ],
+      "summary": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to TIFFSetField() that do not match libtiff’s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0.",
+      "title": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to  TIFFSetField()  that do not match libt"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-120002"
+      ],
+      "attention_score": 75,
+      "cvss": 9.9,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-120002",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T19:20:26.207",
+      "priority": "review",
+      "published": "2026-11-10T19:20:26.080",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120002"
+        }
+      ],
+      "summary": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
+      "title": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network."
+    },
+    {
+      "affected": [
+        "gnome glib",
+        "redhat enterprise linux"
+      ],
+      "aliases": [
+        "CVE-2025-14087"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2025-14087",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-10T20:17:19.727",
+      "priority": "review",
+      "published": "2025-12-10T09:15:47.053",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14087"
+        }
+      ],
+      "summary": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
+      "title": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potentia"
+    },
+    {
+      "affected": [
+        "gnome glib",
+        "redhat cert-manager operator",
+        "redhat codeready linux builder",
+        "redhat codeready linux builder eus",
+        "redhat discovery",
+        "redhat enterprise linux",
+        "redhat enterprise linux aus",
+        "redhat enterprise linux els",
+        "redhat enterprise linux eus",
+        "redhat enterprise linux server tus",
+        "redhat enterprise linux update services for sap solutions",
+        "redhat insights-proxy",
+        "redhat openshift ai",
+        "redhat update infrastructure"
+      ],
+      "aliases": [
+        "CVE-2026-58016"
+      ],
+      "attention_score": 75,
+      "cvss": 9.1,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-58016",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-10T20:19:22.460",
+      "priority": "review",
+      "published": "2026-06-30T13:19:17.840",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58016"
+        }
+      ],
+      "summary": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a `node` element nested within other elements like `method`, `signal`, `property` or `arg`. This issue can cause an unsigned integer overflow and lead to an out-of-bounds read, resulting in a denial of service.",
+      "title": "A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malfor"
+    },
+    {
+      "affected": [
+        "7-zip p7zip",
+        "andybalholm brotli",
+        "anthropic bun",
+        "apache arrow",
+        "clickhouse clickhouse",
+        "debian debian linux",
+        "duckdb duckdb",
+        "envoyproxy envoy",
+        "google brotli",
+        "google woff2",
+        "istio istio",
+        "mcmilk 7-zip-zstd",
+        "microsoft .net",
+        "nodejs node.js",
+        "python-hyper brotlicffi",
+        "siemens common configurator",
+        "siemens comos walkinside",
+        "siemens data flow monitoring",
+        "siemens dataxess configurator",
+        "siemens edge opc ua server configurator",
+        "siemens flow creator configurator",
+        "siemens hyperlynx",
+        "siemens industrial edge cloud connector configurator",
+        "siemens industrial edge databus configurator",
+        "siemens industrial edge hub",
+        "siemens industrial edge management cloud",
+        "siemens innexis architecture native acceleration",
+        "siemens insights hub",
+        "siemens opcenter connect electronics",
+        "siemens opcenter connect manufacturing operations management",
+        "siemens opcenter execution core",
+        "siemens opcenter execution discrete",
+        "siemens opcenter execution foundation",
+        "siemens opcenter execution pharma",
+        "siemens opcenter execution process",
+        "siemens opcenter intelligence",
+        "siemens opcenter quality",
+        "siemens opcenter rd\\&l",
+        "siemens opcenter x",
+        "siemens pads professional",
+        "siemens pave360 automotive",
+        "siemens process preparation x",
+        "siemens ruggedcom ape1808",
+        "siemens ruggedcom ape1808 firmware",
+        "siemens simatic braumat",
+        "siemens simatic profiling tool",
+        "siemens simatic sistar",
+        "siemens simatic wincc",
+        "siemens simatic wincc companion",
+        "siemens simatic wincc runtime",
+        "siemens simatic wincc unified for industrial edge",
+        "siemens simatic wincc unified pc runtime",
+        "siemens simatic wincc unified siqence",
+        "siemens simcenter executable digital twin",
+        "siemens simcenter studio",
+        "siemens teamcenter",
+        "siemens tia administrator",
+        "siemens tia project-server web administration tool",
+        "siemens user management component",
+        "siemens xpedition designer"
+      ],
+      "aliases": [
+        "CVE-2026-111497"
+      ],
+      "attention_score": 75,
+      "cvss": 9.2,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-111497",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Linux",
+        "Microsoft",
+        "Node.js",
+        "Python"
+      ],
+      "modified": "2026-11-10T20:25:59.130",
+      "priority": "review",
+      "published": "2026-10-22T14:17:37.190",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+        }
+      ],
+      "summary": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream. Users need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
+      "title": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote"
+    },
+    {
+      "affected": [
+        "apple macos",
+        "linux linux kernel",
+        "microsoft .net",
+        "microsoft .net framework",
+        "microsoft visual studio 2017",
+        "microsoft visual studio 2019",
+        "microsoft visual studio 2022",
+        "microsoft visual studio 2026",
+        "microsoft windows",
+        "microsoft windows 10 1607",
+        "microsoft windows 10 1809",
+        "microsoft windows 10 21h2",
+        "microsoft windows 10 22h2",
+        "microsoft windows 11 23h2",
+        "microsoft windows 11 24h2",
+        "microsoft windows 11 25h2",
+        "microsoft windows 11 26h1",
+        "microsoft windows server 2012",
+        "microsoft windows server 2016",
+        "microsoft windows server 2019",
+        "microsoft windows server 2022",
+        "microsoft windows server 2025"
+      ],
+      "aliases": [
+        "CVE-2026-47304"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-47304",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Linux",
+        "Microsoft"
+      ],
+      "modified": "2026-11-10T23:17:24.943",
+      "priority": "review",
+      "published": "2026-07-14T19:17:08.830",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47304"
+        }
+      ],
+      "summary": "Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network.",
+      "title": "Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network."
+    },
+    {
+      "affected": [
+        "gnome libsoup",
+        "redhat enterprise linux"
+      ],
+      "aliases": [
+        "CVE-2026-102560"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-102560",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-11T13:17:12.573",
+      "priority": "review",
+      "published": "2026-09-29T18:17:08.750",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102560"
+        }
+      ],
+      "summary": "A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations used for GByteArray growth could wrap, causing zlib to write past the allocated buffer and resulting in a heap buffer overflow.",
+      "title": "A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations use"
+    },
+    {
+      "affected": [
+        "Red Hat Quay"
+      ],
+      "aliases": [
+        "CVE-2026-110697"
+      ],
+      "attention_score": 75,
+      "cvss": 9.9,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-110697",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Quay"
+      ],
+      "modified": "2026-11-11T14:00:00Z",
+      "priority": "review",
+      "published": "2026-11-11T14:00:00Z",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "Red Hat Security Data API",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-110697"
+        }
+      ],
+      "summary": "Red Hat Quay security advisory CVE-2026-110697",
+      "title": "Red Hat Quay security advisory CVE-2026-110697"
+    },
+    {
+      "affected": [
+        "Red Hat Quay"
+      ],
+      "aliases": [
+        "CVE-2026-123710"
+      ],
+      "attention_score": 75,
+      "cvss": 9.8,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-123710",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Quay"
+      ],
+      "modified": "2026-11-11T14:00:00Z",
+      "priority": "review",
+      "published": "2026-11-11T14:00:00Z",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "Red Hat Security Data API",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-123710"
+        }
+      ],
+      "summary": "Red Hat Quay security advisory CVE-2026-123710",
+      "title": "Red Hat Quay security advisory CVE-2026-123710"
+    },
+    {
+      "affected": [
+        "nhost nhost\\/auth"
+      ],
+      "aliases": [
+        "CVE-2026-41574"
+      ],
+      "attention_score": 75,
+      "cvss": 9.3,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-41574",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-11T20:10:00.273",
+      "priority": "review",
+      "published": "2026-05-08T15:16:40.580",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41574"
+        }
+      ],
+      "summary": "Nhost is an open source Firebase alternative with GraphQL. Prior to version 0.49.1, Nhost automatically links an incoming OAuth identity to an existing Nhost account when the email addresses match. This is only safe when the email has been verified by the OAuth provider. Nhost's controller trusts a profile.EmailVerified boolean that is set by each provider adapter. The vulnerability is that several provider adapters do not correctly populate this field they either silently drop a verified field the provider API actually returns (Discord), or they fall back to accepting unconfirmed emails and marking them as verified (Bitbucket). Two Microsoft providers (AzureAD, EntraID) derive the email from non-ownership-proving fields like the user principal name, then mark it verified. The result is that an attacker can present an email they don't own to Nhost, have the OAuth identity merged into the",
+      "title": "Nhost is an open source Firebase alternative with GraphQL. Prior to version 0.49.1, Nhost automatically links an incoming OAuth identity to an existin"
+    },
+    {
+      "affected": [
+        "lightningai pytorch lightning"
+      ],
+      "aliases": [
+        "CVE-2026-44484"
+      ],
+      "attention_score": 75,
+      "cvss": 9.3,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-44484",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "PyTorch"
+      ],
+      "modified": "2026-11-11T20:10:00.273",
+      "priority": "review",
+      "published": "2026-05-14T15:16:48.933",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44484"
+        }
+      ],
+      "summary": "PyTorch Lightning is a deep learning framework to pretrain and finetune AI models. Versions 2.6.2 and 2.6.2 have introduced functionality consistent with a credential harvesting mechanism.",
+      "title": "PyTorch Lightning is a deep learning framework to pretrain and finetune AI models. Versions 2.6.2 and 2.6.2 have introduced functionality consistent w"
+    },
+    {
+      "affected": [
+        "wazuh wazuh"
+      ],
+      "aliases": [
+        "CVE-2026-30893"
+      ],
+      "attention_score": 75,
+      "cvss": 9.9,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-30893",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-11T21:10:00.200",
+      "priority": "review",
+      "published": "2026-04-29T19:16:23.200",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30893"
+        }
+      ],
+      "summary": "Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.4.0 to before version 4.14.4, a path traversal vulnerability in Wazuh's cluster synchronization extraction routine allows an authenticated cluster peer to write arbitrary files outside the intended extraction directory on other cluster nodes. This can be escalated to code execution in the Wazuh service context by overwriting Python modules loaded by Wazuh components (proof of concept available as separate attachment). In deployments where the cluster daemon runs with elevated privileges, system-level compromise is possible. This issue has been patched in version 4.14.4.",
+      "title": "Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.4.0 to before version 4.14.4, a path trav"
+    },
+    {
+      "affected": [
+        "microsoft windows",
+        "ollama ollama"
+      ],
+      "aliases": [
+        "CVE-2026-42248"
+      ],
+      "attention_score": 55,
+      "cvss": 7.7,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-42248",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-11T21:10:00.200",
+      "priority": "review",
+      "published": "2026-04-29T12:16:18.917",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42248"
+        }
+      ],
+      "summary": "Ollama for Windows does not perform integrity or authenticity verification of downloaded update executables. Unlike other platforms, the Windows implementation of the update verification routine unconditionally returns success so no digital signature or trust validation is performed before staging or executing update payloads, enabling attacker‑supplied executables to be accepted and later executed by the application. Critically, Ollama for Windows performs silent automatic updates, so the malicious payload may be installed automatically without user awareness. Maintainers of this project were notified early about this vulnerability, but didn't respond with the details of vulnerability or vulnerable version range. Versions from 0.12.10 to 0.17.5 were tested and confirmed as vulnerable, other versions were not tested but might also be vulnerable.",
+      "title": "Ollama for Windows does not perform integrity or authenticity verification of downloaded update executables. Unlike other platforms, the Windows imple"
+    },
+    {
+      "affected": [
+        "microsoft windows",
+        "ollama ollama"
+      ],
+      "aliases": [
+        "CVE-2026-42249"
+      ],
+      "attention_score": 55,
+      "cvss": 7.7,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-42249",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-11T21:10:00.200",
+      "priority": "review",
+      "published": "2026-04-29T12:16:19.113",
+      "severity": "high",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42249"
+        }
+      ],
+      "summary": "Ollama for Windows contains a Remote Code Execution vulnerability in its update mechanism due to improper handling of attacker‑controlled HTTP response headers. When downloading updates, the application constructs local file paths using values derived from HTTP headers without validation. These values are passed directly to filepath.Join, allowing path traversal sequences (../) to be resolved and enabling files to be written outside the intended update staging directory. An attacker who can influence update responses can exploit this flaw to write arbitrary executables to attacker‑chosen locations accessible to the current user, including the Windows Startup directory. This allows execution of arbitrary executables. Critically, when chained with CVE‑2026‑42248 (Missing Signature Verification for Updates), an attacker can deliver malicious payloads that are written to sensitive locations ",
+      "title": "Ollama for Windows contains a Remote Code Execution vulnerability in its update mechanism due to improper handling of attacker‑controlled HTTP respons"
+    },
+    {
+      "affected": [
+        "ddev ddev"
+      ],
+      "aliases": [
+        "CVE-2026-32885"
+      ],
+      "attention_score": 75,
+      "cvss": 9.1,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-32885",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-11T23:10:00.263",
+      "priority": "review",
+      "published": "2026-04-22T17:16:34.770",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32885"
+        }
+      ],
+      "summary": "DDEV is an open-source tool for running local web development environments for PHP and Node.js. Versions prior to 1.25.2 have unsanitized extraction in both `Untar()` and `Unzip()` functions in `pkg/archive/archive.go`. Downloads and extracts archives from remote sources without path validation. Version 1.25.2 patches the issue.",
+      "title": "DDEV is an open-source tool for running local web development environments for PHP and Node.js. Versions prior to 1.25.2 have unsanitized extraction i"
+    },
+    {
+      "affected": [
+        "axios axios"
+      ],
+      "aliases": [
+        "CVE-2026-42043"
+      ],
+      "attention_score": 75,
+      "cvss": 10.0,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-42043",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-11T23:10:00.263",
+      "priority": "review",
+      "published": "2026-04-24T18:16:31.457",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42043"
+        }
+      ],
+      "summary": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios request can use any address in the 127.0.0.0/8 range (other than 127.0.0.1) to completely bypass the NO_PROXY protection. This vulnerability is due to an incomplete for CVE-2025-62718, This vulnerability is fixed in 1.15.1 and 0.31.1.",
+      "title": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios"
+    },
+    {
+      "affected": [
+        "axios axios"
+      ],
+      "aliases": [
+        "CVE-2026-42044"
+      ],
+      "attention_score": 75,
+      "cvss": 9.1,
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-13T10:25:09Z",
+      "id": "CVE-2026-42044",
+      "last_seen": "2026-11-13T10:25:09Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-11T23:10:00.263",
+      "priority": "review",
+      "published": "2026-04-24T18:16:31.613",
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42044"
+        }
+      ],
+      "summary": "Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.15.2, he Axios library is vulnerable to a Prototype Pollution \"Gadget\" attack that allows any Object.prototype pollution in the application's dependency tree to be escalated into surgical, invisible modification of all JSON API responses — including privilege escalation, balance manipulation, and authorization bypass. The default transformResponse function at lib/defaults/index.js:124 calls JSON.parse(data, this.parseReviver), where this is the merged config object. Because parseReviver is not present in Axios defaults, not validated by assertOptions, and not subject to any constraints, a polluted Object.prototype.parseReviver function is called for every key-value pair in every JSON response, allowing the attacker to selectively modify individual values while leaving the rest of the response intact.",
+      "title": "Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.15.2, he Axios library is vulnerable to a Prototype Pollution"
+    }
+  ],
+  "generated_at": "2026-11-13T10:25:09Z",
   "initial_baseline": false,
   "note": "Watchlist match is not verified local exposure."
 }

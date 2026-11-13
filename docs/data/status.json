@@ -1,30 +1,36 @@
 {
-  "last_run": "2026-11-13T09:58:20Z",
-  "last_successful_run": "2026-11-13T09:58:20Z",
+  "last_run": "2026-11-13T10:25:09Z",
+  "last_successful_run": "2026-11-13T10:25:09Z",
   "message": "Source outages are displayed and do not erase older records.",
-  "new_relevant_alerts": 0,
+  "new_relevant_alerts": 20,
   "partial": true,
   "source_errors": [
-    "github_advisories",
-    "nist_nvd"
+    "github_advisories"
   ],
   "sources": {
     "cisa_kev": {
-      "count": 11,
+      "count": 6,
       "error": "",
-      "last_success": "2026-11-13T09:58:20Z",
+      "last_success": "2026-11-13T10:25:09Z",
       "state": "ok"
     },
     "github_advisories": {
-      "error": "SourceError: GitHub results exceeded five pages; refusing incomplete snapshot",
-      "last_attempt": "2026-11-13T09:58:20Z",
+      "error": "SourceError: GitHub unreviewed/critical exceeded 2000 records; results incomplete",
+      "last_attempt": "2026-11-13T10:25:09Z",
       "state": "error"
     },
     "nist_nvd": {
-      "error": "SourceError: NVD returned >10000 records; increase pagination capacity",
-      "last_attempt": "2026-11-13T09:58:20Z",
-      "state": "error"
+      "count": 133,
+      "error": "",
+      "last_success": "2026-11-13T10:25:09Z",
+      "state": "ok"
+    },
+    "redhat_quay": {
+      "count": 5,
+      "error": "",
+      "last_success": "2026-11-13T10:25:09Z",
+      "state": "ok"
     }
   },
-  "stored_records": 11
+  "stored_records": 148
 }
