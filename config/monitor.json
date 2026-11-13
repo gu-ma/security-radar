@@ -1,0 +1,27 @@
+{
+  "collectors": {
+    "cisa_kev": true,
+    "github_advisories": true,
+    "nist_nvd": true
+  },
+  "watchlist": [
+    "Python",
+    "PyPI",
+    "conda",
+    "conda-forge",
+    "Docker",
+    "Quay",
+    "Kubernetes",
+    "Linux",
+    "Microsoft",
+    "GitHub Actions",
+    "Node.js",
+    "npm",
+    "OpenSSH",
+    "Jupyter",
+    "PyTorch",
+    "TensorFlow"
+  ],
+  "retention_days": 180,
+  "max_entries": 2500
+}

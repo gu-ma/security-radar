@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Security Radar — open-source vulnerability monitoring and security intelligence.">
+  <title>Security Radar — Vulnerability Intelligence</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="./" aria-label="Security Radar home"><span class="symbol">◈</span> Security Radar <span class="version">BETA</span></a>
+      <a class="github" href="https://github.com/gu-ma/security-radar" target="_blank" rel="noopener noreferrer">GitHub project ↗</a>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="intro">
+      <div class="eyebrow"><span class="pulse"></span> OPEN-SOURCE SECURITY INTELLIGENCE</div>
+      <h1 id="intro">Spot what matters.<br><span class="subhead">Skip the noise.</span></h1>
+      <p class="lead">Public vulnerability intelligence from trusted sources, matched against an editable technology watchlist. No deployment or institutional exposure is inferred.</p>
+      <div class="hero-actions"><a href="#findings" class="primary">Explore advisories ↓</a><a href="https://github.com/gu-ma/security-radar/blob/main/docs/SOURCES.md" class="secondary">Sources & coverage ↗</a></div>
+    </section>
+    <section class="stats" aria-label="Overview">
+      <article><div class="metric" id="count-total">—</div><div class="metric-label">advisories retained</div></article>
+      <article><div class="metric" id="count-exploited">—</div><div class="metric-label">in CISA KEV</div></article>
+      <article><div class="metric" id="count-matched">—</div><div class="metric-label">watchlist matches</div></article>
+      <article><div class="metric" id="count-critical">—</div><div class="metric-label">critical severity</div></article>
+    </section>
+    <section class="notice" role="note">
+      <span class="notice-icon">i</span>
+      <p><strong>Awareness, not an asset scan.</strong> A keyword match is only a lead for investigation. It does not mean the product is installed, affected, or exploited in your environment. For local impact, verify products and versions against an approved asset inventory.</p>
+    </section>
+    <section class="status-row" aria-live="polite"><span id="sync-status">Loading published data…</span><span class="sep">·</span><a href="https://github.com/gu-ma/security-radar/actions" target="_blank" rel="noopener noreferrer">Pipeline status ↗</a></section>
+    <section id="findings" class="findings" aria-labelledby="findings-title">
+      <div class="section-heading"><div><div class="eyebrow">RECENT INTELLIGENCE</div><h2 id="findings-title">Advisory explorer</h2></div><p id="result-count" class="results" aria-live="polite"></p></div>
+      <div class="filters">
+        <label class="searchbox"><span class="sr-only">Search advisories</span><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search CVE, vendor, package or keyword…" autocomplete="off"></label>
+        <label class="dropdown"><span class="sr-only">Filter by priority</span><select id="priority"><option value="">All priorities</option><option value="investigate">Investigate</option><option value="review">Review</option><option value="information">Information</option></select></label>
+        <label class="dropdown"><span class="sr-only">Filter by severity</span><select id="severity"><option value="">All severities</option><option value="critical">Critical</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option><option value="unknown">Unknown</option></select></label>
+        <label class="dropdown"><span class="sr-only">Filter by exploited</span><select id="exploited"><option value="">All exploitation statuses</option><option value="yes">CISA KEV listed</option><option value="no">Not KEV listed</option></select></label>
+      </div>
+      <div id="list" class="advisory-list"><div class="empty">Loading advisories…</div></div>
+      <button id="more" class="load-more" type="button" hidden>Show more</button>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell"><span>Security Radar · Public-source intelligence · No confirmed local exposure</span><span>Made for teams that prefer evidence over noise.</span></div></footer>
+</body>
+</html>

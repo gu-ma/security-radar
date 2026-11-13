@@ -1,0 +1,66 @@
+name: Monitor advisories and publish dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+concurrency:
+  group: security-radar
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
+      - name: Collect public advisories
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: python -m security_radar
+      - name: Persist public state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh public security advisories"
+            git push origin HEAD:main
+          fi
+      - name: Notify Teams if explicitly enabled by the repository owner
+        if: ${{ vars.ENABLE_TEAMS == 'true' }}
+        continue-on-error: true
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          RADAR_DASHBOARD_URL: https://gu-ma.github.io/security-radar/
+        run: python -m security_radar.notify
+      - name: Package static website
+        if: ${{ vars.ENABLE_PAGES == 'true' }}
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+
+  deploy:
+    needs: monitor
+    if: ${{ vars.ENABLE_PAGES == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
