@@ -97,7 +97,8 @@ class EngineTests(unittest.TestCase):
         bridge = make_advisory(identifier="CVE-2026-123",
                                aliases=["GHSA-abcd-efgh-ijkl"],
                                title="Docker issue", source="GitHub Advisory Database",
-                               url="https://github.com/advisories/GHSA-abcd-efgh-ijkl")
+                               url="https://github.com/advisories/GHSA-abcd-efgh-ijkl",
+                               published="2026-11-11")
         rows, _ = process(now=self.now, previous=[a, b], fetched=[bridge],
                           watchlist=["Docker"])
         self.assertEqual(len(rows), 1)
