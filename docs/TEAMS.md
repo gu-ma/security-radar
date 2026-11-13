@@ -57,5 +57,5 @@ A high CVSS score does not justify an `@everyone` message by itself. The monitor
 ## Microsoft references
 
 - [Microsoft Power Automate — send a message in Teams](https://learn.microsoft.com/en-us/power-automate/teams/send-a-message-in-teams)
-- [Microsoft Teams Workflows overview](https://support.microsoft.com/en-us/office/create-a-workflow-in-microsoft-teams-...)
+- [Microsoft Teams Workflows overview](https://learn.microsoft.com/en-us/power-automate/teams/teams-overview)
 - [Microsoft Teams webhook workflow guidance](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
