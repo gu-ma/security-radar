@@ -18,7 +18,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-123710",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Quay"
     ],
@@ -63,7 +63,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-110697",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Quay"
     ],
@@ -119,7 +119,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-116606",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [],
     "modified": "2026-11-12T12:31:33Z",
     "priority": "information",
@@ -166,7 +166,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-124194",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -205,7 +205,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-125350",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -274,6 +274,46 @@
       "Red Hat Quay"
     ],
     "aliases": [
+      "CVE-2026-128824"
+    ],
+    "attention_score": 85,
+    "categories": [
+      "applications",
+      "dependencies",
+      "containers"
+    ],
+    "cvss": 5.4,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T16:25:16Z",
+    "id": "CVE-2026-128824",
+    "last_seen": "2026-11-13T16:25:16Z",
+    "matched_topics": [
+      "Quay"
+    ],
+    "modified": "2026-11-13T08:13:00Z",
+    "priority": "information",
+    "published": "2026-11-13T08:13:00Z",
+    "security_topics": [],
+    "severity": "medium",
+    "sources": [
+      {
+        "name": "Red Hat Security Data API",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-128824"
+      }
+    ],
+    "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+    "summary": "A flaw was found in Red Hat Quay. The v1 registry API error handler reflects the attacker-supplied image_id path segment in a response served as text/html, allowing a reflected cross-site scripting (XSS) attack. By tricking a user into visiting a specially crafted URL, a remote attacker can execute arbitrary JavaScript in the victim's browser within the Quay origin, potentially compromising the user's session.",
+    "title": "quay: quay: reflected XSS via image_id in v1 registry error responses",
+    "why_it_matters": "A flaw was found in Red Hat Quay. The v1 registry API error handler reflects the attacker-supplied image_id path segment in a response served as text/html, allowing a reflected cross-site scripting (XSS) attack. By tricking a user into visiting a specially crafted URL, a remote attacker can execute arbitrary JavaScript in the victim's browser within the Quay origin, potentially compromising the user's session."
+  },
+  {
+    "affected": [
+      "Red Hat Quay"
+    ],
+    "aliases": [
       "CVE-2026-125333"
     ],
     "attention_score": 85,
@@ -290,7 +330,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-125333",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Node.js",
       "Quay"
@@ -331,7 +371,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-125332",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Node.js",
       "Quay"
@@ -371,7 +411,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-125335",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [
       "Quay"
     ],
@@ -410,7 +450,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-111793",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [],
     "modified": "2026-11-10T00:00:00Z",
     "priority": "information",
@@ -447,7 +487,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-20320",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [],
     "modified": "2026-11-10T00:00:00Z",
     "priority": "information",
@@ -484,7 +524,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-111560",
-    "last_seen": "2026-11-13T11:26:54Z",
+    "last_seen": "2026-11-13T16:25:16Z",
     "matched_topics": [],
     "modified": "2026-11-10T00:00:00Z",
     "priority": "information",
