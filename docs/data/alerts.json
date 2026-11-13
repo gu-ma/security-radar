@@ -1,6 +1,6 @@
 {
   "alerts": [],
-  "generated_at": null,
+  "generated_at": "2026-11-13T09:48:20Z",
   "initial_baseline": true,
-  "note": "Live collectors have not run yet."
+  "note": "Watchlist match is not verified local exposure."
 }

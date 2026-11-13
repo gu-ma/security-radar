@@ -1,1 +1,327 @@
-[]
+[
+  {
+    "affected": [
+      "Microsoft",
+      "Office"
+    ],
+    "aliases": [
+      "CVE-2026-124194"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-124194",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [
+      "Microsoft"
+    ],
+    "modified": "2026-11-10T00:00:00Z",
+    "priority": "investigate",
+    "published": "2026-11-10T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+    "title": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability"
+  },
+  {
+    "affected": [
+      "Chromium",
+      "Google"
+    ],
+    "aliases": [
+      "CVE-2026-125350"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-125350",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [
+      "Microsoft"
+    ],
+    "modified": "2026-11-10T00:00:00Z",
+    "priority": "investigate",
+    "published": "2026-11-10T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+    "title": "Google Chromium Use-After-Free Vulnerability"
+  },
+  {
+    "affected": [
+      "Openwave Messaging Limited",
+      "Webtop Media Transcoder"
+    ],
+    "aliases": [
+      "CVE-2026-111793"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-111793",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-10T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-10T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+    "title": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability"
+  },
+  {
+    "affected": [
+      "BroadWorks",
+      "Cisco"
+    ],
+    "aliases": [
+      "CVE-2026-20320"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-20320",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-10T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-10T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+    "title": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability"
+  },
+  {
+    "affected": [
+      "Barracuda Networks",
+      "Multiple Products"
+    ],
+    "aliases": [
+      "CVE-2026-111560"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-111560",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-10T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-10T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+    "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability"
+  },
+  {
+    "affected": [
+      "Barracuda Email Security Gateway (ESG)",
+      "Barracuda Networks"
+    ],
+    "aliases": [
+      "CVE-2026-116606"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-116606",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-10T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-10T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+    "title": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+  },
+  {
+    "affected": [
+      "OpenBSD",
+      "OpenSSH"
+    ],
+    "aliases": [
+      "CVE-2026-123158"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-123158",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [
+      "Linux",
+      "OpenSSH"
+    ],
+    "modified": "2026-11-09T00:00:00Z",
+    "priority": "investigate",
+    "published": "2026-11-09T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+    "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability"
+  },
+  {
+    "affected": [
+      "GPUStack"
+    ],
+    "aliases": [
+      "CVE-2026-102895"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-102895",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-09T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-09T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+    "title": "GPUStack Improper Authentication Vulnerability"
+  },
+  {
+    "affected": [
+      "FreeSwitch",
+      "SignalWire"
+    ],
+    "aliases": [
+      "CVE-2026-116779"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-116779",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-09T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-09T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+    "title": "SignalWire FreeSwitch Code Injection Vulnerability"
+  },
+  {
+    "affected": [
+      "Aspera Faspex",
+      "IBM"
+    ],
+    "aliases": [
+      "CVE-2026-123218"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-123218",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-09T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-09T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+    "title": "IBM Aspera Faspex Incorrect Authorization Vulnerability"
+  },
+  {
+    "affected": [
+      "SonicOS SSLVPN",
+      "SonicWall"
+    ],
+    "aliases": [
+      "CVE-2026-19868"
+    ],
+    "cvss": null,
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T09:48:20Z",
+    "id": "CVE-2026-19868",
+    "last_seen": "2026-11-13T09:48:20Z",
+    "matched_topics": [],
+    "modified": "2026-11-06T00:00:00Z",
+    "priority": "information",
+    "published": "2026-11-06T00:00:00Z",
+    "severity": "unknown",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+    "title": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability"
+  }
+]

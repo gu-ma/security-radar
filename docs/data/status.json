@@ -1,8 +1,30 @@
 {
-  "last_run": null,
-  "partial": null,
-  "source_errors": [],
-  "sources": {},
-  "stored_records": 0,
-  "message": "Waiting for first monitoring run."
+  "last_run": "2026-11-13T09:48:20Z",
+  "last_successful_run": "2026-11-13T09:48:20Z",
+  "message": "Source outages are displayed and do not erase older records.",
+  "new_relevant_alerts": 0,
+  "partial": true,
+  "source_errors": [
+    "github_advisories",
+    "nist_nvd"
+  ],
+  "sources": {
+    "cisa_kev": {
+      "count": 11,
+      "error": "",
+      "last_success": "2026-11-13T09:48:20Z",
+      "state": "ok"
+    },
+    "github_advisories": {
+      "error": "SourceError: GitHub results exceeded five pages; refusing incomplete snapshot",
+      "last_attempt": "2026-11-13T09:48:20Z",
+      "state": "error"
+    },
+    "nist_nvd": {
+      "error": "SourceError: NVD returned >10000 records; increase pagination capacity",
+      "last_attempt": "2026-11-13T09:48:20Z",
+      "state": "error"
+    }
+  },
+  "stored_records": 11
 }
