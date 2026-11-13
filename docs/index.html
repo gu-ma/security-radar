@@ -4,39 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Security Radar — open-source vulnerability monitoring and security intelligence.">
-  <title>Security Radar — Vulnerability Intelligence</title>
+  <meta name="description" content="Security Radar: public security advisories, filtered by technology and severity.">
+  <title>Security Radar | Public vulnerability monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="./app.js"></script>
 </head>
 <body>
   <header class="topbar">
     <div class="shell nav">
-      <a class="brand" href="./" aria-label="Security Radar home"><span class="symbol">◈</span> Security Radar <span class="version">BETA</span></a>
-      <a class="github" href="https://github.com/gu-ma/security-radar" target="_blank" rel="noopener noreferrer">GitHub project ↗</a>
+      <a class="brand" href="./" aria-label="Security Radar home"><span class="symbol" aria-hidden="true">&gt;_</span> security-radar<span class="version">v0.2</span></a>
+      <nav class="nav-links" aria-label="Site navigation">
+        <a href="#focus">Focus</a>
+        <a href="#archive">Archive</a>
+        <a class="github" href="https://github.com/gu-ma/security-radar" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
     </div>
   </header>
   <main class="shell">
     <section class="hero" aria-labelledby="intro">
-      <div class="eyebrow"><span class="pulse"></span> OPEN-SOURCE SECURITY INTELLIGENCE</div>
-      <h1 id="intro">Spot what matters.<br><span class="subhead">Skip the noise.</span></h1>
-      <p class="lead">Public vulnerability intelligence from trusted sources, matched against an editable technology watchlist. No deployment or institutional exposure is inferred.</p>
-      <div class="hero-actions"><a href="#focus" class="primary">See what needs attention ↓</a><a href="https://github.com/gu-ma/security-radar/blob/main/docs/SOURCES.md" class="secondary">Sources & coverage ↗</a></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> PUBLIC VULNERABILITY MONITOR <span class="hero-label">/ SIGNAL 01</span></div>
+        <h1 id="intro">Security <span class="title-accent">Radar</span><span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="lead">Public security advisories, filtered by technologies we follow.</p>
+        <p class="hero-note">Watchlist matches are leads, not confirmed exposure.</p>
+        <div class="hero-actions">
+          <a href="#focus" class="primary">View priority alerts <span aria-hidden="true">↓</span></a>
+          <a href="https://github.com/gu-ma/security-radar/blob/main/docs/SOURCES.md" class="secondary">Sources &amp; coverage ↗</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="radar-ring radar-ring-outer"></span>
+        <span class="radar-ring radar-ring-middle"></span>
+        <span class="radar-ring radar-ring-inner"></span>
+        <span class="radar-center"></span>
+        <span class="radar-coordinate">48.000 / 09.000</span>
+      </div>
     </section>
     <section class="stats" aria-label="Overview">
-      <article><div class="metric" id="count-total">—</div><div class="metric-label">advisories retained</div></article>
-      <article><div class="metric" id="count-exploited">—</div><div class="metric-label">in CISA KEV</div></article>
-      <article><div class="metric" id="count-matched">—</div><div class="metric-label">watchlist matches</div></article>
-      <article><div class="metric" id="count-critical">—</div><div class="metric-label">critical severity</div></article>
+      <article><div class="metric" id="count-total">—</div><div class="metric-label">Retained advisories</div></article>
+      <article><div class="metric" id="count-exploited">—</div><div class="metric-label">KEV-listed</div></article>
+      <article><div class="metric" id="count-matched">—</div><div class="metric-label">Watchlist matches</div></article>
+      <article><div class="metric" id="count-critical">—</div><div class="metric-label">Critical severity</div></article>
     </section>
     <section class="notice" role="note">
-      <span class="notice-icon">i</span>
-      <p><strong>Awareness, not an asset scan.</strong> A keyword match is only a lead for investigation. It does not mean the product is installed, affected, or exploited in your environment. For local impact, verify products and versions against an approved asset inventory.</p>
+      <span class="notice-icon" aria-hidden="true">i</span>
+      <p><strong>Scope:</strong> public advisory data only. Product versions and local exposure are not verified.</p>
     </section>
     <section class="status-row" aria-live="polite"><span id="sync-status">Loading published data…</span><span class="sep">·</span><a href="https://github.com/gu-ma/security-radar/actions" target="_blank" rel="noopener noreferrer">Pipeline status ↗</a></section>
     <section id="focus" class="focus" aria-labelledby="focus-title">
-      <div class="section-heading"><div><div class="eyebrow">WATCHLIST-RELEVANT FINDINGS</div><h2 id="focus-title">Focus now</h2></div><p class="results">A short list, ranked by exploitation signal, severity and technology match</p></div>
-      <p class="focus-intro">These are investigation leads, <strong>not</strong> confirmed exposures in your organization. Only public advisories are used.</p>
+      <div class="section-heading"><div><div class="eyebrow">01 / PRIORITY VIEW</div><h2 id="focus-title">Focus now</h2></div><p class="results">Ranked by exploitation signal, severity and watchlist match</p></div>
+      <p class="focus-intro">Items worth reviewing first. Actual exposure is not assessed.</p>
       <nav id="category-tabs" class="category-tabs" aria-label="Filter focus by technology">
         <button type="button" class="category-pill active" data-category="" aria-pressed="true">All technologies</button>
         <button type="button" class="category-pill" data-category="applications" aria-pressed="false">Applications</button>
@@ -50,11 +70,11 @@
       <div id="focus-summary" class="focus-summary" aria-live="polite"></div>
     </section>
     <details id="archive" class="archive">
-      <summary class="archive-toggle"><span>Browse the complete advisory archive</span><span class="archive-hint">Search, filter and explore all records</span></summary>
+      <summary class="archive-toggle"><span>All advisories</span><span class="archive-hint">Full list / search and filters</span></summary>
       <section id="findings" class="findings" aria-labelledby="findings-title">
-      <div class="section-heading"><div><div class="eyebrow">RECENT INTELLIGENCE</div><h2 id="findings-title">Advisory explorer</h2></div><p id="result-count" class="results" aria-live="polite"></p></div>
+      <div class="section-heading"><div><div class="eyebrow">02 / ARCHIVE</div><h2 id="findings-title">Browse records</h2></div><p id="result-count" class="results" aria-live="polite"></p></div>
       <div class="filters">
-        <label class="searchbox"><span class="sr-only">Search advisories</span><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search CVE, vendor, package or keyword…" autocomplete="off"></label>
+        <label class="searchbox"><span class="sr-only">Search advisories</span><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search CVE, product or keyword…" autocomplete="off"></label>
         <label class="dropdown"><span class="sr-only">Filter by technology category</span><select id="category"><option value="">All technologies</option><option value="applications">Applications</option><option value="dependencies">Libraries & dependencies</option><option value="containers">Containers & registries</option><option value="infrastructure">Servers & infrastructure</option><option value="cloud-identity">Cloud & identity</option><option value="ai-ml">AI & ML tooling</option><option value="unclassified">Unclassified</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by security topic</span><select id="topic"><option value="">All security topics</option><option>Supply chain</option><option>Remote code execution</option><option>Privilege escalation</option><option>Authentication & authorization</option><option>Data exposure</option><option>Denial of service</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by priority</span><select id="priority"><option value="">All priorities</option><option value="investigate">Investigate</option><option value="review">Review</option><option value="information">Information</option></select></label>
@@ -66,6 +86,6 @@
     </section>
     </details>
   </main>
-  <footer class="footer"><div class="shell"><span>Security Radar · Public-source intelligence · No confirmed local exposure</span><span>Made for teams that prefer evidence over noise.</span></div></footer>
+  <footer class="footer"><div class="shell"><span>Security Radar / Public advisories only</span><span>Not an asset scan or a local exposure assessment.</span></div></footer>
 </body>
 </html>

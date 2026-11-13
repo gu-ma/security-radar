@@ -79,3 +79,13 @@ A public monitoring result is an investigation lead, not a university security i
 - Teams uses the same structured fields and deterministic filters, but does not replace the dashboard. Only selected new alerts are eligible for notification.
 - Adapter discovery is modular: add a module plus tests and configuration, not UI or notification code.
 - Teams acceptance has two independent gates: offline Python payload/HTTP tests and an actual approved university Workflow post. The second cannot be performed from an unconnected local development environment.
+
+## Planned follow-ups (not in this style/content release)
+
+### Archive sorting
+
+Add a sort control separate from category, severity and priority filtering. Choices: attention priority, CVSS descending/ascending, severity descending, newest publication first, and oldest publication first. Unknown scores should sort consistently rather than being treated as 0. Sorting must work with active filters, pagination and shared deep links, with explicit labels for publication versus last-modified dates.
+
+### Public RSS / Atom feed
+
+Generate a standards-compliant RSS 2.0 or Atom feed at a stable URL beneath the GitHub Pages site using existing normalized public advisories. Include GUID/id, title, original source URL, Security Radar deep link, published/updated timestamps, severity, and technology categories, escaping XML safely. Choose a clear inclusion rule (for example, high-signal watchlist leads only) and keep a bounded history. Validate XML in CI and add a documented subscription URL for integration into other systems, including Microsoft Teams and RSS readers. Avoid duplicating old items or asserting institutional exposure. Feed generation must work without an LLM, a database server, or Microsoft credentials.

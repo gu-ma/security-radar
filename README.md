@@ -59,9 +59,22 @@ The app merges records using shared identifiers (CVE/GHSA aliases), and preserve
 - [Teams integration and university-owner handoff](docs/TEAMS.md)
 - [Security considerations and vulnerability reporting](SECURITY.md)
 
+## Interface and design
+
+The dashboard uses a restrained terminal-inspired theme: Inconsolata for headlines and UI labels, a readable system sans-serif for advisory text, dark graphite surfaces, high-contrast severity colors, and a subtle CSS-only radar motif. Copy is deliberately concise. No browser-side analytics, JavaScript animations, or image assets are needed for the decorative header. The externally hosted Google Fonts stylesheet is optional; a local monospace fallback remains available.
+
 ## Decision-first dashboard
 
 The homepage highlights up to six watchlist-matched high/critical or KEV-listed advisories, with a prominent CVSS score, six technology categories and separate security-topic tags. Archive and homepage filters are deterministic, and search/category deep links can be shared. The full archive is collapsed by default. This **focus ranking is not proof of institutional exposure**. A critical vulnerability without an explicit technology match may stay in the full archive. Incomplete sources are shown in the dashboard status.
+
+## Next on the roadmap
+
+The following are recorded for a future iteration and **are not implemented yet**:
+
+- **Archive sorting:** user-selectable order by newest/oldest publication, highest/lowest CVSS, severity, and attention priority. Preserve sorting when sharing a filtered deep link; handle unscored advisories explicitly.
+- **RSS / Atom feed:** publish a standards-compliant public feed of selected advisories or updates (with stable IDs, links to the original advisory and Security Radar, category tags, and source timestamps). This should be generated from the same normalized data as the site and Teams adapter so downstream systems can subscribe without Microsoft 365 access. Ensure a bounded feed, clear selection criteria, and no leaked institutional details.
+
+See [project roadmap](docs/PROJECT.md) for acceptance criteria.
 
 ## Teams: integration after university approval
 
