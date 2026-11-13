@@ -2,7 +2,8 @@
   "collectors": {
     "cisa_kev": true,
     "github_advisories": true,
-    "nist_nvd": true
+    "nist_nvd": true,
+    "redhat_quay": true
   },
   "watchlist": [
     "Python",

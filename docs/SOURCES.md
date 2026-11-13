@@ -1,14 +1,14 @@
 # Source registry and coverage
 
-**Only the first three sources below have working collectors in v0.1.** Listed vendors and databases are targets for future adapters or supplementary links, not proof of coverage.
+**Four source adapters are implemented: CISA KEV, GitHub Advisories (restricted to high/critical), NIST NVD (critical CVSS v3), and the Red Hat Quay-specific CVE feed.** Listed vendors and databases are targets for future adapters or supplementary links, not proof of coverage.
 
 | Source | Endpoint or authoritative reference | State | Purpose / caveat |
 | --- | --- | --- | --- |
 | CISA Known Exploited Vulnerabilities (KEV) | [JSON catalog](https://github.com/cisagov/kev-data) | **Implemented** | Positive evidence that a CVE is on KEV, not proof of exploitation of any particular machine |
-| GitHub Advisory Database | [Global security advisories REST API](https://docs.github.com/en/rest/security-advisories/global-advisories) | **Implemented** | Reviewed GHSA advisories; package-level data when supplied |
-| NIST National Vulnerability Database (NVD) | [CVE API 2.0](https://nvd.nist.gov/developers/vulnerabilities) | **Implemented** | CVSS and CPE descriptions; processing and analysis can lag upstream disclosures |
+| GitHub Advisory Database | [Global security advisories REST API](https://docs.github.com/en/rest/security-advisories/global-advisories) | **Implemented** | Reviewed high/critical and unreviewed critical advisories; includes vendor CVEs not yet package-reviewed |
+| NIST National Vulnerability Database (NVD) | [CVE API 2.0](https://nvd.nist.gov/developers/vulnerabilities) | **Implemented** | Only recently modified CVSS v3 CRITICAL records (volume-limited); not complete NVD coverage |
 | Open Source Vulnerabilities (OSV) | [OSV API](https://google.github.io/osv.dev/api/) | **Planned** | Query selected packages and versions; not a blanket RSS feed |
-| Red Hat | [Security data](https://access.redhat.com/security/data) | **Planned** | RHSA notices, Red Hat products, Quay-related advisories |
+| Red Hat Quay | [Red Hat Security Data API](https://docs.redhat.com/en/documentation/red_hat_security_data_api/1.0/html-single/red_hat_security_data_api/index) | **Implemented — Quay only** | Queries the official product-filtered CVE listing, not all Red Hat products; reports API errors |
 | Microsoft Security Response Center (MSRC) | [Security Update Guide](https://msrc.microsoft.com/update-guide) | **Planned** | Microsoft technologies; documented export/API options must be verified before implementing |
 | Python Software Foundation | [Python security](https://www.python.org/dev/security/) | **Planned** | Interpreter/core ecosystem security; select appropriate official structured feed |
 | conda-forge | [Security process](https://github.com/conda-forge/security) | **Planned** | Infrastructure disclosures and project security; not a universal feed of package CVEs |
@@ -19,9 +19,11 @@
 
 **CISA KEV:** reads the public JSON dataset and selects CVEs added within the lookback. If a CVE is already in the retained list, it gains KEV status. There is no institutional asset mapping.
 
-**GitHub advisories:** queries reviewed global advisories with a bounded page count, respecting API rate limits. Advisories without CVEs use a GHSA ID as their primary ID. Package ecosystems are extracted when supplied.
+**GitHub advisories:** queries reviewed high/critical and unreviewed critical global advisories with a bounded page count, respecting API rate limits. Advisories without CVEs use a GHSA ID as their primary ID. Package ecosystems are extracted when supplied.
 
-**NVD:** queries recently modified CVEs, paginates up to a bounded limit, extracts CVSS information and product tokens from CPEs. The parser intentionally does not pretend to determine exact vulnerable version ranges or local exploitability.
+**NVD:** queries recently modified CVSS v3 CRITICAL CVEs only, paginates up to a bounded limit, extracts CVSS information and product tokens from CPEs. The parser intentionally does not pretend to determine exact vulnerable version ranges or local exploitability.
+
+**Red Hat Quay:** the official CVE listing is queried using a product filter. Red Hat products outside Quay remain out of scope until dedicated adapters are added. An upstream API error is visible as source failure, not an empty successful source.
 
 **OSV:** a future adapter should use monitored package inventory and batch version queries. Inventory must stay private if it contains institutional information; a public dashboard should use general-interest lists only.
 

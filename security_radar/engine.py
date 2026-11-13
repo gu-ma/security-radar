@@ -67,8 +67,8 @@ def process(*, now: datetime, previous: list[dict], fetched: list[dict],
             continue
         recent.append(enrich(row, watchlist))
     levels = {"investigate": 0, "review": 1, "information": 2}
-    recent.sort(key=lambda row: (levels[row["priority"]], row.get("modified", "")), reverse=False)
     recent.sort(key=lambda row: row.get("modified", ""), reverse=True)
+    recent.sort(key=lambda row: (-row.get("attention_score", 0), levels[row["priority"]]))
     recent = recent[:max_entries]
     fresh = [row for row in recent
              if row["priority"] != "information"
@@ -95,11 +95,11 @@ def run(config_path: Path, data_dir: Path) -> int:
         if not config.get("collectors", {}).get(name, True):
             continue
         previous_success = old_sources.get(name, {}).get("last_success")
-        lookback_days = 7
+        lookback_days = 3
         if previous_success:
             try:
                 last = datetime.fromisoformat(previous_success.replace("Z", "+00:00"))
-                lookback_days = min(110, max(7, (now - last).days + 3))
+                lookback_days = min(110, max(3, (now - last).days + 2))
             except ValueError:
                 pass
         LOG.info("Collecting %s (lookback %d days)", name, lookback_days)

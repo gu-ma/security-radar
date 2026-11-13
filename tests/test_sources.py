@@ -1,5 +1,5 @@
 import unittest
-from security_radar.sources import parse_kev, parse_ghsa, parse_nvd
+from security_radar.sources import parse_kev, parse_ghsa, parse_nvd, parse_redhat_quay
 
 
 class ParserTests(unittest.TestCase):
@@ -25,6 +25,17 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(rows[0]["id"], "CVE-2026-123")
         self.assertIn("some-package", rows[0]["affected"])
         self.assertIn("GHSA-aaaa-bbbb-cccc", rows[0]["aliases"])
+
+    def test_redhat_quay_product_advisory(self):
+        records = parse_redhat_quay([{
+            "CVE": "CVE-2026-123710", "severity": "Critical", "cvss3_score": "9.8",
+            "public_date": "2026-11-11",
+            "bugzilla": {"description": "Quay signing-key takeover"}
+        }])
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]["severity"], "critical")
+        self.assertEqual(records[0]["cvss"], 9.8)
+        self.assertIn("Red Hat Quay", records[0]["affected"])
 
     def test_nvd(self):
         payload = {"vulnerabilities": [{"cve": {

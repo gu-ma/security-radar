@@ -21,7 +21,7 @@
       <div class="eyebrow"><span class="pulse"></span> OPEN-SOURCE SECURITY INTELLIGENCE</div>
       <h1 id="intro">Spot what matters.<br><span class="subhead">Skip the noise.</span></h1>
       <p class="lead">Public vulnerability intelligence from trusted sources, matched against an editable technology watchlist. No deployment or institutional exposure is inferred.</p>
-      <div class="hero-actions"><a href="#findings" class="primary">Explore advisories ↓</a><a href="https://github.com/gu-ma/security-radar/blob/main/docs/SOURCES.md" class="secondary">Sources & coverage ↗</a></div>
+      <div class="hero-actions"><a href="#focus" class="primary">See what needs attention ↓</a><a href="https://github.com/gu-ma/security-radar/blob/main/docs/SOURCES.md" class="secondary">Sources & coverage ↗</a></div>
     </section>
     <section class="stats" aria-label="Overview">
       <article><div class="metric" id="count-total">—</div><div class="metric-label">advisories retained</div></article>
@@ -34,7 +34,15 @@
       <p><strong>Awareness, not an asset scan.</strong> A keyword match is only a lead for investigation. It does not mean the product is installed, affected, or exploited in your environment. For local impact, verify products and versions against an approved asset inventory.</p>
     </section>
     <section class="status-row" aria-live="polite"><span id="sync-status">Loading published data…</span><span class="sep">·</span><a href="https://github.com/gu-ma/security-radar/actions" target="_blank" rel="noopener noreferrer">Pipeline status ↗</a></section>
-    <section id="findings" class="findings" aria-labelledby="findings-title">
+    <section id="focus" class="focus" aria-labelledby="focus-title">
+      <div class="section-heading"><div><div class="eyebrow">WATCHLIST-RELEVANT FINDINGS</div><h2 id="focus-title">Focus now</h2></div><p class="results">A short list, ranked by exploitation signal, severity and technology match</p></div>
+      <p class="focus-intro">These are investigation leads, <strong>not</strong> confirmed exposures in your organization. Only public advisories are used.</p>
+      <div id="spotlight" class="spotlight-list"><div class="empty">Loading priority advisories…</div></div>
+      <div id="focus-summary" class="focus-summary" aria-live="polite"></div>
+    </section>
+    <details id="archive" class="archive">
+      <summary class="archive-toggle"><span>Browse the complete advisory archive</span><span class="archive-hint">Search, filter and explore all records</span></summary>
+      <section id="findings" class="findings" aria-labelledby="findings-title">
       <div class="section-heading"><div><div class="eyebrow">RECENT INTELLIGENCE</div><h2 id="findings-title">Advisory explorer</h2></div><p id="result-count" class="results" aria-live="polite"></p></div>
       <div class="filters">
         <label class="searchbox"><span class="sr-only">Search advisories</span><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search CVE, vendor, package or keyword…" autocomplete="off"></label>
@@ -45,6 +53,7 @@
       <div id="list" class="advisory-list"><div class="empty">Loading advisories…</div></div>
       <button id="more" class="load-more" type="button" hidden>Show more</button>
     </section>
+    </details>
   </main>
   <footer class="footer"><div class="shell"><span>Security Radar · Public-source intelligence · No confirmed local exposure</span><span>Made for teams that prefer evidence over noise.</span></div></footer>
 </body>

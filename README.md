@@ -6,9 +6,9 @@
 
 ## Status
 
-**v0.1 / early pilot.** Implemented collectors: CISA Known Exploited Vulnerabilities, GitHub Global Security Advisories, and NIST NVD. The first live runs and GitHub Pages deployment must be confirmed in the [Actions tab](https://github.com/gu-ma/security-radar/actions). Source failures are displayed rather than silently treated as “no vulnerabilities.”
+**v0.1 / early pilot.** Implemented collectors: CISA Known Exploited Vulnerabilities, selected high/critical GitHub Global Security Advisories (including critical unreviewed advisories), critical NVD CVEs, and Red Hat Quay CVEs. The first live runs and GitHub Pages deployment must be confirmed in the [Actions tab](https://github.com/gu-ma/security-radar/actions). Source failures are displayed rather than silently treated as “no vulnerabilities.”
 
-Other sources discussed (OSV, Red Hat, Microsoft MSRC, Python, conda-forge, Docker) are documented in [sources and coverage](docs/SOURCES.md) as planned or supplementary: **they are not monitored by this version**. Never interpret a missing alert as proof that a vendor has no active vulnerabilities.
+Other sources discussed (OSV, broader Red Hat products, Microsoft MSRC, Python, conda-forge, Docker) are documented in [sources and coverage](docs/SOURCES.md) as planned or supplementary: **they are not monitored by this version**. Never interpret a missing alert as proof that a vendor has no active vulnerabilities.
 
 ## Get started
 
@@ -56,6 +56,10 @@ The app merges records using shared identifiers (CVE/GHSA aliases), and preserve
 - [Deployment, operation and troubleshooting](docs/OPERATIONS.md)
 - [Teams integration and university-owner handoff](docs/TEAMS.md)
 - [Security considerations and vulnerability reporting](SECURITY.md)
+
+## Decision-first dashboard
+
+The homepage highlights up to six watchlist-matched high/critical or KEV-listed advisories. The full archive is collapsed by default. This **focus ranking is not proof of institutional exposure**. A critical vulnerability without an explicit technology match may stay in the full archive. Incomplete sources are shown in the dashboard status.
 
 ## Teams: integration after university approval
 

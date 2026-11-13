@@ -36,11 +36,11 @@ Never equate a CVSS score or a watchlist match with confirmed local exposure. â€
 
 ## User experience
 
-Dashboard: status/last synchronization, counts, search by identifier/product, filters for priority, severity and KEV, references to official advisories. The UI never claims institutional exposure. Data are deliberately rendered as text, not HTML, to avoid cross-site scripting through untrusted advisory content.
+Dashboard: a six-item focus view for high-impact watchlist matches, a collapsed full searchable archive, status/last synchronization, and official advisory links. The UI never claims institutional exposure. Data are deliberately rendered as text, not HTML, to avoid cross-site scripting through untrusted advisory content.
 
 ## Phased roadmap
 
-1. **MVP:** CISA KEV, GitHub Advisories, NVD, offline tests, generated JSON.
+1. **MVP:** CISA KEV, selected high/critical GitHub Advisories, critical NVD, Red Hat Quay CVEs, offline tests, generated JSON.
 2. **Public website:** GitHub Pages deployment and source-health indicators.
 3. **Expanded sources:** OSV package queries; Red Hat; Microsoft MSRC; Python; conda-forge; Docker. Each requires adapter tests, source/coverage checks and rate-limit review.
 4. **Institutional integration:** Teams Workflow/webhook, university approval, operational ownership, monitored technologies.

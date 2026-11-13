@@ -42,6 +42,21 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(len(rows), 1)
         self.assertEqual(alerts, [])
 
+    def test_quay_highlight_and_no_confirmed_exposure(self):
+        quay = make_advisory(
+            identifier="CVE-2026-123710",
+            title="Red Hat Quay signing-key takeover", severity="critical", cvss=9.8,
+            affected=["Red Hat Quay"],
+            source="Red Hat Security Data API",
+            url="https://access.redhat.com/security/cve/CVE-2026-123710",
+            published="2026-11-11")
+        rows, alerts = process(now=self.now, previous=[], fetched=[quay],
+                               watchlist=["Quay"])
+        self.assertEqual(rows[0]["priority"], "review")
+        self.assertGreater(rows[0]["attention_score"], 0)
+        self.assertEqual(rows[0]["exposure"], "not assessed")
+        self.assertEqual(alerts[0]["id"], "CVE-2026-123710")
+
     def test_cross_source_alias_merges(self):
         ghsa = make_advisory(
             identifier="CVE-2026-123", aliases=["GHSA-aaaa-bbbb-cccc"],

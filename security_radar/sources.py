@@ -132,32 +132,48 @@ def collect_kev(now: datetime, *, days: int = 90) -> list[dict]:
     return parse_kev(get_json(KEV_URL), since=cutoff_date(now, days))
 
 
-def collect_ghsa(now: datetime, *, days: int = 7) -> list[dict]:
+def collect_ghsa(now: datetime, *, days: int = 3) -> list[dict]:
+    """High/critical reviewed advisories + critical unreviewed advisories.
+
+    GitHub separates reviewed (package-vetted) and unreviewed (often vendor CVEs).
+    Ignoring unreviewed records hides newly disclosed registry vulnerabilities.
+    Keep the bounded result set honest: raise if any query is truncated.
+    """
     since = cutoff_date(now, days)
     found = []
-    # The 'modified' qualifier includes published and updated advisories.
-    for page in range(1, 6):
-        params = urlencode({"type": "reviewed", "modified": ">=" + since,
-                            "per_page": 100, "page": page, "sort": "updated", "direction": "desc"})
-        batch = get_json(GHSA_URL + "?" + params, api="github")
-        found.extend(parse_ghsa(batch))
-        if len(batch) < 100:
-            break
-    else:
-        raise SourceError("GitHub results exceeded five pages; refusing incomplete snapshot")
+    for kind, severity in (("reviewed", "critical"), ("reviewed", "high"),
+                           ("unreviewed", "critical")):
+        for page in range(1, 21):
+            params = urlencode({"type": kind, "severity": severity, "modified": ">=" + since,
+                                "per_page": 100, "page": page, "sort": "updated",
+                                "direction": "desc"})
+            batch = get_json(GHSA_URL + "?" + params, api="github")
+            if not isinstance(batch, list):
+                raise SourceError("Unexpected GitHub advisory response")
+            found.extend(parse_ghsa(batch))
+            if len(batch) < 100:
+                break
+        else:
+            raise SourceError(f"GitHub {kind}/{severity} exceeded 2000 records; results incomplete")
     return found
 
 
-def collect_nvd(now: datetime, *, days: int = 7) -> list[dict]:
-    # NVD accepts extended ISO-8601 timestamps for last-modified windows.
-    # NVD prohibits windows longer than 120 days.
+def collect_nvd(now: datetime, *, days: int = 3) -> list[dict]:
+    """Recent NVD CVEs already scored CRITICAL using CVSS v3.
+
+    Narrowing by severity prevents the API's very large all-severity modification
+    backlog from hiding the entire source. Other new CVEs can appear in GHSA/KEV.
+    """
     start = (now - timedelta(days=min(days, 110))).strftime("%Y-%m-%dT%H:%M:%S.000")
     end = now.strftime("%Y-%m-%dT%H:%M:%S.000")
     index, output = 0, []
     while True:
         params = urlencode({"lastModStartDate": start, "lastModEndDate": end,
+                            "cvssV3Severity": "CRITICAL",
                             "resultsPerPage": 1000, "startIndex": index})
         payload = get_json(NVD_URL + "?" + params, api="nvd")
+        if not isinstance(payload, dict):
+            raise SourceError("Unexpected NVD response")
         output.extend(parse_nvd(payload))
         total = payload.get("totalResults")
         if not isinstance(total, int):
@@ -167,10 +183,76 @@ def collect_nvd(now: datetime, *, days: int = 7) -> list[dict]:
             break
         if not payload["vulnerabilities"]:
             raise SourceError("NVD pagination stopped unexpectedly")
-        # Without an API key NVD limits request frequency.
-        time.sleep(6)
+        time.sleep(6)  # NVD without API key enforces low request frequency.
         if index >= 10000:
-            raise SourceError("NVD returned >10000 records; increase pagination capacity")
+            raise SourceError("NVD critical results exceeded 10000; narrow the collection window")
     return output
 
-SOURCES = {"cisa_kev": collect_kev, "github_advisories": collect_ghsa, "nist_nvd": collect_nvd}
+
+REDHAT_CVE_URL = "https://access.redhat.com/hydra/rest/securitydata/cve.json"
+REDHAT_CVE_DETAILS = "https://access.redhat.com/hydra/rest/securitydata/cve/"
+
+
+def parse_redhat_quay(items: list[dict]) -> list[dict]:
+    """Parse public Red Hat Security Data API CVE records for Quay products."""
+    if not isinstance(items, list):
+        raise SourceError("Unexpected Red Hat Security Data API schema")
+    results = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        cve = item.get("CVE") or item.get("cve_id")
+        if not isinstance(cve, str) or not re.fullmatch(r"CVE-\d{4}-\d{4,}", cve, re.I):
+            continue
+        bugzilla = item.get("bugzilla") or {}
+        if isinstance(bugzilla, list):
+            bugzilla = bugzilla[0] if bugzilla else {}
+        desc = (bugzilla.get("description") if isinstance(bugzilla, dict) else None)
+        details = item.get("details") or item.get("description") or ""
+        if isinstance(details, list):
+            details = next((entry for entry in details if isinstance(entry, str)), "")
+        if not isinstance(details, str):
+            details = ""
+        title = str(desc or item.get("title") or details[:150] or
+                    ("Red Hat Quay security advisory " + cve))
+        score = item.get("cvss3_score") or item.get("cvss_score")
+        try:
+            score = float(score) if score is not None else None
+        except (TypeError, ValueError):
+            score = None
+        severity = str(item.get("severity") or cvss_to_severity(score)).lower()
+        if severity == "important":
+            severity = "high"
+        if severity == "moderate":
+            severity = "medium"
+        results.append(make_advisory(
+            identifier=cve, title=title, summary=details or title,
+            severity=severity, cvss=score,
+            affected=["Red Hat Quay"],
+            source="Red Hat Security Data API",
+            url="https://access.redhat.com/security/cve/" + cve,
+            published=str(item.get("public_date") or ""),
+            modified=str(item.get("public_date") or "")))
+    return results
+
+
+def collect_redhat_quay(now: datetime, *, days: int = 7) -> list[dict]:
+    """Red Hat's official API scoped to its Quay products, not all Red Hat CVEs."""
+    since = cutoff_date(now, days)
+    results = []
+    for page in range(1, 11):
+        params = urlencode({"after": since, "product": "Red Hat Quay",
+                            "per_page": 100, "page": page, "isCompressed": "false"})
+        payload = get_json(REDHAT_CVE_URL + "?" + params)
+        if not isinstance(payload, list):
+            raise SourceError("Unexpected Red Hat CVE list schema")
+        results.extend(parse_redhat_quay(payload))
+        if len(payload) < 100:
+            break
+    else:
+        raise SourceError("Red Hat Quay CVEs exceeded ten pages; results incomplete")
+    return results
+
+
+SOURCES = {"cisa_kev": collect_kev, "github_advisories": collect_ghsa,
+           "nist_nvd": collect_nvd, "redhat_quay": collect_redhat_quay}

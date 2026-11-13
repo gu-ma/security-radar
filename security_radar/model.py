@@ -100,5 +100,10 @@ def enrich(advisory: dict, watchlist: list[str]) -> dict:
     else:
         priority = "information"
     result["priority"] = priority
+    # Only order leads within the dashboard. A high score is not confirmed exposure.
+    severity_points = {"critical": 45, "high": 25, "medium": 5, "low": 0, "unknown": 0}
+    result["attention_score"] = (80 if advisory.get("exploited") else 0) + (
+        severity_points.get(advisory.get("severity"), 0)
+    ) + (30 if matches else 0)
     result["exposure"] = "not assessed"
     return result

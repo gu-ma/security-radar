@@ -8,7 +8,26 @@ const elements = {
   more: document.getElementById("more"),
 };
 let advisories = [];
-let visibleLimit = 40;
+let visibleLimit = 20;
+function urgency(a) {
+  const severity = {critical: 45, high: 25, medium: 5, low: 0, unknown: 0};
+  return typeof a.attention_score === "number" ? a.attention_score :
+    (a.exploited ? 80 : 0) + (severity[a.severity] || 0) +
+      ((a.matched_topics || []).length ? 30 : 0);
+}
+function chronological(a, b) { return String(b.modified || b.published || "").localeCompare(String(a.modified || a.published || "")); }
+function prioritize(a, b) { return urgency(b) - urgency(a) || chronological(a, b); }
+function spotlight() {
+  const important = advisories.filter(a => (a.matched_topics || []).length &&
+    (a.exploited || ["critical", "high"].includes(a.severity)))
+    .sort(prioritize);
+  const container = document.getElementById("spotlight");
+  container.replaceChildren();
+  important.slice(0, 6).forEach(a => container.appendChild(card(a, true)));
+  if (!important.length) container.appendChild(text("div", "No high-priority watchlist matches in the available data. Check source health before interpreting this as an all-clear.", "empty"));
+  document.getElementById("focus-summary").textContent =
+    important.length + " potential high-priority watchlist matches · showing up to 6 · source data may be incomplete.";
+}
 
 function text(tag, value, className) {
   const el = document.createElement(tag);
@@ -32,7 +51,7 @@ function displayDate(value) {
   const date = new Date(value);
   return isNaN(date.getTime()) ? String(value).slice(0, 10) : date.toLocaleDateString(undefined, {year:"numeric",month:"short",day:"numeric"});
 }
-function card(a) {
+function card(a, featured = false) {
   const article = document.createElement("article");
   article.className = "advisory";
   const head = text("div", "", "advisory-header");
@@ -42,13 +61,23 @@ function card(a) {
   if (a.exploited) head.appendChild(text("span", "CISA KEV", "tag exploited"));
   article.appendChild(head);
   article.appendChild(text("h3", a.title || a.id));
-  if (a.summary) article.appendChild(text("p", a.summary));
+  if (a.summary) article.appendChild(text("p",
+    a.summary.length > (featured ? 340 : 230) ?
+      a.summary.slice(0, featured ? 340 : 230).trimEnd() + "…" : a.summary));
   const meta = text("div", "", "metadata");
   meta.appendChild(text("span", "Updated " + displayDate(a.modified || a.published)));
   const matches = a.matched_topics || [];
   if (matches.length) meta.appendChild(text("span", "Topics: " + matches.join(", ")));
   (a.sources || []).slice(0, 3).forEach(s => { const l = sourceLink(s); if (l) meta.appendChild(l); });
   article.appendChild(meta);
+  if (featured) {
+    const reasons = [];
+    if (a.exploited) reasons.push("Listed in CISA KEV");
+    if (a.severity === "critical") reasons.push("Critical severity" + (a.cvss ? " · CVSS " + a.cvss : ""));
+    else if (a.severity === "high") reasons.push("High severity");
+    if (matches.length) reasons.push("Watchlist: " + matches.join(", "));
+    article.appendChild(text("p", "Why highlighted: " + reasons.join(" · ") + ". Local exposure not assessed.", "spotlight-reason"));
+  }
   return article;
 }
 function render() {
@@ -63,6 +92,7 @@ function render() {
     if (q && ![a.id, a.title, a.summary, ...(a.affected || []), ...(a.matched_topics || []), ...(a.aliases || [])].join(" ").toLowerCase().includes(q)) return false;
     return true;
   });
+  matched.sort(prioritize);
   elements.list.replaceChildren();
   if (!matched.length) elements.list.appendChild(text("div", "No advisories match these filters. Try broadening your search.", "empty"));
   else matched.slice(0, visibleLimit).forEach(a => elements.list.appendChild(card(a)));
@@ -85,6 +115,7 @@ async function load() {
     if (!status.last_run) sync.textContent = "Not yet populated — run the monitor workflow to collect advisories.";
     else sync.textContent = "Updated " + displayDate(status.last_run) +
       (status.partial ? " · Some sources failed: " + (status.source_errors || []).join(", ") : " · Sources collected successfully");
+    spotlight();
     render();
   } catch (error) {
     document.getElementById("sync-status").textContent = "Data unavailable — inspect GitHub Actions.";

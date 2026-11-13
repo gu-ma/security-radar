@@ -29,7 +29,7 @@ No pip install is necessary; Python 3.11+ is recommended. Internet access is req
 
 ## Source health
 
-NVD, GitHub and CISA each report a last success timestamp and current state. If one fails, old data is retained and the dashboard notes partial success; investigate authentication and rate limits. If **all** fail, the monitor exits nonzero and does not overwrite previously successful data.
+NVD, GitHub, CISA and Red Hat Quay each report a last success timestamp and current state. If one fails, old data is retained and the dashboard notes partial success; investigate authentication and rate limits. If **all** fail, the monitor exits nonzero and does not overwrite previously successful data.
 
 Potential limits: NVD no-key rate limiting, NVD record volume, GitHub API quotas, CISA JSON availability and scheduled workflow delays. The first run is a baseline, not an incident event.
 

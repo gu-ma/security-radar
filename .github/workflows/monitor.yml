@@ -4,6 +4,16 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "security_radar/**"
+      - "tests/**"
+      - "config/**"
+      - "docs/index.html"
+      - "docs/app.js"
+      - "docs/styles.css"
+      - ".github/workflows/monitor.yml"
 
 concurrency:
   group: security-radar
@@ -41,7 +51,7 @@ jobs:
         continue-on-error: true
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
-          RADAR_DASHBOARD_URL: https://gu-ma.github.io/security-radar/
+          RADAR_DASHBOARD_URL: https://apps.massol.me/security-radar/
         run: python -m security_radar.notify
       - name: Package static website
         if: ${{ vars.ENABLE_PAGES == 'true' }}
