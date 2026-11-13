@@ -55,7 +55,8 @@ def coalesce(records: list[dict], existing: list[dict], now: str) -> dict[str, d
 
 def process(*, now: datetime, previous: list[dict], fetched: list[dict],
             watchlist: list[str], retention_days: int = 180,
-            max_entries: int = 2500) -> tuple[list[dict], list[dict]]:
+            max_entries: int = 2500,
+            focus_topics: list[str] | None = None) -> tuple[list[dict], list[dict]]:
     timestamp = now.isoformat(timespec="seconds").replace("+00:00", "Z")
     earlier = {alias for row in previous for alias in [row["id"]] + row.get("aliases", [])}
     merged = coalesce(fetched, previous, timestamp)
@@ -65,7 +66,7 @@ def process(*, now: datetime, previous: list[dict], fetched: list[dict],
         # Keep existing advisories when recently modified, even if first disclosed years ago.
         if max(row.get("modified", ""), row.get("published", ""))[:10] < cutoff:
             continue
-        recent.append(enrich(row, watchlist))
+        recent.append(enrich(row, watchlist, focus_topics=focus_topics))
     levels = {"investigate": 0, "review": 1, "information": 2}
     recent.sort(key=lambda row: row.get("modified", ""), reverse=True)
     recent.sort(key=lambda row: (-row.get("attention_score", 0), levels[row["priority"]]))
@@ -82,6 +83,7 @@ def run(config_path: Path, data_dir: Path) -> int:
     watchlist = config.get("watchlist", [])
     if not isinstance(watchlist, list) or not all(isinstance(w, str) for w in watchlist):
         raise ValueError("config.watchlist must be an array of strings")
+    focus_topics = config.get("focus_topics", [])
     now = datetime.now(timezone.utc)
     now_string = now.isoformat(timespec="seconds").replace("+00:00", "Z")
     old_rows = read_json(data_dir / "advisories.json", [])
@@ -126,7 +128,7 @@ def run(config_path: Path, data_dir: Path) -> int:
         return 1
 
     records, fresh = process(now=now, previous=old_rows, fetched=fetched,
-                             watchlist=watchlist,
+                             watchlist=watchlist, focus_topics=focus_topics,
                              retention_days=int(config.get("retention_days", 180)),
                              max_entries=int(config.get("max_entries", 2500)))
     # On initial run, populate history without posting months of backlog.

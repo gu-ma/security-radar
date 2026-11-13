@@ -36,3 +36,5 @@
 - Watchlists are keyword matching rather than product and version resolution.
 - Cross-source data quality and CVE propagation delays vary.
 - For authoritative remediation instructions, always follow original vendor advisories.
+
+**Focused watchlist ranking:** `config/monitor.json` has a `focus_topics` list used solely to rank the homepage shortlist. It does not affect CVE severity or assert local exposure. The GitHub unreviewed-critical query is restricted to a one-day lookback to control extreme feed volume; this is not complete historical coverage.

@@ -144,7 +144,8 @@ def collect_ghsa(now: datetime, *, days: int = 3) -> list[dict]:
     for kind, severity in (("reviewed", "critical"), ("reviewed", "high"),
                            ("unreviewed", "critical")):
         for page in range(1, 21):
-            params = urlencode({"type": kind, "severity": severity, "modified": ">=" + since,
+            params = urlencode({"type": kind, "severity": severity,
+                                "modified": ">=" + (cutoff_date(now, 1) if kind == "unreviewed" else since),
                                 "per_page": 100, "page": page, "sort": "updated",
                                 "direction": "desc"})
             batch = get_json(GHSA_URL + "?" + params, api="github")
@@ -246,7 +247,18 @@ def collect_redhat_quay(now: datetime, *, days: int = 7) -> list[dict]:
         payload = get_json(REDHAT_CVE_URL + "?" + params)
         if not isinstance(payload, list):
             raise SourceError("Unexpected Red Hat CVE list schema")
-        results.extend(parse_redhat_quay(payload))
+        # List items are intentionally compact; enrich Quay descriptions using
+        # Red Hat's public per-CVE endpoint when available.
+        for item in payload:
+            cve = (item or {}).get("CVE") if isinstance(item, dict) else None
+            if isinstance(cve, str) and re.fullmatch(r"CVE-\d{4}-\d{4,}", cve, re.I):
+                try:
+                    full = get_json(REDHAT_CVE_DETAILS + cve + ".json")
+                    if isinstance(full, dict):
+                        item = {**item, **full}
+                except SourceError:
+                    pass  # A missing detail endpoint must not discard an advisory.
+            results.extend(parse_redhat_quay([item]))
         if len(payload) < 100:
             break
     else:

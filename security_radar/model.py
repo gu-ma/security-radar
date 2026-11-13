@@ -83,7 +83,7 @@ def merge(old: dict, new: dict, now: str) -> dict:
     return out
 
 
-def enrich(advisory: dict, watchlist: list[str]) -> dict:
+def enrich(advisory: dict, watchlist: list[str], focus_topics: list[str] | None = None) -> dict:
     """Keywords indicate possible relevance, NEVER confirmed institutional exposure."""
     result = dict(advisory)
     searchable = " ".join([advisory.get("title", ""), advisory.get("summary", ""),
@@ -102,7 +102,8 @@ def enrich(advisory: dict, watchlist: list[str]) -> dict:
     result["priority"] = priority
     # Only order leads within the dashboard. A high score is not confirmed exposure.
     severity_points = {"critical": 45, "high": 25, "medium": 5, "low": 0, "unknown": 0}
-    result["attention_score"] = (80 if advisory.get("exploited") else 0) + (
+    boost = 50 if set(w.lower() for w in matches) & set(w.lower() for w in (focus_topics or [])) else 0
+    result["attention_score"] = boost + (80 if advisory.get("exploited") else 0) + (
         severity_points.get(advisory.get("severity"), 0)
     ) + (30 if matches else 0)
     result["exposure"] = "not assessed"
