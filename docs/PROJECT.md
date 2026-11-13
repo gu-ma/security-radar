@@ -67,3 +67,15 @@ Dashboard: a six-item focus view for high-impact watchlist matches, a collapsed 
 **Security stakeholders:** scope the relevant technologies and decide escalation based on actual asset information.
 
 A public monitoring result is an investigation lead, not a university security incident declaration.
+
+## v0.2 decision-first design
+
+- CVSS score and version are prominent at top right; unknown scores/versions are marked as such.
+- Technology category is a multi-label attribute with six known values, plus `unclassified` for insufficient evidence.
+- Security topics describe vulnerability mechanism and are separate from technology category.
+- "Why it matters" is derived from original advisory text, never from unverified AI-generated explanations.
+- "Suggested next step" is a conservative rule-based template. It does not state that institutional infrastructure is affected.
+- The focus view shows up to six significant watchlist leads. The full archive has distinct technology/topic/severity/priority/KEV filters, and supports shareable search/category links.
+- Teams uses the same structured fields and deterministic filters, but does not replace the dashboard. Only selected new alerts are eligible for notification.
+- Adapter discovery is modular: add a module plus tests and configuration, not UI or notification code.
+- Teams acceptance has two independent gates: offline Python payload/HTTP tests and an actual approved university Workflow post. The second cannot be performed from an unconnected local development environment.

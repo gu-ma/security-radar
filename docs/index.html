@@ -37,6 +37,15 @@
     <section id="focus" class="focus" aria-labelledby="focus-title">
       <div class="section-heading"><div><div class="eyebrow">WATCHLIST-RELEVANT FINDINGS</div><h2 id="focus-title">Focus now</h2></div><p class="results">A short list, ranked by exploitation signal, severity and technology match</p></div>
       <p class="focus-intro">These are investigation leads, <strong>not</strong> confirmed exposures in your organization. Only public advisories are used.</p>
+      <nav id="category-tabs" class="category-tabs" aria-label="Filter focus by technology">
+        <button type="button" class="category-pill active" data-category="" aria-pressed="true">All technologies</button>
+        <button type="button" class="category-pill" data-category="applications" aria-pressed="false">Applications</button>
+        <button type="button" class="category-pill" data-category="dependencies" aria-pressed="false">Libraries & dependencies</button>
+        <button type="button" class="category-pill" data-category="containers" aria-pressed="false">Containers & registries</button>
+        <button type="button" class="category-pill" data-category="infrastructure" aria-pressed="false">Servers & infrastructure</button>
+        <button type="button" class="category-pill" data-category="cloud-identity" aria-pressed="false">Cloud & identity</button>
+        <button type="button" class="category-pill" data-category="ai-ml" aria-pressed="false">AI & ML tooling</button>
+      </nav>
       <div id="spotlight" class="spotlight-list"><div class="empty">Loading priority advisories…</div></div>
       <div id="focus-summary" class="focus-summary" aria-live="polite"></div>
     </section>
@@ -46,6 +55,8 @@
       <div class="section-heading"><div><div class="eyebrow">RECENT INTELLIGENCE</div><h2 id="findings-title">Advisory explorer</h2></div><p id="result-count" class="results" aria-live="polite"></p></div>
       <div class="filters">
         <label class="searchbox"><span class="sr-only">Search advisories</span><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search CVE, vendor, package or keyword…" autocomplete="off"></label>
+        <label class="dropdown"><span class="sr-only">Filter by technology category</span><select id="category"><option value="">All technologies</option><option value="applications">Applications</option><option value="dependencies">Libraries & dependencies</option><option value="containers">Containers & registries</option><option value="infrastructure">Servers & infrastructure</option><option value="cloud-identity">Cloud & identity</option><option value="ai-ml">AI & ML tooling</option><option value="unclassified">Unclassified</option></select></label>
+        <label class="dropdown"><span class="sr-only">Filter by security topic</span><select id="topic"><option value="">All security topics</option><option>Supply chain</option><option>Remote code execution</option><option>Privilege escalation</option><option>Authentication & authorization</option><option>Data exposure</option><option>Denial of service</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by priority</span><select id="priority"><option value="">All priorities</option><option value="investigate">Investigate</option><option value="review">Review</option><option value="information">Information</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by severity</span><select id="severity"><option value="">All severities</option><option value="critical">Critical</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option><option value="unknown">Unknown</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by exploited</span><select id="exploited"><option value="">All exploitation statuses</option><option value="yes">CISA KEV listed</option><option value="no">Not KEV listed</option></select></label>

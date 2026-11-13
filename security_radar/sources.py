@@ -60,13 +60,17 @@ def parse_ghsa(payload: list) -> list[dict]:
             score = float(score) if score is not None else None
         except (TypeError, ValueError):
             score = None
+        version = ""
+        vector = (item.get("cvss") or {}).get("vector_string") or ""
+        if isinstance(vector, str) and vector.startswith("CVSS:"):
+            version = vector.partition("/")[0].removeprefix("CVSS:")
         output.append(make_advisory(
             identifier=ident,
             aliases=[item["ghsa_id"]],
             title=item.get("summary") or ident,
             summary=item.get("description") or "",
             severity=item.get("severity", "unknown"),
-            cvss=score, affected=packages, ecosystems=ecosystems,
+            cvss=score, cvss_version=version, affected=packages, ecosystems=ecosystems,
             source="GitHub Advisory Database",
             url=item.get("html_url") or ("https://github.com/advisories/" + item["ghsa_id"]),
             published=item.get("published_at", ""),

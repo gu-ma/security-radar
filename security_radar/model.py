@@ -34,6 +34,7 @@ def cvss_to_severity(score: float | None) -> str:
 
 def make_advisory(*, identifier: str, title: str, summary: str = "",
                   severity: str = "unknown", cvss: float | None = None,
+                  cvss_version: str = "",
                   exploited: bool = False, affected: list[str] | None = None,
                   ecosystems: list[str] | None = None, aliases: list[str] | None = None,
                   source: str, url: str, published: str = "", modified: str = "") -> dict:
@@ -43,7 +44,8 @@ def make_advisory(*, identifier: str, title: str, summary: str = "",
     return {
         "id": identifier, "title": title.strip()[:300],
         "summary": " ".join(summary.split())[:900],
-        "severity": severity, "cvss": cvss, "exploited": bool(exploited),
+        "severity": severity, "cvss": cvss, "cvss_version": cvss_version,
+        "exploited": bool(exploited),
         "affected": sorted(set(affected or []))[:60],
         "ecosystems": sorted(set(ecosystems or [])),
         "aliases": sorted(set([identifier] + (aliases or []))),
@@ -72,6 +74,8 @@ def merge(old: dict, new: dict, now: str) -> dict:
                           key=lambda x: ranks.get(x, 0))
     scores = [v for v in (old.get("cvss"), new.get("cvss")) if isinstance(v, (int, float))]
     out["cvss"] = max(scores) if scores else None
+    out["cvss_version"] = (new.get("cvss_version") if new.get("cvss") == out["cvss"]
+                           and new.get("cvss_version") else old.get("cvss_version", ""))
     if len(new.get("summary", "")) > len(old.get("summary", "")):
         out["summary"] = new["summary"]
     if (not old.get("title") or old.get("title") == old["id"]) and new.get("title"):
@@ -106,5 +110,10 @@ def enrich(advisory: dict, watchlist: list[str], focus_topics: list[str] | None 
     result["attention_score"] = boost + (80 if advisory.get("exploited") else 0) + (
         severity_points.get(advisory.get("severity"), 0)
     ) + (30 if matches else 0)
+    from .taxonomy import categorize, explanation, next_step, topic_tags
+    result["categories"] = categorize(advisory)
+    result["security_topics"] = topic_tags(advisory)
+    result["why_it_matters"] = explanation(advisory)
+    result["suggested_next_step"] = next_step(result)
     result["exposure"] = "not assessed"
     return result

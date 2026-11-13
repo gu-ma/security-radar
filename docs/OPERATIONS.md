@@ -56,3 +56,13 @@ Potential limits: NVD no-key rate limiting, NVD record volume, GitHub API quotas
 - Polling and advisory storage have bounded sizes; see code for limits.
 - No operational on-call guarantee or complete source coverage.
 - The optional Teams notifier has not been exercised against a real tenant.
+
+## v0.2 validation
+
+Run `python -m unittest discover -s tests -v` and `python -m security_radar.notify --dry-run --alerts-file examples/sample_alerts.json` to validate the full offline Teams payload contract. The latter makes no HTTP requests.
+
+The monitor uses dynamic modules in `security_radar/adapters/`. After adding an adapter, check both offline tests and live `docs/data/status.json` source health before describing it as active.
+
+Tagging, category-specific next steps, and official explanations are entirely deterministic. False-positive categorization is possible; update the explicit rules and tests when needed.
+
+Teams notification is disabled unless the authorized university owner has confirmed a Workflow test and the repository owner enables `ENABLE_TEAMS`.

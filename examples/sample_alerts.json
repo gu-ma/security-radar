@@ -1,0 +1,54 @@
+{
+  "alerts": [
+    {
+      "id": "CVE-2026-123710",
+      "title": "Example Quay registry signing-key issue",
+      "summary": "A public advisory describes unauthorized registry signing-key changes in affected configurations.",
+      "why_it_matters": "A public advisory describes unauthorized registry signing-key changes in affected configurations.",
+      "suggested_next_step": "Check the upstream Red Hat advisory and determine whether affected versions are in use.",
+      "severity": "critical",
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "categories": [
+        "containers"
+      ],
+      "security_topics": [
+        "Supply chain"
+      ],
+      "priority": "review",
+      "attention_score": 125,
+      "matched_topics": [
+        "Quay"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "sources": [
+        {
+          "name": "Red Hat Security Data",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-123710"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-000001",
+      "title": "Example unrelated critical vulnerability",
+      "summary": "Synthetic unrelated case for filtering tests.",
+      "severity": "critical",
+      "cvss": 9.8,
+      "categories": [
+        "applications"
+      ],
+      "matched_topics": [],
+      "priority": "information",
+      "exploited": false,
+      "sources": [
+        {
+          "name": "Example",
+          "url": "https://example.org/advisory"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-13T00:00:00Z",
+  "note": "Synthetic offline test data; not live monitoring."
+}

@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .model import enrich, merge, utcnow
-from .sources import SOURCES
+from .registry import discover_sources
 
 LOG = logging.getLogger("security_radar")
 
@@ -93,7 +93,7 @@ def run(config_path: Path, data_dir: Path) -> int:
     fetched: list[dict] = []
     success = 0
     errors = []
-    for name, collector in SOURCES.items():
+    for name, collector in discover_sources().items():
         if not config.get("collectors", {}).get(name, True):
             continue
         previous_success = old_sources.get(name, {}).get("last_success")

@@ -38,3 +38,17 @@
 - For authoritative remediation instructions, always follow original vendor advisories.
 
 **Focused watchlist ranking:** `config/monitor.json` has a `focus_topics` list used solely to rank the homepage shortlist. It does not affect CVE severity or assert local exposure. The GitHub unreviewed-critical query is restricted to a one-day lookback to control extreme feed volume; this is not complete historical coverage.
+
+## Adding a new source adapter
+
+Source adapters are discovered automatically in `security_radar/adapters/`. A new module needs a unique `SOURCE_ID` string and a callable `collect(now, *, days)` returning dictionaries created by `security_radar.model.make_advisory`. Define an explicit `DESCRIPTION` and add source-specific parser tests. Add the matching `collectors` entry to `config/monitor.json`, and update this file to reflect the actual coverage.
+
+No changes to the dashboard, taxonomy, ranking or Teams notifier are necessary. Source text is untrusted data and must never execute as code. Do not mark a planned source as implemented before a successful live check.
+
+### Deterministic tagging
+
+Six broad categories are assigned by rules in `security_radar/taxonomy.py`: Applications, Libraries & dependencies, Containers & registries, Servers & infrastructure, Cloud & identity, and AI & ML tooling. Multiple categories may apply. Security topics are separate: Supply chain, Remote code execution, Privilege escalation, Authentication & authorization, Data exposure and Denial of service.
+
+Unknown categories are marked `unclassified`. Keyword rules can produce false positives. None of these tags establishes affected software versions or university exposure.
+
+Where provided, CVSS score and source/version are displayed. A missing version is marked as not provided rather than guessed. Explanation uses the original public summary, and the recommended next step is chosen from fixed, deterministic templates.
