@@ -1,0 +1,965 @@
+<?xml version='1.0' encoding='utf-8'?>
+<atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
+  <atom:title>Security Radar | High-signal advisories</atom:title>
+  <atom:subtitle>Selected public advisories. Institutional exposure has not been assessed.</atom:subtitle>
+  <atom:id>https://apps.massol.me/security-radar/</atom:id>
+  <atom:link rel="self" href="https://apps.massol.me/security-radar/atom.xml" type="application/atom+xml" />
+  <atom:link rel="alternate" href="https://apps.massol.me/security-radar/" />
+  <atom:author>
+    <atom:name>Security Radar</atom:name>
+  </atom:author>
+  <atom:updated>2026-11-13T10:18:08Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-128027#findings</atom:id>
+    <atom:title>FrankenPHP Docker images before 1.1.11 were rebuilt only when new base image tags were created, so security fixes that Alpine, PHP, and Go applied und</atom:title>
+    <atom:published>2026-11-13T10:18:08Z</atom:published>
+    <atom:updated>2026-11-13T10:18:08Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-128027#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-128027" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3
+
+Summary: FrankenPHP Docker images before 1.1.11 were rebuilt only when new base image tags were created, so security fixes that Alpine, PHP, and Go applied under existing tags were not propagated. Remote attackers could exploit known flaws in the stale system libraries, such as CVE-2025-15467 in libcrypto3, to execute code.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-128027
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-127080#findings</atom:id>
+    <atom:title>OpsTree BuildPiper before 2.7.0 contains an improper authorization vulnerability that allows authenticated deploy users to define arbitrary Kubernetes</atom:title>
+    <atom:published>2026-11-13T10:18:04Z</atom:published>
+    <atom:updated>2026-11-13T10:18:04Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-127080#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-127080" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4
+
+Summary: OpsTree BuildPiper before 2.7.0 contains an improper authorization vulnerability that allows authenticated deploy users to define arbitrary Kubernetes hostPath volumes without allow-list or policy checks. Attackers can set the host path to / in the Define HostPath Volume configuration to mount the worker node root filesystem read-write, breaking container isolation and enabling node and cluster compromise.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-127080
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-127073#findings</atom:id>
+    <atom:title>OpsTree BuildPiper before 2.7.0 contains a privilege escalation vulnerability that allows project users to gain Kubernetes cluster-admin rights by sub</atom:title>
+    <atom:published>2026-11-13T10:18:03Z</atom:published>
+    <atom:updated>2026-11-13T10:18:03Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-127073#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-127073" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4
+
+Summary: OpsTree BuildPiper before 2.7.0 contains a privilege escalation vulnerability that allows project users to gain Kubernetes cluster-admin rights by submitting unrestricted manifests through the Additional Manifest feature. Attackers can deploy a ClusterRoleBinding binding a service account to cluster-admin, which the pipeline applies with cluster-wide credentials, granting control over all workloads and secrets.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-127073
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Privilege escalation" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-52829#findings</atom:id>
+    <atom:title>Zebra Address Book Aborted by IPv4-Mapped Mempool Misbehavior Update</atom:title>
+    <atom:published>2026-07-02T20:26:56Z</atom:published>
+    <atom:updated>2026-11-13T02:42:30Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-52829#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-63wg-wjjj-7cp8" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ### Am I affected You are affected if: 1. You run `zebrad` up to and including `v4.4.1`. 2. Your node listens on the default `[::]` address on a Linux host (the standard deployment configuration — `net.ipv6.bindv6only=0` is the default on all common Linux distributions). 3. Your node is synced near the chain tip (the expected production state for any node participating in the network). ### Summary An address normalization mismatch between the handshake path and the mempool misbehavior path causes a deterministic assertion panic when a peer connects via IPv4 to a dual-stack IPv6 listener and then triggers a mempool misbehavior penalty. The handshake path canonicalizes IPv4-mapped IPv6 addresses to plain IPv4 when storing the peer in the address book via `MetaAddr::new_connected`. The mempool misbehavior path forwards the raw transient socket address (IPv4-mapped IPv6 form) when sending `M
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-63wg-wjjj-7cp8
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-123710#findings</atom:id>
+    <atom:title>Red Hat Quay security advisory CVE-2026-123710</atom:title>
+    <atom:published>2026-11-11T14:00:00Z</atom:published>
+    <atom:updated>2026-11-13T00:32:54Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-123710#findings" type="text/html" />
+    <atom:link rel="related" href="https://access.redhat.com/security/cve/CVE-2026-123710" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: A flaw was found in Red Hat Quay. An unauthenticated client can obtain an anonymous registry token with an audience it controls, present that token to the service key rotation endpoint, and install its own approved signing key with no expiry. Registry tokens signed with that key are accepted for any repository, allowing read and write access to private images and replacement of repository tags.
+
+Suggested next step: Review the original advisory and affected build or distribution components. Verify upstream status before changing dependencies.
+
+Original advisory: https://access.redhat.com/security/cve/CVE-2026-123710
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Supply chain" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-110697#findings</atom:id>
+    <atom:title>Red Hat Quay security advisory CVE-2026-110697</atom:title>
+    <atom:published>2026-11-11T14:00:00Z</atom:published>
+    <atom:updated>2026-11-13T00:31:51Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-110697#findings" type="text/html" />
+    <atom:link rel="related" href="https://access.redhat.com/security/cve/CVE-2026-110697" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.9 (v3.1)
+
+Summary: A flaw was found in Quay where the robot account listing function constructs a SQL LIKE pattern from user-controlled namespace names without escaping wildcard metacharacters. An attacker who creates a namespace containing an underscore character can match and retrieve robot accounts and their decrypted authentication tokens from other tenants' namespaces, leading to cross-tenant credential theft and unauthorized image operations.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://access.redhat.com/security/cve/CVE-2026-110697
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-124006#findings</atom:id>
+    <atom:title>XWEB EVO through 5.8.8 contains a predictable credential generation vulnerability that allows...</atom:title>
+    <atom:published>2026-11-12T21:31:27Z</atom:published>
+    <atom:updated>2026-11-12T21:31:29Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-124006#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-hp68-2m45-hqr3" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 8.1 (v3.1)
+
+Summary: XWEB EVO through 5.8.8 contains a predictable credential generation vulnerability that allows attackers to derive the Linux root password by computing a fixed prefix combined with a daily password value. Attackers can calculate the deterministic root credential, which before 5.7.0 was identical across all units and from 5.7.0 onward remains derivable from the MAC-based daily password, to gain unauthorized root access to the underlying operating system. This product line reached it's end of service date in March 2026.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-hp68-2m45-hqr3
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-63984#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ipv6: rpl: fix hdrlen...</atom:title>
+    <atom:published>2026-07-19T18:31:48Z</atom:published>
+    <atom:updated>2026-11-12T21:31:27Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-63984#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-6hh9-w4p2-c5qm" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ipv6: rpl: fix hdrlen overflow in ipv6_rpl_srh_decompress() ipv6_rpl_srh_decompress() computes: outhdr-&gt;hdrlen = (((n + 1) * sizeof(struct in6_addr)) &gt;&gt; 3); hdrlen is __u8. For n &gt;= 127 the result exceeds 255 and silently truncates. With n=127 (cmpri=15, cmpre=15, pad=0, hdrlen=16): (128 * 16) &gt;&gt; 3 = 256, truncated to 0 as __u8 The caller in ipv6_rpl_srh_rcv() then places the compressed header at buf + ((ohdr-&gt;hdrlen + 1) &lt;&lt; 3). With hdrlen=0 this is buf + 8, but the decompressed region occupies buf[0..2055] (8-byte header plus 128 full addresses). The compressed header overlaps the decompressed data, and ipv6_rpl_srh_compress() writes into this overlap, corrupting the routing header of the forwarded packet. The existing guard at exthdrs.c:546 checks (n + 1) &gt; 255, which prevents n+1 from overflowing unsigned char (the s
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-6hh9-w4p2-c5qm
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-101031#findings</atom:id>
+    <atom:title>The `example_dag_decorator` example Dag shipped with Apache Airflow validated an IP address...</atom:title>
+    <atom:published>2026-11-09T12:31:38Z</atom:published>
+    <atom:updated>2026-11-12T18:31:21Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-101031#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-423g-74fv-rrcc" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: The `example_dag_decorator` example Dag shipped with Apache Airflow validated an IP address fetched over HTTP with Python's `ipaddress` module and then placed it into a shell command. `ipaddress` accepts IPv6 zone identifiers containing arbitrary characters, so when example Dags are loaded (`load_examples` enabled), a user who can trigger that Dag with a custom `url` parameter could point it at a server whose response injects shell commands run on the worker. This is an incomplete fix for CVE-2025-54941; users who upgraded for CVE-2025-54941 should upgrade again. Users are advised to upgrade to apache-airflow 3.4.0 or later, or to disable example Dags (`load_examples = False`), which is recommended for production.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-423g-74fv-rrcc
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-98432#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ipv4: free inet_opt and...</atom:title>
+    <atom:published>2026-10-15T18:32:33Z</atom:published>
+    <atom:updated>2026-11-12T18:31:14Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-98432#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-qp6h-4hvh-qqqc" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-qp6h-4hvh-qqqc
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-118740#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability</atom:title>
+    <atom:published>2026-11-12T17:17:48Z</atom:published>
+    <atom:updated>2026-11-12T17:17:49Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-118740#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-4g86-54fm-h9h8" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Aspire. This advisory provides guidance on updating affected applications and components. Aspire Dashboard's unauthenticated NotFound route can permit telemetry deletion in both standalone and AppHost-hosted deployments. In standalone deployments using browser-token authentication, it can also expose the browser token. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/526 ## CVSS Details - **Version:** 3.1 - **Severity:** Critical - **Score:** 9.1 - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N` - **Weakness:** CWE-862 ## Affected Platforms - **Platforms:** Any supported OS - **Architectures:** x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages ### Standalone Aspire Dashboard Package | Affected
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-4g86-54fm-h9h8
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Applications" />
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-2f3w-v7f5-vpgx#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-118740 - Aspire Security Feature Bypass Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:33:09Z</atom:published>
+    <atom:updated>2026-11-12T17:17:38Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-2f3w-v7f5-vpgx#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-2f3w-v7f5-vpgx" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-4g86-54fm-h9h8. This link is maintained to preserve external references. ## Original Description Missing authorization in Aspire allows an unauthorized attacker to bypass a security feature over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2f3w-v7f5-vpgx
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-63857#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+net: airoha: Do not read...</atom:title>
+    <atom:published>2026-07-19T15:30:27Z</atom:published>
+    <atom:updated>2026-11-12T15:32:46Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-63857#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-93j7-q4pr-7pmf" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: net: airoha: Do not read uninitialized fragment address in airoha_dev_xmit() The transmit loop in airoha_dev_xmit() reads fragment address and length during its final iteration, when the loop index equals skb_shinfo(skb)-&gt;nr_frags, at which point the fragment data is uninitialized. While these values are never consumed, the read itself is unsafe and may trigger a page fault. Fix this by avoiding the fragment read on the last iteration. Additionally, move the skb pointer from the first to the last used packet descriptor, so that airoha_qdma_tx_napi_poll() defers freeing the skb until the final descriptor is processed.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-93j7-q4pr-7pmf
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-107242#findings</atom:id>
+    <atom:title>The Node.js web service on VOS (previously Versa FlexVNF) is used for URL-based Zero Touch...</atom:title>
+    <atom:published>2026-11-10T03:30:25Z</atom:published>
+    <atom:updated>2026-11-12T15:31:52Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-107242#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-3jg2-q8pw-r325" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: The Node.js web service on VOS (previously Versa FlexVNF) is used for URL-based Zero Touch Provisioning (ZTP) of the VOS appliance and is not required after provisioning is complete. This service generates session identifiers using UUID version 1 (UUIDv1), which is derived from the system’s date and time and its MAC address. As a result, successive identifiers differ only slightly and can be predicted. An attacker who can predict a user’s session ID could hijack that user’s session. Versa’s security hardening guide for Hubs, Branches, and Controllers recommends disabling the Node.js web service after the initial provisioning of the VOS device. This vulnerability is not exploitable on VOS devices where the Node.js web service has been disabled.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-3jg2-q8pw-r325
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-63825#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+gcov: use atomic counter...</atom:title>
+    <atom:published>2026-07-19T12:30:24Z</atom:published>
+    <atom:updated>2026-11-12T15:31:45Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-63825#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-xc4c-7263-hq9r" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: gcov: use atomic counter updates to fix concurrent access crashes GCC's GCOV instrumentation can merge global branch counters with loop induction variables as an optimization. In inflate_fast(), the inner copy loops get transformed so that the GCOV counter value is loaded multiple times to compute the loop base address, start index, and end bound. Since GCOV counters are global (not per-CPU), concurrent execution on different CPUs causes the counter to change between loads, producing inconsistent values and out-of-bounds memory writes. The crash manifests during IPComp (IP Payload Compression) processing when inflate_fast() runs concurrently on multiple CPUs: BUG: unable to handle page fault for address: ffffd0a3c0902ffa RIP: inflate_fast+1431 Call Trace: zlib_inflate __deflate_decompress crypto_comp_decompress ipcomp_de
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-xc4c-7263-hq9r
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42284#findings</atom:id>
+    <atom:title>GitPython is a python library used to interact with Git repositories. Prior to version 3.1.47, _clone() validates multi_options as the original list,</atom:title>
+    <atom:published>2026-05-07T19:16:01Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42284#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42284" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8
+
+Summary: GitPython is a python library used to interact with Git repositories. Prior to version 3.1.47, _clone() validates multi_options as the original list, then executes shlex.split(" ".join(multi_options)). A string like "--branch main --config core.hooksPath=/x" passes validation (starts with --branch), but after split becomes ["--branch", "main", "--config", "core.hooksPath=/x"]. Git applies the config and executes attacker hooks during clone. This issue has been patched in version 3.1.47.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42284
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42264#findings</atom:id>
+    <atom:title>Axios is a promise based HTTP client for the browser and Node.js. From version 1.0.0 to before version 1.15.2, fFive config properties (auth, baseURL,</atom:title>
+    <atom:published>2026-05-08T04:16:20Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42264#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42264" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: Axios is a promise based HTTP client for the browser and Node.js. From version 1.0.0 to before version 1.15.2, fFive config properties (auth, baseURL, socketPath, beforeRedirect, and insecureHTTPParser) in the HTTP adapter are read via direct property access without hasOwnProperty guards, making them exploitable as prototype pollution gadgets. When Object.prototype is polluted by another dependency in the same process, axios silently picks up these polluted values on every outbound HTTP request. This issue has been patched in version 1.15.2.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42264
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Applications" />
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42044#findings</atom:id>
+    <atom:title>Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.15.2, he Axios library is vulnerable to a Prototype Pollution</atom:title>
+    <atom:published>2026-04-24T18:16:31Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42044#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42044" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.15.2, he Axios library is vulnerable to a Prototype Pollution "Gadget" attack that allows any Object.prototype pollution in the application's dependency tree to be escalated into surgical, invisible modification of all JSON API responses — including privilege escalation, balance manipulation, and authorization bypass. The default transformResponse function at lib/defaults/index.js:124 calls JSON.parse(data, this.parseReviver), where this is the merged config object. Because parseReviver is not present in Axios defaults, not validated by assertOptions, and not subject to any constraints, a polluted Object.prototype.parseReviver function is called for every key-value pair in every JSON response, allowing the attacker to selectively modify individual values while leaving the rest of the response intact.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42044
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Applications" />
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Privilege escalation" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42043#findings</atom:id>
+    <atom:title>Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios</atom:title>
+    <atom:published>2026-04-24T18:16:31Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42043#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42043" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 10
+
+Summary: Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.1 and 0.31.1, an attacker who can influence the target URL of an Axios request can use any address in the 127.0.0.0/8 range (other than 127.0.0.1) to completely bypass the NO_PROXY protection. This vulnerability is due to an incomplete for CVE-2025-62718, This vulnerability is fixed in 1.15.1 and 0.31.1.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42043
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Applications" />
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-40281#findings</atom:id>
+    <atom:title>Gotenberg is a Docker-powered stateless API for PDF files. In versions 8.30.1 and earlier, the metadata write endpoint validates metadata keys for con</atom:title>
+    <atom:published>2026-05-06T21:16:01Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-40281#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40281" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: Gotenberg is a Docker-powered stateless API for PDF files. In versions 8.30.1 and earlier, the metadata write endpoint validates metadata keys for control characters but leaves metadata values unsanitized. A newline character in a metadata value splits the ExifTool stdin line into two separate arguments, allowing injection of arbitrary ExifTool pseudo-tags such as -FileName, -Directory, -SymLink, and -HardLink. This is a bypass of the incomplete key-sanitization fix introduced in v8.30.1. An unauthenticated attacker can rename or move any PDF being processed to an arbitrary path in the container filesystem, overwrite arbitrary files, or create symlinks and hard links at arbitrary paths.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-40281
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-33587#findings</atom:id>
+    <atom:title>Lack of user input sanitisation in Open Notebook v1.8.3 allows the application user to execute Python code (and subsequently OS commands) on the docke</atom:title>
+    <atom:published>2026-05-07T11:16:00Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-33587#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33587" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.2
+
+Summary: Lack of user input sanitisation in Open Notebook v1.8.3 allows the application user to execute Python code (and subsequently OS commands) on the docker container via Server-Side Template Injection (SSTI) for user-created transformations.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-33587
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-33078#findings</atom:id>
+    <atom:title>Roxy-WI is a web interface for managing Haproxy, Nginx, Apache and Keepalived servers. Versions prior to 8.2.6.4 have a SQL injection vulnerability in</atom:title>
+    <atom:published>2026-04-24T03:16:10Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-33078#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33078" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.9
+
+Summary: Roxy-WI is a web interface for managing Haproxy, Nginx, Apache and Keepalived servers. Versions prior to 8.2.6.4 have a SQL injection vulnerability in the haproxy_section_save function in app/routes/config/routes.py. The server_ip parameter, sourced from the URL path, is passed unsanitized through multiple function calls and ultimately interpolated into a SQL query string using Python string formatting, allowing attackers to execute arbitrary SQL commands. Version 8.2.6.4 fixes the issue.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-33078
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-32885#findings</atom:id>
+    <atom:title>DDEV is an open-source tool for running local web development environments for PHP and Node.js. Versions prior to 1.25.2 have unsanitized extraction i</atom:title>
+    <atom:published>2026-04-22T17:16:34Z</atom:published>
+    <atom:updated>2026-11-11T23:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-32885#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-32885" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: DDEV is an open-source tool for running local web development environments for PHP and Node.js. Versions prior to 1.25.2 have unsanitized extraction in both `Untar()` and `Unzip()` functions in `pkg/archive/archive.go`. Downloads and extracts archives from remote sources without path validation. Version 1.25.2 patches the issue.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-32885
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42249#findings</atom:id>
+    <atom:title>Ollama for Windows contains a Remote Code Execution vulnerability in its update mechanism due to improper handling of attacker‑controlled HTTP respons</atom:title>
+    <atom:published>2026-04-29T12:16:19Z</atom:published>
+    <atom:updated>2026-11-11T21:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42249#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42249" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7
+
+Summary: Ollama for Windows contains a Remote Code Execution vulnerability in its update mechanism due to improper handling of attacker‑controlled HTTP response headers. When downloading updates, the application constructs local file paths using values derived from HTTP headers without validation. These values are passed directly to filepath.Join, allowing path traversal sequences (../) to be resolved and enabling files to be written outside the intended update staging directory. An attacker who can influence update responses can exploit this flaw to write arbitrary executables to attacker‑chosen locations accessible to the current user, including the Windows Startup directory. This allows execution of arbitrary executables. Critically, when chained with CVE‑2026‑42248 (Missing Signature Verification for Updates), an attacker can deliver malicious payloads that are written to sensitive locations 
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42249
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="AI &amp; ML tooling" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42248#findings</atom:id>
+    <atom:title>Ollama for Windows does not perform integrity or authenticity verification of downloaded update executables. Unlike other platforms, the Windows imple</atom:title>
+    <atom:published>2026-04-29T12:16:18Z</atom:published>
+    <atom:updated>2026-11-11T21:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42248#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42248" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7
+
+Summary: Ollama for Windows does not perform integrity or authenticity verification of downloaded update executables. Unlike other platforms, the Windows implementation of the update verification routine unconditionally returns success so no digital signature or trust validation is performed before staging or executing update payloads, enabling attacker‑supplied executables to be accepted and later executed by the application. Critically, Ollama for Windows performs silent automatic updates, so the malicious payload may be installed automatically without user awareness. Maintainers of this project were notified early about this vulnerability, but didn't respond with the details of vulnerability or vulnerable version range. Versions from 0.12.10 to 0.17.5 were tested and confirmed as vulnerable, other versions were not tested but might also be vulnerable.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42248
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="AI &amp; ML tooling" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-30893#findings</atom:id>
+    <atom:title>Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.4.0 to before version 4.14.4, a path trav</atom:title>
+    <atom:published>2026-04-29T19:16:23Z</atom:published>
+    <atom:updated>2026-11-11T21:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-30893#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30893" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.9
+
+Summary: Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.4.0 to before version 4.14.4, a path traversal vulnerability in Wazuh's cluster synchronization extraction routine allows an authenticated cluster peer to write arbitrary files outside the intended extraction directory on other cluster nodes. This can be escalated to code execution in the Wazuh service context by overwriting Python modules loaded by Wazuh components (proof of concept available as separate attachment). In deployments where the cluster daemon runs with elevated privileges, system-level compromise is possible. This issue has been patched in version 4.14.4.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-30893
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-44484#findings</atom:id>
+    <atom:title>PyTorch Lightning is a deep learning framework to pretrain and finetune AI models. Versions 2.6.2 and 2.6.2 have introduced functionality consistent w</atom:title>
+    <atom:published>2026-05-14T15:16:48Z</atom:published>
+    <atom:updated>2026-11-11T20:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-44484#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-44484" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3
+
+Summary: PyTorch Lightning is a deep learning framework to pretrain and finetune AI models. Versions 2.6.2 and 2.6.2 have introduced functionality consistent with a credential harvesting mechanism.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-44484
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="AI &amp; ML tooling" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-41574#findings</atom:id>
+    <atom:title>Nhost is an open source Firebase alternative with GraphQL. Prior to version 0.49.1, Nhost automatically links an incoming OAuth identity to an existin</atom:title>
+    <atom:published>2026-05-08T15:16:40Z</atom:published>
+    <atom:updated>2026-11-11T20:10:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-41574#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-41574" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3
+
+Summary: Nhost is an open source Firebase alternative with GraphQL. Prior to version 0.49.1, Nhost automatically links an incoming OAuth identity to an existing Nhost account when the email addresses match. This is only safe when the email has been verified by the OAuth provider. Nhost's controller trusts a profile.EmailVerified boolean that is set by each provider adapter. The vulnerability is that several provider adapters do not correctly populate this field they either silently drop a verified field the provider API actually returns (Discord), or they fall back to accepting unconfirmed emails and marking them as verified (Bitbucket). Two Microsoft providers (AzureAD, EntraID) derive the email from non-ownership-proving fields like the user principal name, then mark it verified. The result is that an attacker can present an email they don't own to Nhost, have the OAuth identity merged into the
+
+Suggested next step: Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-41574
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Cloud &amp; identity" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-102560#findings</atom:id>
+    <atom:title>A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations use</atom:title>
+    <atom:published>2026-09-29T18:17:08Z</atom:published>
+    <atom:updated>2026-11-11T13:17:12Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-102560#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102560" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8
+
+Summary: A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations used for GByteArray growth could wrap, causing zlib to write past the allocated buffer and resulting in a heap buffer overflow.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-102560
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-107846#findings</atom:id>
+    <atom:title>bitcoinjs-lib: Undetected merkle node duplication in block root computation validates a forged transaction list</atom:title>
+    <atom:published>2026-11-10T15:57:25Z</atom:published>
+    <atom:updated>2026-11-11T05:12:35Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-107846#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-8vv3-6qpc-gpw6" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL
+
+Summary: ### Summary `fastMerkleRoot` pads an odd level by hashing the last node with itself. It does not report that it did so, and `checkTxRoots` never looks for repeated transactions. A peer can therefore duplicate transactions to fill the pad and produce a block with a different transaction list but the same merkle root. The block hash and block id do not change, so the header still carries valid proof of work. In the proof of concept a real mainnet block goes from nine transactions to ten, and separately to twelve, with the same id every time, and `checkTxRoots` accepts all three. Bitcoin Core rejects this case through the `mutated` flag in `ComputeMerkleRoot` and the `bad-txns-duplicate` reason in `CheckBlock`. This is CVE-2012-2459. ### Details A bitcoin merkle tree pads an odd level by hashing the last node with itself. Duplicating transactions to fill that pad therefore yields the same r
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-8vv3-6qpc-gpw6
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114142#findings</atom:id>
+    <atom:title>toml-node: Prototype pollution: parsing a TOML document can write to Object.prototype</atom:title>
+    <atom:published>2026-10-22T16:39:55Z</atom:published>
+    <atom:updated>2026-11-11T05:10:47Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114142#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-h895-cgqg-jf52" type="text/html" />
+    <atom:summary type="text">Severity: HIGH
+
+Summary: ### Summary CVE-2026-63376 described prototype pollution through __proto__ key-path desynchronization and was fixed in 4.1.2 by rewriting the path bookkeeping and adding an ownedContainers WeakSet. The desynchronization is still reachable, spelled with a quote character instead of a dot, and the owned-container check is not applied on the path that matters. A four-line TOML document parsed with toml.parse() writes a property onto Object.prototype, where it is visible to every object in the process — including objects produced by unrelated libraries. ### Details Three gaps compose. All line numbers are `lib/compiler.js` in 5.0.0. **1. The path-key encoding is ambiguous.** `quoteDottedString()` quotes a segment only when it contains a `.`, and never escapes a `"` inside the segment: ```js 287: function quoteDottedString(str) { 288: if (str.indexOf(".") &gt; -1) { 289: return "\"" + str + "\""
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-h895-cgqg-jf52
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-118745#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-118745 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:47:20Z</atom:published>
+    <atom:updated>2026-11-11T00:47:22Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-118745#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-x8x8-p968-x646" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in .NET. This advisory provides guidance on updating affected applications and components. Crafted PDB line metadata can exceed the caller-provided buffer and cause a heap out-of-bounds write. ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 8.8 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-122 ## Affected Platforms - **Platforms:** Windows - **Architectures:** x86, x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages On Windows x86, x64, and Arm64, Microsoft.DiaSymReader.Native versions earlier than 18.9.1-beta1.26515.1 are affected when reading crafted native PDBs. ### .NET on Windows Product | Affected version | Patched version --- | --- | --- .NET 8.0 installed on Windows | &gt;= 8.0.0
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-x8x8-p968-x646
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114152#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114152 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:46:12Z</atom:published>
+    <atom:updated>2026-11-11T00:46:14Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114152#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-xf35-v9jh-g65w" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in .NET. This advisory provides guidance on updating affected applications and components. Attacker-controlled COFF relocation offsets can cause an out-of-bounds stack write in `DiaObjectFile::ApplyFixup`. ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 8.8 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-121, CWE-822 ## Affected Platforms - **Platforms:** Windows - **Architectures:** x86, x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages Microsoft.DiaSymReader.Native versions earlier than 18.9.1-beta1.26515.1 are affected when loading document specifications from a PDB that references an attacker-influenced COFF object. ### .NET on Windows Product | Affected version | Patched version 
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-xf35-v9jh-g65w
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-cfv6-4v53-fff6#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-118745 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:33:10Z</atom:published>
+    <atom:updated>2026-11-11T00:39:58Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-cfv6-4v53-fff6#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-cfv6-4v53-fff6" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-x8x8-p968-x646. This link is maintained to preserve external references. ## Original Description Heap-based buffer overflow in Visual Studio allows an unauthorized attacker to execute code over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-cfv6-4v53-fff6
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-hm4p-mv9w-4w8f#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-114152 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:32:51Z</atom:published>
+    <atom:updated>2026-11-11T00:39:40Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-hm4p-mv9w-4w8f#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-hm4p-mv9w-4w8f" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-xf35-v9jh-g65w. This link is maintained to preserve external references. ## Original Description Stack-based buffer overflow in Visual Studio allows an unauthorized attacker to execute code over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-hm4p-mv9w-4w8f
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114151#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114151 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:35:02Z</atom:published>
+    <atom:updated>2026-11-11T00:35:05Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114151#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-fpxj-5c99-g7vj" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in .NET. This advisory provides guidance on updating affected applications and components. A crafted PDB `LF_DECIMAL` payload can trigger an out-of-bounds stack write when processed by DIA. ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 8.8 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-502, CWE-121 ## Affected Platforms - **Platforms:** Windows - **Architectures:** x86, x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages Microsoft.DiaSymReader.Native versions earlier than 18.9.1-beta1.26515.1 are affected when reading constants from attacker-supplied PDBs through `ISymUnmanagedConstant.GetValue`. The .NET runtime's native stack-trace reading path does not call `ISymUnmanagedConstant.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-fpxj-5c99-g7vj
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-mqcg-252r-5fj7#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-114151 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:32:51Z</atom:published>
+    <atom:updated>2026-11-11T00:34:55Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-mqcg-252r-5fj7#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-mqcg-252r-5fj7" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-fpxj-5c99-g7vj. This link is maintained to preserve external references. ## Original Description Deserialization of untrusted data in Visual Studio allows an unauthorized attacker to execute code over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-mqcg-252r-5fj7
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114158#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114158 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:34:13Z</atom:published>
+    <atom:updated>2026-11-11T00:34:15Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114158#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-r8h3-p8p6-ggp7" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in .NET. This advisory provides guidance on updating affected applications and components. A Portable PDB `EmbeddedSource` record with parent RID 0 can trigger an out-of-bounds write. ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 8.8 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-122 ## Affected Platforms - **Platforms:** Windows - **Architectures:** x86, x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages Microsoft.DiaSymReader.Native components bundled with the affected .NET versions listed below are affected when initializing the native reader with a crafted Portable PDB containing an `EmbeddedSource` record with parent RID 0. The Windows runtime's native stack-trace reader can re
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-r8h3-p8p6-ggp7
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-cjjx-gv54-83qh#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-114158 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:32:52Z</atom:published>
+    <atom:updated>2026-11-11T00:34:05Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-cjjx-gv54-83qh#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-cjjx-gv54-83qh" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-r8h3-p8p6-ggp7. This link is maintained to preserve external references. ## Original Description Heap-based buffer overflow in Visual Studio allows an unauthorized attacker to execute code over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-cjjx-gv54-83qh
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114159#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114159 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:32:59Z</atom:published>
+    <atom:updated>2026-11-11T00:33:03Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114159#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-3cgx-w6gm-fqrx" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in .NET. This advisory provides guidance on updating affected applications and components. An oversized Portable PDB document name can be truncated during allocation and cause a heap out-of-bounds write. ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 8.8 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-122 ## Affected Platforms - **Platforms:** Windows - **Architectures:** x86, x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages Microsoft.DiaSymReader.Native components bundled with the affected .NET versions listed below are affected when initializing the native reader with a Portable PDB containing an oversized document name. The Windows runtime's native stack-trace reader can reach th
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-3cgx-w6gm-fqrx
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-6rff-vv3p-7mrw#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-114159 - Visual Studio Remote Code Execution Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:32:51Z</atom:published>
+    <atom:updated>2026-11-11T00:32:14Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-6rff-vv3p-7mrw#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-6rff-vv3p-7mrw" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-3cgx-w6gm-fqrx. This link is maintained to preserve external references. ## Original Description Heap-based buffer overflow in Visual Studio allows an unauthorized attacker to execute code over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-6rff-vv3p-7mrw
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-120792#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:31:23Z</atom:published>
+    <atom:updated>2026-11-11T00:31:25Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-120792#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-q6jf-24jf-m3cg" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.3 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in the Aspire CLI. This advisory provides guidance on updating affected applications and components. Insecure temporary files used by Aspire CLI can allow a local attacker to obtain sensitive configuration information. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/518 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.3 - **Vector:** `CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:L` - **Weakness:** CWE-532 (Insertion of Sensitive Information into Log File) - **MSRC severity:** Important - **Impact:** Information Disclosure ## Affected Platforms - **Platforms:** Linux, macOS - **Architectures:** x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages ### Standalone Aspire CLI Package | Affected
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-q6jf-24jf-m3cg
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Data exposure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-120778#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:30:06Z</atom:published>
+    <atom:updated>2026-11-11T00:30:07Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-120778#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-m63f-xhvm-6mv5" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.3 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in the Aspire CLI. This advisory provides guidance on updating affected applications and components. An insecure temporary directory used by Aspire CLI-generated builds can allow a local attacker to influence MSBuild response-file discovery and execute code with the privileges of the developer running the CLI. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/519 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.3 - **Vector:** `CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H` - **Weakness:** CWE-379 (Creation of Temporary File in Directory with Insecure Permissions) - **MSRC severity:** Important ## Affected Platforms - **Platforms:** Linux, macOS - **Architectures:** x64, Arm64 ## &lt;a name="affected-pac
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-m63f-xhvm-6mv5
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Privilege escalation" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114147#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114147 - ASP.NET Core Denial of Service Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:23:32Z</atom:published>
+    <atom:updated>2026-11-11T00:23:34Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114147#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-wr8v-9x5q-ggcm" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in ASP.NET Core. This advisory provides guidance on updating affected applications and components. SignalR Redis scale-out can mishandle case-mismatched group removal and leave subscriptions in a state that permits persistent resource amplification and denial of service. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/509 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.5 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-401 ## Affected Platforms - **Platforms:** Windows, Linux, macOS - **Architectures:** All ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages The tables list affected version ranges and fixed package versions. Runtime and s
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-wr8v-9x5q-ggcm
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114146#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114146 - ASP.NET Core Elevation of Privilege Vulnerability</atom:title>
+    <atom:published>2026-11-11T00:21:56Z</atom:published>
+    <atom:updated>2026-11-11T00:21:58Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114146#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-67wp-ghc2-fw2g" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.8 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in ASP.NET Core. This advisory provides guidance on updating affected applications and components. SignalR connections are not consistently bound to the identity negotiated at connection establishment, allowing injected messages to execute Hub invocations as the victim. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/504 ## CVSS Details - **Version:** 3.1 - **Severity:** Critical - **Score:** 9.0 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-863 ## Affected Platforms - **Platforms:** Windows, Linux, macOS - **Architectures:** All ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages The tables list affected version ranges and fixed package versions. Runtime an
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-67wp-ghc2-fw2g
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Privilege escalation" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-wrm2-c2h2-4w82#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-109478 - ASP.NET Core Denial of Service Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:32:29Z</atom:published>
+    <atom:updated>2026-11-11T00:21:10Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-wrm2-c2h2-4w82#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-wrm2-c2h2-4w82" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-r3qf-p3jm-8h4p. This link is maintained to preserve external references. ## Original Description Inefficient algorithmic complexity in ASP.NET Core allows an unauthorized attacker to deny service over a network.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-wrm2-c2h2-4w82
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=GHSA-r33q-3g5w-gqx6#findings</atom:id>
+    <atom:title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-105544 - .NET Elevation of Privilege Vulnerability</atom:title>
+    <atom:published>2026-11-10T21:32:22Z</atom:published>
+    <atom:updated>2026-11-11T00:11:55Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=GHSA-r33q-3g5w-gqx6#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-r33q-3g5w-gqx6" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-6856-87hx-p5x7. This link is maintained to preserve external references. ## Original Description Improper access control in .NET allows an authorized attacker to elevate privileges locally.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-r33q-3g5w-gqx6
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Privilege escalation" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-120006#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-120006 - Aspire Elevation of Privilege Vulnerability</atom:title>
+    <atom:published>2026-11-10T23:24:48Z</atom:published>
+    <atom:updated>2026-11-10T23:24:49Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-120006#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-f7vh-h5g3-7jrh" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in Aspire. This advisory provides guidance on updating affected applications and components. Disclosure of an Aspire Dashboard authentication cookie to a linked service can allow an attacker-controlled container to replay the authenticated session and execute code as the host developer. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/503 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.5 - **Vector:** `CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H` - **Weakness:** CWE-201 (Insertion of Sensitive Information Into Sent Data) ## Affected Platforms - **Platforms:** macOS - **Architectures:** x64, Arm64 ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages ### Standalone Aspire Package | Affected version 
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-f7vh-h5g3-7jrh
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Privilege escalation" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-47304#findings</atom:id>
+    <atom:title>Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network.</atom:title>
+    <atom:published>2026-07-14T19:17:08Z</atom:published>
+    <atom:updated>2026-11-10T23:17:24Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-47304#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-47304" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8
+
+Summary: Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-47304
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114149#findings</atom:id>
+    <atom:title>Microsoft Security Advisory CVE-2026-114149 - ASP.NET Core Denial of Service Vulnerability</atom:title>
+    <atom:published>2026-11-10T23:06:32Z</atom:published>
+    <atom:updated>2026-11-10T23:06:34Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-114149#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-x33c-w48q-qrgc" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Executive summary Microsoft is releasing this security advisory to provide information about a vulnerability in ASP.NET Core. This advisory provides guidance on updating affected applications and components. Multipart form processing can bypass the configured header-count limit and consume excessive resources. ## Announcement Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/511 ## CVSS Details - **Version:** 3.1 - **Severity:** High - **Score:** 7.5 (base score) - **Vector:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C` - **Weakness:** CWE-770 ## Affected Platforms - **Platforms:** Windows, Linux, macOS - **Architectures:** All ## &lt;a name="affected-packages"&gt;&lt;/a&gt;Affected Packages The tables list affected version ranges and fixed package versions. Runtime and standalone deliveries are listed separately. ### .NET 8.0 - affected r
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-x33c-w48q-qrgc
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+</atom:feed>
