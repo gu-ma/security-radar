@@ -99,11 +99,12 @@ class EngineTests(unittest.TestCase):
                                title="Docker issue", source="GitHub Advisory Database",
                                url="https://github.com/advisories/GHSA-abcd-efgh-ijkl",
                                published="2026-11-11")
-        rows, _ = process(now=self.now, previous=[a, b], fetched=[bridge],
+        observed_at = datetime(2026, 11, 13, 12, 0, tzinfo=timezone.utc)
+        rows, _ = process(now=observed_at, previous=[a, b], fetched=[bridge],
                           watchlist=["Docker"])
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["first_seen"], "2026-11-13T09:48:00Z")
-        self.assertEqual(rows[0]["last_seen"], "2026-11-13T10:25:00Z")
+        self.assertEqual(rows[0]["last_seen"], "2026-11-13T12:00:00Z")
 
     def test_cross_source_alias_merges(self):
         ghsa = make_advisory(
