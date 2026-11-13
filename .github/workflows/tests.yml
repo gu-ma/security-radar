@@ -20,6 +20,11 @@ jobs:
       - run: python -m unittest discover -s tests -v
 
       - name: Check dashboard JavaScript syntax
-        run: node --check docs/app.js
+        run: |
+          node --check docs/app.js
+          node --check docs/sorting.js
+          node --test tests/test_sorting.cjs
+      - name: Validate public feed generation
+        run: python -m security_radar.feeds --input examples/sample_feed.json --output-dir /tmp/security-radar-feed-test
       - name: Validate offline Teams preview
         run: python -m security_radar.notify --dry-run --alerts-file examples/sample_alerts.json > /tmp/security-radar-teams-preview.json

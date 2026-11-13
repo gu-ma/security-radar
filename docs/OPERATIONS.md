@@ -66,3 +66,16 @@ The monitor uses dynamic modules in `security_radar/adapters/`. After adding an 
 Tagging, category-specific next steps, and official explanations are entirely deterministic. False-positive categorization is possible; update the explicit rules and tests when needed.
 
 Teams notification is disabled unless the authorized university owner has confirmed a Workflow test and the repository owner enables `ENABLE_TEAMS`.
+
+## Sorting and syndication
+
+The archive supports client-side sorting by attention/relevance, CVSS ascending/descending, severity, publication date and last-updated date. Missing CVSS and timestamps are placed last. Sort choice is shareable through the `sort` URL parameter and composes with category/topic filters. Sorting is implemented in `docs/sorting.js` and tested with `node --test tests/test_sorting.cjs`.
+
+The monitor generates **RSS 2.0** and **Atom 1.0** on every successful collection:
+
+- `https://apps.massol.me/security-radar/rss.xml`
+- `https://apps.massol.me/security-radar/atom.xml`
+
+Run `python -m security_radar.feeds` locally to rebuild them from `docs/data/advisories.json`. Feed entries are recent, watchlist-relevant high/critical or KEV-listed records, limited to 50. Old records can remain in the dashboard but leave the feed as newer records displace them. GUIDs are stable canonical advisory deep links; consumers should use GUID/Atom ID to deduplicate. The feeds are public and make no claim about university exposure.
+
+**Storage limits:** `retention_days=180` and `max_entries=2500` bound the current JSON in `config/monitor.json`; the feed caps output at 50. Git history still retains old committed snapshots. A future optimization is to publish GitHub Pages artifacts without rewriting tracked generated data at every scheduled run. This requires designing persistent deduplication state separately before switching, to avoid repeated Teams notifications.

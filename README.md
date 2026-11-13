@@ -69,12 +69,18 @@ The homepage highlights up to six watchlist-matched high/critical or KEV-listed 
 
 ## Next on the roadmap
 
-The following are recorded for a future iteration and **are not implemented yet**:
+Archive sorting and public RSS/Atom feeds are implemented. Open **All advisories** to sort by attention, severity, CVSS score, publication date or update date. The selected sort order is retained in the URL, including when filters are used. Missing scores and dates appear last in either direction.
 
-- **Archive sorting:** user-selectable order by newest/oldest publication, highest/lowest CVSS, severity, and attention priority. Preserve sorting when sharing a filtered deep link; handle unscored advisories explicitly.
-- **RSS / Atom feed:** publish a standards-compliant public feed of selected advisories or updates (with stable IDs, links to the original advisory and Security Radar, category tags, and source timestamps). This should be generated from the same normalized data as the site and Teams adapter so downstream systems can subscribe without Microsoft 365 access. Ensure a bounded feed, clear selection criteria, and no leaked institutional details.
+**Subscribe to public high-signal advisories:**
 
-See [project roadmap](docs/PROJECT.md) for acceptance criteria.
+- [RSS 2.0](https://apps.massol.me/security-radar/rss.xml)
+- [Atom 1.0](https://apps.massol.me/security-radar/atom.xml)
+
+Both feeds are automatically generated from the same public normalized data. They contain at most **50** recently updated advisories with a watchlist match and high/critical severity or CISA KEV listing. Entries have stable advisory-specific deep links, original source references, severity, categories and timestamps. These are *curated awareness feeds*, not a complete CVE firehose or claims of verified local exposure. To make integration simple, use whichever format your reader or automation supports.
+
+**Retention and size:** The active dataset retains advisories modified within approximately **180 days** and is capped at **2,500 records** (see `config/monitor.json`). These limits bound the web payload, but generated JSON/XML snapshots are also committed to Git history, which grows over time. Future storage hardening should publish artifacts without committing every generated snapshot into the repository. See [operations](docs/OPERATIONS.md).
+
+See [project roadmap](docs/PROJECT.md) for future hardening.
 
 ## Teams: integration after university approval
 

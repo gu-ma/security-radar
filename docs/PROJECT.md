@@ -80,12 +80,16 @@ A public monitoring result is an investigation lead, not a university security i
 - Adapter discovery is modular: add a module plus tests and configuration, not UI or notification code.
 - Teams acceptance has two independent gates: offline Python payload/HTTP tests and an actual approved university Workflow post. The second cannot be performed from an unconnected local development environment.
 
-## Planned follow-ups (not in this style/content release)
+## Archive sorting and public feeds (implemented)
 
 ### Archive sorting
 
-Add a sort control separate from category, severity and priority filtering. Choices: attention priority, CVSS descending/ascending, severity descending, newest publication first, and oldest publication first. Unknown scores should sort consistently rather than being treated as 0. Sorting must work with active filters, pagination and shared deep links, with explicit labels for publication versus last-modified dates.
+The archive has a separate sort control with attention priority, CVSS descending/ascending, severity descending, publication date ascending/descending, and update date ascending/descending. Missing scores and dates sort last in either direction. Sorting works with active filters, "show more" pagination and shared `?sort=...` deep links; Focus now retains its own fixed ranking. Node offline tests cover the comparator and missing values.
 
 ### Public RSS / Atom feed
 
-Generate a standards-compliant RSS 2.0 or Atom feed at a stable URL beneath the GitHub Pages site using existing normalized public advisories. Include GUID/id, title, original source URL, Security Radar deep link, published/updated timestamps, severity, and technology categories, escaping XML safely. Choose a clear inclusion rule (for example, high-signal watchlist leads only) and keep a bounded history. Validate XML in CI and add a documented subscription URL for integration into other systems, including Microsoft Teams and RSS readers. Avoid duplicating old items or asserting institutional exposure. Feed generation must work without an LLM, a database server, or Microsoft credentials.
+The monitor generates `docs/rss.xml` (RSS 2.0) and `docs/atom.xml` (Atom 1.0) using the standard-library XML serializer. Both carry stable advisory IDs/deep links, original source links, publication/update timestamps, severity, and categorization. Eligibility: watchlist match and high/critical severity or CISA KEV listing. The 50 most recently updated eligible records are published; not all stored records. The output is deterministic for identical source data, with XML 1.0 control characters removed. CI validates the XML schemas at a structural level and exercises filtering, time formatting, and stable IDs. Feed files are generated on monitor runs without Microsoft credentials or a language model.
+
+## Future: bounded repository growth
+
+The active dataset already has a rolling 180-day modified-time window and a maximum of 2,500 records. RSS/Atom feeds contain only the 50 most recently modified qualifying advisories. These caps protect browser and feed consumers, but every scheduled write currently creates a new Git commit containing public JSON/XML snapshots, so **Git history accumulates**. Before substantially increasing polling frequency or coverage, redesign data publication as a workflow-built GitHub Pages artifact (or a separate bounded data branch/storage service) so generated snapshots are not repeatedly committed to `main`. Preserve cross-run state and deduplication in a reliable nonpublic execution store before removing the current persisted JSON. That change should be separately validated to avoid repeated notifications or loss of historical comparison state.

@@ -288,3 +288,14 @@ input::placeholder { color: #829291; opacity: 1; }
   html { scroll-behavior: auto; }
   .advisory { transition: none; }
 }
+
+/* Public feed links and selectable archive order. */
+.sort-field { position: relative; }
+.sort-field select { border-color: #466456; background: #132019; color: #c4ecc9; }
+.footer-feeds { display: inline-flex; gap: 8px; }
+.footer-feeds a { color: var(--cyan); text-decoration: none; }
+.footer-feeds a:hover { text-decoration: underline; }
+@media (max-width: 440px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 11px; }
+}

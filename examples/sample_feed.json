@@ -1,0 +1,28 @@
+[
+  {
+    "id": "CVE-2026-123710",
+    "title": "Example Red Hat Quay issue",
+    "summary": "Registry signing-key issue.",
+    "severity": "critical",
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "matched_topics": [
+      "Quay"
+    ],
+    "categories": [
+      "containers"
+    ],
+    "security_topics": [
+      "Supply chain"
+    ],
+    "exploited": false,
+    "published": "2026-11-11T00:00:00Z",
+    "modified": "2026-11-13T00:00:00Z",
+    "sources": [
+      {
+        "name": "Red Hat",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-123710"
+      }
+    ]
+  }
+]

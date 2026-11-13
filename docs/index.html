@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" type="application/rss+xml" title="Security Radar RSS" href="./rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Security Radar Atom" href="./atom.xml">
+  <script defer src="./sorting.js"></script>
   <script defer src="./app.js"></script>
 </head>
 <body>
@@ -18,7 +21,8 @@
       <a class="brand" href="./" aria-label="Security Radar home"><span class="symbol" aria-hidden="true">&gt;_</span> security-radar<span class="version">v0.2</span></a>
       <nav class="nav-links" aria-label="Site navigation">
         <a href="#focus">Focus</a>
-        <a href="#archive">Archive</a>
+        <a href="#archive">View All</a>
+        <a href="./rss.xml" title="Subscribe via RSS">RSS</a>
         <a class="github" href="https://github.com/gu-ma/security-radar" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </nav>
     </div>
@@ -26,13 +30,13 @@
   <main class="shell">
     <section class="hero" aria-labelledby="intro">
       <div class="hero-content">
-        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> PUBLIC VULNERABILITY MONITOR <span class="hero-label">/ SIGNAL 01</span></div>
+        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> PUBLIC VULNERABILITY MONITOR </div>
         <h1 id="intro">Security <span class="title-accent">Radar</span><span class="cursor" aria-hidden="true">_</span></h1>
         <p class="lead">Public security advisories, filtered by technologies we follow.</p>
-        <p class="hero-note">Watchlist matches are leads, not confirmed exposure.</p>
         <div class="hero-actions">
           <a href="#focus" class="primary">View priority alerts <span aria-hidden="true">↓</span></a>
           <a href="https://github.com/gu-ma/security-radar/blob/main/docs/SOURCES.md" class="secondary">Sources &amp; coverage ↗</a>
+          <a href="./atom.xml" class="secondary" title="Subscribe via Atom">Atom ↗</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -80,12 +84,13 @@
         <label class="dropdown"><span class="sr-only">Filter by priority</span><select id="priority"><option value="">All priorities</option><option value="investigate">Investigate</option><option value="review">Review</option><option value="information">Information</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by severity</span><select id="severity"><option value="">All severities</option><option value="critical">Critical</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option><option value="unknown">Unknown</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by exploited</span><select id="exploited"><option value="">All exploitation statuses</option><option value="yes">CISA KEV listed</option><option value="no">Not KEV listed</option></select></label>
+        <label class="dropdown sort-field"><span class="sr-only">Sort advisories</span><select id="sort"><option value="attention">Priority / relevance</option><option value="cvss-desc">CVSS: highest first</option><option value="cvss-asc">CVSS: lowest first</option><option value="severity-desc">Severity: critical first</option><option value="published-desc">Published: newest first</option><option value="published-asc">Published: oldest first</option><option value="updated-desc">Updated: newest first</option><option value="updated-asc">Updated: oldest first</option></select></label>
       </div>
       <div id="list" class="advisory-list"><div class="empty">Loading advisories…</div></div>
       <button id="more" class="load-more" type="button" hidden>Show more</button>
     </section>
     </details>
   </main>
-  <footer class="footer"><div class="shell"><span>Security Radar / Public advisories only</span><span>Not an asset scan or a local exposure assessment.</span></div></footer>
+  <footer class="footer"><div class="shell"><span>Security Radar / Public advisories only</span><span class="footer-feeds"><a href="./rss.xml">RSS</a> · <a href="./atom.xml">Atom</a></span><span>Not an asset scan or a local exposure assessment.</span></div></footer>
 </body>
 </html>
