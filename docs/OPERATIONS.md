@@ -35,8 +35,8 @@ Potential limits: NVD no-key rate limiting, NVD record volume, GitHub API quotas
 
 ## Deployment and schedules
 
-- Workflow scheduled every six hours at minute 17 UTC, plus manual dispatch.
-- Generated public JSON files are committed back to `main`.
+- Workflow scheduled twice daily at **00:17 and 12:17 UTC**, plus manual dispatch. A full monitoring run may produce one data commit. The exact start time is not guaranteed.
+- Generated public JSON and feed XML files are committed back to `main` on scheduled and manual monitoring runs. Pushes to supported code/site paths only run tests and deploy the already committed data; they do not collect or commit another snapshot.
 - For a new repository, GitHub Pages settings and variable `ENABLE_PAGES` are **manual administrator steps**.
 - Pushes performed by GitHub Actions' built-in token may not trigger other push-based workflows; this workflow deploys in the same run.
 - GitHub scheduled workflows may be delayed or disabled after inactivity.
@@ -83,3 +83,9 @@ Run `python -m security_radar.feeds` locally to rebuild them from `docs/data/adv
 ## Observation timestamps
 
 `first_seen` records when Security Radar first collected a specific advisory and is immutable across normal subsequent collection runs. `last_seen` records the last time any enabled source returned that advisory. Neither is the vendor's `published` or `modified` timestamp. A former bug caused `first_seen` to reset whenever the saved JSON was reloaded; regression tests now cover repeated runs, absent source observations, and cross-source alias merges. On 2026-11-13 the earliest observations were restored for the then-current 295 records from earlier Git-committed snapshots. No timestamps earlier than the first available repository snapshot can be inferred.
+
+## Commit frequency and output punctuation
+
+Monitor collection runs on a 12-hour schedule, at 00:17 and 12:17 UTC, and when manually dispatched. A code or website push runs tests and deploys the last committed dataset but deliberately skips collection, feed regeneration, state persistence, and Teams notification. This avoids extra public data commits during active site development. The public advisory snapshot still stores `first_seen`, `last_seen`, and status timestamps, so each real collection run can create a data commit even if no new CVE appears. At most two regular scheduled data commits per day is the expected baseline, plus deliberate manual runs. Git history still grows over time.
+
+The public JSON serializer and advisory normalization replace any upstream em dash with a spaced hyphen, including vendor text and retained historical records. This does not change the CVE identifiers, severity, sources, or other security findings.

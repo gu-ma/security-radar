@@ -18,6 +18,17 @@ def iso_date(value: str | None) -> str:
     return value.replace("+00:00", "Z")
 
 
+def normalize_punctuation(value):
+    """Avoid em dashes in all public display and normalized advisory fields."""
+    if isinstance(value, str):
+        return value.replace("\u2014", " - ")
+    if isinstance(value, dict):
+        return {key: normalize_punctuation(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [normalize_punctuation(item) for item in value]
+    return value
+
+
 def cvss_to_severity(score: float | None) -> str:
     if score is None:
         return "unknown"
@@ -41,7 +52,7 @@ def make_advisory(*, identifier: str, title: str, summary: str = "",
     severity = severity.lower()
     if severity not in {"critical", "high", "medium", "low", "unknown"}:
         severity = "unknown"
-    return {
+    return normalize_punctuation({
         "id": identifier, "title": title.strip()[:300],
         "summary": " ".join(summary.split())[:900],
         "severity": severity, "cvss": cvss, "cvss_version": cvss_version,
@@ -51,7 +62,7 @@ def make_advisory(*, identifier: str, title: str, summary: str = "",
         "aliases": sorted(set([identifier] + (aliases or []))),
         "sources": [{"name": source, "url": url}] if url.startswith("https://") else [],
         "published": iso_date(published), "modified": iso_date(modified or published),
-    }
+    })
 
 
 def merge(old: dict, new: dict, now: str) -> dict:
@@ -94,6 +105,7 @@ def merge(old: dict, new: dict, now: str) -> dict:
 
 def enrich(advisory: dict, watchlist: list[str], focus_topics: list[str] | None = None) -> dict:
     """Keywords indicate possible relevance, NEVER confirmed institutional exposure."""
+    advisory = normalize_punctuation(advisory)
     result = dict(advisory)
     searchable = " ".join([advisory.get("title", ""), advisory.get("summary", ""),
                             " ".join(advisory.get("affected", [])),

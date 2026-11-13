@@ -3,7 +3,7 @@ name: Monitor advisories and publish dashboard
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 0,12 * * *"
   push:
     branches: [main]
     paths:
@@ -33,13 +33,16 @@ jobs:
       - name: Run offline tests
         run: python -m unittest discover -s tests -v
       - name: Collect public advisories
+        if: ${{ github.event_name != 'push' }}
         env:
           GH_TOKEN: ${{ github.token }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: python -m security_radar
       - name: Generate public RSS and Atom feeds
+        if: ${{ github.event_name != 'push' }}
         run: python -m security_radar.feeds
       - name: Persist public state
+        if: ${{ github.event_name != 'push' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -49,7 +52,7 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Notify Teams if explicitly enabled by the repository owner
-        if: ${{ vars.ENABLE_TEAMS == 'true' }}
+        if: ${{ github.event_name != 'push' && vars.ENABLE_TEAMS == 'true' }}
         continue-on-error: true
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}

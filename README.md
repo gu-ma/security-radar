@@ -13,12 +13,12 @@ Other sources discussed (OSV, broader Red Hat products, Microsoft MSRC, Python, 
 ## Get started
 
 1. Review [config/monitor.json](config/monitor.json) and edit the technology watchlist.
-2. Visit [Actions → Monitor advisories and publish dashboard](https://github.com/gu-ma/security-radar/actions/workflows/monitor.yml) and choose **Run workflow**. It also runs automatically every six hours.
+2. Visit [Actions → Monitor advisories and publish dashboard](https://github.com/gu-ma/security-radar/actions/workflows/monitor.yml) and choose **Run workflow**. It also runs automatically twice a day, at 00:17 and 12:17 UTC.
 3. In repository **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source.
 4. Set repository Actions variable `ENABLE_PAGES` to `true` under **Settings → Secrets and variables → Actions → Variables**. Run the monitor workflow again.
 5. When deployment succeeds, open **https://apps.massol.me/security-radar/**.
 
-The workflow writes public advisory JSON into `docs/data/` on the default branch. That is intentional; these files contain only public upstream advisory content, never a private institutional inventory. Repository settings may require allowing GitHub Actions to create commits (**Settings → Actions → General → Workflow permissions → Read and write permissions**). If the workflow cannot push, it reports an error; do not claim the published data is current.
+Scheduled and manual monitoring runs write public advisory JSON into `docs/data/` on the default branch. Code and dashboard pushes run tests and publish the existing snapshot without collecting new advisories or creating another data snapshot commit. That is intentional; these files contain only public upstream advisory content, never a private institutional inventory. Repository settings may require allowing GitHub Actions to create commits (**Settings → Actions → General → Workflow permissions → Read and write permissions**). If the workflow cannot push, it reports an error; do not claim the published data is current.
 
 ### Run locally
 

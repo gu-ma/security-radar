@@ -7,7 +7,7 @@ import logging
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from .model import enrich, merge, utcnow
+from .model import enrich, merge, normalize_punctuation, utcnow
 from .registry import discover_sources
 
 LOG = logging.getLogger("security_radar")
@@ -21,7 +21,7 @@ def read_json(path: Path, fallback):
 
 def write_json(path: Path, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(data, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    text = json.dumps(normalize_punctuation(data), indent=2, ensure_ascii=False, sort_keys=True) + "\n"
     if not path.exists() or path.read_text(encoding="utf-8") != text:
         path.write_text(text, encoding="utf-8")
 

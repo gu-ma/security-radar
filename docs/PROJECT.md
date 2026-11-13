@@ -1,4 +1,4 @@
-# Security Radar — project specification
+# Security Radar : project specification
 
 ## Objective
 
@@ -11,7 +11,7 @@ Provide an independent, low-maintenance security intelligence tool collecting pu
 | Component | Implementation |
 | --- | --- |
 | Collection | Python 3, standard-library HTTP clients |
-| Scheduling | GitHub Actions (every six hours; not a real-time SLA) |
+| Scheduling | GitHub Actions (twice daily at 00:17 and 12:17 UTC; not a real-time SLA) |
 | State | Versioned JSON in `docs/data`; first-run baseline |
 | Normalization | CVE/GHSA alias merge, source links, CVSS/severity, KEV signal |
 | Prioritization | Configurable watchlist keyword matches |

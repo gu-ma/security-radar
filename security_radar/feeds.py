@@ -36,7 +36,7 @@ def _clean(value: object) -> str:
         n = ord(ch)
         if n in (9, 10, 13) or 0x20 <= n <= 0xD7FF or 0xE000 <= n <= 0xFFFD or 0x10000 <= n <= 0x10FFFF:
             output.append(ch)
-    return "".join(output)
+    return "".join(output).replace("\u2014", " - ")
 
 
 def _dt(value: object) -> datetime | None:
