@@ -61,7 +61,7 @@ The app merges records using shared identifiers (CVE/GHSA aliases), and preserve
 
 ## Interface and design
 
-The dashboard uses a restrained terminal-inspired theme: Ubuntu Sans Mono for headlines and UI labels, a readable system sans-serif for advisory text, dark graphite surfaces, high-contrast severity colors, and a subtle CSS-only radar motif. Copy is deliberately concise. No browser-side analytics, JavaScript animations, or image assets are needed for the decorative header. The externally hosted Google Fonts stylesheet is optional; a local monospace fallback remains available.
+The dashboard uses a restrained terminal-inspired theme: IBM Plex Mono for headlines and UI labels, a readable system sans-serif for advisory text, dark graphite surfaces, high-contrast severity colors, and a subtle CSS-only radar motif. Copy is deliberately concise. No browser-side analytics, JavaScript animations, or image assets are needed for the decorative header. The externally hosted Google Fonts stylesheet is optional; a local monospace fallback remains available.
 
 ## Decision-first dashboard
 
