@@ -7,7 +7,25 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 14 Nov 2026 00:08:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:31:52 GMT</lastBuildDate>
+    <item>
+      <title>Dokploy before 0.31.1 contains an OS command injection vulnerability in...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-129433#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-129433#findings</guid>
+      <pubDate>Sat, 14 Nov 2026 13:17:22 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.9 (v3.1)
+
+Summary: Dokploy before 0.31.1 contains an OS command injection vulnerability in getComposeContainerCommand() that allows authenticated organization members to execute shell commands via the serviceName parameter. Attackers can store serviceName values with shell metacharacters through backup.create or backup.update tRPC procedures, executing commands as root when scheduled backups run and taking over the host via the mounted Docker socket.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-gfc5-hfj7-fjwc
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Containers &amp; registries</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-gfc5-hfj7-fjwc" type="text/html" />
+    </item>
     <item>
       <title>NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2026-126299#findings</link>
@@ -889,25 +907,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <category>Denial of service</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-wrm2-c2h2-4w82" type="text/html" />
-    </item>
-    <item>
-      <title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-105544 - .NET Elevation of Privilege Vulnerability</title>
-      <link>https://apps.massol.me/security-radar/?q=GHSA-r33q-3g5w-gqx6#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=GHSA-r33q-3g5w-gqx6#findings</guid>
-      <pubDate>Tue, 10 Nov 2026 21:32:22 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-6856-87hx-p5x7. This link is maintained to preserve external references. ## Original Description Improper access control in .NET allows an authorized attacker to elevate privileges locally.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-r33q-3g5w-gqx6
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Privilege escalation</category>
-      <category>Authentication &amp; authorization</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-r33q-3g5w-gqx6" type="text/html" />
     </item>
   </channel>
 </rss>
