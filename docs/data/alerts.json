@@ -1,6 +1,130 @@
 {
-  "alerts": [],
-  "generated_at": "2026-11-13T16:25:16Z",
+  "alerts": [
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-129167",
+        "GHSA-pfpf-25qg-8vx8"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 8.1,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-14T06:24:14Z",
+      "id": "CVE-2026-129167",
+      "last_seen": "2026-11-14T06:24:14Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-13T18:32:45Z",
+      "priority": "review",
+      "published": "2026-11-13T18:32:36Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-pfpf-25qg-8vx8"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "Seafile SeaDoc converter 2.0.4 before 2.0.11 and 3.0.0 before 3.0.8 contains an absolute path traversal vulnerability that allows unauthenticated attackers holding a public share token to execute code. Attackers supply an absolute filename to /api/v1/confluence-to-wiki/ to extract a ZIP from download_url into the Python library path, then trigger the module's import via a file-convert request.",
+      "title": "Seafile SeaDoc converter 2.0.4 before 2.0.11 and 3.0.0 before 3.0.8 contains an absolute path...",
+      "why_it_matters": "Seafile SeaDoc converter 2.0.4 before 2.0.11 and 3.0.0 before 3.0.8 contains an absolute path traversal vulnerability that allows unauthenticated attackers holding a public share token to execute code. Attackers supply an absolute filename to /api/v1/confluence-to-wiki/ to extract a ZIP from download_url into the Python library path, then trigger the module's import via a file-convert request."
+    },
+    {
+      "affected": [
+        "ag-psd"
+      ],
+      "aliases": [
+        "CVE-2026-62297",
+        "GHSA-qfx6-q44v-9qqw"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 7.5,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-14T06:24:14Z",
+      "id": "CVE-2026-62297",
+      "last_seen": "2026-11-14T06:24:14Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-13T23:19:41Z",
+      "priority": "review",
+      "published": "2026-11-13T23:19:38Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-qfx6-q44v-9qqw"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Summary readPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data. A tiny crafted PSD declaring huge geometry forces a multi-gigabyte allocation. ### Impact On ag-psd 30.2.0, Node 24, a 52-byte PSD makes readPsd(buf) commit ~3.17 GB (measured peak RSS) in ~0.45 s before throwing a catchable RangeError (\"Offset is outside the bounds of the DataView\")  -  about 61,000,000x amplification. Because the buffer is committed before validation, the allocation OOM-kills the process before the error on essentially any host (uncatchable), and concurrent requests exhaust memory. Any service reading untrusted PSDs with ag-psd is exposed to a remote DoS. This is distinct from #39 and #206, which involve genuinely large PSDs (memory proportional to real data). Here the",
+      "title": "ag-psd can exhaust memory when parsing crafted PSD dimensions",
+      "why_it_matters": "### Summary readPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data. A tiny crafted PSD declaring huge geometry forces a multi-gigabyte allocation. ### Impact On ag-psd 30.2.0, Node 24, a 52-byte PSD makes readPsd(buf) commit ~3.17 GB (measured peak RSS) in ~0.45 s before throwing a catchable RangeError (\"Offset is outside the bounds of the DataView\")  -  about 61,000,000x amplification. Because the buffer is committed before validation, the allocation OOM-kills the process before the error on essentially any host (uncatchable), and concurrent requests exhaust memory. Any service reading untrusted PSDs with ag-psd is exposed to a remote DoS. This is distinct from #39 and #206, which involve genuinely large PSDs (memory proportional to real data). Here the"
+    },
+    {
+      "affected": [
+        "nltk"
+      ],
+      "aliases": [
+        "CVE-2026-126299",
+        "GHSA-89p3-fcch-88ph"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 7.5,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-14T06:24:14Z",
+      "id": "CVE-2026-126299",
+      "last_seen": "2026-11-14T06:24:14Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-14T00:08:50Z",
+      "priority": "review",
+      "published": "2026-11-14T00:08:50Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-89p3-fcch-88ph"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "## Summary The public CCG lexicon parser `nltk.ccg.lexicon.fromstring` parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an untrusted CCG lexicon string can be driven into tens of seconds of single-threaded CPU by a few-megabyte input, starving the request worker. No authentication or user interaction is required. ## Root Cause `matchBrackets` consumes a bracket body one character at a time with `inside = inside + rest[0]; rest = rest[1:]`. The `rest = rest[1:]` tail re-slice copies the entire remaining string on every iteration, so a flat bracket body costs O(n^2). `augParseCategory` drives a `while rest != \"\":` operator loop that re-copies the regular-expression match tail (`rest = app[3]`) once per operator, which is also O(n^2) over a long operator chain. The parser carries a recursion-depth guard (`MAX_",
+      "title": "NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+      "why_it_matters": "## Summary The public CCG lexicon parser `nltk.ccg.lexicon.fromstring` parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an untrusted CCG lexicon string can be driven into tens of seconds of single-threaded CPU by a few-megabyte input, starving the request worker. No authentication or user interaction is required. ## Root Cause `matchBrackets` consumes a bracket body one character at a time with `inside = inside + rest[0]; rest = rest[1:]`. The `rest = rest[1:]` tail re-slice copies the entire remaining string on every iteration, so a flat bracket body costs O(n^2). `augParseCategory` drives a `while rest != \"\":` operator loop that re-copies the regular-expression match tail (`rest = app[3]`) once per operator, which is also O(n^2) over a long operator chain. The parser carries a recursion-depth guard (`MAX_"
+    }
+  ],
+  "generated_at": "2026-11-14T06:24:14Z",
   "initial_baseline": false,
   "note": "Watchlist match is not verified local exposure."
 }
