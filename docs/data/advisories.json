@@ -287,7 +287,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128086",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Quay"
     ],
@@ -327,7 +327,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128085",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Quay"
     ],
@@ -369,7 +369,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T16:25:16Z",
     "id": "CVE-2026-128824",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Quay"
     ],
@@ -490,7 +490,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-114713",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T00:00:00Z",
     "priority": "information",
@@ -527,7 +527,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-123039",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T00:00:00Z",
     "priority": "information",
@@ -864,7 +864,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T18:02:08Z",
     "id": "CVE-2026-129433",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Docker"
     ],
@@ -982,7 +982,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-128027",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Docker"
     ],
@@ -1233,7 +1233,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-118740",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Linux",
       "Microsoft"
@@ -1275,7 +1275,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "GHSA-2f3w-v7f5-vpgx",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Linux",
       "Microsoft"
@@ -2453,7 +2453,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126299",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Python"
     ],
@@ -2496,7 +2496,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-62297",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "npm"
     ],
@@ -2540,7 +2540,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-52829",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [
       "Linux"
     ],
@@ -4172,6 +4172,228 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-125795",
+      "GHSA-3cfv-f88w-c563"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-125795",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T15:30:47Z",
+    "priority": "information",
+    "published": "2026-11-15T15:30:41Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3cfv-f88w-c563"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Estatik Estatik estatik allows PHP Local File Inclusion.This issue affects Estatik: from n/a through 4.3.6.",
+    "title": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File...",
+    "why_it_matters": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Estatik Estatik estatik allows PHP Local File Inclusion.This issue affects Estatik: from n/a through 4.3.6."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129483",
+      "GHSA-h9fw-9v74-m2cr"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129483",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T15:30:47Z",
+    "priority": "information",
+    "published": "2026-11-15T14:17:27.530",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-h9fw-9v74-m2cr"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129483"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerability in the SRP server mechanism because srp_server_mech_step2 does not reject client public values A that are multiples of N. Unauthenticated network clients can send A equal to N to force a zero shared secret, authenticating as any existing user without the password and learning session keys.",
+    "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerability in the SRP server...",
+    "why_it_matters": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerability in the SRP server mechanism because srp_server_mech_step2 does not reject client public values A that are multiples of N. Unauthenticated network clients can send A equal to N to force a zero shared secret, authenticating as any existing user without the password and learning session keys."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-125769",
+      "GHSA-vg24-2rxm-rxwg"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-125769",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T15:30:47Z",
+    "priority": "information",
+    "published": "2026-11-15T15:30:40Z",
+    "security_topics": [
+      "Privilege escalation"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vg24-2rxm-rxwg"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Incorrect Privilege Assignment vulnerability in Nasir Ahmed Advanced Form Integration advanced-form-integration allows Privilege Escalation.This issue affects Advanced Form Integration: from n/a through 2.11.3.",
+    "title": "Incorrect Privilege Assignment vulnerability in Nasir Ahmed Advanced Form Integration advanced...",
+    "why_it_matters": "Incorrect Privilege Assignment vulnerability in Nasir Ahmed Advanced Form Integration advanced-form-integration allows Privilege Escalation.This issue affects Advanced Form Integration: from n/a through 2.11.3."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-122662",
+      "GHSA-v4j4-5mx7-gp87"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-122662",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T15:30:40Z",
+    "priority": "information",
+    "published": "2026-11-15T15:30:40Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-v4j4-5mx7-gp87"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "Deserialization of Untrusted Data vulnerability in Barn2 Plugins Document Library Pro document-library-pro allows Object Injection.This issue affects Document Library Pro: from n/a before 4.2.2.",
+    "title": "Deserialization of Untrusted Data vulnerability in Barn2 Plugins Document Library Pro document...",
+    "why_it_matters": "Deserialization of Untrusted Data vulnerability in Barn2 Plugins Document Library Pro document-library-pro allows Object Injection.This issue affects Document Library Pro: from n/a before 4.2.2."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129349",
+      "GHSA-3j37-vw7v-fxxw"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129349",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T12:31:29Z",
+    "priority": "information",
+    "published": "2026-11-15T12:31:29Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3j37-vw7v-fxxw"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "When authentication caching is enabled on DefaultLdapRealm, after a user logs in successfully once, subsequent logins for that user succeed with any password. A cached authentication skips the LDAP bind, and the AllowAllCredentialsMatcher installed by default in DefaultLdapRealm accepts any credentials, allowing an attacker who knows a valid username to authenticate as that user. This issue affects all Apache Shiro versions through 3.0.0, only when using DefaultLdapRealm (or JndiLdapRealm) with authenticationCachingEnabled set to true, which is not the default. Mitigation: Upgrade to version 3.0.1 or later, which fixes the issue by no longer installing AllowAllCredentialsMatcher by default. Alternatively, disable authentication caching on the LDAP realm (this is the default), or configure a credentials matcher, such as SimpleCredentialsMatcher, that verifies credentials against the cache",
+    "title": "When authentication caching is enabled on DefaultLdapRealm, after a user logs in successfully...",
+    "why_it_matters": "When authentication caching is enabled on DefaultLdapRealm, after a user logs in successfully once, subsequent logins for that user succeed with any password. A cached authentication skips the LDAP bind, and the AllowAllCredentialsMatcher installed by default in DefaultLdapRealm accepts any credentials, allowing an attacker who knows a valid username to authenticate as that user. This issue affects all Apache Shiro versions through 3.0.0, only when using DefaultLdapRealm (or JndiLdapRealm) with authenticationCachingEnabled set to true, which is not the default. Mitigation: Upgrade to version 3.0.1 or later, which fixes the issue by no longer installing AllowAllCredentialsMatcher by default. Alternatively, disable authentication caching on the LDAP realm (this is the default), or configure a credentials matcher, such as SimpleCredentialsMatcher, that verifies credentials against the cache"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129444",
+      "GHSA-32m9-2655-w25q"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 10.0,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129444",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T09:30:40Z",
+    "priority": "information",
+    "published": "2026-11-15T09:16:44.570",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-32m9-2655-w25q"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129444"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability was identified in D-Link DSL-6740C 20131126. This affects an unknown function of the file /etc/templates/ftpd/ftpd_conf.php of the component FTP Daemon. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit is publicly available and might be used.",
+    "title": "A vulnerability was identified in D-Link DSL-6740C 20131126. This affects an unknown function of...",
+    "why_it_matters": "A vulnerability was identified in D-Link DSL-6740C 20131126. This affects an unknown function of the file /etc/templates/ftpd/ftpd_conf.php of the component FTP Daemon. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit is publicly available and might be used."
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-129354",
       "GHSA-j69h-pwm6-99pr"
     ],
@@ -4186,23 +4408,85 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129354",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-15T03:30:50Z",
     "priority": "information",
-    "published": "2026-11-15T03:30:43Z",
+    "published": "2026-11-15T01:18:03.043",
     "security_topics": [],
     "severity": "critical",
     "sources": [
       {
         "name": "GitHub Advisory Database",
         "url": "https://github.com/advisories/GHSA-j69h-pwm6-99pr"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129354"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
     "summary": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used.",
     "title": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function...",
     "why_it_matters": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used."
+  },
+  {
+    "affected": [
+      "paloaltonetworks pan-os",
+      "paloaltonetworks panorama m-200",
+      "paloaltonetworks panorama m-300",
+      "paloaltonetworks panorama m-500",
+      "paloaltonetworks panorama m-600",
+      "paloaltonetworks panorama m-700",
+      "paloaltonetworks panorama virtual appliance",
+      "paloaltonetworks wf-500",
+      "paloaltonetworks wf-500-b",
+      "php php",
+      "siemens amis ts",
+      "siemens blueplanet 360 nx3 m6 wm od iisx",
+      "siemens blueplanet 360 nx3 m6 wm od iisx firmware",
+      "siemens blueplanet 360 nx3 m6 wm od iisx-s",
+      "siemens blueplanet 360 nx3 m6 wm od iisx-s firmware",
+      "siemens energy engage",
+      "siemens ruggedcom ape1808",
+      "siemens ruggedcom ape1808 firmware",
+      "siemens spectrum power 4",
+      "siemens spectrum power 7",
+      "siemens spectrum power tg"
+    ],
+    "aliases": [
+      "CVE-2026-109618"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.2,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-109618",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T01:18:01.333",
+    "priority": "information",
+    "published": "2026-10-21T14:17:09.357",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+    "title": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly accoun",
+    "why_it_matters": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE)."
   },
   {
     "affected": [],
@@ -4221,17 +4505,21 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129353",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-15T00:30:31Z",
     "priority": "information",
-    "published": "2026-11-15T00:30:26Z",
+    "published": "2026-11-15T00:16:51.120",
     "security_topics": [],
     "severity": "critical",
     "sources": [
       {
         "name": "GitHub Advisory Database",
         "url": "https://github.com/advisories/GHSA-96r3-gppx-q366"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129353"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
@@ -4256,17 +4544,21 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129351",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-15T00:30:26Z",
     "priority": "information",
-    "published": "2026-11-15T00:30:26Z",
+    "published": "2026-11-14T23:16:47.753",
     "security_topics": [],
     "severity": "critical",
     "sources": [
       {
         "name": "GitHub Advisory Database",
         "url": "https://github.com/advisories/GHSA-r63q-p323-qrrf"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129351"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
@@ -4291,7 +4583,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129261",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T18:30:53Z",
     "priority": "information",
@@ -4328,7 +4620,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T18:02:08Z",
     "id": "CVE-2026-129255",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T15:31:47Z",
     "priority": "information",
@@ -4363,7 +4655,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T18:02:08Z",
     "id": "CVE-2026-120522",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T15:31:47Z",
     "priority": "information",
@@ -4402,7 +4694,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T18:02:08Z",
     "id": "CVE-2026-19907",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T15:31:45Z",
     "priority": "information",
@@ -4443,7 +4735,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126173",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T06:31:30Z",
     "priority": "information",
@@ -4484,7 +4776,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-124021",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T00:31:44Z",
     "priority": "information",
@@ -4521,7 +4813,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-124020",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T00:31:44Z",
     "priority": "information",
@@ -4626,7 +4918,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-82504",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T21:32:08Z",
     "priority": "information",
@@ -4816,7 +5108,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-123282",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T18:58:12.513",
     "priority": "information",
@@ -4852,7 +5144,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-123280",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T18:55:07.007",
     "priority": "information",
@@ -5029,7 +5321,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-129171",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T18:32:44Z",
     "priority": "information",
@@ -5354,7 +5646,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-63079",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T18:32:36Z",
     "priority": "information",
@@ -5433,7 +5725,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-129110",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T18:32:29Z",
     "priority": "information",
@@ -5584,7 +5876,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-78162",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T17:17:34.690",
     "priority": "information",
@@ -5620,7 +5912,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-118383",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T15:56:12.173",
     "priority": "information",
@@ -5657,7 +5949,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-128049",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T15:45:24.843",
     "priority": "information",
@@ -6204,7 +6496,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-109445",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T15:31:51Z",
     "priority": "information",
@@ -7049,7 +7341,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-126378",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T12:31:23Z",
     "priority": "information",
@@ -7574,7 +7866,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-127277",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T03:32:00Z",
     "priority": "information",
@@ -7728,7 +8020,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-44498",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T02:44:14Z",
     "priority": "information",
@@ -7766,7 +8058,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "GHSA-cwfq-rfcr-8hmp",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T02:44:10Z",
     "priority": "information",
@@ -7805,7 +8097,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-100397",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T01:09:55Z",
     "priority": "information",
@@ -7958,7 +8250,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-122006",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T23:46:52Z",
     "priority": "information",
@@ -7998,7 +8290,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "GHSA-wgv4-95jc-33jm",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T23:46:27Z",
     "priority": "information",
@@ -8069,7 +8361,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-126797",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T21:36:06.743",
     "priority": "information",
@@ -8318,7 +8610,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-119757",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T21:30:23.870",
     "priority": "information",
@@ -8356,7 +8648,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-17131",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T20:48:51.047",
     "priority": "information",
@@ -8392,7 +8684,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2023-39970",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T19:16:44.533",
     "priority": "information",
@@ -9229,7 +9521,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-40076",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T18:15:39Z",
     "priority": "information",
@@ -13025,6 +13317,214 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-129453"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.6,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129453",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T14:17:26.730",
+    "priority": "information",
+    "published": "2026-11-15T14:17:26.583",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129453"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability was found in DrayTek Vigor2960 1.5.1.6. This issue affects the function check_file_exist of the file /cgi-bin/mainfunction.cgi of the component File Existence Check. Performing a manipulation of the argument upload_name results in heap-based buffer overflow. The attack may be initiated remotely. The exploit has been made public and could be used. Upgrading to version 1.5.1.7 is capable of addressing this issue. Upgrading the affected component is recommended. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "title": "A vulnerability was found in DrayTek Vigor2960 1.5.1.6. This issue affects the function check_file_exist of the file /cgi-bin/mainfunction.cgi of the",
+    "why_it_matters": "A vulnerability was found in DrayTek Vigor2960 1.5.1.6. This issue affects the function check_file_exist of the file /cgi-bin/mainfunction.cgi of the component File Existence Check. Performing a manipulation of the argument upload_name results in heap-based buffer overflow. The attack may be initiated remotely. The exploit has been made public and could be used. Upgrading to version 1.5.1.7 is capable of addressing this issue. Upgrading the affected component is recommended. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\""
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129452"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.5,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129452",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T13:16:59.867",
+    "priority": "information",
+    "published": "2026-11-15T13:16:59.703",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129452"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability has been found in DrayTek Vigor2960 1.5.1.6. This vulnerability affects the function set_table of the file /cgi-bin/mainfunction.cgi. Such manipulation of the argument jsondata leads to command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 1.5.1.7 is able to resolve this issue. It is suggested to upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "title": "A vulnerability has been found in DrayTek Vigor2960 1.5.1.6. This vulnerability affects the function set_table of the file /cgi-bin/mainfunction.cgi.",
+    "why_it_matters": "A vulnerability has been found in DrayTek Vigor2960 1.5.1.6. This vulnerability affects the function set_table of the file /cgi-bin/mainfunction.cgi. Such manipulation of the argument jsondata leads to command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 1.5.1.7 is able to resolve this issue. It is suggested to upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\""
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129451"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.6,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129451",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T13:16:59.647",
+    "priority": "information",
+    "published": "2026-11-15T13:16:58.600",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129451"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function app_guest_export of the file /cgi-bin/mainfunction.cgi. This manipulation of the argument filename causes path traversal. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. The affected component should be upgraded. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "title": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function app_guest_export of the file /cgi-bin/mainfunction.cgi. This manip",
+    "why_it_matters": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function app_guest_export of the file /cgi-bin/mainfunction.cgi. This manipulation of the argument filename causes path traversal. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. The affected component should be upgraded. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\""
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129450"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.6,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129450",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T12:17:21.790",
+    "priority": "information",
+    "published": "2026-11-15T12:17:20.913",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129450"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability was detected in DrayTek Vigor2960 1.5.1.6. Affected by this issue is the function sub_1E084 of the file /cgi-bin/mainfunction.cgi?action=doWebBackup. The manipulation of the argument option results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 1.5.1.7 can resolve this issue. You should upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "title": "A vulnerability was detected in DrayTek Vigor2960 1.5.1.6. Affected by this issue is the function sub_1E084 of the file /cgi-bin/mainfunction.cgi?acti",
+    "why_it_matters": "A vulnerability was detected in DrayTek Vigor2960 1.5.1.6. Affected by this issue is the function sub_1E084 of the file /cgi-bin/mainfunction.cgi?action=doWebBackup. The manipulation of the argument option results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 1.5.1.7 can resolve this issue. You should upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\""
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129449"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.6,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129449",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-15T11:17:11.580",
+    "priority": "information",
+    "published": "2026-11-15T11:17:10.620",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129449"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A security vulnerability has been detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this vulnerability is the function sub_14914 of the file /cgi-bin/mainfunction.cgi. The manipulation of the argument swmconfigupload leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 1.5.1.7 addresses this issue. It is advisable to upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\"",
+    "title": "A security vulnerability has been detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this vulnerability is the function sub_14914 of the file /c",
+    "why_it_matters": "A security vulnerability has been detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this vulnerability is the function sub_14914 of the file /cgi-bin/mainfunction.cgi. The manipulation of the argument swmconfigupload leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 1.5.1.7 addresses this issue. It is advisable to upgrade the affected component. The vendor recommends: \"1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.\""
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129352"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.5,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-129352",
+    "last_seen": "2026-11-15T18:51:54Z",
+    "matched_topics": [],
+    "modified": "2026-11-14T23:16:48.177",
+    "priority": "information",
+    "published": "2026-11-14T23:16:48.033",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129352"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability was detected in TRENDnet TEW-657BRM 1.00.1. This issue affects some unknown processing of the file /usr/sbin/upgrade_flash.cgi. Performing a manipulation of the argument boundary results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor explains: \"\"I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.\"",
+    "title": "A vulnerability was detected in TRENDnet TEW-657BRM 1.00.1. This issue affects some unknown processing of the file /usr/sbin/upgrade_flash.cgi. Perfor",
+    "why_it_matters": "A vulnerability was detected in TRENDnet TEW-657BRM 1.00.1. This issue affects some unknown processing of the file /usr/sbin/upgrade_flash.cgi. Performing a manipulation of the argument boundary results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor explains: \"\"I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.\""
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-129258"
     ],
     "attention_score": 25,
@@ -13038,7 +13538,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T18:02:08Z",
     "id": "CVE-2026-129258",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T15:16:58.433",
     "priority": "information",
@@ -13072,7 +13572,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T18:02:08Z",
     "id": "CVE-2026-129250",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T12:17:44.480",
     "priority": "information",
@@ -13111,7 +13611,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126298",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T00:08:00Z",
     "priority": "information",
@@ -13151,7 +13651,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "GHSA-6665-2vj3-h76r",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T00:06:58Z",
     "priority": "information",
@@ -13192,7 +13692,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126297",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T00:05:58Z",
     "priority": "information",
@@ -13232,7 +13732,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "GHSA-qvhx-rvgc-jhwf",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-14T00:04:16Z",
     "priority": "information",
@@ -13272,7 +13772,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "GHSA-f7j6-hf97-9v99",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T23:20:11Z",
     "priority": "information",
@@ -13310,7 +13810,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "GHSA-jh6r-h4rx-2j3w",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T23:04:16Z",
     "priority": "information",
@@ -13351,7 +13851,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126303",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T21:02:20Z",
     "priority": "information",
@@ -13391,7 +13891,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "GHSA-4hvg-fv5c-9936",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T20:57:56Z",
     "priority": "information",
@@ -13430,7 +13930,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126304",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T20:55:19Z",
     "priority": "information",
@@ -13468,7 +13968,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "GHSA-7r4r-6ppg-7ff8",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T20:54:34Z",
     "priority": "information",
@@ -13507,7 +14007,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128089",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T20:19:16Z",
     "priority": "information",
@@ -13546,7 +14046,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128082",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T19:21:03Z",
     "priority": "information",
@@ -13585,7 +14085,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128081",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T18:47:19Z",
     "priority": "information",
@@ -13626,7 +14126,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126191",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T16:39:45Z",
     "priority": "information",
@@ -13665,7 +14165,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-44499",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T02:42:59Z",
     "priority": "information",
@@ -13706,7 +14206,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-126190",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-13T00:49:47Z",
     "priority": "information",
@@ -13747,7 +14247,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-126081",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T23:37:10Z",
     "priority": "information",
@@ -13787,7 +14287,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-128067",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T23:34:44Z",
     "priority": "information",
@@ -13826,7 +14326,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-126366",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T22:55:00Z",
     "priority": "information",
@@ -13896,7 +14396,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-56712",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T21:30:23.870",
     "priority": "information",
@@ -13935,7 +14435,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-125323",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T20:46:05Z",
     "priority": "information",
@@ -13974,7 +14474,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-125327",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T20:37:39Z",
     "priority": "information",
@@ -14015,7 +14515,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-114605",
-    "last_seen": "2026-11-15T06:33:49Z",
+    "last_seen": "2026-11-15T18:51:54Z",
     "matched_topics": [],
     "modified": "2026-11-12T06:30:20Z",
     "priority": "information",
