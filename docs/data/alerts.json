@@ -1,50 +1,6 @@
 {
-  "alerts": [
-    {
-      "affected": [],
-      "aliases": [
-        "CVE-2026-129433",
-        "GHSA-gfc5-hfj7-fjwc"
-      ],
-      "attention_score": 75,
-      "categories": [
-        "containers"
-      ],
-      "cvss": 9.9,
-      "cvss_version": "3.1",
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-14T18:02:08Z",
-      "id": "CVE-2026-129433",
-      "last_seen": "2026-11-14T18:02:08Z",
-      "matched_topics": [
-        "Docker"
-      ],
-      "modified": "2026-11-14T15:31:52Z",
-      "priority": "review",
-      "published": "2026-11-14T13:17:22.820",
-      "security_topics": [
-        "Remote code execution"
-      ],
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-gfc5-hfj7-fjwc"
-        },
-        {
-          "name": "NIST NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129433"
-        }
-      ],
-      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
-      "summary": "Dokploy before 0.31.1 contains an OS command injection vulnerability in getComposeContainerCommand() that allows authenticated organization members to execute shell commands via the serviceName parameter. Attackers can store serviceName values with shell metacharacters through backup.create or backup.update tRPC procedures, executing commands as root when scheduled backups run and taking over the host via the mounted Docker socket.",
-      "title": "Dokploy before 0.31.1 contains an OS command injection vulnerability in...",
-      "why_it_matters": "Dokploy before 0.31.1 contains an OS command injection vulnerability in getComposeContainerCommand() that allows authenticated organization members to execute shell commands via the serviceName parameter. Attackers can store serviceName values with shell metacharacters through backup.create or backup.update tRPC procedures, executing commands as root when scheduled backups run and taking over the host via the mounted Docker socket."
-    }
-  ],
-  "generated_at": "2026-11-14T18:02:08Z",
+  "alerts": [],
+  "generated_at": "2026-11-15T06:33:49Z",
   "initial_baseline": false,
   "note": "Watchlist match is not verified local exposure."
 }
