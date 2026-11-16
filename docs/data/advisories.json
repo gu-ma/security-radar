@@ -119,9 +119,9 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-116606",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
-    "modified": "2026-11-12T12:31:33Z",
+    "modified": "2026-11-16T18:17:27.957",
     "priority": "information",
     "published": "2026-11-02T13:17:37.017",
     "security_topics": [
@@ -287,7 +287,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128086",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [
       "Quay"
     ],
@@ -327,7 +327,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-128085",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [
       "Quay"
     ],
@@ -369,7 +369,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T16:25:16Z",
     "id": "CVE-2026-128824",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [
       "Quay"
     ],
@@ -490,7 +490,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-114713",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-13T00:00:00Z",
     "priority": "information",
@@ -527,7 +527,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-123039",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-13T00:00:00Z",
     "priority": "information",
@@ -4172,6 +4172,209 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-129952"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-16T22:02:31Z",
+    "id": "CVE-2026-129952",
+    "last_seen": "2026-11-16T22:02:31Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T20:28:06.217",
+    "priority": "information",
+    "published": "2026-11-16T15:17:30.573",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129952"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to gain administrator access by forging JWTs with the hardcoded 'nodepress-secret' fallback key. Attackers can sign HS256 bearer tokens with the default issuer, audience, and role 'admin' to access administrator-only APIs for article, comment, options, and file management.",
+    "title": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to gain administrator access by f",
+    "why_it_matters": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to gain administrator access by forging JWTs with the hardcoded 'nodepress-secret' fallback key. Attackers can sign HS256 bearer tokens with the default issuer, audience, and role 'admin' to access administrator-only APIs for article, comment, options, and file management."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129955"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-16T22:02:31Z",
+    "id": "CVE-2026-129955",
+    "last_seen": "2026-11-16T22:02:31Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T20:28:06.217",
+    "priority": "information",
+    "published": "2026-11-16T15:17:31.030",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129955"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain administrator access by using the hardcoded default password 'root'. Attackers can send base64-encoded 'root' to POST /admin/login when NP_ADMIN_DEFAULT_PASSWORD is unset to obtain admin tokens and fully control the site.",
+    "title": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain administrator access by using th",
+    "why_it_matters": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain administrator access by using the hardcoded default password 'root'. Attackers can send base64-encoded 'root' to POST /admin/login when NP_ADMIN_DEFAULT_PASSWORD is unset to obtain admin tokens and fully control the site."
+  },
+  {
+    "affected": [
+      "paloaltonetworks pan-os",
+      "paloaltonetworks panorama m-200",
+      "paloaltonetworks panorama m-300",
+      "paloaltonetworks panorama m-500",
+      "paloaltonetworks panorama m-600",
+      "paloaltonetworks panorama m-700",
+      "paloaltonetworks panorama virtual appliance",
+      "paloaltonetworks wf-500",
+      "paloaltonetworks wf-500-b",
+      "php php",
+      "siemens amis ts",
+      "siemens blueplanet 360 nx3 m6 wm od iisx",
+      "siemens blueplanet 360 nx3 m6 wm od iisx firmware",
+      "siemens blueplanet 360 nx3 m6 wm od iisx-s",
+      "siemens blueplanet 360 nx3 m6 wm od iisx-s firmware",
+      "siemens energy engage",
+      "siemens local monitoring bt-monitoring-vm",
+      "siemens ruggedcom ape1808",
+      "siemens ruggedcom ape1808 firmware",
+      "siemens spectrum power 4",
+      "siemens spectrum power 7",
+      "siemens spectrum power tg"
+    ],
+    "aliases": [
+      "CVE-2026-109618"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.2,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-15T18:51:54Z",
+    "id": "CVE-2026-109618",
+    "last_seen": "2026-11-16T22:02:31Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T16:54:58.603",
+    "priority": "information",
+    "published": "2026-10-21T14:17:09.357",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+    "title": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly accoun",
+    "why_it_matters": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE)."
+  },
+  {
+    "affected": [
+      "haben-cs9 simple and nice shopping cart script"
+    ],
+    "aliases": [
+      "CVE-2023-1497"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-16T22:02:31Z",
+    "id": "CVE-2023-1497",
+    "last_seen": "2026-11-16T22:02:31Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T15:25:33.407",
+    "priority": "information",
+    "published": "2023-03-19T19:15:20.130",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1497"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability was found in SourceCodester Simple and Nice Shopping Cart Script 1.0. It has been rated as critical. This issue affects some unknown processing of the file uploaderm.php. The manipulation of the argument submit leads to unrestricted upload. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-223397 was assigned to this vulnerability.",
+    "title": "A vulnerability was found in SourceCodester Simple and Nice Shopping Cart Script 1.0. It has been rated as critical. This issue affects some unknown p",
+    "why_it_matters": "A vulnerability was found in SourceCodester Simple and Nice Shopping Cart Script 1.0. It has been rated as critical. This issue affects some unknown processing of the file uploaderm.php. The manipulation of the argument submit leads to unrestricted upload. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-223397 was assigned to this vulnerability."
+  },
+  {
+    "affected": [
+      "cridio listingpro"
+    ],
+    "aliases": [
+      "CVE-2024-38795"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-16T22:02:31Z",
+    "id": "CVE-2024-38795",
+    "last_seen": "2026-11-16T22:02:31Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T09:17:11.940",
+    "priority": "information",
+    "published": "2024-08-29T15:15:26.460",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38795"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Emraan Cheema ListingPro listingpro-plugin allows SQL Injection.This issue affects ListingPro: from n/a through 2.9.4.",
+    "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Emraan Cheema ListingPro listingpro-plugin allow",
+    "why_it_matters": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Emraan Cheema ListingPro listingpro-plugin allows SQL Injection.This issue affects ListingPro: from n/a through 2.9.4."
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-125795",
       "GHSA-3cfv-f88w-c563"
     ],
@@ -4221,7 +4424,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-129483",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-15T15:30:47Z",
     "priority": "information",
@@ -4408,7 +4611,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129354",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-15T03:30:50Z",
     "priority": "information",
@@ -4429,64 +4632,6 @@
     "summary": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used.",
     "title": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function...",
     "why_it_matters": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used."
-  },
-  {
-    "affected": [
-      "paloaltonetworks pan-os",
-      "paloaltonetworks panorama m-200",
-      "paloaltonetworks panorama m-300",
-      "paloaltonetworks panorama m-500",
-      "paloaltonetworks panorama m-600",
-      "paloaltonetworks panorama m-700",
-      "paloaltonetworks panorama virtual appliance",
-      "paloaltonetworks wf-500",
-      "paloaltonetworks wf-500-b",
-      "php php",
-      "siemens amis ts",
-      "siemens blueplanet 360 nx3 m6 wm od iisx",
-      "siemens blueplanet 360 nx3 m6 wm od iisx firmware",
-      "siemens blueplanet 360 nx3 m6 wm od iisx-s",
-      "siemens blueplanet 360 nx3 m6 wm od iisx-s firmware",
-      "siemens energy engage",
-      "siemens ruggedcom ape1808",
-      "siemens ruggedcom ape1808 firmware",
-      "siemens spectrum power 4",
-      "siemens spectrum power 7",
-      "siemens spectrum power tg"
-    ],
-    "aliases": [
-      "CVE-2026-109618"
-    ],
-    "attention_score": 45,
-    "categories": [
-      "unclassified"
-    ],
-    "cvss": 9.2,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-15T18:51:54Z",
-    "id": "CVE-2026-109618",
-    "last_seen": "2026-11-15T18:51:54Z",
-    "matched_topics": [],
-    "modified": "2026-11-15T01:18:01.333",
-    "priority": "information",
-    "published": "2026-10-21T14:17:09.357",
-    "security_topics": [
-      "Remote code execution"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
-      }
-    ],
-    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
-    "title": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly accoun",
-    "why_it_matters": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE)."
   },
   {
     "affected": [],
@@ -4544,7 +4689,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129351",
-    "last_seen": "2026-11-16T06:30:42Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-15T00:30:26Z",
     "priority": "information",
@@ -13364,7 +13509,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-129452",
-    "last_seen": "2026-11-15T18:51:54Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-15T13:16:59.867",
     "priority": "information",
@@ -13400,7 +13545,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-129451",
-    "last_seen": "2026-11-15T18:51:54Z",
+    "last_seen": "2026-11-16T22:02:31Z",
     "matched_topics": [],
     "modified": "2026-11-15T13:16:59.647",
     "priority": "information",
