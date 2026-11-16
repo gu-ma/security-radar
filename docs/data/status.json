@@ -1,33 +1,36 @@
 {
-  "last_run": "2026-11-15T18:51:54Z",
-  "last_successful_run": "2026-11-15T18:51:54Z",
+  "last_run": "2026-11-16T06:30:42Z",
+  "last_successful_run": "2026-11-16T06:30:42Z",
   "message": "Source outages are displayed and do not erase older records.",
   "new_relevant_alerts": 0,
-  "partial": false,
-  "source_errors": [],
+  "partial": true,
+  "source_errors": [
+    "nist_nvd"
+  ],
   "sources": {
     "cisa_kev": {
       "count": 2,
       "error": "",
-      "last_success": "2026-11-15T18:51:54Z",
+      "last_success": "2026-11-16T06:30:42Z",
       "state": "ok"
     },
     "github_advisories": {
-      "count": 50,
+      "count": 31,
       "error": "",
-      "last_success": "2026-11-15T18:51:54Z",
+      "last_success": "2026-11-16T06:30:42Z",
       "state": "ok"
     },
     "nist_nvd": {
       "count": 36,
-      "error": "",
+      "error": "SourceError: Unable to read nvd source (HTTPError: HTTP Error 503: Service Unavailable)",
+      "last_attempt": "2026-11-16T06:30:42Z",
       "last_success": "2026-11-15T18:51:54Z",
-      "state": "ok"
+      "state": "error"
     },
     "redhat_quay": {
       "count": 3,
       "error": "",
-      "last_success": "2026-11-15T18:51:54Z",
+      "last_success": "2026-11-16T06:30:42Z",
       "state": "ok"
     }
   },
