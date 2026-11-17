@@ -13,7 +13,8 @@
   <link rel="alternate" type="application/rss+xml" title="Security Radar RSS" href="./rss.xml">
   <link rel="alternate" type="application/atom+xml" title="Security Radar Atom" href="./atom.xml">
   <script defer src="./sorting.js"></script>
-  <script defer src="./app.js"></script>
+  <script defer src="./source-filter.js"></script>
+  <script defer src="./app.js?v=20261117-source1"></script>
 </head>
 <body>
   <header class="topbar">
@@ -77,6 +78,7 @@
       <div class="section-heading"><div><div class="eyebrow">02 / ARCHIVE</div><h2 id="findings-title">Browse records</h2></div><p id="result-count" class="results" aria-live="polite"></p></div>
       <div class="filters">
         <label class="searchbox"><span class="sr-only">Search advisories</span><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search CVE, product or keyword…" autocomplete="off"></label>
+        <label class="dropdown"><span class="sr-only">Filter by advisory source</span><select id="source"><option value="">All sources</option><option value="cisa_kev">CISA KEV</option><option value="github_advisories">GitHub Advisories</option><option value="nist_nvd">NIST NVD</option><option value="redhat_quay">Red Hat Security Data</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by technology category</span><select id="category"><option value="">All technologies</option><option value="applications">Applications</option><option value="dependencies">Libraries & dependencies</option><option value="containers">Containers & registries</option><option value="infrastructure">Servers & infrastructure</option><option value="cloud-identity">Cloud & identity</option><option value="ai-ml">AI & ML tooling</option><option value="unclassified">Unclassified</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by security topic</span><select id="topic"><option value="">All security topics</option><option>Supply chain</option><option>Remote code execution</option><option>Privilege escalation</option><option>Authentication & authorization</option><option>Data exposure</option><option>Denial of service</option></select></label>
         <label class="dropdown"><span class="sr-only">Filter by priority</span><select id="priority"><option value="">All priorities</option><option value="investigate">Investigate</option><option value="review">Review</option><option value="information">Information</option></select></label>

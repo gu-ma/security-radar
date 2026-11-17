@@ -6,7 +6,8 @@ import time
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
-from .http import SourceError, get_json
+from .http import SourceError, SourcePaginationError, SourceSchemaError, get_json, get_github_page
+from . import schema
 from .model import cvss_to_severity, make_advisory
 
 KEV_URL = "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
@@ -19,10 +20,9 @@ def cutoff_date(now: datetime, days: int) -> str:
 
 
 def parse_kev(payload: dict, *, since: str) -> list[dict]:
-    if not isinstance(payload, dict) or not isinstance(payload.get("vulnerabilities"), list):
-        raise SourceError("Unexpected CISA KEV schema")
+    records = schema.kev(payload)
     result = []
-    for item in payload["vulnerabilities"]:
+    for item in records:
         if item.get("dateAdded", "") < since or not item.get("cveID"):
             continue
         cve = item["cveID"]
@@ -40,12 +40,9 @@ def parse_kev(payload: dict, *, since: str) -> list[dict]:
 
 
 def parse_ghsa(payload: list) -> list[dict]:
-    if not isinstance(payload, list):
-        raise SourceError("Unexpected GitHub advisory schema")
+    records = schema.ghsa(payload)
     output = []
-    for item in payload:
-        if not isinstance(item, dict) or not item.get("ghsa_id"):
-            continue
+    for item in records:
         # GHSA is an independent authoritative identifier when no CVE is assigned.
         ident = item.get("cve_id") or item["ghsa_id"]
         packages, ecosystems = [], []
@@ -99,10 +96,9 @@ def _cpe_products(configurations: list) -> list[str]:
 
 
 def parse_nvd(payload: dict) -> list[dict]:
-    if not isinstance(payload, dict) or not isinstance(payload.get("vulnerabilities"), list):
-        raise SourceError("Unexpected NVD schema")
+    records = schema.nvd(payload)
     result = []
-    for row in payload["vulnerabilities"]:
+    for row in records:
         cve = row.get("cve") or {}
         ident = cve.get("id")
         if not ident or cve.get("vulnStatus") in {"Rejected"}:
@@ -137,29 +133,42 @@ def collect_kev(now: datetime, *, days: int = 90) -> list[dict]:
 
 
 def collect_ghsa(now: datetime, *, days: int = 3) -> list[dict]:
-    """High/critical reviewed advisories + critical unreviewed advisories.
+    """Fetch selected GitHub advisories using API Link-header cursors.
 
-    GitHub separates reviewed (package-vetted) and unreviewed (often vendor CVEs).
-    Ignoring unreviewed records hides newly disclosed registry vulnerabilities.
-    Keep the bounded result set honest: raise if any query is truncated.
+    Global advisories do not support numbered pagination. A repeated cursor,
+    repeated result page or excessive pagination fails closed and leaves the
+    previous snapshot in place, rather than publishing truncated results.
     """
     since = cutoff_date(now, days)
     found = []
     for kind, severity in (("reviewed", "critical"), ("reviewed", "high"),
                            ("unreviewed", "critical")):
-        for page in range(1, 21):
-            params = urlencode({"type": kind, "severity": severity,
-                                "modified": ">=" + (cutoff_date(now, 1) if kind == "unreviewed" else since),
-                                "per_page": 100, "page": page, "sort": "updated",
-                                "direction": "desc"})
-            batch = get_json(GHSA_URL + "?" + params, api="github")
-            if not isinstance(batch, list):
-                raise SourceError("Unexpected GitHub advisory response")
+        params = urlencode({"type": kind, "severity": severity,
+                            "modified": ">=" + (cutoff_date(now, 1) if kind == "unreviewed" else since),
+                            "per_page": 100, "sort": "updated", "direction": "desc"})
+        url = GHSA_URL + "?" + params
+        visited = set()
+        seen_ids = set()
+        for _ in range(50):
+            if url in visited:
+                raise SourcePaginationError(f"GitHub {kind}/{severity}: repeated cursor")
+            visited.add(url)
+            batch, next_url = get_github_page(url)
+            # Catch APIs that ignore cursors and serve the same full page again.
+            identifiers = [row.get("ghsa_id") for row in schema.ghsa(batch)]
+            if len(set(identifiers)) != len(identifiers):
+                raise SourcePaginationError(f"GitHub {kind}/{severity}: duplicate IDs in response page")
+            if set(identifiers) & seen_ids:
+                raise SourcePaginationError(f"GitHub {kind}/{severity}: repeated result page")
+            seen_ids.update(identifiers)
             found.extend(parse_ghsa(batch))
-            if len(batch) < 100:
+            if not next_url:
                 break
+            if not batch:
+                raise SourcePaginationError(f"GitHub {kind}/{severity}: empty page has next cursor")
+            url = next_url
         else:
-            raise SourceError(f"GitHub {kind}/{severity} exceeded 2000 records; results incomplete")
+            raise SourcePaginationError(f"GitHub {kind}/{severity}: exceeded 50 cursor pages")
     return found
 
 
@@ -178,7 +187,7 @@ def collect_nvd(now: datetime, *, days: int = 3) -> list[dict]:
                             "resultsPerPage": 1000, "startIndex": index})
         payload = get_json(NVD_URL + "?" + params, api="nvd")
         if not isinstance(payload, dict):
-            raise SourceError("Unexpected NVD response")
+            raise SourceSchemaError("Unexpected NVD response")
         output.extend(parse_nvd(payload))
         total = payload.get("totalResults")
         if not isinstance(total, int):
@@ -200,15 +209,10 @@ REDHAT_CVE_DETAILS = "https://access.redhat.com/hydra/rest/securitydata/cve/"
 
 def parse_redhat_quay(items: list[dict]) -> list[dict]:
     """Parse public Red Hat Security Data API CVE records for Quay products."""
-    if not isinstance(items, list):
-        raise SourceError("Unexpected Red Hat Security Data API schema")
+    records = schema.redhat(items)
     results = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
+    for item in records:
         cve = item.get("CVE") or item.get("cve_id")
-        if not isinstance(cve, str) or not re.fullmatch(r"CVE-\d{4}-\d{4,}", cve, re.I):
-            continue
         bugzilla = item.get("bugzilla") or {}
         if isinstance(bugzilla, list):
             bugzilla = bugzilla[0] if bugzilla else {}
@@ -249,8 +253,7 @@ def collect_redhat_quay(now: datetime, *, days: int = 7) -> list[dict]:
         params = urlencode({"after": since, "product": "Red Hat Quay",
                             "per_page": 100, "page": page, "isCompressed": "false"})
         payload = get_json(REDHAT_CVE_URL + "?" + params)
-        if not isinstance(payload, list):
-            raise SourceError("Unexpected Red Hat CVE list schema")
+        schema.redhat(payload)
         # List items are intentionally compact; enrich Quay descriptions using
         # Red Hat's public per-CVE endpoint when available.
         for item in payload:

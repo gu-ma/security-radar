@@ -9,6 +9,7 @@ const labels = {
 const els = {
   list: document.getElementById("list"), spotlight: document.getElementById("spotlight"),
   query: document.getElementById("query"), category: document.getElementById("category"),
+  source: document.getElementById("source"),
   topic: document.getElementById("topic"), priority: document.getElementById("priority"),
   severity: document.getElementById("severity"), exploited: document.getElementById("exploited"),
   more: document.getElementById("more"), archive: document.getElementById("archive"),
@@ -122,6 +123,7 @@ function spotlight() {
 function renderArchive() {
   const q=els.query.value.trim().toLowerCase();
   const rows=advisories.filter(a=>
+    (!els.source.value||window.SecurityRadarSources.matchesSource(a,els.source.value)) &&
     (!els.category.value||categoriesOf(a).includes(els.category.value)) &&
     (!els.topic.value||topicsOf(a).includes(els.topic.value)) &&
     (!els.priority.value||a.priority===els.priority.value) &&
@@ -129,7 +131,8 @@ function renderArchive() {
     (!els.exploited.value||a.exploited===(els.exploited.value==="yes")) &&
     (!q||[a.id,a.title,a.summary,...(a.affected||[]),
       ...(a.matched_topics||[]),...(a.aliases||[]),
-      ...categoriesOf(a),...topicsOf(a)].join(" ").toLowerCase().includes(q))
+      ...categoriesOf(a),...topicsOf(a),
+      ...(a.sources||[]).map(s=>s.name||"")].join(" ").toLowerCase().includes(q))
   );
   const ordered = window.SecurityRadarSort.sortAdvisories(rows, els.sort.value);
   els.list.replaceChildren();
@@ -143,6 +146,8 @@ function syncQueryUrl() {
   const url=new URL(window.location.href);
   const value=els.query.value.trim();
   if(value)url.searchParams.set("q",value);else url.searchParams.delete("q");
+  const origin=els.source.value;
+  if(origin)url.searchParams.set("source",origin);else url.searchParams.delete("source");
   const cat=els.category.value;
   if(cat)url.searchParams.set("category",cat);else url.searchParams.delete("category");
   const topic=els.topic.value;
@@ -180,13 +185,15 @@ async function load() {
       :" · All enabled sources succeeded");
     const params=new URLSearchParams(window.location.search);
     if(params.has("q"))els.query.value=params.get("q");
+    if(params.has("source")&&[...els.source.options].some(o=>o.value===params.get("source")))
+      els.source.value=params.get("source");
     if(params.has("category")&&[...els.category.options].some(o=>o.value===params.get("category")))
       els.category.value=params.get("category");
     if(params.has("topic")&&[...els.topic.options].some(o=>o.value===params.get("topic")))
       els.topic.value=params.get("topic");
     if(params.has("sort") && window.SecurityRadarSort.modes.includes(params.get("sort")))
       els.sort.value=params.get("sort");
-    if(params.has("q")||params.has("category")||params.has("topic")||params.has("sort"))
+    if(params.has("q")||params.has("source")||params.has("category")||params.has("topic")||params.has("sort"))
       els.archive.open=true;
     setFocusedCategory("");
     renderArchive();
@@ -200,7 +207,7 @@ els.tabs.addEventListener("click",e=>{
   const button=e.target.closest("button[data-category]");
   if(button&&els.tabs.contains(button))setFocusedCategory(button.dataset.category);
 });
-[els.query,els.category,els.topic,els.priority,els.severity,els.exploited,els.sort].forEach(input=>
+[els.query,els.source,els.category,els.topic,els.priority,els.severity,els.exploited,els.sort].forEach(input=>
   input.addEventListener("input",()=>{visibleLimit=20;renderArchive();syncQueryUrl()})
 );
 els.more.addEventListener("click",()=>{visibleLimit+=20;renderArchive()});

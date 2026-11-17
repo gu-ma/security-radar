@@ -23,7 +23,8 @@ jobs:
         run: |
           node --check docs/app.js
           node --check docs/sorting.js
-          node --test tests/test_sorting.cjs
+          node --check docs/source-filter.js
+          node --test tests/test_sorting.cjs tests/test_source_filter.cjs
       - name: Validate public feed generation
         run: python -m security_radar.feeds --input examples/sample_feed.json --output-dir /tmp/security-radar-feed-test
       - name: Validate offline Teams preview

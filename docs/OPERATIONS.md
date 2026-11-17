@@ -89,3 +89,13 @@ Run `python -m security_radar.feeds` locally to rebuild them from `docs/data/adv
 Monitor collection runs on a 12-hour schedule, at 00:17 and 12:17 UTC, and when manually dispatched. A code or website push runs tests and deploys the last committed dataset but deliberately skips collection, feed regeneration, state persistence, and Teams notification. This avoids extra public data commits during active site development. The public advisory snapshot still stores `first_seen`, `last_seen`, and status timestamps, so each real collection run can create a data commit even if no new CVE appears. At most two regular scheduled data commits per day is the expected baseline, plus deliberate manual runs. Git history still grows over time.
 
 The public JSON serializer and advisory normalization replace any upstream em dash with a spaced hyphen, including vendor text and retained historical records. This does not change the CVE identifiers, severity, sources, or other security findings.
+
+## Source reliability and incident response
+
+The GitHub Global Advisories collector uses the REST API's Link-header cursor, not numbered pages. It fails closed when the cursor repeats, records appear twice in a paginated response, or more than 50 pages are requested within a severity/type query. If an upstream API changes critical JSON fields, source-specific validators raise `SourceSchemaError` instead of silently treating malformed data as zero advisories.
+
+Each enabled source retains `last_success`, `last_attempt`, current state, count from the last complete collection, and a classified failure type. Error types are `schema`, `pagination`, `source`, and `unexpected`. A partially failed collection keeps the last published advisories and marks its status as partial. A zero-result batch is permitted for legitimately sparse source/date windows and will be monitored for anomalies in the planned run-history view.
+
+The archive's Source filter uses the collector name recorded on the advisory, not the vulnerability's vendor. Merged advisories can match more than one source. The filter is shareable with `?source=github_advisories`, for example.
+
+For persistent failures, review source freshness in `docs/data/status.json` and inspect the [GitHub Actions workflow](https://github.com/gu-ma/security-radar/actions/workflows/monitor.yml). The operational status page, bounded run history and incident deduplication/notification system are follow-up phases in `docs/PROJECT.md`. No automatic operational email or Teams notification is enabled by this iteration.

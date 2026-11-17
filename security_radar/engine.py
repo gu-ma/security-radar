@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .model import enrich, merge, normalize_punctuation, utcnow
 from .registry import discover_sources
+from .http import SourceSchemaError, SourcePaginationError, SourceError
 
 LOG = logging.getLogger("security_radar")
 
@@ -120,7 +121,9 @@ def run(config_path: Path, data_dir: Path) -> int:
             records = collector(now, days=lookback_days)
             fetched.extend(records)
             new_sources[name] = {
-                "state": "ok", "last_success": now_string, "count": len(records), "error": ""
+                "state": "ok", "last_success": now_string, "last_attempt": now_string,
+                "count": len(records), "error": "", "error_type": "",
+                "consecutive_failures": 0, "first_failure": ""
             }
             LOG.info("%s: %d advisories", name, len(records))
             success += 1
@@ -129,10 +132,20 @@ def run(config_path: Path, data_dir: Path) -> int:
             message = f"{type(exc).__name__}: {exc}"
             LOG.warning("%s failed: %s", name, message)
             errors.append(name)
+            old_state = old_sources.get(name, {})
+            error_type = (
+                "schema" if isinstance(exc, SourceSchemaError) else
+                "pagination" if isinstance(exc, SourcePaginationError) else
+                "source" if isinstance(exc, SourceError) else "unexpected"
+            )
             new_sources[name] = {
-                **old_sources.get(name, {}),
+                **old_state,
                 "state": "error", "error": message[:350],
-                "last_attempt": now_string
+                "error_type": error_type,
+                "last_attempt": now_string,
+                "consecutive_failures": old_state.get("consecutive_failures", 0) + 1,
+                "first_failure": old_state.get("first_failure", now_string)
+                    if old_state.get("state") == "error" else now_string
             }
     if not success:
         LOG.error("All enabled sources failed (or none were enabled). Keeping previous data.")

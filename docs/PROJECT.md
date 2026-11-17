@@ -93,3 +93,47 @@ The monitor generates `docs/rss.xml` (RSS 2.0) and `docs/atom.xml` (Atom 1.0) us
 ## Future: bounded repository growth
 
 The active dataset already has a rolling 180-day modified-time window and a maximum of 2,500 records. RSS/Atom feeds contain only the 50 most recently modified qualifying advisories. These caps protect browser and feed consumers, but every scheduled write currently creates a new Git commit containing public JSON/XML snapshots, so **Git history accumulates**. Before substantially increasing polling frequency or coverage, redesign data publication as a workflow-built GitHub Pages artifact (or a separate bounded data branch/storage service) so generated snapshots are not repeatedly committed to `main`. Preserve cross-run state and deduplication in a reliable nonpublic execution store before removing the current persisted JSON. That change should be separately validated to avoid repeated notifications or loss of historical comparison state.
+
+## Reliability and operations roadmap (November 2026)
+
+The next steps are intentionally ordered, with one verifiable problem solved before adding new feeds. No recurring failure emails or Teams pings are enabled.
+
+### Phase 1: collector reliability and source filtering (this iteration)
+
+- [x] Replace unsupported numbered GitHub Global Advisory pages with GitHub Link-header cursors; reject repeated cursors, repeated records, malformed payloads, or an excessive page count.
+- [x] Validate source-specific outer and important nested JSON fields before normalizing. Treat changed schemas as failures rather than an empty successful source.
+- [x] Record a classified failure reason (schema, pagination, request/source, or unexpected), consecutive failures, first failure time, and last successful collection.
+- [x] Add a multi-source origin filter to the archive and share the source choice in the URL. Source is distinct from affected vendor/product.
+- [x] Test normal, missing-field, changed-schema, cursor-loop, and merged-source behavior offline.
+- [ ] Verify a full live collection after deployment, particularly GitHub Advisories, and address any remaining provider-specific response changes before calling source health resolved.
+
+### Phase 2: status and run history
+
+- [ ] Build a low-noise, read-only `status.html` page linked from the dashboard header/status row. Keep the main focus view uncluttered.
+- [ ] Publish a bounded run-history file (for example, last 30 to 60 monitoring runs) containing per-source status, elapsed time, counts, first/last error, last success, freshness and diagnostic category. Show timestamps in UTC and link to GitHub Actions run logs.
+- [ ] Clearly distinguish healthy, degraded, stale, and failed; identify whether a zero-result batch was expected or an anomaly. Count anomalies across runs, not just a single result.
+- [ ] Include a last-checked timestamp and show when GitHub Actions itself has not run on schedule. A workflow cannot directly detect its own absence: use an independent watchdog or external check.
+- [ ] Never publish credentials, full untrusted response bodies, internal asset details or request authorization headers.
+
+### Phase 3: deduplicated operational notifications
+
+- [ ] Notify only when source status changes to failed/degraded, becomes stale for a configured threshold, or recovers. Avoid one notice per scheduled failure.
+- [ ] Aggregate multiple failures into one incident, apply cooldowns and maintain a durable deduplication ledger. Make notification opt-in and test with fake transports.
+- [ ] Use GitHub Issues or an approved email/health-monitoring workflow independent of university Teams. Confirm ownership and permissions before activation.
+- [ ] Document the runbook for schema, pagination, quotas, authentication, and unexpected empty-result incidents.
+
+### Phase 4: additional sources and relevance
+
+- [ ] Add OSV package advisories (focus on affected ecosystems and watchlist matches).
+- [ ] Evaluate Microsoft MSRC and broader Red Hat coverage before enabling them.
+- [ ] Explore Python, conda-forge and Docker upstream sources where there is reliable vendor-provided data.
+- [ ] Require source-specific schema fixtures, pagination tests, completeness checks, metadata links, rate-limit handling, and a demonstrated live sample for each new adapter.
+- [ ] Add a New / Updated view with explicit first-observed versus vendor-modified dates; avoid implying local exposure.
+- [ ] Consider EPSS and affected-product signals to improve prioritization without turning a generic CVSS score into a false institutional incident.
+- [ ] Revisit `max_entries`, source quotas and archive retention as coverage increases; prioritize relevant records rather than keeping only a broad, severity-driven firehose.
+
+### Phase 5: long-term state and delivery
+
+- [ ] Remove generated snapshots from the normal Git history once equivalent persistent deduplication state exists.
+- [ ] Add the notification change ledger (including meaningful updates to existing advisories).
+- [ ] Complete a one-time Microsoft Teams acceptance test only with an authorized institutional owner.
