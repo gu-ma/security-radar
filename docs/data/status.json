@@ -1,13 +1,13 @@
 {
-  "duration_seconds": 5.37,
+  "duration_seconds": 6.65,
   "failed": false,
-  "finished_at": "2026-11-17T08:56:37Z",
-  "last_run": "2026-11-17T08:56:32Z",
-  "last_successful_run": "2026-11-17T08:56:32Z",
+  "finished_at": "2026-11-17T20:56:02Z",
+  "last_run": "2026-11-17T20:55:55Z",
+  "last_successful_run": "2026-11-17T20:55:55Z",
   "message": "Source outages are displayed and do not erase older records.",
-  "new_relevant_alerts": 20,
+  "new_relevant_alerts": 4,
   "partial": false,
-  "run_url": "https://github.com/gu-ma/security-radar/actions/runs/44051014362",
+  "run_url": "https://github.com/gu-ma/security-radar/actions/runs/44174431716",
   "source_errors": [],
   "sources": {
     "cisa_kev": {
@@ -16,28 +16,28 @@
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-17T08:56:32Z",
-      "last_success": "2026-11-17T08:56:32Z",
+      "last_attempt": "2026-11-17T20:55:55Z",
+      "last_success": "2026-11-17T20:55:55Z",
       "state": "ok"
     },
     "github_advisories": {
       "consecutive_failures": 0,
-      "count": 180,
+      "count": 220,
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-17T08:56:32Z",
-      "last_success": "2026-11-17T08:56:32Z",
+      "last_attempt": "2026-11-17T20:55:55Z",
+      "last_success": "2026-11-17T20:55:55Z",
       "state": "ok"
     },
     "nist_nvd": {
       "consecutive_failures": 0,
-      "count": 15,
+      "count": 19,
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-17T08:56:32Z",
-      "last_success": "2026-11-17T08:56:32Z",
+      "last_attempt": "2026-11-17T20:55:55Z",
+      "last_success": "2026-11-17T20:55:55Z",
       "state": "ok"
     },
     "redhat_quay": {
@@ -46,10 +46,10 @@
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-17T08:56:32Z",
-      "last_success": "2026-11-17T08:56:32Z",
+      "last_attempt": "2026-11-17T20:55:55Z",
+      "last_success": "2026-11-17T20:55:55Z",
       "state": "ok"
     }
   },
-  "stored_records": 575
+  "stored_records": 614
 }

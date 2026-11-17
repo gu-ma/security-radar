@@ -8,7 +8,140 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-16T22:18:22Z</atom:updated>
+  <atom:updated>2026-11-17T20:20:53Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-25153#findings</atom:id>
+    <atom:title>Backstage is an open framework for building developer portals, and @backstage/plugin-techdocs-node provides common node.js functionalities for TechDoc</atom:title>
+    <atom:published>2026-01-30T22:15:56Z</atom:published>
+    <atom:updated>2026-11-17T20:20:53Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-25153#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-25153" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: Backstage is an open framework for building developer portals, and @backstage/plugin-techdocs-node provides common node.js functionalities for TechDocs. In versions of @backstage/plugin-techdocs-node prior to 1.13.11 and 1.14.1, when TechDocs is configured with `runIn: local`, a malicious actor who can submit or modify a repository's `mkdocs.yml` file can execute arbitrary Python code on the TechDocs build server via MkDocs hooks configuration. @backstage/plugin-techdocs-node versions 1.13.11 and 1.14.1 contain a fix. The fix introduces an allowlist of supported MkDocs configuration keys. Unsupported configuration keys (including `hooks`) are now removed from `mkdocs.yml` before running the generator, with a warning logged to indicate which keys were removed. Users of `@techdocs/cli` should also upgrade to the latest version, which includes the fixed `@backstage/plugin-techdocs-node` dep
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-25153
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-53998#findings</atom:id>
+    <atom:title>Phoenix: Format String Injection in applyChatTemplate</atom:title>
+    <atom:published>2026-11-17T20:02:29Z</atom:published>
+    <atom:updated>2026-11-17T20:02:30Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-53998#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-gfv3-m769-5xm3" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 10 (v3.1)
+
+Summary: - Summary A format string injection vulnerability in the applyChatTemplate GraphQL endpoint allows an attacker to read server-side environment variables, cryptographic secrets, and internal module attributes directly from the API response. On default Phoenix installations where authentication is disabled the endpoint is reachable with no credentials. On auth-enabled deployments, any account regardless of privilege level is sufficient to exploit it. - Impact Server filesystem paths, loaded Python module names, and internal configuration constants are fully disclosed, an attacker with network access can read the full server `os.environ` including the admin credentials hardcoded in `phoenix.auth`. Successful exploitation allows an attacker to extract PHOENIX_SECRET, the master key used to sign all JWTs and derive the Fernet encryption key protecting stored credentials (LLM API keys, OAuth t
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-gfv3-m769-5xm3
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Cloud &amp; identity" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-126553#findings</atom:id>
+    <atom:title>Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload...</atom:title>
+    <atom:published>2026-11-17T18:31:46Z</atom:published>
+    <atom:updated>2026-11-17T18:31:54Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-126553#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-6x63-6qfc-frph" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL
+
+Summary: Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Object Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-6x63-6qfc-frph
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-126552#findings</atom:id>
+    <atom:title>Missing Authentication for Critical Function, OS Command Injection vulnerability in Broadcom...</atom:title>
+    <atom:published>2026-11-17T18:31:46Z</atom:published>
+    <atom:updated>2026-11-17T18:31:46Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-126552#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-37fr-pfqf-86xg" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL
+
+Summary: Missing Authentication for Critical Function, OS Command Injection vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows OS Command Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-37fr-pfqf-86xg
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-126551#findings</atom:id>
+    <atom:title>Use of Hard-coded Cryptographic Key vulnerability in Broadcom AutoSys Workload Automation ...</atom:title>
+    <atom:published>2026-11-17T18:31:46Z</atom:published>
+    <atom:updated>2026-11-17T18:31:46Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-126551#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-gcgf-3c86-345v" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL
+
+Summary: Use of Hard-coded Cryptographic Key vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Session Credential Falsification through Forging.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-gcgf-3c86-345v
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</atom:id>
+    <atom:title>picomatch vulnerable to ReDoS through single-branch repeated extglobs</atom:title>
+    <atom:published>2026-10-19T18:32:12Z</atom:published>
+    <atom:updated>2026-11-17T15:56:44Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-fc5q-39xc-vjpf" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: Picomatch through 4.0.7 contains a regular expression denial of service vulnerability that allows attackers to block the event loop by supplying single-branch repeated extglob patterns. Attackers can provide globs like +(*) or +(*a), which analyzeRepeatedExtglob in lib/parse.js skips, causing exponential backtracking against short crafted strings and denying service to Node.js applications.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-fc5q-39xc-vjpf
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-89788#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: fix tree connection...</atom:title>
+    <atom:published>2026-09-16T09:30:30Z</atom:published>
+    <atom:updated>2026-11-17T12:31:35Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-89788#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-29wc-2986-775f" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ksmbd: fix tree connection use-after-free in smb2_tree_connect() ksmbd_tree_conn_connect() publishes a new tree connection in sess-&gt;tree_conns with a single reference and returns its pointer to smb2_tree_connect(). The handler continues to initialize the object and build the response after publication. A concurrent session logoff can erase the connection and drop that reference, freeing the object while the handler still uses it. BUG: KASAN: slab-use-after-free in smb2_tree_connect+0xe3d/0xf90 smb2_tree_connect (fs/smb/server/smb2pdu.c:2872) handle_ksmbd_work process_one_work worker_thread kthread After xa_store() succeeds, take a second reference before releasing tree_conns_lock. The original reference belongs to the xarray entry and the second belongs to the creating smb2_tree_connect() handler. Keep the references bal
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-29wc-2986-775f
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-130072#findings</atom:id>
     <atom:title>Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to</atom:title>
@@ -840,138 +973,6 @@ Original advisory: https://github.com/advisories/GHSA-cgwc-qvrx-rf7f
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="AI &amp; ML tooling" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-31236#findings</atom:id>
-    <atom:title>llm CLI tool contains a code injection vulnerability via `--functions` command-line argument</atom:title>
-    <atom:published>2026-05-12T18:30:41Z</atom:published>
-    <atom:updated>2026-11-16T15:10:55Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-31236#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-g76p-4vg5-f4qh" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: The llm CLI tool thru 0.27.1 contains a critical code injection vulnerability via its --functions command-line argument. This argument is intended to allow users to provide custom Python function definitions. However, the tool directly executes the provided code using the unsafe exec() function without any sanitization, sandboxing, or security restrictions. An attacker can exploit this by crafting a malicious llm command with arbitrary Python code in the --functions argument and using social engineering to trick a victim into running it. This leads to arbitrary code execution on the victim's system, potentially granting the attacker full control.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-g76p-4vg5-f4qh
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-128118#findings</atom:id>
-    <atom:title>SvelteKit: Build-time server-only module import guard could fail, resulting in server secrets being statically replaced in client bundle</atom:title>
-    <atom:published>2026-11-16T14:59:00Z</atom:published>
-    <atom:updated>2026-11-16T14:59:01Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-128118#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-m9j8-jcmv-hp69" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: Under certain circumstances, server-only imports, which typically cannot be included in the client bundle, could make their way into it, potentially exposing secrets. This could only occur when those server-only imports were made through `src/params.js`.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-m9j8-jcmv-hp69
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-128120#findings</atom:id>
-    <atom:title>SvelteKit: DoS while parsing form data from a remote functions `form`</atom:title>
-    <atom:published>2026-11-16T14:57:35Z</atom:published>
-    <atom:updated>2026-11-16T14:57:38Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-128120#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-3r8g-jcqq-3p5j" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: This only affects applications using the experimental remote functions flag and utilizing the `form`, `query`, or `command` remote functions. A specially-crafted request could block the event loop for extended periods of time during parsing.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-3r8g-jcqq-3p5j
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-128128#findings</atom:id>
-    <atom:title>AIOHTTP: WebSocket max_msg_size bypass via integer overflow</atom:title>
-    <atom:published>2026-11-16T14:52:40Z</atom:published>
-    <atom:updated>2026-11-16T14:52:42Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-128128#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-3rp8-rxj8-mvjw" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary The `max_msg_size` check in the WebSocket reader added the declared frame length to the size of the partial message already buffered. In the C extension this addition is 64-bit arithmetic, so a declared length close to 2**63 overflowed and the check passed. ### Impact An attacker could bypass `max_msg_size` and cause unbounded memory use by streaming an oversized WebSocket message after a small non-final fragment. ### Workaround If unable to upgrade, the Python reader is unaffected and can be used with `AIOHTTP_NO_EXTENSIONS=1`. --- Patch: https://github.com/aio-libs/aiohttp/commit/8cfbe9abe5e11b84006a10f9bdf82bf607671dab
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-3rp8-rxj8-mvjw
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-128130#findings</atom:id>
-    <atom:title>AIOHTTP: Pure-Python parser request replay and buffer growth behind a declined upgrade</atom:title>
-    <atom:published>2026-11-16T14:51:53Z</atom:published>
-    <atom:updated>2026-11-16T14:51:56Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-128130#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-28qf-cpwq-vmc2" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 8.2 (v3.1)
-
-Summary: ### Summary When the pipelined request queue was full, the pure-Python parser stored the unparsed remainder internally and also returned it to the caller. After a handler declined an upgrade request, the buffered data was re-fed, so the buffer grew with each handled request and already-handled requests were dispatched to the application again. ### Impact If users are using the Python parser (`AIOHTTP_NO_EXTENSIONS`, or not a standard wheel installed), an attacker could cause excessive memory use and cause pipelined requests to be processed more than once. ### Workaround Switch to the default C parser. --- Patch: https://github.com/aio-libs/aiohttp/commit/47babd8c23ca79e2bae6cc8dcb5752b61e369fc7
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-28qf-cpwq-vmc2
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2024-5980#findings</atom:id>
-    <atom:title>pytorch-lightning vulnerable to Arbitrary File Write via /v1/runs API endpoint</atom:title>
-    <atom:published>2024-06-27T21:32:08Z</atom:published>
-    <atom:updated>2026-11-16T14:43:15Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2024-5980#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-mr7h-w2qc-ffc2" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1 (v3.0)
-
-Summary: A vulnerability in the /v1/runs API endpoint of lightning-ai/pytorch-lightning v2.2.4 allows attackers to exploit path traversal when extracting tar.gz files. When the LightningApp is running with the plugin_server, attackers can deploy malicious tar.gz plugins that embed arbitrary files with path traversal vulnerabilities. This can result in arbitrary files being written to any directory in the victim's local file system, potentially leading to remote code execution.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-mr7h-w2qc-ffc2
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="AI &amp; ML tooling" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-129433#findings</atom:id>
-    <atom:title>Dokploy before 0.31.1 contains an OS command injection vulnerability in...</atom:title>
-    <atom:published>2026-11-14T13:17:22Z</atom:published>
-    <atom:updated>2026-11-14T15:31:52Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-129433#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-gfc5-hfj7-fjwc" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.9 (v3.1)
-
-Summary: Dokploy before 0.31.1 contains an OS command injection vulnerability in getComposeContainerCommand() that allows authenticated organization members to execute shell commands via the serviceName parameter. Attackers can store serviceName values with shell metacharacters through backup.create or backup.update tRPC procedures, executing commands as root when scheduled backups run and taking over the host via the mounted Docker socket.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-gfc5-hfj7-fjwc
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Containers &amp; registries" />
     <atom:category term="Remote code execution" />
   </atom:entry>
 </atom:feed>
