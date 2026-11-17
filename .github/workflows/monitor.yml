@@ -33,13 +33,15 @@ jobs:
       - name: Run offline tests
         run: python -m unittest discover -s tests -v
       - name: Collect public advisories
+        id: collection
+        continue-on-error: true
         if: ${{ github.event_name != 'push' }}
         env:
           GH_TOKEN: ${{ github.token }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: python -m security_radar
       - name: Generate public RSS and Atom feeds
-        if: ${{ github.event_name != 'push' }}
+        if: ${{ github.event_name != 'push' && steps.collection.outcome == 'success' }}
         run: python -m security_radar.feeds
       - name: Persist public state
         if: ${{ github.event_name != 'push' }}
@@ -52,7 +54,7 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Notify Teams if explicitly enabled by the repository owner
-        if: ${{ github.event_name != 'push' && vars.ENABLE_TEAMS == 'true' }}
+        if: ${{ github.event_name != 'push' && steps.collection.outcome == 'success' && vars.ENABLE_TEAMS == 'true' }}
         continue-on-error: true
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
@@ -63,10 +65,15 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs
+      - name: Flag failed collection after preserving and publishing health state
+        if: ${{ github.event_name != 'push' && steps.collection.outcome == 'failure' }}
+        run: |
+          echo "Collector failed. Health status was saved. Inspect the Status page and collection logs."
+          exit 1
 
   deploy:
     needs: monitor
-    if: ${{ vars.ENABLE_PAGES == 'true' }}
+    if: ${{ always() && vars.ENABLE_PAGES == 'true' && needs.monitor.result != 'cancelled' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read

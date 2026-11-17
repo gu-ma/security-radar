@@ -99,3 +99,13 @@ Each enabled source retains `last_success`, `last_attempt`, current state, count
 The archive's Source filter uses the collector name recorded on the advisory, not the vulnerability's vendor. Merged advisories can match more than one source. The filter is shareable with `?source=github_advisories`, for example.
 
 For persistent failures, review source freshness in `docs/data/status.json` and inspect the [GitHub Actions workflow](https://github.com/gu-ma/security-radar/actions/workflows/monitor.yml). The operational status page, bounded run history and incident deduplication/notification system are follow-up phases in `docs/PROJECT.md`. No automatic operational email or Teams notification is enabled by this iteration.
+
+## Status page and bounded history
+
+The public [Status page](https://apps.massol.me/security-radar/status.html) shows per-source health from `docs/data/status.json` and the most recent 40 actual monitoring runs from `docs/data/history.json`. Run entries contain source summaries, total stored records, new alerts, duration and a GitHub Actions execution URL. Public data is advisory-source metadata only; no secrets or full response bodies are retained.
+
+The status page begins collecting historical runs with the next scheduled/manual collector execution. Code pushes deploy the existing snapshot, do not append history, and are visible only in GitHub Actions.
+
+On a complete outage, the collector now writes a failed health record without overwriting the previous advisory snapshot. The workflow saves and deploys that record before reporting failure to GitHub Actions. The deployment can succeed even when collection fails, so treat collection result and publication result separately.
+
+The Status page labels data stale after 36 hours without a recorded collection, but the app itself cannot independently monitor missing runs or deliver alerts. A separate watchdog and deduplicated GitHub Issue notification workflow remain unimplemented.

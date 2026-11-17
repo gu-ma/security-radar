@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Security Radar source health and recent collection history.">
+  <title>Status | Security Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=20261117-status1">
+  <link rel="stylesheet" href="./status.css">
+  <script defer src="./status.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="./" aria-label="Security Radar home"><span class="symbol" aria-hidden="true">&gt;_</span> security-radar<span class="version">STATUS</span></a>
+      <nav class="nav-links" aria-label="Site navigation">
+        <a href="./#focus">Focus</a>
+        <a href="./#archive">View All</a>
+        <a href="./status.html" aria-current="page">Status</a>
+        <a class="github" href="https://github.com/gu-ma/security-radar/actions/workflows/monitor.yml" target="_blank" rel="noopener noreferrer">Actions ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell status-main">
+    <div class="eyebrow">SYSTEM / SOURCE HEALTH</div>
+    <h1>Collection status</h1>
+    <p class="status-intro">Source health and collection history. GitHub Actions provides detailed execution logs.</p>
+    <div class="status-overview" id="health-overview" aria-live="polite">Loading collection status...</div>
+    <section aria-labelledby="sources-title" class="status-section">
+      <div class="status-heading"><h2 id="sources-title">Sources</h2><span class="status-hint">Last complete source results are retained on failure</span></div>
+      <div id="health-sources" class="health-sources" aria-live="polite"></div>
+    </section>
+    <section aria-labelledby="history-title" class="status-section">
+      <div class="status-heading"><h2 id="history-title">Recent collection runs</h2><span class="status-hint">Up to 40 runs · UTC timestamps</span></div>
+      <p class="status-intro">Code pushes and website deployments are not collection runs. Check GitHub Actions for their logs and for runs that never reached publication.</p>
+      <div id="health-history" class="health-history" aria-live="polite"></div>
+    </section>
+    <p class="status-small">This is a published snapshot, not a live incident detection service. Missing scheduled runs cannot be detected reliably by the collector itself. No operational notifications are enabled.</p>
+  </main>
+  <footer class="footer"><div class="shell"><span>Security Radar / Public collection metadata only</span><a href="./">Return to dashboard</a></div></footer>
+</body>
+</html>

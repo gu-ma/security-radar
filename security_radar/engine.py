@@ -4,11 +4,13 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .model import enrich, merge, normalize_punctuation, utcnow
 from .registry import discover_sources
+from .health import append_history, github_run_url, record_run
 from .http import SourceSchemaError, SourcePaginationError, SourceError
 
 LOG = logging.getLogger("security_radar")
@@ -97,6 +99,7 @@ def run(config_path: Path, data_dir: Path) -> int:
         raise ValueError("config.watchlist must be an array of strings")
     focus_topics = config.get("focus_topics", [])
     now = datetime.now(timezone.utc)
+    started_clock = time.monotonic()
     now_string = now.isoformat(timespec="seconds").replace("+00:00", "Z")
     old_rows = read_json(data_dir / "advisories.json", [])
     status = read_json(data_dir / "status.json", {})
@@ -147,8 +150,31 @@ def run(config_path: Path, data_dir: Path) -> int:
                 "first_failure": old_state.get("first_failure", now_string)
                     if old_state.get("state") == "error" else now_string
             }
+    def save_health(payload: dict) -> None:
+        # History captures actual collection runs, never code-only push builds.
+        finished = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+        payload["run_url"] = github_run_url()
+        payload["finished_at"] = finished
+        payload["duration_seconds"] = round(time.monotonic() - started_clock, 2)
+        old_history = read_json(data_dir / "history.json", [])
+        history_entry = record_run(
+            payload, started_at=now_string, finished_at=finished,
+            duration_seconds=payload["duration_seconds"], run_url=payload["run_url"])
+        write_json(data_dir / "history.json", append_history(old_history, history_entry))
+        write_json(data_dir / "status.json", payload)
+
     if not success:
-        LOG.error("All enabled sources failed (or none were enabled). Keeping previous data.")
+        # An all-source failure must still update PUBLIC health. Preserve the
+        # previous good advisory and alert snapshots without claiming success.
+        LOG.error("All enabled sources failed (or none were enabled). Keeping previous advisories.")
+        save_health({
+            "last_run": now_string,
+            "last_successful_run": status.get("last_successful_run", ""),
+            "failed": True, "partial": True,
+            "source_errors": errors, "sources": new_sources,
+            "stored_records": len(old_rows), "new_relevant_alerts": 0,
+            "message": "Collection failed. Previously stored advisories were retained.",
+        })
         return 1
 
     records, fresh = process(now=now, previous=old_rows, fetched=fetched,
@@ -164,12 +190,12 @@ def run(config_path: Path, data_dir: Path) -> int:
         "alerts": alerts,
         "note": "Watchlist match is not verified local exposure."
     })
-    write_json(data_dir / "status.json", {
+    save_health({
         "last_run": now_string, "last_successful_run": now_string,
-        "partial": bool(errors), "source_errors": errors,
+        "failed": False, "partial": bool(errors), "source_errors": errors,
         "sources": new_sources, "stored_records": len(records),
         "new_relevant_alerts": len(alerts),
-        "message": "Source outages are displayed and do not erase older records."
+        "message": "Source outages are displayed and do not erase older records.",
     })
     LOG.info("Stored %d records and %d new relevant alerts; errors: %s",
              len(records), len(alerts), errors)

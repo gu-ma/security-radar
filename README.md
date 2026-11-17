@@ -101,3 +101,9 @@ MIT licensed. Contributions and issue reports are welcome.
 The archive has a **Source** selector for CISA KEV, GitHub Advisories, NIST NVD, and Red Hat Quay. One merged advisory may have several source references; a match to any selected collector includes it. The `source` URL parameter is shareable.
 
 The GitHub collector follows API cursor pagination instead of requesting numbered pages. Each collector validates essential JSON structures, exposes errors and preserves the prior published snapshot if its source fails. `docs/data/status.json` now distinguishes schema/pagination/source errors and records consecutive failures. **A successful workflow is not proof that every source was healthy.** A dedicated status and run-history page, followed by deduplicated health notifications, is scheduled in the [project roadmap](docs/PROJECT.md). No noisy per-run alerts are enabled.
+
+## Collection status and recent runs
+
+The public [Status page](https://apps.massol.me/security-radar/status.html) shows source-specific health, last successful collection and a bounded 40-run history with direct GitHub Actions log links. It helps distinguish source failures from workflow failures. Run history is populated by scheduled/manual collector executions, not by code-only site pushes, and starts with the next collection.
+
+The status page does not send any notifications. Missing-run watchdog checks and deduplicated GitHub Issue alerts are planned but not enabled.

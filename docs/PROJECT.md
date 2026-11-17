@@ -137,3 +137,13 @@ The next steps are intentionally ordered, with one verifiable problem solved bef
 - [ ] Remove generated snapshots from the normal Git history once equivalent persistent deduplication state exists.
 - [ ] Add the notification change ledger (including meaningful updates to existing advisories).
 - [ ] Complete a one-time Microsoft Teams acceptance test only with an authorized institutional owner.
+
+## Operational status and collection history (implemented)
+
+The dashboard has a separate `status.html` page using published, public-only monitoring metadata. Per-source cards display current result, last attempt, last success, last complete count, diagnostic category, failure streak, and error summary. A bounded `docs/data/history.json` holds the last 40 actual collection runs, including per-source snapshots, elapsed collection duration, affected source names and a direct GitHub Actions run link.
+
+Code-only pushes do not add history. Health history starts on the first collection after this change. The page marks a status stale when the last recorded collection is older than 36 hours. This is a browser display heuristic, not an independent alert or availability guarantee.
+
+On all-source failure, the collector saves failed status and history while retaining existing advisory and alert snapshots. The workflow persists and deploys that health result, then marks the monitor job failed. Do not infer clean source health from a green Actions deployment.
+
+**Still planned:** independent missing-run watchdog, data-quality anomaly monitoring, GitHub Issue incident deduplication, recovery events, source-specific dashboards, and a robust notification ledger. Neither email nor Teams health notifications are enabled.
