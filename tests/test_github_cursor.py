@@ -1,6 +1,7 @@
 """Cursor-based GitHub advisory pagination regression coverage."""
 import unittest
 from datetime import datetime, timezone
+from urllib.parse import parse_qs, urlsplit
 from unittest.mock import patch
 
 from security_radar.http import SourcePaginationError, SourceSchemaError
@@ -35,7 +36,7 @@ class GithubCursorTests(unittest.TestCase):
         self.assertEqual(len(items), 2)
         self.assertEqual(len(calls), 4)
         self.assertIn("after=cursor123", calls[1])
-        self.assertNotIn("page=", calls[0])
+        self.assertNotIn("page", parse_qs(urlsplit(calls[0]).query))
 
     def test_repeated_cursor_fails_closed(self):
         def page(url):
