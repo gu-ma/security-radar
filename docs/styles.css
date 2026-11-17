@@ -319,3 +319,7 @@ input::placeholder { color: #829291; opacity: 1; }
   .cvss-box { flex-basis: 72px; }
   .spotlight-list .advisory:first-child h3 { font-size: 21px; }
 }
+
+/* Distinguish initial publication from subsequent advisory maintenance. */
+.archive-filter-note { font: 400 12px/1.6 var(--mono); color: var(--dim); margin: -4px 0 17px; }
+.tag.older-update { color: var(--cyan); background: #132329; border-color: #2d4851; }

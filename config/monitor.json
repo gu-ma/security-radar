@@ -28,5 +28,6 @@
   "focus_topics": [
     "Quay",
     "conda-forge"
-  ]
+  ],
+  "new_publication_days": 7
 }

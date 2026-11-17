@@ -49,7 +49,7 @@ NIST NVD ──────┘                                      │
 
 To add a source, place a module in `security_radar/adapters/` exposing `SOURCE_ID` and `collect(now, *, days)`. The registry discovers it automatically. Keep its public-only data mapping and tests alongside the adapter. See [source registry](docs/SOURCES.md).
 
-The app merges records using shared identifiers (CVE/GHSA aliases), and preserves upstream source links. Advisory histories are retained for 180 days (configurable); NVD requests are limited to 110-day chunks and GitHub advisories to bounded pages, and may report errors when collection is incomplete. This is a pilot, not a completeness guarantee.
+The app merges records using shared identifiers (CVE/GHSA aliases), and preserves upstream source links. It retains original publication timestamps separately from upstream modification timestamps and the dates Security Radar first observed a record. Advisory histories are retained for 180 days (configurable); NVD requests are limited to 110-day chunks and GitHub advisories to bounded pages, and may report errors when collection is incomplete. This is a pilot, not a completeness guarantee.
 
 ## Documentation
 
@@ -76,7 +76,7 @@ Archive sorting and public RSS/Atom feeds are implemented. Open **All advisories
 - [RSS 2.0](https://apps.massol.me/security-radar/rss.xml)
 - [Atom 1.0](https://apps.massol.me/security-radar/atom.xml)
 
-Both feeds are automatically generated from the same public normalized data. They contain at most **50** recently updated advisories with a watchlist match and high/critical severity or CISA KEV listing. Entries have stable advisory-specific deep links, original source references, severity, categories and timestamps. These are *curated awareness feeds*, not a complete CVE firehose or claims of verified local exposure. To make integration simple, use whichever format your reader or automation supports.
+Both feeds are **high-signal advisory activity feeds, not newly disclosed vulnerability feeds**. An older advisory that receives new metadata can appear in the feeds with its original publication date. Both feeds are automatically generated from the same public normalized data. They contain at most **50** recently updated advisories with a watchlist match and high/critical severity or CISA KEV listing. Entries have stable advisory-specific deep links, original source references, severity, categories and timestamps. These are *curated awareness feeds*, not a complete CVE firehose or claims of verified local exposure. To make integration simple, use whichever format your reader or automation supports.
 
 **Retention and size:** The active dataset retains advisories modified within approximately **180 days** and is capped at **2,500 records** (see `config/monitor.json`). These limits bound the web payload, but generated JSON/XML snapshots are also committed to Git history, which grows over time. Future storage hardening should publish artifacts without committing every generated snapshot into the repository. See [operations](docs/OPERATIONS.md).
 
@@ -107,3 +107,11 @@ The GitHub collector follows API cursor pagination instead of requesting numbere
 The public [Status page](https://apps.massol.me/security-radar/status.html) shows source-specific health, last successful collection and a bounded 40-run history with direct GitHub Actions log links. It helps distinguish source failures from workflow failures. Run history is populated by scheduled/manual collector executions, not by code-only site pushes, and starts with the next collection.
 
 The status page does not send any notifications. Missing-run watchdog checks and deduplicated GitHub Issue alerts are planned but not enabled.
+
+## Publication date versus update date
+
+The archive now offers **Newly published** (past 7 or 30 days) and **Updated existing** (past 7 or 30 days) filters. Newly published is based on the upstream original `published` timestamp. Updated existing uses the upstream `modified` timestamp but excludes advisories originally published in the same period. Both dates appear on every card, with an "Older disclosure updated" marker for large gaps. The view can be shared via `?activity=published-7` or `?activity=updated-7`; selecting a view chooses the relevant default sort, which users may override.
+
+Collection still queries GitHub by **modified date** using overlapping retrieval windows, so new metadata on older advisories is not lost. Canonical CVE/GHSA identifiers and aliases merge into a single record; GHSA remains an alias for CVE-linked advisories and the primary ID when no CVE is assigned.
+
+To avoid treating a 2024 disclosure modified in 2026 as a new vulnerability, new-alert selection requires the original publication to be within the configurable `new_publication_days` window (default: 7). Older updated advisories stay searchable, and can still appear in the high-signal activity RSS/Atom feeds. Updates to severity, affected ranges and fixes are not yet compared for meaningful changes; that remains separate roadmap work. In particular, an old vulnerability newly added to CISA KEV should not be mislabeled as newly published just because exploitation was recently confirmed.

@@ -128,7 +128,8 @@ The next steps are intentionally ordered, with one verifiable problem solved bef
 - [ ] Evaluate Microsoft MSRC and broader Red Hat coverage before enabling them.
 - [ ] Explore Python, conda-forge and Docker upstream sources where there is reliable vendor-provided data.
 - [ ] Require source-specific schema fixtures, pagination tests, completeness checks, metadata links, rate-limit handling, and a demonstrated live sample for each new adapter.
-- [ ] Add a New / Updated view with explicit first-observed versus vendor-modified dates; avoid implying local exposure.
+- [x] Add distinct original-publication and recently-updated archive views, show both dates, and preserve source observation timestamps separately.
+- [ ] Track significant upstream changes (affected ranges, fixed versions, severity changes, KEV transitions) with an evidence-based change ledger. Do not equate metadata revisions with new security patches.
 - [ ] Consider EPSS and affected-product signals to improve prioritization without turning a generic CVSS score into a false institutional incident.
 - [ ] Revisit `max_entries`, source quotas and archive retention as coverage increases; prioritize relevant records rather than keeping only a broad, severity-driven firehose.
 
@@ -147,3 +148,9 @@ Code-only pushes do not add history. Health history starts on the first collecti
 On all-source failure, the collector saves failed status and history while retaining existing advisory and alert snapshots. The workflow persists and deploys that health result, then marks the monitor job failed. Do not infer clean source health from a green Actions deployment.
 
 **Still planned:** independent missing-run watchdog, data-quality anomaly monitoring, GitHub Issue incident deduplication, recovery events, source-specific dashboards, and a robust notification ledger. Neither email nor Teams health notifications are enabled.
+
+## Advisory lifecycle distinction (implemented November 2026)
+
+GitHub's `modified` API query is retained for complete incremental synchronization, while each advisory stores its **original publication** separately from the **last source update** and Security Radar's **first observation**. The archive has 7/30-day new-publication and updated-existing filters with date-appropriate sorting, shareable URLs, and visible dates. New alert selection excludes previously unknown but years-old advisories merely reindexed or amended by an upstream feed. RSS/Atom intentionally remain high-signal **activity** feeds, because important metadata and KEV developments may apply to older disclosures. The project continues to merge GHSA IDs with CVE aliases across all sources.
+
+**Future work:** Collect and compare per-source fixed versions and vulnerable ranges before claiming a genuinely new patch, distinguish a new KEV listing from a metadata-only update, and provide change-aware notifications without duplicating advisories.

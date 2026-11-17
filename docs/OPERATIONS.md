@@ -109,3 +109,13 @@ The status page begins collecting historical runs with the next scheduled/manual
 On a complete outage, the collector now writes a failed health record without overwriting the previous advisory snapshot. The workflow saves and deploys that record before reporting failure to GitHub Actions. The deployment can succeed even when collection fails, so treat collection result and publication result separately.
 
 The Status page labels data stale after 36 hours without a recorded collection, but the app itself cannot independently monitor missing runs or deliver alerts. A separate watchdog and deduplicated GitHub Issue notification workflow remain unimplemented.
+
+## Original publication versus advisory modifications
+
+GitHub Advisory Database synchronization continues to query the `modified` field with a sliding overlap and cursor pagination. This is necessary to capture corrections to old advisories, new references, and updated severity data. The collector explicitly maps `published_at` to `published` and `updated_at` to `modified`. The normalization layer preserves the earliest reported publication timestamp across CVE/GHSA merges, while storing the latest modification timestamp separately. `first_seen` is only the time this monitor first encountered the advisory.
+
+For example, GHSA-56xg-wfcc-g829/CVE-2024-34359 was originally published in May 2024, and a database maintenance commit changed its modification date in November 2026. It remains an older disclosure, not a 2026 vulnerability.
+
+The archive has independent "Newly published" and "Updated existing" date-range views (7 or 30 days), with explicit publication and update dates on cards. The activity filter composes with the existing source, technology, severity and sort filters. New-alert output is limited to first-observed relevant advisories originally published within `new_publication_days` (default 7), rather than classifying every newly encountered older updated advisory as a new disclosure. This changes the set of records eligible for optional Teams alerts, but does not enable Teams.
+
+The RSS and Atom feeds remain high-signal **activity** feeds sorted by update date and keep stable identifiers and the original publication timestamp in their respective entries. They are not a newly published CVE-only feed. A future source-aware change ledger can identify meaningful changes to fixed versions, affected ranges, severity and KEV status separately; no automatic "new patch" claim is currently made.

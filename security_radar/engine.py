@@ -67,9 +67,24 @@ def coalesce(records: list[dict], existing: list[dict], now: str) -> dict[str, d
     return by_id
 
 
+def recently_published(row: dict, now: datetime, *, days: int = 7) -> bool:
+    """Original disclosure date, not when an older advisory was edited or first seen."""
+    raw = row.get("published")
+    if not isinstance(raw, str) or not raw:
+        return False
+    try:
+        published = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if published.tzinfo is None:
+            published = published.replace(tzinfo=timezone.utc)
+        published = published.astimezone(timezone.utc)
+        return now - timedelta(days=days) <= published <= now + timedelta(minutes=5)
+    except (ValueError, OverflowError):
+        return False
+
+
 def process(*, now: datetime, previous: list[dict], fetched: list[dict],
             watchlist: list[str], retention_days: int = 180,
-            max_entries: int = 2500,
+            max_entries: int = 2500, new_publication_days: int = 7,
             focus_topics: list[str] | None = None) -> tuple[list[dict], list[dict]]:
     timestamp = now.isoformat(timespec="seconds").replace("+00:00", "Z")
     earlier = {alias for row in previous for alias in [row["id"]] + row.get("aliases", [])}
@@ -85,8 +100,12 @@ def process(*, now: datetime, previous: list[dict], fetched: list[dict],
     recent.sort(key=lambda row: row.get("modified", ""), reverse=True)
     recent.sort(key=lambda row: (-row.get("attention_score", 0), levels[row["priority"]]))
     recent = recent[:max_entries]
+    # A record first encountered today may describe a vulnerability originally
+    # published years ago and only updated yesterday. Keep it in the archive
+    # but never announce it as a newly published vulnerability.
     fresh = [row for row in recent
              if row["priority"] != "information"
+             and recently_published(row, now, days=new_publication_days)
              and not any(alias in earlier for alias in row.get("aliases", [row["id"]]))]
     fresh.sort(key=lambda row: (levels[row["priority"]], row.get("modified", "")))
     return recent, fresh[:20]
@@ -180,7 +199,8 @@ def run(config_path: Path, data_dir: Path) -> int:
     records, fresh = process(now=now, previous=old_rows, fetched=fetched,
                              watchlist=watchlist, focus_topics=focus_topics,
                              retention_days=int(config.get("retention_days", 180)),
-                             max_entries=int(config.get("max_entries", 2500)))
+                             max_entries=int(config.get("max_entries", 2500)),
+                             new_publication_days=int(config.get("new_publication_days", 7)))
     # On initial run, populate history without posting months of backlog.
     is_initial = not status.get("last_run")
     alerts = [] if is_initial else fresh
@@ -188,7 +208,7 @@ def run(config_path: Path, data_dir: Path) -> int:
     write_json(data_dir / "alerts.json", {
         "generated_at": now_string, "initial_baseline": is_initial,
         "alerts": alerts,
-        "note": "Watchlist match is not verified local exposure."
+        "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
     })
     save_health({
         "last_run": now_string, "last_successful_run": now_string,

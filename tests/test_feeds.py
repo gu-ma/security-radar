@@ -92,6 +92,16 @@ class FeedTests(unittest.TestCase):
         self.assertNotIn(b"javascript:", artifacts["rss.xml"])
         self.assertNotIn(b"javascript:", artifacts["atom.xml"])
 
+    def test_older_modified_advisory_keeps_original_feed_publication(self):
+        old = sample("CVE-2024-34359", published="2024-05-13T14:10:18Z",
+                     modified="2026-11-16T15:19:28Z")
+        xml = render_feeds([old])
+        rss = ET.fromstring(xml["rss.xml"])
+        atom = ET.fromstring(xml["atom.xml"])
+        self.assertEqual(parsedate_to_datetime(rss.findtext("./channel/item/pubDate")).year, 2024)
+        self.assertEqual(atom.findtext(A+"entry/"+A+"published"), "2024-05-13T14:10:18Z")
+        self.assertEqual(atom.findtext(A+"entry/"+A+"updated"), "2026-11-16T15:19:28Z")
+
     def test_empty_feed_is_well_formed(self):
         artifacts = render_feeds([])
         self.assertEqual(len(ET.fromstring(artifacts["rss.xml"]).findall("./channel/item")), 0)

@@ -98,7 +98,11 @@ def _eligible(row: dict) -> bool:
 
 
 def select_entries(records: list[dict], limit: int = MAX_ITEMS) -> list[dict]:
-    """Most recently updated high-signal advisories, one item per canonical ID."""
+    """Most recently updated high-signal activity, NOT a new-disclosure feed.
+
+    Keep older amended advisories (and new KEV signals) eligible while retaining
+    original publication timestamps and stable IDs in both XML formats.
+    """
     if not isinstance(records, list):
         raise ValueError("advisory data must be a JSON array")
     if not isinstance(limit, int) or limit < 1 or limit > 200:

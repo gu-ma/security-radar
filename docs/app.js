@@ -10,6 +10,7 @@ const els = {
   list: document.getElementById("list"), spotlight: document.getElementById("spotlight"),
   query: document.getElementById("query"), category: document.getElementById("category"),
   source: document.getElementById("source"),
+  activity: document.getElementById("activity"),
   topic: document.getElementById("topic"), priority: document.getElementById("priority"),
   severity: document.getElementById("severity"), exploited: document.getElementById("exploited"),
   more: document.getElementById("more"), archive: document.getElementById("archive"),
@@ -62,6 +63,8 @@ function card(a, featured=false) {
   head.append(el("span",a.id||"Unknown ID","id"));
   head.append(el("span",a.priority||"information","tag "+(a.priority||"information")));
   if (a.exploited) head.append(el("span","CISA KEV-listed","tag exploited"));
+  if (window.SecurityRadarDates.isOlderUpdate(a)) head.append(
+    el("span","Older disclosure updated","tag older-update"));
   article.append(head);
   const titleRow=el("div","","advisory-title-row");
   titleRow.append(el("h3",a.title||a.id||"Unnamed advisory"));
@@ -88,7 +91,8 @@ function card(a, featured=false) {
       "Description not provided by source.",220),"description"));
   }
   const meta=el("div","","metadata");
-  meta.append(el("span","Updated "+dateLabel(a.modified||a.published)));
+  meta.append(el("span","Published "+dateLabel(a.published)));
+  meta.append(el("span","Updated "+dateLabel(a.modified)));
   if((a.matched_topics||[]).length)
     meta.append(el("span","Watchlist: "+a.matched_topics.join(", ")));
   const src=a.sources||[];
@@ -123,6 +127,7 @@ function spotlight() {
 function renderArchive() {
   const q=els.query.value.trim().toLowerCase();
   const rows=advisories.filter(a=>
+    window.SecurityRadarDates.matchesActivity(a,els.activity.value) &&
     (!els.source.value||window.SecurityRadarSources.matchesSource(a,els.source.value)) &&
     (!els.category.value||categoriesOf(a).includes(els.category.value)) &&
     (!els.topic.value||topicsOf(a).includes(els.topic.value)) &&
@@ -135,6 +140,15 @@ function renderArchive() {
       ...(a.sources||[]).map(s=>s.name||"")].join(" ").toLowerCase().includes(q))
   );
   const ordered = window.SecurityRadarSort.sortAdvisories(rows, els.sort.value);
+  const activityNote = {
+    "published-7":"Original disclosures in the past 7 days, not metadata updates.",
+    "published-30":"Original disclosures in the past 30 days, not metadata updates.",
+    "updated-7":"Older disclosures revised in the past 7 days. An update does not necessarily mean a new patch.",
+    "updated-30":"Older disclosures revised in the past 30 days. An update does not necessarily mean a new patch."
+  };
+  document.getElementById("activity-context").textContent =
+    activityNote[els.activity.value] ||
+    "Publication is the original disclosure date. Update is the latest source revision.";
   els.list.replaceChildren();
   if(!ordered.length) els.list.append(el("div","No advisories match these filters.","empty"));
   else ordered.slice(0,visibleLimit).forEach(a=>els.list.append(card(a)));
@@ -146,6 +160,8 @@ function syncQueryUrl() {
   const url=new URL(window.location.href);
   const value=els.query.value.trim();
   if(value)url.searchParams.set("q",value);else url.searchParams.delete("q");
+  const activity=els.activity.value;
+  if(activity)url.searchParams.set("activity",activity);else url.searchParams.delete("activity");
   const origin=els.source.value;
   if(origin)url.searchParams.set("source",origin);else url.searchParams.delete("source");
   const cat=els.category.value;
@@ -185,6 +201,8 @@ async function load() {
       :" · All enabled sources succeeded");
     const params=new URLSearchParams(window.location.search);
     if(params.has("q"))els.query.value=params.get("q");
+    if(params.has("activity")&&window.SecurityRadarDates.modes.includes(params.get("activity")))
+      els.activity.value=params.get("activity");
     if(params.has("source")&&[...els.source.options].some(o=>o.value===params.get("source")))
       els.source.value=params.get("source");
     if(params.has("category")&&[...els.category.options].some(o=>o.value===params.get("category")))
@@ -193,7 +211,9 @@ async function load() {
       els.topic.value=params.get("topic");
     if(params.has("sort") && window.SecurityRadarSort.modes.includes(params.get("sort")))
       els.sort.value=params.get("sort");
-    if(params.has("q")||params.has("source")||params.has("category")||params.has("topic")||params.has("sort"))
+    else if(els.activity.value.startsWith("published-"))els.sort.value="published-desc";
+    else if(els.activity.value.startsWith("updated-"))els.sort.value="updated-desc";
+    if(params.has("q")||params.has("activity")||params.has("source")||params.has("category")||params.has("topic")||params.has("sort"))
       els.archive.open=true;
     setFocusedCategory("");
     renderArchive();
@@ -206,6 +226,12 @@ async function load() {
 els.tabs.addEventListener("click",e=>{
   const button=e.target.closest("button[data-category]");
   if(button&&els.tabs.contains(button))setFocusedCategory(button.dataset.category);
+});
+els.activity.addEventListener("change",()=>{
+  if(els.activity.value.startsWith("published-"))els.sort.value="published-desc";
+  else if(els.activity.value.startsWith("updated-"))els.sort.value="updated-desc";
+  else els.sort.value="attention";
+  visibleLimit=20;renderArchive();syncQueryUrl();
 });
 [els.query,els.source,els.category,els.topic,els.priority,els.severity,els.exploited,els.sort].forEach(input=>
   input.addEventListener("input",()=>{visibleLimit=20;renderArchive();syncQueryUrl()})

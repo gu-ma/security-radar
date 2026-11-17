@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone
-from security_radar.engine import process
+from security_radar.engine import process, recently_published
 from security_radar.model import make_advisory, merge, enrich
 
 
@@ -105,6 +105,51 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["first_seen"], "2026-11-13T09:48:00Z")
         self.assertEqual(rows[0]["last_seen"], "2026-11-13T12:00:00Z")
+
+
+    def test_old_disclosure_updated_today_is_not_a_new_alert(self):
+        """GHSA-56xg-wfcc-g829: 2024 disclosure updated in November 2026."""
+        now = datetime(2026, 11, 17, 9, 0, tzinfo=timezone.utc)
+        old_updated = make_advisory(
+            identifier="CVE-2024-34359", aliases=["GHSA-56xg-wfcc-g829"],
+            title="llama-cpp-python template injection",
+            severity="critical", source="GitHub Advisory Database",
+            url="https://github.com/advisories/GHSA-56xg-wfcc-g829",
+            affected=["llama-cpp-python"],
+            published="2024-05-13T14:10:18Z", modified="2026-11-16T15:19:28Z")
+        rows, alerts = process(now=now, previous=[], fetched=[old_updated],
+                               watchlist=["Python"])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["published"], "2024-05-13T14:10:18Z")
+        self.assertEqual(rows[0]["modified"], "2026-11-16T15:19:28Z")
+        self.assertEqual(alerts, [])
+
+    def test_publication_window_is_not_update_window(self):
+        now = datetime(2026, 11, 17, 9, 0, tzinfo=timezone.utc)
+        row = dict(self.cve, published="2026-11-16T08:00:00Z",
+                   modified="2026-11-17T08:00:00Z")
+        self.assertTrue(recently_published(row, now))
+        self.assertFalse(recently_published(dict(row, published="2024-05-13T12:00:00Z"), now))
+        self.assertFalse(recently_published(dict(row, published=""), now))
+        self.assertFalse(recently_published(dict(row, published="not-a-date"), now))
+        self.assertFalse(recently_published(dict(row, published="2027-01-01T00:00:00Z"), now))
+
+    def test_ghsa_update_does_not_duplicate_existing_record(self):
+        now = datetime(2026, 11, 17, 9, 0, tzinfo=timezone.utc)
+        original = make_advisory(identifier="CVE-2024-34359",
+            aliases=["GHSA-56xg-wfcc-g829"], title="llama-cpp-python issue",
+            severity="high", source="GitHub Advisory Database",
+            url="https://github.com/advisories/GHSA-56xg-wfcc-g829",
+            published="2024-05-13", modified="2024-05-20")
+        previous, _ = process(now=datetime(2026, 11, 16, tzinfo=timezone.utc),
+                              previous=[], fetched=[original], watchlist=["Python"])
+        update = dict(original, modified="2026-11-16T15:19:28Z", severity="critical")
+        rows, alerts = process(now=now, previous=previous, fetched=[update],
+                               watchlist=["Python"])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["modified"], "2026-11-16T15:19:28Z")
+        self.assertEqual(rows[0]["published"], "2024-05-13T00:00:00Z")
+        self.assertEqual(alerts, [])
 
     def test_cross_source_alias_merges(self):
         ghsa = make_advisory(

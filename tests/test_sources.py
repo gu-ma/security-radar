@@ -26,6 +26,25 @@ class ParserTests(unittest.TestCase):
         self.assertIn("some-package", rows[0]["affected"])
         self.assertIn("GHSA-aaaa-bbbb-cccc", rows[0]["aliases"])
 
+    def test_ghsa_retains_original_publication_when_updated_years_later(self):
+        rows = parse_ghsa([{
+            "ghsa_id": "GHSA-56xg-wfcc-g829",
+            "cve_id": "CVE-2024-34359",
+            "summary": "llama-cpp-python template injection",
+            "severity": "critical",
+            "published_at": "2024-05-13T14:10:18Z",
+            "updated_at": "2026-11-16T15:19:28Z",
+            "vulnerabilities": [{
+                "package": {"ecosystem": "pip", "name": "llama-cpp-python"},
+                "vulnerable_version_range": ">= 0.2.30, <= 0.2.71",
+                "first_patched_version": "0.2.72"
+            }],
+        }])
+        self.assertEqual(rows[0]["id"], "CVE-2024-34359")
+        self.assertIn("GHSA-56xg-wfcc-g829", rows[0]["aliases"])
+        self.assertEqual(rows[0]["published"], "2024-05-13T14:10:18Z")
+        self.assertEqual(rows[0]["modified"], "2026-11-16T15:19:28Z")
+
     def test_redhat_quay_product_advisory(self):
         records = parse_redhat_quay([{
             "CVE": "CVE-2026-123710", "severity": "Critical", "cvss3_score": "9.8",
