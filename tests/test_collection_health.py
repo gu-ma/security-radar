@@ -33,8 +33,10 @@ class CollectionHealthTests(unittest.TestCase):
             published="2026-11-16", modified="2026-11-16", severity="critical",
             source="NIST NVD", url="https://nvd.nist.gov/vuln/detail/CVE-2026-12345")]
         with patch("security_radar.engine.discover_sources", return_value={"fake": collector}):
-            self.assertEqual(run(self.config, self.data), 0)
-            self.assertEqual(run(self.config, self.data), 0)
+            with patch.dict("os.environ", {"GITHUB_REPOSITORY": "gu-ma/security-radar", "GITHUB_RUN_ID": "101"}):
+                self.assertEqual(run(self.config, self.data), 0)
+            with patch.dict("os.environ", {"GITHUB_REPOSITORY": "gu-ma/security-radar", "GITHUB_RUN_ID": "102"}):
+                self.assertEqual(run(self.config, self.data), 0)
         entries = self.read("history.json")
         self.assertEqual(len(entries), 2)
         self.assertTrue(all(x["result"]=="healthy" for x in entries))
