@@ -7,7 +7,26 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 14 Nov 2026 15:31:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 22:18:22 GMT</lastBuildDate>
+    <item>
+      <title>Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130072#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130072#findings</guid>
+      <pubDate>Mon, 16 Nov 2026 22:18:22 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 8.8
+
+Summary: Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-130072
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Authentication &amp; authorization</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-130072" type="text/html" />
+    </item>
     <item>
       <title>Dokploy before 0.31.1 contains an OS command injection vulnerability in...</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2026-129433#findings</link>
@@ -888,25 +907,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <category>Privilege escalation</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-67wp-ghc2-fw2g" type="text/html" />
-    </item>
-    <item>
-      <title>Duplicate Advisory: Microsoft Security Advisory CVE-2026-109478 - ASP.NET Core Denial of Service Vulnerability</title>
-      <link>https://apps.massol.me/security-radar/?q=GHSA-wrm2-c2h2-4w82#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=GHSA-wrm2-c2h2-4w82#findings</guid>
-      <pubDate>Tue, 10 Nov 2026 21:32:29 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ## Duplicate Advisory This advisory has been withdrawn because it is a duplicate of GHSA-r3qf-p3jm-8h4p. This link is maintained to preserve external references. ## Original Description Inefficient algorithmic complexity in ASP.NET Core allows an unauthorized attacker to deny service over a network.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-wrm2-c2h2-4w82
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-wrm2-c2h2-4w82" type="text/html" />
     </item>
   </channel>
 </rss>

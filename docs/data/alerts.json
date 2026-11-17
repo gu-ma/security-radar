@@ -1,6 +1,46 @@
 {
-  "alerts": [],
-  "generated_at": "2026-11-16T22:02:31Z",
+  "alerts": [
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-130072"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 8.8,
+      "cvss_version": "",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-17T07:55:36Z",
+      "id": "CVE-2026-130072",
+      "last_seen": "2026-11-17T07:55:36Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-16T22:18:22.533",
+      "priority": "review",
+      "published": "2026-11-16T22:18:22.533",
+      "security_topics": [
+        "Authentication & authorization",
+        "Denial of service"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130072"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service.",
+      "title": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to",
+      "why_it_matters": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service."
+    }
+  ],
+  "generated_at": "2026-11-17T07:55:36Z",
   "initial_baseline": false,
   "note": "Watchlist match is not verified local exposure."
 }

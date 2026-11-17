@@ -119,7 +119,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T09:48:20Z",
     "id": "CVE-2026-116606",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-16T18:17:27.957",
     "priority": "information",
@@ -2433,6 +2433,45 @@
     "why_it_matters": "Expression Language Injection vulnerability in Hitachi Replication Manager on Windows, Linux, Solaris allows Code Injection.This issue affects Hitachi Replication Manager: before 8.8.5-02."
   },
   {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-130072"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 8.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-17T07:55:36Z",
+    "id": "CVE-2026-130072",
+    "last_seen": "2026-11-17T07:55:36Z",
+    "matched_topics": [
+      "Node.js"
+    ],
+    "modified": "2026-11-16T22:18:22.533",
+    "priority": "review",
+    "published": "2026-11-16T22:18:22.533",
+    "security_topics": [
+      "Authentication & authorization",
+      "Denial of service"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130072"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service.",
+    "title": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to",
+    "why_it_matters": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service."
+  },
+  {
     "affected": [
       "nltk"
     ],
@@ -4172,6 +4211,112 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-79614"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-17T07:55:36Z",
+    "id": "CVE-2026-79614",
+    "last_seen": "2026-11-17T07:55:36Z",
+    "matched_topics": [],
+    "modified": "2026-11-17T02:17:22.743",
+    "priority": "information",
+    "published": "2026-11-17T02:17:22.743",
+    "security_topics": [
+      "Privilege escalation"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79614"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "An out-of-bounds write vulnerability in “libclinkc.so” in Zyxel DX3301-T0/EX3301-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an unauthenticated attacker to elevate privileges and potentially execute arbitrary commands by sending a crafted HTTP request. WAN access is disabled by default on these devices.",
+    "title": "An out-of-bounds write vulnerability in “libclinkc.so” in Zyxel DX3301-T0/EX3301-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an unauthen",
+    "why_it_matters": "An out-of-bounds write vulnerability in “libclinkc.so” in Zyxel DX3301-T0/EX3301-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an unauthenticated attacker to elevate privileges and potentially execute arbitrary commands by sending a crafted HTTP request. WAN access is disabled by default on these devices."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-130071"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-17T07:55:36Z",
+    "id": "CVE-2026-130071",
+    "last_seen": "2026-11-17T07:55:36Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T22:18:22.373",
+    "priority": "information",
+    "published": "2026-11-16T22:18:22.373",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130071"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in the guest-whitelisted update_doc method that allows unauthenticated attackers to modify any document. Attackers can supply a doctype, name and arbitrary fields that are saved with ignore_permissions=True, altering User records to escalate privileges, take over accounts or tamper with business data.",
+    "title": "TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in",
+    "why_it_matters": "TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in the guest-whitelisted update_doc method that allows unauthenticated attackers to modify any document. Attackers can supply a doctype, name and arbitrary fields that are saved with ignore_permissions=True, altering User records to escalate privileges, take over accounts or tamper with business data."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-130070"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "cloud-identity"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-17T07:55:36Z",
+    "id": "CVE-2026-130070",
+    "last_seen": "2026-11-17T07:55:36Z",
+    "matched_topics": [],
+    "modified": "2026-11-16T22:18:22.220",
+    "priority": "information",
+    "published": "2026-11-16T22:18:22.220",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130070"
+      }
+    ],
+    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+    "summary": "Ghost by muneeb141 on the main branch from commit c731cdf through commit 672dfec contains an authentication bypass vulnerability in the whitelisted ghost.api.ghost.convert_to_real_user method that allows unauthenticated attackers to skip OTP verification by setting the client-supplied bypass_otp parameter. Attackers can obtain a ghost session from the guest-accessible create_ghost_session endpoint, then call convert_to_real_user with an arbitrary real_email and bypass_otp=1 to receive OAuth tokens for existing accounts and take them over.",
+    "title": "Ghost by muneeb141 on the main branch from commit c731cdf through commit 672dfec contains an authentication bypass vulnerability in the whitelisted gh",
+    "why_it_matters": "Ghost by muneeb141 on the main branch from commit c731cdf through commit 672dfec contains an authentication bypass vulnerability in the whitelisted ghost.api.ghost.convert_to_real_user method that allows unauthenticated attackers to skip OTP verification by setting the client-supplied bypass_otp parameter. Attackers can obtain a ghost session from the guest-accessible create_ghost_session endpoint, then call convert_to_real_user with an arbitrary real_email and bypass_otp=1 to receive OAuth tokens for existing accounts and take them over."
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-129952"
     ],
     "attention_score": 45,
@@ -4185,7 +4330,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-16T22:02:31Z",
     "id": "CVE-2026-129952",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-16T20:28:06.217",
     "priority": "information",
@@ -4221,7 +4366,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-16T22:02:31Z",
     "id": "CVE-2026-129955",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-16T20:28:06.217",
     "priority": "information",
@@ -4280,7 +4425,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-109618",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-16T16:54:58.603",
     "priority": "information",
@@ -4318,7 +4463,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-16T22:02:31Z",
     "id": "CVE-2023-1497",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-16T15:25:33.407",
     "priority": "information",
@@ -4354,7 +4499,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-16T22:02:31Z",
     "id": "CVE-2024-38795",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-16T09:17:11.940",
     "priority": "information",
@@ -4424,7 +4569,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-129483",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-15T15:30:47Z",
     "priority": "information",
@@ -4611,7 +4756,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129354",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-15T03:30:50Z",
     "priority": "information",
@@ -4689,7 +4834,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T06:33:49Z",
     "id": "CVE-2026-129351",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-15T00:30:26Z",
     "priority": "information",
@@ -13509,7 +13654,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-129452",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-15T13:16:59.867",
     "priority": "information",
@@ -13545,7 +13690,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-129451",
-    "last_seen": "2026-11-16T22:02:31Z",
+    "last_seen": "2026-11-17T07:55:36Z",
     "matched_topics": [],
     "modified": "2026-11-15T13:16:59.647",
     "priority": "information",
