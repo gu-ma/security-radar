@@ -1,89 +1,241 @@
 {
   "alerts": [
     {
-      "affected": [
-        "@libp2p/crypto"
-      ],
+      "affected": [],
       "aliases": [
-        "CVE-2026-110789",
-        "GHSA-rvfr-cqwq-rc4j"
+        "CVE-2026-130678",
+        "GHSA-m9xr-rqfh-qjpx"
       ],
-      "attention_score": 55,
+      "attention_score": 75,
       "categories": [
         "dependencies"
       ],
-      "cvss": 7.5,
+      "cvss": 9.0,
       "cvss_version": "3.1",
-      "ecosystems": [
-        "npm"
-      ],
+      "ecosystems": [],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-18T07:29:14Z",
-      "id": "CVE-2026-110789",
-      "last_seen": "2026-11-18T07:29:14Z",
+      "first_seen": "2026-11-18T20:32:15Z",
+      "id": "CVE-2026-130678",
+      "last_seen": "2026-11-18T20:32:15Z",
       "matched_topics": [
-        "npm"
+        "Node.js"
       ],
-      "modified": "2026-11-17T21:05:09Z",
+      "modified": "2026-11-18T12:31:34Z",
       "priority": "review",
-      "published": "2026-11-17T21:05:08Z",
+      "published": "2026-11-18T12:31:28Z",
       "security_topics": [],
-      "severity": "high",
+      "severity": "critical",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-rvfr-cqwq-rc4j"
+          "url": "https://github.com/advisories/GHSA-m9xr-rqfh-qjpx"
         }
       ],
       "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-      "summary": "### Summary A remote peer can stall a js-libp2p node's entire event loop for ~4–5 seconds per connection (and transiently allocate ~2 GB) by sending a ~15-byte crafted `publicKey` inside an Identify message. The malformed key reaches the DER decoder before any peer-id/signature check, so the attack is pre-auth and repeatable indefinitely by reconnecting. ### Details `packages/crypto/src/keys/rsa/der.ts` `readLength()` parses DER long-form lengths with no comparison to `buf.byteLength`, and `readInteger()` then loops over the attacker-claimed length: ```ts function readInteger (buf, context) { const length = readLength(buf, context) // attacker-controlled, claims up to 2^64 const end = context.offset + length for (let i = context.offset; i < end; i++) // runs far past buf.byteLength vals.push(buf[i]) // pushes `undefined` past the end } ``` The blob reaches the parser pre-auth: Identify r",
-      "title": "libp2p: ASN.1 DER decoder drives an unbounded synchronous loop on attacker-controlled length fields, stalling the Node event loop pre-auth",
-      "why_it_matters": "### Summary A remote peer can stall a js-libp2p node's entire event loop for ~4–5 seconds per connection (and transiently allocate ~2 GB) by sending a ~15-byte crafted `publicKey` inside an Identify message. The malformed key reaches the DER decoder before any peer-id/signature check, so the attack is pre-auth and repeatable indefinitely by reconnecting. ### Details `packages/crypto/src/keys/rsa/der.ts` `readLength()` parses DER long-form lengths with no comparison to `buf.byteLength`, and `readInteger()` then loops over the attacker-claimed length: ```ts function readInteger (buf, context) { const length = readLength(buf, context) // attacker-controlled, claims up to 2^64 const end = context.offset + length for (let i = context.offset; i < end; i++) // runs far past buf.byteLength vals.push(buf[i]) // pushes `undefined` past the end } ``` The blob reaches the parser pre-auth: Identify r"
+      "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to execute script by storing malicious Attribute View column names rendered unescaped in col.ts. Attackers can inject HTML via addAttributeViewKey, .sy.zip import, or sync, and when a victim adds or duplicates the column, insertAdjacentHTML runs JavaScript with Node.js privileges for desktop code execution.",
+      "title": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers...",
+      "why_it_matters": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to execute script by storing malicious Attribute View column names rendered unescaped in col.ts. Attackers can inject HTML via addAttributeViewKey, .sy.zip import, or sync, and when a victim adds or duplicates the column, insertAdjacentHTML runs JavaScript with Node.js privileges for desktop code execution."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-130680",
+        "GHSA-pmjj-gw4x-8pj6"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 9.6,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-18T20:32:15Z",
+      "id": "CVE-2026-130680",
+      "last_seen": "2026-11-18T20:32:15Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-18T12:31:34Z",
+      "priority": "review",
+      "published": "2026-11-18T12:31:28Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-pmjj-gw4x-8pj6"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "SiYuan from 3.3.0 before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to inject HTML via unescaped checkbox column names in Gallery and Kanban AttributeView renderers. Attackers can share a crafted .sy.zip document whose rendering in the Electron desktop client with nodeIntegration enabled executes Node.js and host OS commands.",
+      "title": "SiYuan from 3.3.0 before 3.8.10 contains a stored cross-site scripting vulnerability that allows...",
+      "why_it_matters": "SiYuan from 3.3.0 before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to inject HTML via unescaped checkbox column names in Gallery and Kanban AttributeView renderers. Attackers can share a crafted .sy.zip document whose rendering in the Electron desktop client with nodeIntegration enabled executes Node.js and host OS commands."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-130681",
+        "GHSA-mg8p-4rrj-qfxr"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 9.0,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-18T20:32:15Z",
+      "id": "CVE-2026-130681",
+      "last_seen": "2026-11-18T20:32:15Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-18T12:31:34Z",
+      "priority": "review",
+      "published": "2026-11-18T12:31:28Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-mg8p-4rrj-qfxr"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability, an incomplete fix for CVE-2026-44670, because renderAVAttribute() inserts an Attribute View name unescaped into the database row attribute panel header. Attackers who can persist the name, such as via the setAttrViewName action, can inject an onerror handler that runs OS commands through Node.js when a desktop user opens the panel.",
+      "title": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability, an incomplete fix for...",
+      "why_it_matters": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability, an incomplete fix for CVE-2026-44670, because renderAVAttribute() inserts an Attribute View name unescaped into the database row attribute panel header. Attackers who can persist the name, such as via the setAttrViewName action, can inject an onerror handler that runs OS commands through Node.js when a desktop user opens the panel."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-130679",
+        "GHSA-r755-ggqh-772w"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "applications",
+        "dependencies"
+      ],
+      "cvss": 9.4,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-18T20:32:15Z",
+      "id": "CVE-2026-130679",
+      "last_seen": "2026-11-18T20:32:15Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-18T12:31:34Z",
+      "priority": "review",
+      "published": "2026-11-18T12:17:11.450",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-r755-ggqh-772w"
+        },
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130679"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an image URL containing a double quote and onerror handler that executes OS commands via Node.js in the desktop app when victims open the bound note or row attribute panel.",
+      "title": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML()...",
+      "why_it_matters": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an image URL containing a double quote and onerror handler that executes OS commands via Node.js in the desktop app when victims open the bound note or row attribute panel."
     },
     {
       "affected": [
-        "@libp2p/gossipsub"
+        "@augment-vir/node"
       ],
       "aliases": [
-        "CVE-2026-119793",
-        "GHSA-x2vm-cf3p-m2w8"
+        "CVE-2026-63496",
+        "GHSA-xvcc-vqjv-phqh"
       ],
       "attention_score": 55,
       "categories": [
         "dependencies"
       ],
-      "cvss": 7.5,
+      "cvss": 7.8,
       "cvss_version": "3.1",
       "ecosystems": [
         "npm"
       ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-18T07:29:14Z",
-      "id": "CVE-2026-119793",
-      "last_seen": "2026-11-18T07:29:14Z",
+      "first_seen": "2026-11-18T20:32:15Z",
+      "id": "CVE-2026-63496",
+      "last_seen": "2026-11-18T20:32:15Z",
       "matched_topics": [
+        "Node.js",
         "npm"
       ],
-      "modified": "2026-11-17T21:06:20Z",
+      "modified": "2026-11-18T16:15:53Z",
       "priority": "review",
-      "published": "2026-11-17T21:06:20Z",
-      "security_topics": [],
+      "published": "2026-11-18T16:15:52Z",
+      "security_topics": [
+        "Remote code execution"
+      ],
       "severity": "high",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-x2vm-cf3p-m2w8"
+          "url": "https://github.com/advisories/GHSA-xvcc-vqjv-phqh"
         }
       ],
       "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-      "summary": "### Summary A single gossipsub peer can grow a node's `topics` map without bound by flooding subscription RPCs, because the default configuration has no global, per-peer, or topic-length cap and peer scoring does not penalise subscription volume. The peer is never greylisted, so the growth continues toward OOM. ### Details `handleReceivedSubscription` (`packages/gossipsub/src/gossipsub.ts:1028`, line 1036) runs `this.topics.set(topic, new Set())` for every distinct topic string: ```ts private handleReceivedSubscription (from, topic, subscribe) { let topicSet = this.topics.get(topic) if (subscribe) { if (topicSet == null) { topicSet = new Set() this.topics.set(topic, topicSet) // no global cap, no per-peer cap } topicSet.add(from.toString()) } } ``` The only topical gate (`gossipsub.ts:981`, `if (this.allowedTopics != null && !this.allowedTopics.has(topic)) return`) is skipped when `allow",
-      "title": "libp2p: gossipsub creates a permanent topics-map entry per distinct subscription with no cap in the default config",
-      "why_it_matters": "### Summary A single gossipsub peer can grow a node's `topics` map without bound by flooding subscription RPCs, because the default configuration has no global, per-peer, or topic-length cap and peer scoring does not penalise subscription volume. The peer is never greylisted, so the growth continues toward OOM. ### Details `handleReceivedSubscription` (`packages/gossipsub/src/gossipsub.ts:1028`, line 1036) runs `this.topics.set(topic, new Set())` for every distinct topic string: ```ts private handleReceivedSubscription (from, topic, subscribe) { let topicSet = this.topics.get(topic) if (subscribe) { if (topicSet == null) { topicSet = new Set() this.topics.set(topic, topicSet) // no global cap, no per-peer cap } topicSet.add(from.toString()) } } ``` The only topical gate (`gossipsub.ts:981`, `if (this.allowedTopics != null && !this.allowedTopics.has(topic)) return`) is skipped when `allow"
+      "summary": "## Shell Command Injection in `grep()` via Unsanitized `searchPattern` ### Summary The `grep()` function exported by `@augment-vir/node` inserts caller-controlled search patterns directly into a double-quoted shell command string without sanitization (`grep.ts:310`). When the constructed command is passed to `spawn()` with `shell: 'bash'` (`shell.ts:98-99`), bash evaluates `$()` command substitution expressions embedded in the pattern, resulting in arbitrary OS command execution as the Node.js process user. Any downstream application that passes untrusted input to `grep()`'s `pattern` or `patterns` field is vulnerable to unauthenticated local (and potentially remote) code execution. CVSS Base Score: **7.8 (High)**. ### Details **Root cause:** `packages/node/src/augments/fs/grep.ts:310` maps each search pattern into the shell fragment `-e \"${searchPattern}\"` with no sanitization: ```ts //",
+      "title": "augment-virShell allows Command Injection in `grep()` via Unsanitized `searchPattern`",
+      "why_it_matters": "## Shell Command Injection in `grep()` via Unsanitized `searchPattern` ### Summary The `grep()` function exported by `@augment-vir/node` inserts caller-controlled search patterns directly into a double-quoted shell command string without sanitization (`grep.ts:310`). When the constructed command is passed to `spawn()` with `shell: 'bash'` (`shell.ts:98-99`), bash evaluates `$()` command substitution expressions embedded in the pattern, resulting in arbitrary OS command execution as the Node.js process user. Any downstream application that passes untrusted input to `grep()`'s `pattern` or `patterns` field is vulnerable to unauthenticated local (and potentially remote) code execution. CVSS Base Score: **7.8 (High)**. ### Details **Root cause:** `packages/node/src/augments/fs/grep.ts:310` maps each search pattern into the shell fragment `-e \"${searchPattern}\"` with no sanitization: ```ts //"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-130756"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies",
+        "containers"
+      ],
+      "cvss": 9.3,
+      "cvss_version": "",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-18T20:32:15Z",
+      "id": "CVE-2026-130756",
+      "last_seen": "2026-11-18T20:32:15Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-18T19:17:46.287",
+      "priority": "review",
+      "published": "2026-11-18T19:17:46.287",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130756"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS connections. Network attackers holding a recovered intermediate key can intercept standalone pnpm registry fetches and serve forged package metadata or tarballs.",
+      "title": "pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS conn",
+      "why_it_matters": "pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS connections. Network attackers holding a recovered intermediate key can intercept standalone pnpm registry fetches and serve forged package metadata or tarballs."
     }
   ],
-  "generated_at": "2026-11-18T07:29:14Z",
+  "generated_at": "2026-11-18T20:32:15Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }

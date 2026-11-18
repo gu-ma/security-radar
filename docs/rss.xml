@@ -7,7 +7,167 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 17 Nov 2026 22:18:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 19:17:46 GMT</lastBuildDate>
+    <item>
+      <title>pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS conn</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130756#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130756#findings</guid>
+      <pubDate>Wed, 18 Nov 2026 19:17:46 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.3
+
+Summary: pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS connections. Network attackers holding a recovered intermediate key can intercept standalone pnpm registry fetches and serve forged package metadata or tarballs.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-130756
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Containers &amp; registries</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-130756" type="text/html" />
+    </item>
+    <item>
+      <title>A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-111497#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-111497#findings</guid>
+      <pubDate>Thu, 22 Oct 2026 14:17:37 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.2
+
+Summary: A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream. Users need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-111497
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Servers &amp; infrastructure</category>
+      <category>Remote code execution</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497" type="text/html" />
+    </item>
+    <item>
+      <title>Insufficient protection of communications in Progress WS_FTP Server versions prior to 2025.0.5 could allow a network attacker to intercept sensitive i</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-115338#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-115338#findings</guid>
+      <pubDate>Mon, 09 Nov 2026 17:17:11 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8
+
+Summary: Insufficient protection of communications in Progress WS_FTP Server versions prior to 2025.0.5 could allow a network attacker to intercept sensitive information or modify requests when unencrypted connections are used.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-115338
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-115338" type="text/html" />
+    </item>
+    <item>
+      <title>augment-virShell allows Command Injection in `grep()` via Unsanitized `searchPattern`</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-63496#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-63496#findings</guid>
+      <pubDate>Wed, 18 Nov 2026 16:15:52 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.8 (v3.1)
+
+Summary: ## Shell Command Injection in `grep()` via Unsanitized `searchPattern` ### Summary The `grep()` function exported by `@augment-vir/node` inserts caller-controlled search patterns directly into a double-quoted shell command string without sanitization (`grep.ts:310`). When the constructed command is passed to `spawn()` with `shell: 'bash'` (`shell.ts:98-99`), bash evaluates `$()` command substitution expressions embedded in the pattern, resulting in arbitrary OS command execution as the Node.js process user. Any downstream application that passes untrusted input to `grep()`'s `pattern` or `patterns` field is vulnerable to unauthenticated local (and potentially remote) code execution. CVSS Base Score: **7.8 (High)**. ### Details **Root cause:** `packages/node/src/augments/fs/grep.ts:310` maps each search pattern into the shell fragment `-e "${searchPattern}"` with no sanitization: ```ts //
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-xvcc-vqjv-phqh
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-xvcc-vqjv-phqh" type="text/html" />
+    </item>
+    <item>
+      <title>picomatch vulnerable to ReDoS through single-branch repeated extglobs</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</guid>
+      <pubDate>Mon, 19 Oct 2026 18:32:12 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Withdrawn Advisory This advisory has been withdrawn because it is a security issue. See https://github.com/micromatch/picomatch/pull/235#issuecomment-6315749381 for more information. This link is maintained to preserve external references. ## Original Description Picomatch through 4.0.7 contains a regular expression denial of service vulnerability that allows attackers to block the event loop by supplying single-branch repeated extglob patterns. Attackers can provide globs like +(*) or +(*a), which analyzeRepeatedExtglob in lib/parse.js skips, causing exponential backtracking against short crafted strings and denying service to Node.js applications.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-fc5q-39xc-vjpf
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-fc5q-39xc-vjpf" type="text/html" />
+    </item>
+    <item>
+      <title>SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability, an incomplete fix for...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130681#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130681#findings</guid>
+      <pubDate>Wed, 18 Nov 2026 12:31:28 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9 (v3.1)
+
+Summary: SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability, an incomplete fix for CVE-2026-44670, because renderAVAttribute() inserts an Attribute View name unescaped into the database row attribute panel header. Attackers who can persist the name, such as via the setAttrViewName action, can inject an onerror handler that runs OS commands through Node.js when a desktop user opens the panel.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-mg8p-4rrj-qfxr
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-mg8p-4rrj-qfxr" type="text/html" />
+    </item>
+    <item>
+      <title>SiYuan from 3.3.0 before 3.8.10 contains a stored cross-site scripting vulnerability that allows...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130680#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130680#findings</guid>
+      <pubDate>Wed, 18 Nov 2026 12:31:28 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.6 (v3.1)
+
+Summary: SiYuan from 3.3.0 before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to inject HTML via unescaped checkbox column names in Gallery and Kanban AttributeView renderers. Attackers can share a crafted .sy.zip document whose rendering in the Electron desktop client with nodeIntegration enabled executes Node.js and host OS commands.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-pmjj-gw4x-8pj6
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-pmjj-gw4x-8pj6" type="text/html" />
+    </item>
+    <item>
+      <title>SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML()...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130679#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130679#findings</guid>
+      <pubDate>Wed, 18 Nov 2026 12:17:11 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.4 (v3.1)
+
+Summary: SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an image URL containing a double quote and onerror handler that executes OS commands via Node.js in the desktop app when victims open the bound note or row attribute panel.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-r755-ggqh-772w
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Applications</category>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-r755-ggqh-772w" type="text/html" />
+    </item>
+    <item>
+      <title>SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130678#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130678#findings</guid>
+      <pubDate>Wed, 18 Nov 2026 12:31:28 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9 (v3.1)
+
+Summary: SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to execute script by storing malicious Attribute View column names rendered unescaped in col.ts. Attackers can inject HTML via addAttributeViewKey, .sy.zip import, or sync, and when a victim adds or duplicates the column, insertAdjacentHTML runs JavaScript with Node.js privileges for desktop code execution.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-m9xr-rqfh-qjpx
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-m9xr-rqfh-qjpx" type="text/html" />
+    </item>
     <item>
       <title>Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material und</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2025-34206#findings</link>
@@ -137,6 +297,24 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-gfv3-m769-5xm3" type="text/html" />
     </item>
     <item>
+      <title>Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-119192#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-119192#findings</guid>
+      <pubDate>Tue, 10 Nov 2026 15:57:34 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ### Summary RSASSA-PKCS1-v1_5 signature verification (`publicKey.verify()` with the default scheme, also used by X.509 certificate and PKCS#7 verification) accepted non-canonical BER encodings of the DigestInfo, such as NULL parameters with content and non-minimal lengths. These leave attacker-controlled bytes inside an accepted DigestInfo, which allows signatures to be forged without the private key for RSA keys with a low public exponent (e=3). Fixed in node-forge 1.4.1. ### Details In `lib/rsa.js`, `key.verify()` with the default `RSASSA-PKCS1-V1_5` scheme removes the padding, parses the recovered DigestInfo with the lenient BER parser `asn1.fromDer()` and checks its structure with `asn1.validate()` against `digestInfoValidator`. Neither requires a canonical DER encoding, so verification accepted, among others: - NULL parameters with content bytes (e.g. `05 40 &lt;64 bytes&gt;`) - non-NULL 
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-6qrw-m8cv-hcxf
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Containers &amp; registries</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-6qrw-m8cv-hcxf" type="text/html" />
+    </item>
+    <item>
       <title>Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload...</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2026-126553#findings</link>
       <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-126553#findings</guid>
@@ -187,24 +365,6 @@ Original advisory: https://github.com/advisories/GHSA-gcgf-3c86-345v
 Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-gcgf-3c86-345v" type="text/html" />
-    </item>
-    <item>
-      <title>picomatch vulnerable to ReDoS through single-branch repeated extglobs</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</guid>
-      <pubDate>Mon, 19 Oct 2026 18:32:12 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: Picomatch through 4.0.7 contains a regular expression denial of service vulnerability that allows attackers to block the event loop by supplying single-branch repeated extglob patterns. Attackers can provide globs like +(*) or +(*a), which analyzeRepeatedExtglob in lib/parse.js skips, causing exponential backtracking against short crafted strings and denying service to Node.js applications.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-fc5q-39xc-vjpf
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-fc5q-39xc-vjpf" type="text/html" />
     </item>
     <item>
       <title>In the Linux kernel, the following vulnerability has been resolved:
@@ -752,173 +912,6 @@ Original advisory: https://github.com/advisories/GHSA-5g73-69p4-7gvx
 Watchlist match only. Local exposure has not been assessed.</description>
       <category>Libraries &amp; dependencies</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-5g73-69p4-7gvx" type="text/html" />
-    </item>
-    <item>
-      <title>PandasAI interactive prompt function Remote Code Execution (RCE)</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2024-12366#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2024-12366#findings</guid>
-      <pubDate>Tue, 11 Feb 2025 15:32:24 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: PandasAI uses an interactive prompt function that is vulnerable to prompt injection and run arbitrary Python code that can lead to Remote Code Execution (RCE) instead of the intended explanation of the natural language processing by the LLM. The security controls of PandasAI (2.4.3 and earlier) fail to distinguish between legitimate and malicious inputs, allowing the attackers to manipulate the system into executing untrusted code, leading to untrusted code execution (RCE), system compromise, or pivoting attacks on connected services.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-vv2h-2w3q-3fx7
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-vv2h-2w3q-3fx7" type="text/html" />
-    </item>
-    <item>
-      <title>pgAdmin 4 vulnerable to Unsafe Deserialization and Remote Code Execution by an Authenticated user</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2024-2044#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2024-2044#findings</guid>
-      <pubDate>Thu, 07 Mar 2024 21:30:22 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.9 (v3.1)
-
-Summary: pgAdmin prior to version 8.4 is affected by a path-traversal vulnerability while deserializing users’ sessions in the session handling code. If the server is running on Windows, an unauthenticated attacker can load and deserialize remote pickle objects and gain code execution. If the server is running on POSIX/Linux, an authenticated attacker can upload pickle objects, deserialize them and gain code execution.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-rj98-crf4-g69w
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-rj98-crf4-g69w" type="text/html" />
-    </item>
-    <item>
-      <title>OpenStack os-vif Ageing time of 0 disables linuxbridge MAC learning</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2019-15753#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2019-15753#findings</guid>
-      <pubDate>Tue, 24 May 2022 16:55:04 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1 (v3.0)
-
-Summary: In OpenStack os-vif 1.15.x before 1.15.2, and 1.16.0, a hard-coded MAC aging time of 0 disables MAC learning in linuxbridge, forcing obligatory Ethernet flooding of non-local destinations, which both impedes network performance and allows users to possibly view the content of packets for instances belonging to other tenants sharing the same network. Only deployments using the linuxbridge backend are affected. This occurs in PyRoute2.add() in `internal/command/ip/linux/impl_pyroute2.py`.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-mcpw-cp35-p3h8
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-mcpw-cp35-p3h8" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI Has Path Traversal in FileTools</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-35615#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-35615#findings</guid>
-      <pubDate>Mon, 06 Apr 2026 23:09:28 GMT</pubDate>
-      <description>Severity: CRITICAL
-
-Summary: ### Executive Summary: The path validation has a critical logic bug: it checks for `..` AFTER `normpath()` has already collapsed all `..` sequences. This makes the check completely useless and allows trivial path traversal to any file on the system. The path validation function also does not resolve the symlink wich could potentially cause path traversal. ### Details: `_validate_path()` calls `os.path.normpath()` first, which collapses `..` sequences, then checks for `'..'` in normalized. Since `..` is already collapsed, the check always passes. **Vulnerable File:** `src/praisonai-agents/praisonaiagents/tools/file_tools.py` **Lines:** 42-49 ```python class FileTools: """Tools for file operations including read, write, list, and information.""" @staticmethod def _validate_path(filepath: str) -&gt; str: # Normalize the path normalized = os.path.normpath(filepath) absolute = os.path.abspath(no
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-693f-pf34-72c5
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-693f-pf34-72c5" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI Vulnerable to OS Command Injection</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-40088#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-40088#findings</guid>
-      <pubDate>Wed, 08 Apr 2026 21:52:10 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.6 (v3.1)
-
-Summary: The `execute_command` function and workflow shell execution are exposed to user-controlled input via agent workflows, YAML definitions, and LLM-generated tool calls, allowing attackers to inject arbitrary shell commands through shell metacharacters. --- ## Description PraisonAI's workflow system and command execution tools pass user-controlled input directly to `subprocess.run()` with `shell=True`, enabling command injection attacks. Input sources include: 1. YAML workflow step definitions 2. Agent configuration files (agents.yaml) 3. LLM-generated tool call parameters 4. Recipe step configurations The `shell=True` parameter causes the shell to interpret metacharacters (`;`, `|`, `&amp;&amp;`, `$()`, etc.), allowing attackers to execute arbitrary commands beyond the intended operation. --- ## Affected Code **Primary command execution (shell=True default):** ```python # code/tools/execute_command
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-2763-cj5r-c79m
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-2763-cj5r-c79m" type="text/html" />
-    </item>
-    <item>
-      <title>mcp-kubernetes-server has an OS Command Injection vulnerability</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2025-59377#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2025-59377#findings</guid>
-      <pubDate>Mon, 15 Sep 2025 15:31:24 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: `feiskyer/mcp-kubernetes-server` through **0.1.11** allows **OS command injection** via the `/mcp/kubectl` endpoint. The handler constructs a shell command with user-supplied arguments and executes it with `subprocess` using `shell=True`, enabling injection through shell metacharacters (e.g., `;`, `&amp;&amp;`, `$()`), even when the server is running in **read-only** mode. A remote, unauthenticated attacker can execute arbitrary OS commands on the host, resulting in full compromise of confidentiality, integrity, and availability. This issue is **distinct from** `mcp-server-kubernetes` and from **CVE-2025-53355**.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-4hqq-7q79-932p
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Containers &amp; registries</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-4hqq-7q79-932p" type="text/html" />
-    </item>
-    <item>
-      <title>Mesop Affected by Unauthenticated Remote Code Execution via Test Suite Route /exec-py</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-33057#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-33057#findings</guid>
-      <pubDate>Wed, 18 Mar 2026 20:05:00 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: #### Summary An explicit web endpoint inside the `ai/` testing module infrastructure directly ingests untrusted Python code strings unconditionally without authentication measures, yielding standard Unrestricted Remote Code Execution. Any individual capable of routing HTTP logic to this server block will gain explicit host-machine command rights. #### Details The AI codebase package includes a lightweight debugging Flask server inside `ai/sandbox/wsgi_app.py`. The `/exec-py` route accepts base_64 encoded raw string payloads inside the `code` parameter natively evaluated by a basic `POST` web request. It saves it rapidly to the operating system logic path and injects it recursively using `execute_module(module_path...)`. ```python # ai/sandbox/wsgi_app.py @flask_app.route("/exec-py", methods=["POST"]) def exec_py_route(): code = base64.urlsafe_b64decode(request.form.get("code")) # ... cod
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-gjgx-rvqr-6w6v
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-gjgx-rvqr-6w6v" type="text/html" />
-    </item>
-    <item>
-      <title>Ludwig framework is vulnerable to insecure deserialization through its predict() method.</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-31237#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-31237#findings</guid>
-      <pubDate>Tue, 12 May 2026 18:30:41 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: The Ludwig framework thru 0.10.4 is vulnerable to insecure deserialization (CWE-502) through its predict() method. When a user provides a dataset file path to the predict() method, the framework automatically determines the file format. If the file is a pickle (.pkl) file, it is loaded using pandas.read_pickle() without any validation or security restrictions. This allows the deserialization of arbitrary Python objects via the unsafe pickle module. A remote attacker can exploit this by providing a maliciously crafted pickle file, leading to arbitrary code execution on the system running the Ludwig prediction.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-wcr3-gm9f-f87q
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-wcr3-gm9f-f87q" type="text/html" />
-    </item>
-    <item>
-      <title>MLflow Command Injection vulnerability</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2025-15379#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2025-15379#findings</guid>
-      <pubDate>Mon, 30 Mar 2026 09:31:28 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 10 (v3.0)
-
-Summary: A command injection vulnerability exists in MLflow's model serving container initialization code, specifically in the `_install_model_dependencies_to_env()` function. When deploying a model with `env_manager=LOCAL`, MLflow reads dependency specifications from the model artifact's `python_env.yaml` file and directly interpolates them into a shell command without sanitization. This allows an attacker to supply a malicious model artifact and achieve arbitrary command execution on systems that deploy the model. The vulnerability affects versions 3.8.0 and is fixed in version 3.8.1.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-r23q-823p-vmf7
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Containers &amp; registries</category>
-      <category>AI &amp; ML tooling</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-r23q-823p-vmf7" type="text/html" />
     </item>
   </channel>
 </rss>
