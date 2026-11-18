@@ -8,7 +8,103 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-17T20:20:53Z</atom:updated>
+  <atom:updated>2026-11-17T22:18:03Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2025-34206#findings</atom:id>
+    <atom:title>Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material und</atom:title>
+    <atom:published>2025-09-19T19:15:41Z</atom:published>
+    <atom:updated>2026-11-17T22:18:03Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2025-34206#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2025-34206" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3
+
+Summary: Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material under /var/www/efs_storage into many Docker containers with overly-permissive filesystem permissions. Files such as secrets.env, GPG-encrypted blobs in .secrets, MySQL client keys, and application session files are accessible from multiple containers. An attacker who controls or reaches any container can read or modify these artifacts, leading to credential theft, RCE via Laravel APP_KEY, Portainer takeover, and full compromise.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2025-34206
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Remote code execution" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2025-34204#findings</atom:id>
+    <atom:title>Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) contains multiple Docker containers that run pri</atom:title>
+    <atom:published>2025-09-19T19:15:41Z</atom:published>
+    <atom:updated>2026-11-17T22:18:02Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2025-34204#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2025-34204" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.7
+
+Summary: Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) contains multiple Docker containers that run primary application processes (for example PHP workers, Node.js servers and custom binaries) as the root user. This increases the blast radius of a container compromise and enables lateral movement and host compromise when a container is breached.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2025-34204
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-64566#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+xfrm: iptfs: propagate...</atom:title>
+    <atom:published>2026-08-05T09:31:17Z</atom:published>
+    <atom:updated>2026-11-17T21:31:20Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-64566#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-wr7x-h83j-8fqg" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: xfrm: iptfs: propagate SKBFL_SHARED_FRAG in iptfs_skb_add_frags() When iptfs_skb_add_frags() copies frag references from the source frag walk into a new SKB, it increments the page reference count via __skb_frag_ref() but does not propagate SKBFL_SHARED_FRAG to the destination SKB's skb_shinfo-&gt;flags. If the source SKB carries shared frags (e.g. from a page-pool backed receive path), the new inner SKB will appear to ESP as having privately owned frags. A subsequent esp_input() call for a nested transport-mode SA then takes the no-COW fast path and decrypts in place, writing over pages that are still referenced by the outer IPTFS SKB. This causes kernel-visible memory corruption and can trigger a panic. All other frag-transfer helpers in the kernel (skb_try_coalesce, skb_gro_receive, __pskb_copy_fclone, skb_shift, skb_seg
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-wr7x-h83j-8fqg
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-119793#findings</atom:id>
+    <atom:title>libp2p: gossipsub creates a permanent topics-map entry per distinct subscription with no cap in the default config</atom:title>
+    <atom:published>2026-11-17T21:06:20Z</atom:published>
+    <atom:updated>2026-11-17T21:06:20Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-119793#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-x2vm-cf3p-m2w8" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ### Summary A single gossipsub peer can grow a node's `topics` map without bound by flooding subscription RPCs, because the default configuration has no global, per-peer, or topic-length cap and peer scoring does not penalise subscription volume. The peer is never greylisted, so the growth continues toward OOM. ### Details `handleReceivedSubscription` (`packages/gossipsub/src/gossipsub.ts:1028`, line 1036) runs `this.topics.set(topic, new Set())` for every distinct topic string: ```ts private handleReceivedSubscription (from, topic, subscribe) { let topicSet = this.topics.get(topic) if (subscribe) { if (topicSet == null) { topicSet = new Set() this.topics.set(topic, topicSet) // no global cap, no per-peer cap } topicSet.add(from.toString()) } } ``` The only topical gate (`gossipsub.ts:981`, `if (this.allowedTopics != null &amp;&amp; !this.allowedTopics.has(topic)) return`) is skipped when `allow
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-x2vm-cf3p-m2w8
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-110789#findings</atom:id>
+    <atom:title>libp2p: ASN.1 DER decoder drives an unbounded synchronous loop on attacker-controlled length fields, stalling the Node event loop pre-auth</atom:title>
+    <atom:published>2026-11-17T21:05:08Z</atom:published>
+    <atom:updated>2026-11-17T21:05:09Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-110789#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-rvfr-cqwq-rc4j" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ### Summary A remote peer can stall a js-libp2p node's entire event loop for ~4–5 seconds per connection (and transiently allocate ~2 GB) by sending a ~15-byte crafted `publicKey` inside an Identify message. The malformed key reaches the DER decoder before any peer-id/signature check, so the attack is pre-auth and repeatable indefinitely by reconnecting. ### Details `packages/crypto/src/keys/rsa/der.ts` `readLength()` parses DER long-form lengths with no comparison to `buf.byteLength`, and `readInteger()` then loops over the attacker-claimed length: ```ts function readInteger (buf, context) { const length = readLength(buf, context) // attacker-controlled, claims up to 2^64 const end = context.offset + length for (let i = context.offset; i &lt; end; i++) // runs far past buf.byteLength vals.push(buf[i]) // pushes `undefined` past the end } ``` The blob reaches the parser pre-auth: Identify r
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-rvfr-cqwq-rc4j
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-25153#findings</atom:id>
     <atom:title>Backstage is an open framework for building developer portals, and @backstage/plugin-techdocs-node provides common node.js functionalities for TechDoc</atom:title>
@@ -872,106 +968,6 @@ Original advisory: https://github.com/advisories/GHSA-r23q-823p-vmf7
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="Containers &amp; registries" />
-    <atom:category term="AI &amp; ML tooling" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2016-4972#findings</atom:id>
-    <atom:title>OpenStack Murano Code Execution</atom:title>
-    <atom:published>2022-05-17T03:48:22Z</atom:published>
-    <atom:updated>2026-11-16T15:23:41Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2016-4972#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-87r7-q54j-f9qg" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.0)
-
-Summary: OpenStack Murano before 1.0.3 (liberty) and 2.x before 2.0.1 (mitaka), Murano-dashboard before 1.0.3 (liberty) and 2.x before 2.0.1 (mitaka), and python-muranoclient before 0.7.3 (liberty) and 0.8.x before 0.8.5 (mitaka) improperly use loaders inherited from yaml.Loader when parsing MuranoPL and UI files, which allows remote attackers to create arbitrary Python objects and execute arbitrary code via crafted extended YAML tags in UI definitions in packages.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-87r7-q54j-f9qg
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-31239#findings</atom:id>
-    <atom:title>mamba language model framework vulnerable to insecure deserialization when loading pre-trained models from HuggingFace Hub</atom:title>
-    <atom:published>2026-05-12T18:30:41Z</atom:published>
-    <atom:updated>2026-11-16T15:22:56Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-31239#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-pq2f-x424-6fjm" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: The mamba language model framework thru 2.2.6 is vulnerable to insecure deserialization (CWE-502) when loading pre-trained models from HuggingFace Hub. The MambaLMHeadModel.from_pretrained() method uses torch.load() to load the pytorch_model.bin weight file without enabling the security-restrictive weights_only=True parameter. This allows the deserialization of arbitrary Python objects via the pickle module. An attacker can exploit this by publishing a malicious model repository on HuggingFace Hub. When a victim loads a model from this repository, arbitrary code is executed on the victim's system in the context of the mamba process.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-pq2f-x424-6fjm
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="AI &amp; ML tooling" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-31238#findings</atom:id>
-    <atom:title>Ludwig framework is vulnerable to insecure deserialization in its model serving component</atom:title>
-    <atom:published>2026-05-12T18:30:41Z</atom:published>
-    <atom:updated>2026-11-16T15:20:40Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-31238#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-xp5q-5q7g-q26r" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: The Ludwig framework thru 0.10.4 is vulnerable to insecure deserialization (CWE-502) in its model serving component. When starting a model server with the ludwig serve command, the framework loads model weight files using torch.load() without enabling the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the pickle module. An attacker can exploit this by providing a maliciously crafted PyTorch model file, leading to arbitrary code execution on the system hosting the Ludwig model server.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-xp5q-5q7g-q26r
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="AI &amp; ML tooling" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2024-34359#findings</atom:id>
-    <atom:title>llama-cpp-python vulnerable to Remote Code Execution by Server-Side Template Injection in Model Metadata</atom:title>
-    <atom:published>2024-05-13T14:10:18Z</atom:published>
-    <atom:updated>2026-11-16T15:19:29Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2024-34359#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-56xg-wfcc-g829" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.6 (v3.1)
-
-Summary: ## Description `llama-cpp-python` depends on class `Llama` in `llama.py` to load `.gguf` llama.cpp or Latency Machine Learning Models. The `__init__` constructor built in the `Llama` takes several parameters to configure the loading and running of the model. Other than `NUMA, LoRa settings`, `loading tokenizers,` and `hardware settings`, `__init__` also loads the `chat template` from targeted `.gguf` 's Metadata and furtherly parses it to `llama_chat_format.Jinja2ChatFormatter.to_chat_handler()` to construct the `self.chat_handler` for this model. Nevertheless, `Jinja2ChatFormatter` parse the `chat template` within the Metadate with sandbox-less `jinja2.Environment`, which is furthermore rendered in `__call__` to construct the `prompt` of interaction. This allows `jinja2` Server Side Template Injection which leads to RCE by a carefully constructed payload. ## Source-to-Sink ### `llama.py
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-56xg-wfcc-g829
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="AI &amp; ML tooling" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2024-5452#findings</atom:id>
-    <atom:title>Remote code execution in pytorch lightning</atom:title>
-    <atom:published>2024-06-06T18:30:58Z</atom:published>
-    <atom:updated>2026-11-16T15:15:31Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2024-5452#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-cgwc-qvrx-rf7f" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.0)
-
-Summary: A remote code execution (RCE) vulnerability exists in the lightning-ai/pytorch-lightning library version 2.2.1 due to improper handling of deserialized user input and mismanagement of dunder attributes by the `deepdiff` library. The library uses `deepdiff.Delta` objects to modify application state based on frontend actions. However, it is possible to bypass the intended restrictions on modifying dunder attributes, allowing an attacker to construct a serialized delta that passes the deserializer whitelist and contains dunder attributes. When processed, this can be exploited to access other modules, classes, and instances, leading to arbitrary attribute write and total RCE on any self-hosted pytorch-lightning application in its default configuration, as the delta endpoint is enabled by default.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-cgwc-qvrx-rf7f
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="AI &amp; ML tooling" />
     <atom:category term="Remote code execution" />
   </atom:entry>
