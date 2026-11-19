@@ -8,15 +8,54 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-18T19:17:46Z</atom:updated>
+  <atom:updated>2026-11-19T00:46:41Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-63129#findings</atom:id>
+    <atom:title>mssql-mcp-core: SQL injection in mssql-mcp write tools via unparameterized table names and WHERE clauses</atom:title>
+    <atom:published>2026-11-19T00:46:38Z</atom:published>
+    <atom:updated>2026-11-19T00:46:41Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-63129#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-2m9m-6cr5-9x25" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: Several tools in `mssql-mcp-core` built T-SQL by string-interpolating caller-supplied identifiers and predicates directly into the statement passed to the node-mssql `Request.query()` batch API. Only data values were parameterized. Affected tools and inputs: - `update_data`, `delete_data`: `tableName` and the free-form `whereClause` were interpolated raw. - `insert_data`: `tableName` and column names (object keys) were interpolated raw. - `execute_transaction`: the same raw `tableName`/`whereClause` interpolation per operation. - `create_table`, `create_index`, `drop_table`: table/column/index/schema identifiers were interpolated with no or insufficient validation. - `list_databases` (reader tier): the `stateFilter` argument was interpolated raw into the query, with only a non-enforced inputSchema enum guarding it. The only check on `whereClause` was that it was non-empty. Because the ro
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2m9m-6cr5-9x25
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-64459#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+tcp: restore RCU grace...</atom:title>
+    <atom:published>2026-07-25T12:31:36Z</atom:published>
+    <atom:updated>2026-11-19T00:30:27Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-64459#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-6hpw-qg6p-q7xc" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: tcp: restore RCU grace period in tcp_ao_destroy_sock Commit 51e547e8c89c ("tcp: Free TCP-AO/TCP-MD5 info/keys without RCU") removed the call_rcu() callback from tcp_ao_destroy_sock(), arguing that "the destruction of info/keys is delayed until the socket destructor" and therefore "no one can discover it anymore". That argument does not hold for the call site in tcp_connect() (net/ipv4/tcp_output.c:4327-4332). At that point the socket is in TCP_SYN_SENT, has already been inserted into the inet ehash by inet_hash_connect() in tcp_v4_connect(), and is therefore very much discoverable: any softirq running tcp_v4_rcv() on another CPU can take the socket out of the ehash, walk into tcp_inbound_hash(), and load tp-&gt;ao_info via implicit RCU before bh_lock_sock_nested() is taken on the destroying CPU. The reader path then enters 
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-6hpw-qg6p-q7xc
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-130756#findings</atom:id>
     <atom:title>pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS conn</atom:title>
     <atom:published>2026-11-18T19:17:46Z</atom:published>
-    <atom:updated>2026-11-18T19:17:46Z</atom:updated>
+    <atom:updated>2026-11-18T21:31:47Z</atom:updated>
     <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-130756#findings" type="text/html" />
     <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-130756" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
 
 Summary: pnpm exe before 10.34.8 embeds an outdated Node.js runtime that still trusts compromised eMudhra intermediate CA certificates during registry TLS connections. Network attackers holding a recovered intermediate key can intercept standalone pnpm registry fetches and serve forged package metadata or tarballs.
 
@@ -27,6 +66,42 @@ Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-130756
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-68903#findings</atom:id>
+    <atom:title>LLMKube: Arbitrary Host File Read via Model.spec.source hostPath Injection</atom:title>
+    <atom:published>2026-11-18T21:18:02Z</atom:published>
+    <atom:updated>2026-11-18T21:18:03Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-68903#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-jw3m-8q7m-f35r" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ### Summary LLMKube's `ModelReconciler` accepts arbitrary absolute paths and `file://` URIs in the `Model.spec.source` field and propagates them to two distinct sinks without path allowlisting: (1) `os.Open()` inside the controller pod itself (`copyLocalModel`), and (2) a Kubernetes `HostPathVolumeSource` that mounts the attacker-supplied path into the inference pod's init container. Any namespace user with permission to create or update `Model` and `InferenceService` custom resources can read arbitrary files accessible to the controller pod (e.g., the controller's own Kubernetes service-account token) or arbitrary files on the node where the inference pod is scheduled (e.g., `/etc/kubernetes/kubelet.conf`). Model caching, the feature that activates the `hostPath` sink, is **enabled by default** in both the CLI and the official Helm chart. CVSS v3.1 Base Score: **7.7 (High)**. ### Detail
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-jw3m-8q7m-f35r
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-73864#findings</atom:id>
+    <atom:title>install-artifact-from-github loads downloaded native artifacts without integrity verification</atom:title>
+    <atom:published>2026-11-18T21:17:37Z</atom:published>
+    <atom:updated>2026-11-18T21:17:37Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-73864#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-88q3-gch3-5396" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Description `bin/install-from-cache.js` downloads a prebuilt native addon (`*.node`) over the network and writes it directly to the artifact path **with no cryptographic integrity verification of any kind**  -  no checksum manifest, no signature, no SRI. A scan of the whole package for `createHash|sha256|checksum|integrity|digest|signature` finds nothing. The file is then `require()`-loaded by the consumer, which executes the addon's native module-init code. Anyone able to influence the download achieves code execution on the installing machine. ### Affected code (v1.6.0) - **Mirror is fully attacker-steerable via an env var, no host pinning**  -  `bin/install-from-cache.js:80`: ```js let assetUrl = mirrorHost || process.env[mirrorEnvVar] || 'https://github.com'; ``` `re2` passes `--host-var RE2_DOWNLOAD_MIRROR`, so setting `RE2_DOWNLOAD_MIRROR` (CI config, `.npmrc`/env passthrough, a
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-88q3-gch3-5396
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
   </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-111497#findings</atom:id>
@@ -888,80 +963,5 @@ Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="Containers &amp; registries" />
     <atom:category term="Supply chain" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-40157#findings</atom:id>
-    <atom:title>PraisonAI vulnerable to arbitrary file write via path traversal in `praisonai recipe unpack`</atom:title>
-    <atom:published>2026-04-10T19:27:59Z</atom:published>
-    <atom:updated>2026-11-16T15:57:15Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-40157#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-99g3-w8gr-x37c" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL
-
-Summary: | Field | Value | |---|---| | Severity | Critical | | Type | Path traversal -- arbitrary file write via `tar.extract()` without member validation | | Affected | `src/praisonai/praisonai/cli/features/recipe.py:1170-1172` | ## Summary `cmd_unpack` in the recipe CLI extracts `.praison` tar archives using raw `tar.extract()` without validating archive member paths. A `.praison` bundle containing `../../` entries will write files outside the intended output directory. An attacker who distributes a malicious bundle can overwrite arbitrary files on the victim's filesystem when they run `praisonai recipe unpack`. ## Details The vulnerable code is in `cli/features/recipe.py:1170-1172`: ```python for member in tar.getmembers(): if member.name != "manifest.json": tar.extract(member, recipe_dir) ``` The only check is whether the member is `manifest.json`. The code never validates member names -- abs
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-99g3-w8gr-x37c
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2025-2945#findings</atom:id>
-    <atom:title>pgAdmin 4 Vulnerable to Remote Code Execution</atom:title>
-    <atom:published>2025-04-03T15:31:13Z</atom:published>
-    <atom:updated>2026-11-16T15:55:39Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2025-2945#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-g73c-fw68-pwx3" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.9 (v3.1)
-
-Summary: Remote Code Execution security vulnerability in pgAdmin 4 (Query Tool and Cloud Deployment modules). The vulnerability is associated with the 2 POST endpoints; /sqleditor/query_tool/download, where the query_commited parameter and /cloud/deploy endpoint, where the high_availability parameter is unsafely passed to the Python eval() function, allowing arbitrary code execution. This issue affects pgAdmin 4: before 9.2.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-g73c-fw68-pwx3
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2025-62373#findings</atom:id>
-    <atom:title>Pipecat: Remote Code Execution by Pickle Deserialization Through LivekitFrameSerializer</atom:title>
-    <atom:published>2026-04-23T21:15:42Z</atom:published>
-    <atom:updated>2026-11-16T15:49:36Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2025-62373#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-c2jg-5cp7-6wc7" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: Remote Code Execution via Unsafe Deserialization in Pipecat's LivekitFrameSerializer ### Summary A critical vulnerability exists in Pipecat's `LivekitFrameSerializer` – an **optional, non-default, undocumented** frame serializer class (now deprecated) intended for LiveKit integration. The class's `deserialize()` method uses Python's `pickle.loads()` on data received from WebSocket clients without any validation or sanitization. This means that a malicious WebSocket client can send a crafted pickle payload to execute arbitrary code on the Pipecat server. The vulnerable code resides in `src/pipecat/serializers/livekit.py` (around line 73), where untrusted WebSocket message data is passed directly into `pickle.loads()` for deserialization. If a Pipecat server is configured to use LivekitFrameSerializer and is listening on an external interface (e.g. 0.0.0.0), an attacker on the network (or 
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-c2jg-5cp7-6wc7
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2024-23752#findings</atom:id>
-    <atom:title>Code execution in pandasai</atom:title>
-    <atom:published>2024-01-22T03:30:26Z</atom:published>
-    <atom:updated>2026-11-16T15:48:35Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2024-23752#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-5g73-69p4-7gvx" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: GenerateSDFPipeline in synthetic_dataframe in PandasAI (aka pandas-ai) through 1.5.17 allows attackers to trigger the generation of arbitrary Python code that is executed by SDFCodeExecutor. An attacker can create a dataframe that provides an English language specification of this Python code. NOTE: the vendor previously attempted to restrict code execution in response to a separate issue, CVE-2023-39660.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-5g73-69p4-7gvx
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
   </atom:entry>
 </atom:feed>
