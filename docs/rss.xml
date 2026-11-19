@@ -7,7 +7,134 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 19 Nov 2026 00:46:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 20:35:58 GMT</lastBuildDate>
+    <item>
+      <title>OpenID4VP: X.509 chain validation accepts a forged certificate that reuses a trusted anchor's Subject DN without verifying its signature</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-75522#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-75522#findings</guid>
+      <pubDate>Thu, 19 Nov 2026 20:35:57 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Summary `ChainBuilder` (the private RFC 5280 validator behind `TrustEvaluator` and the public credential-parsing API) terminated chain building on **Subject Distinguished Name string equality** rather than on cryptographic closure to a trust anchor. A certificate whose Subject DN string matched a trusted anchor's Subject DN was accepted as the chain terminus **with no signature verification** against the anchor's public key. An attacker who mints a self-signed certificate and copies a trusted anchor's Subject DN string onto it can therefore have that certificate  -  and any credential signed with its private key  -  accepted as issued under a trusted authority. ## Impact A relying party using `@openeudi/openid4vp` to verify OpenID4VP presentations (mdoc / SD-JWT VC) could be induced to accept a **forged credential as genuine**, defeating the trust-anchor model. In an eIDAS / EUDI age-
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-4c2f-96cf-f5fc
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-4c2f-96cf-f5fc" type="text/html" />
+    </item>
+    <item>
+      <title>Cross-Site Request Forgery (CSRF) vulnerability in rustdesk-client RustDesk Client rustdesk-client on Windows, MacOS, Linux, iOS, Android (Flutter URI</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-30793#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-30793#findings</guid>
+      <pubDate>Thu, 05 Mar 2026 16:16:20 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.3
+
+Summary: Cross-Site Request Forgery (CSRF) vulnerability in rustdesk-client RustDesk Client rustdesk-client on Windows, MacOS, Linux, iOS, Android (Flutter URI scheme handler, FFI bridge modules) allows Privilege Escalation. This vulnerability is associated with program files flutter/lib/common.Dart, src/flutter_ffi.Rs and program routines URI handler for rustdesk://password/, bind.MainSetPermanentPassword(). This issue affects RustDesk Client: through 1.4.5. NOTE: some third parties have indicated that these details do not align with the Supplier's statements.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-30793
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Privilege escalation</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30793" type="text/html" />
+    </item>
+    <item>
+      <title>picomatch vulnerable to ReDoS through single-branch repeated extglobs</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</guid>
+      <pubDate>Mon, 19 Oct 2026 18:32:12 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ## Withdrawn Advisory This advisory has been withdrawn because it is not a security issue. See https://github.com/micromatch/picomatch/pull/235#issuecomment-6315749381 for more information. This link is maintained to preserve external references. ## Original Description Picomatch through 4.0.7 contains a regular expression denial of service vulnerability that allows attackers to block the event loop by supplying single-branch repeated extglob patterns. Attackers can provide globs like +(*) or +(*a), which analyzeRepeatedExtglob in lib/parse.js skips, causing exponential backtracking against short crafted strings and denying service to Node.js applications.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-fc5q-39xc-vjpf
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-fc5q-39xc-vjpf" type="text/html" />
+    </item>
+    <item>
+      <title>Mareforma: verify_bundle never checks a per-claim signature</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-71536#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-71536#findings</guid>
+      <pubDate>Thu, 19 Nov 2026 16:03:39 GMT</pubDate>
+      <description>Severity: HIGH
+
+Summary: ## What's wrong `verify_bundle` documents that it verifies "a bundle's DSSE envelope AND each per-claim signature", lists "per-claim signature failure" among its raised errors, and promises that partial verification never surfaces "an authenticated bundle that contains some invalid claims" as success. The code does not do this. The JSON-LD predicate built by `JSONLDExporter._claim_node` carries no signature material (there is no `signatureBundle` field on the node), so the verify loop has nothing cryptographic to check per claim. It only re-derives each claim's canonical-statement digest from the node fields and compares it to the signed subject list: ```python chain_input = _signing.canonical_statement({...node fields...}, node.get("evidence") or {}) expected = hashlib.sha256(chain_input).hexdigest() if subjects[subject_name] != expected: raise BundleVerificationError(...) ``` That dige
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-hxh5-gp44-rc6p
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-hxh5-gp44-rc6p" type="text/html" />
+    </item>
+    <item>
+      <title>In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: hold cl_lock in...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-99310#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-99310#findings</guid>
+      <pubDate>Mon, 16 Nov 2026 12:31:40 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp-&gt;cl_openowners and reads so_stateids without clp-&gt;cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp-&gt;cl_lock while client_has_openowners() walks the openowner list.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2g5x-xxw3-8949
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-2g5x-xxw3-8949" type="text/html" />
+    </item>
+    <item>
+      <title>In the Linux kernel, the following vulnerability has been resolved:
+
+ceph: reject mdsmaps that...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings</guid>
+      <pubDate>Mon, 16 Nov 2026 12:31:40 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap-&gt;possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the "in" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc-&gt;max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2p6h-wr8g-2xqx
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-2p6h-wr8g-2xqx" type="text/html" />
+    </item>
+    <item>
+      <title>In the Linux kernel, the following vulnerability has been resolved:
+
+ceph: fix integer overflow...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-99304#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-99304#findings</guid>
+      <pubDate>Mon, 16 Nov 2026 12:31:40 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: fix integer overflow in the snap trace bounds check ceph_update_snap_trace() bounds the two encoded snapid arrays that follow a struct ceph_mds_snap_realm with sizeof(u64) * (num_snaps + num_prior_parent_snaps). Both counts come straight off the wire as __le32, so the addition is evaluated in unsigned int and wraps before sizeof(u64) promotes it to size_t: an MDS sending num_snaps = 1 and num_prior_parent_snaps = 0xffffffff makes the sum zero and the check degenerates to ceph_decode_need(&amp;p, e, 0, bad), which always passes. dup_array() then reads num_snaps * 8 bytes past the end of the message front, which ceph_msg_new2() allocates at exactly front_len bytes. An unsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or compromised MDS with no client-side action, as do the snaptraces carried in an MDS reply 
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-gwm4-f7gj-p7vj
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-gwm4-f7gj-p7vj" type="text/html" />
+    </item>
     <item>
       <title>mssql-mcp-core: SQL injection in mssql-mcp write tools via unparameterized table names and WHERE clauses</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2026-63129#findings</link>
@@ -151,24 +278,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Libraries &amp; dependencies</category>
       <category>Remote code execution</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-xvcc-vqjv-phqh" type="text/html" />
-    </item>
-    <item>
-      <title>picomatch vulnerable to ReDoS through single-branch repeated extglobs</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</guid>
-      <pubDate>Mon, 19 Oct 2026 18:32:12 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ## Withdrawn Advisory This advisory has been withdrawn because it is a security issue. See https://github.com/micromatch/picomatch/pull/235#issuecomment-6315749381 for more information. This link is maintained to preserve external references. ## Original Description Picomatch through 4.0.7 contains a regular expression denial of service vulnerability that allows attackers to block the event loop by supplying single-branch repeated extglob patterns. Attackers can provide globs like +(*) or +(*a), which analyzeRepeatedExtglob in lib/parse.js skips, causing exponential backtracking against short crafted strings and denying service to Node.js applications.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-fc5q-39xc-vjpf
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-fc5q-39xc-vjpf" type="text/html" />
     </item>
     <item>
       <title>SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability, an incomplete fix for...</title>
@@ -802,116 +911,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <category>Remote code execution</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-9mqq-jqxf-grvw" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI Has Authentication Bypass via OAuthManager.validate_token()</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34953#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34953#findings</guid>
-      <pubDate>Wed, 01 Apr 2026 23:29:01 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1 (v3.1)
-
-Summary: ### Summary `OAuthManager.validate_token()` returns `True` for any token not found in its internal store, which is empty by default. Any HTTP request to the MCP server with an arbitrary Bearer token is treated as authenticated, granting full access to all registered tools and agent capabilities. ### Details `oauth.py:364` (source) -&gt; `oauth.py:374` (loop miss) -&gt; `oauth.py:381` (sink) ```python # source def validate_token(self, token: str) -&gt; bool: for stored_token in self._tokens.values(): if stored_token.access_token == token: return not stored_token.is_expired() # sink -- _tokens is empty by default, loop never executes, falls through return True ``` ### PoC ```bash # install: pip install -e src/praisonai # start server: praisonai mcp serve --transport http-stream --port 8080 curl -s -X POST http://127.0.0.1:8080/mcp \ -H "Authorization: Bearer fake_token_abc123" \ -H "Content-Type: a
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-98f9-fqg5-hvq5
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Cloud &amp; identity</category>
-      <category>Authentication &amp; authorization</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-98f9-fqg5-hvq5" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI: OS Command Injection in MCPHandler.parse_mcp_command()</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34935#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34935#findings</guid>
-      <pubDate>Wed, 01 Apr 2026 23:20:00 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: ### Summary The `--mcp` CLI argument is passed directly to `shlex.split()` and forwarded through the call chain to `anyio.open_process()` with no validation, allowlist check, or sanitization at any hop, allowing arbitrary OS command execution as the process user. ### Details `cli/features/mcp.py:61` (source) -&gt; `praisonaiagents/mcp/mcp.py:345` (hop) -&gt; `mcp/client/stdio/__init__.py:253` (sink) ```python # source parts = shlex.split(command) # hop cmd, args, env = self.parse_mcp_command(command, env_vars) self.server_params = StdioServerParameters(command=cmd, args=arguments) # sink process = await anyio.open_process([command, *args]) ``` Fixed in commit `47bff65413beaa3c21bf633c1fae4e684348368c` (v4.5.69) by introducing a command allowlist: ```python ALLOWED_COMMANDS = {"npx", "uvx", "node", "python"} if cmd not in ALLOWED_COMMANDS: raise ValueError(f"Disallowed command: {cmd}") ``` ### 
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-9gm9-c8mq-vq7m
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-9gm9-c8mq-vq7m" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI Has Second-Order SQL Injection in `get_all_user_threads`</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34934#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34934#findings</guid>
-      <pubDate>Wed, 01 Apr 2026 23:20:32 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: ## Summary The `get_all_user_threads` function constructs raw SQL queries using f-strings with unescaped thread IDs fetched from the database. An attacker stores a malicious thread ID via `update_thread`. When the application loads the thread list, the injected payload executes and grants full database access. --- ## Details **File Path:** `src/praisonai/praisonai/ui/sql_alchemy.py` **Flow:** - **Source (Line 539):** ```python await data_layer.update_thread(thread_id=payload, user_id=user) ``` - **Hop (Line 547):** ```python thread_ids = "('" + "','".join([t["thread_id"] for t in user_threads]) + "')" ``` - **Sink (Line 576):** ```sql WHERE s."threadId" IN {thread_ids} ``` --- ## Proof of Concept (PoC) ```python import asyncio from praisonai.ui.sql_alchemy import SQLAlchemyDataLayer async def run_poc(): data_layer = SQLAlchemyDataLayer(conninfo="sqlite+aiosqlite:///app.db") # Insert a va
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-9cq8-3v94-434g
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-9cq8-3v94-434g" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI Has Missing Authentication in WebSocket Gateway</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34952#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34952#findings</guid>
-      <pubDate>Wed, 01 Apr 2026 23:28:04 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1 (v3.1)
-
-Summary: ### Summary The PraisonAI Gateway server accepts WebSocket connections at `/ws` and serves agent topology at `/info` with no authentication. Any network client can connect, enumerate registered agents, and send arbitrary messages to agents and their tool sets. ### Details `gateway/server.py:242` (source) -&gt; `gateway/server.py:250` (sink) ```python # source -- /info leaks all agent IDs with no auth async def info(request): return JSONResponse({ "agents": list(self._agents.keys()), "sessions": len(self._sessions), "clients": len(self._clients), }) # sink -- WebSocket accepted unconditionally, no token check async def websocket_endpoint(websocket: WebSocket): await websocket.accept() client_id = str(uuid.uuid4()) self._clients[client_id] = websocket # processes any message from any client ``` ### PoC ```bash # tested on: praisonai==4.5.87 (source install) # install: pip install -e src/prais
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-cfh6-vr3j-qc3g
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-cfh6-vr3j-qc3g" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI has critical RCE via `type: job` workflow YAML</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-40288#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-40288#findings</guid>
-      <pubDate>Fri, 10 Apr 2026 19:32:48 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: `praisonai workflow run &lt;file.yaml&gt;` loads untrusted YAML and if `type: job` executes steps through `JobWorkflowExecutor` in job_workflow.py. This supports: - `run:` → shell command execution via `subprocess.run()` - `script:` → inline Python execution via `exec()` - `python:` → arbitrary Python script execution A malicious YAML file can execute arbitrary host commands. ### Affected Code - workflow.py → `action_run()` - job_workflow.py → `_exec_shell()`, `_exec_inline_python()`, `_exec_python_script()` ### PoC Create `exploit.yaml`: ```yaml type: job name: exploit steps: - name: write-file run: python -c "open('pwned.txt','w').write('owned')" ``` Run: ```bash praisonai workflow run exploit.yaml ``` ### Reproduction Steps 1. Save the YAML above as `exploit.yaml`. 2. Execute `praisonai workflow run exploit.yaml`. 3. Confirm `pwned.txt` appears in the working directory. ### Impact Remote or
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-vc46-vw85-3wvm
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-vc46-vw85-3wvm" type="text/html" />
-    </item>
-    <item>
-      <title>PraisonAI Vulnerable Untrusted Remote Template Code Execution</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-40154#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-40154#findings</guid>
-      <pubDate>Fri, 10 Apr 2026 19:26:05 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.3 (v3.1)
-
-Summary: PraisonAI treats remotely fetched template files as trusted executable code without integrity verification, origin validation, or user confirmation, enabling supply chain attacks through malicious templates. --- ## Description When a user installs a template from a remote source (e.g., GitHub), PraisonAI downloads Python files (including `tools.py`) to a local cache without: 1. Code signing verification 2. Integrity checksum validation 3. Dangerous code pattern scanning 4. User confirmation before execution When the template is subsequently used, the cached `tools.py` is automatically loaded and executed via `exec_module()`, granting the template's code full access to the user's environment, filesystem, and network. --- ## Affected Code **Template download (no verification):** ```python # templates/registry.py:135-151 def fetch_github_template(owner, repo, template_path, ref="main"): tem
-
-Suggested next step: Review the original advisory and affected build or distribution components. Verify upstream status before changing dependencies.
-
-Original advisory: https://github.com/advisories/GHSA-pv9q-275h-rh7x
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Containers &amp; registries</category>
-      <category>Supply chain</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-pv9q-275h-rh7x" type="text/html" />
     </item>
   </channel>
 </rss>

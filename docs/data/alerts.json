@@ -1,12 +1,164 @@
 {
   "alerts": [
     {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99304",
+        "GHSA-gwm4-f7gj-p7vj"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-19T20:38:33Z",
+      "id": "CVE-2026-99304",
+      "last_seen": "2026-11-19T20:38:33Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-19T15:32:06Z",
+      "priority": "review",
+      "published": "2026-11-16T12:31:40Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-gwm4-f7gj-p7vj"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: ceph: fix integer overflow in the snap trace bounds check ceph_update_snap_trace() bounds the two encoded snapid arrays that follow a struct ceph_mds_snap_realm with sizeof(u64) * (num_snaps + num_prior_parent_snaps). Both counts come straight off the wire as __le32, so the addition is evaluated in unsigned int and wraps before sizeof(u64) promotes it to size_t: an MDS sending num_snaps = 1 and num_prior_parent_snaps = 0xffffffff makes the sum zero and the check degenerates to ceph_decode_need(&p, e, 0, bad), which always passes. dup_array() then reads num_snaps * 8 bytes past the end of the message front, which ceph_msg_new2() allocates at exactly front_len bytes. An unsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or compromised MDS with no client-side action, as do the snaptraces carried in an MDS reply ",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: fix integer overflow...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: ceph: fix integer overflow in the snap trace bounds check ceph_update_snap_trace() bounds the two encoded snapid arrays that follow a struct ceph_mds_snap_realm with sizeof(u64) * (num_snaps + num_prior_parent_snaps). Both counts come straight off the wire as __le32, so the addition is evaluated in unsigned int and wraps before sizeof(u64) promotes it to size_t: an MDS sending num_snaps = 1 and num_prior_parent_snaps = 0xffffffff makes the sum zero and the check degenerates to ceph_decode_need(&p, e, 0, bad), which always passes. dup_array() then reads num_snaps * 8 bytes past the end of the message front, which ceph_msg_new2() allocates at exactly front_len bytes. An unsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or compromised MDS with no client-side action, as do the snaptraces carried in an MDS reply "
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99310",
+        "GHSA-2g5x-xxw3-8949"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-19T20:38:33Z",
+      "id": "CVE-2026-99310",
+      "last_seen": "2026-11-19T20:38:33Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-19T15:32:07Z",
+      "priority": "review",
+      "published": "2026-11-16T12:31:40Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-2g5x-xxw3-8949"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp->cl_openowners and reads so_stateids without clp->cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp->cl_lock while client_has_openowners() walks the openowner list.",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: hold cl_lock in...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp->cl_openowners and reads so_stateids without clp->cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp->cl_lock while client_has_openowners() walks the openowner list."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99306",
+        "GHSA-2p6h-wr8g-2xqx"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-19T20:38:33Z",
+      "id": "CVE-2026-99306",
+      "last_seen": "2026-11-19T20:38:33Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-19T15:32:07Z",
+      "priority": "review",
+      "published": "2026-11-16T12:31:40Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-2p6h-wr8g-2xqx"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap->possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the \"in\" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc->max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: reject mdsmaps that...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap->possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the \"in\" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc->max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa"
+    },
+    {
       "affected": [
-        "install-artifact-from-github"
+        "mareforma"
       ],
       "aliases": [
-        "CVE-2026-73864",
-        "GHSA-88q3-gch3-5396"
+        "CVE-2026-71536",
+        "GHSA-hxh5-gp44-rc6p"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": null,
+      "cvss_version": "",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-19T20:38:33Z",
+      "id": "CVE-2026-71536",
+      "last_seen": "2026-11-19T20:38:33Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-19T16:03:40Z",
+      "priority": "review",
+      "published": "2026-11-19T16:03:39Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-hxh5-gp44-rc6p"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "## What's wrong `verify_bundle` documents that it verifies \"a bundle's DSSE envelope AND each per-claim signature\", lists \"per-claim signature failure\" among its raised errors, and promises that partial verification never surfaces \"an authenticated bundle that contains some invalid claims\" as success. The code does not do this. The JSON-LD predicate built by `JSONLDExporter._claim_node` carries no signature material (there is no `signatureBundle` field on the node), so the verify loop has nothing cryptographic to check per claim. It only re-derives each claim's canonical-statement digest from the node fields and compares it to the signed subject list: ```python chain_input = _signing.canonical_statement({...node fields...}, node.get(\"evidence\") or {}) expected = hashlib.sha256(chain_input).hexdigest() if subjects[subject_name] != expected: raise BundleVerificationError(...) ``` That dige",
+      "title": "Mareforma: verify_bundle never checks a per-claim signature",
+      "why_it_matters": "## What's wrong `verify_bundle` documents that it verifies \"a bundle's DSSE envelope AND each per-claim signature\", lists \"per-claim signature failure\" among its raised errors, and promises that partial verification never surfaces \"an authenticated bundle that contains some invalid claims\" as success. The code does not do this. The JSON-LD predicate built by `JSONLDExporter._claim_node` carries no signature material (there is no `signatureBundle` field on the node), so the verify loop has nothing cryptographic to check per claim. It only re-derives each claim's canonical-statement digest from the node fields and compares it to the signed subject list: ```python chain_input = _signing.canonical_statement({...node fields...}, node.get(\"evidence\") or {}) expected = hashlib.sha256(chain_input).hexdigest() if subjects[subject_name] != expected: raise BundleVerificationError(...) ``` That dige"
+    },
+    {
+      "affected": [
+        "@openeudi/openid4vp"
+      ],
+      "aliases": [
+        "CVE-2026-75522",
+        "GHSA-4c2f-96cf-f5fc"
       ],
       "attention_score": 55,
       "categories": [
@@ -19,116 +171,30 @@
       ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-19T07:26:36Z",
-      "id": "CVE-2026-73864",
-      "last_seen": "2026-11-19T07:26:36Z",
+      "first_seen": "2026-11-19T20:38:33Z",
+      "id": "CVE-2026-75522",
+      "last_seen": "2026-11-19T20:38:33Z",
       "matched_topics": [
         "npm"
       ],
-      "modified": "2026-11-18T21:17:37Z",
+      "modified": "2026-11-19T20:35:58Z",
       "priority": "review",
-      "published": "2026-11-18T21:17:37Z",
+      "published": "2026-11-19T20:35:57Z",
       "security_topics": [],
       "severity": "high",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-88q3-gch3-5396"
+          "url": "https://github.com/advisories/GHSA-4c2f-96cf-f5fc"
         }
       ],
       "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-      "summary": "## Description `bin/install-from-cache.js` downloads a prebuilt native addon (`*.node`) over the network and writes it directly to the artifact path **with no cryptographic integrity verification of any kind**  -  no checksum manifest, no signature, no SRI. A scan of the whole package for `createHash|sha256|checksum|integrity|digest|signature` finds nothing. The file is then `require()`-loaded by the consumer, which executes the addon's native module-init code. Anyone able to influence the download achieves code execution on the installing machine. ### Affected code (v1.6.0) - **Mirror is fully attacker-steerable via an env var, no host pinning**  -  `bin/install-from-cache.js:80`: ```js let assetUrl = mirrorHost || process.env[mirrorEnvVar] || 'https://github.com'; ``` `re2` passes `--host-var RE2_DOWNLOAD_MIRROR`, so setting `RE2_DOWNLOAD_MIRROR` (CI config, `.npmrc`/env passthrough, a com",
-      "title": "install-artifact-from-github loads downloaded native artifacts without integrity verification",
-      "why_it_matters": "## Description `bin/install-from-cache.js` downloads a prebuilt native addon (`*.node`) over the network and writes it directly to the artifact path **with no cryptographic integrity verification of any kind**  -  no checksum manifest, no signature, no SRI. A scan of the whole package for `createHash|sha256|checksum|integrity|digest|signature` finds nothing. The file is then `require()`-loaded by the consumer, which executes the addon's native module-init code. Anyone able to influence the download achieves code execution on the installing machine. ### Affected code (v1.6.0) - **Mirror is fully attacker-steerable via an env var, no host pinning**  -  `bin/install-from-cache.js:80`: ```js let assetUrl = mirrorHost || process.env[mirrorEnvVar] || 'https://github.com'; ``` `re2` passes `--host-var RE2_DOWNLOAD_MIRROR`, so setting `RE2_DOWNLOAD_MIRROR` (CI config, `.npmrc`/env passthrough, a com"
-    },
-    {
-      "affected": [
-        "github.com/defilantech/llmkube"
-      ],
-      "aliases": [
-        "CVE-2026-68903",
-        "GHSA-jw3m-8q7m-f35r"
-      ],
-      "attention_score": 55,
-      "categories": [
-        "containers"
-      ],
-      "cvss": 7.7,
-      "cvss_version": "3.1",
-      "ecosystems": [
-        "go"
-      ],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-19T07:26:36Z",
-      "id": "CVE-2026-68903",
-      "last_seen": "2026-11-19T07:26:36Z",
-      "matched_topics": [
-        "Kubernetes"
-      ],
-      "modified": "2026-11-18T21:18:03Z",
-      "priority": "review",
-      "published": "2026-11-18T21:18:02Z",
-      "security_topics": [],
-      "severity": "high",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-jw3m-8q7m-f35r"
-        }
-      ],
-      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
-      "summary": "### Summary LLMKube's `ModelReconciler` accepts arbitrary absolute paths and `file://` URIs in the `Model.spec.source` field and propagates them to two distinct sinks without path allowlisting: (1) `os.Open()` inside the controller pod itself (`copyLocalModel`), and (2) a Kubernetes `HostPathVolumeSource` that mounts the attacker-supplied path into the inference pod's init container. Any namespace user with permission to create or update `Model` and `InferenceService` custom resources can read arbitrary files accessible to the controller pod (e.g., the controller's own Kubernetes service-account token) or arbitrary files on the node where the inference pod is scheduled (e.g., `/etc/kubernetes/kubelet.conf`). Model caching, the feature that activates the `hostPath` sink, is **enabled by default** in both the CLI and the official Helm chart. CVSS v3.1 Base Score: **7.7 (High)**. ### Detail",
-      "title": "LLMKube: Arbitrary Host File Read via Model.spec.source hostPath Injection",
-      "why_it_matters": "### Summary LLMKube's `ModelReconciler` accepts arbitrary absolute paths and `file://` URIs in the `Model.spec.source` field and propagates them to two distinct sinks without path allowlisting: (1) `os.Open()` inside the controller pod itself (`copyLocalModel`), and (2) a Kubernetes `HostPathVolumeSource` that mounts the attacker-supplied path into the inference pod's init container. Any namespace user with permission to create or update `Model` and `InferenceService` custom resources can read arbitrary files accessible to the controller pod (e.g., the controller's own Kubernetes service-account token) or arbitrary files on the node where the inference pod is scheduled (e.g., `/etc/kubernetes/kubelet.conf`). Model caching, the feature that activates the `hostPath` sink, is **enabled by default** in both the CLI and the official Helm chart. CVSS v3.1 Base Score: **7.7 (High)**. ### Detail"
-    },
-    {
-      "affected": [
-        "@connorbritain/mssql-mcp-core",
-        "@connorbritain/mssql-mcp-reader",
-        "@connorbritain/mssql-mcp-server",
-        "@connorbritain/mssql-mcp-writer"
-      ],
-      "aliases": [
-        "CVE-2026-63129",
-        "GHSA-2m9m-6cr5-9x25"
-      ],
-      "attention_score": 55,
-      "categories": [
-        "dependencies",
-        "infrastructure"
-      ],
-      "cvss": 8.8,
-      "cvss_version": "3.1",
-      "ecosystems": [
-        "npm"
-      ],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-19T07:26:36Z",
-      "id": "CVE-2026-63129",
-      "last_seen": "2026-11-19T07:26:36Z",
-      "matched_topics": [
-        "npm"
-      ],
-      "modified": "2026-11-19T00:46:41Z",
-      "priority": "review",
-      "published": "2026-11-19T00:46:38Z",
-      "security_topics": [],
-      "severity": "high",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-2m9m-6cr5-9x25"
-        }
-      ],
-      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-      "summary": "Several tools in `mssql-mcp-core` built T-SQL by string-interpolating caller-supplied identifiers and predicates directly into the statement passed to the node-mssql `Request.query()` batch API. Only data values were parameterized. Affected tools and inputs: - `update_data`, `delete_data`: `tableName` and the free-form `whereClause` were interpolated raw. - `insert_data`: `tableName` and column names (object keys) were interpolated raw. - `execute_transaction`: the same raw `tableName`/`whereClause` interpolation per operation. - `create_table`, `create_index`, `drop_table`: table/column/index/schema identifiers were interpolated with no or insufficient validation. - `list_databases` (reader tier): the `stateFilter` argument was interpolated raw into the query, with only a non-enforced inputSchema enum guarding it. The only check on `whereClause` was that it was non-empty. Because the ro",
-      "title": "mssql-mcp-core: SQL injection in mssql-mcp write tools via unparameterized table names and WHERE clauses",
-      "why_it_matters": "Several tools in `mssql-mcp-core` built T-SQL by string-interpolating caller-supplied identifiers and predicates directly into the statement passed to the node-mssql `Request.query()` batch API. Only data values were parameterized. Affected tools and inputs: - `update_data`, `delete_data`: `tableName` and the free-form `whereClause` were interpolated raw. - `insert_data`: `tableName` and column names (object keys) were interpolated raw. - `execute_transaction`: the same raw `tableName`/`whereClause` interpolation per operation. - `create_table`, `create_index`, `drop_table`: table/column/index/schema identifiers were interpolated with no or insufficient validation. - `list_databases` (reader tier): the `stateFilter` argument was interpolated raw into the query, with only a non-enforced inputSchema enum guarding it. The only check on `whereClause` was that it was non-empty. Because the ro"
+      "summary": "## Summary `ChainBuilder` (the private RFC 5280 validator behind `TrustEvaluator` and the public credential-parsing API) terminated chain building on **Subject Distinguished Name string equality** rather than on cryptographic closure to a trust anchor. A certificate whose Subject DN string matched a trusted anchor's Subject DN was accepted as the chain terminus **with no signature verification** against the anchor's public key. An attacker who mints a self-signed certificate and copies a trusted anchor's Subject DN string onto it can therefore have that certificate  -  and any credential signed with its private key  -  accepted as issued under a trusted authority. ## Impact A relying party using `@openeudi/openid4vp` to verify OpenID4VP presentations (mdoc / SD-JWT VC) could be induced to accept a **forged credential as genuine**, defeating the trust-anchor model. In an eIDAS / EUDI age- or ",
+      "title": "OpenID4VP: X.509 chain validation accepts a forged certificate that reuses a trusted anchor's Subject DN without verifying its signature",
+      "why_it_matters": "## Summary `ChainBuilder` (the private RFC 5280 validator behind `TrustEvaluator` and the public credential-parsing API) terminated chain building on **Subject Distinguished Name string equality** rather than on cryptographic closure to a trust anchor. A certificate whose Subject DN string matched a trusted anchor's Subject DN was accepted as the chain terminus **with no signature verification** against the anchor's public key. An attacker who mints a self-signed certificate and copies a trusted anchor's Subject DN string onto it can therefore have that certificate  -  and any credential signed with its private key  -  accepted as issued under a trusted authority. ## Impact A relying party using `@openeudi/openid4vp` to verify OpenID4VP presentations (mdoc / SD-JWT VC) could be induced to accept a **forged credential as genuine**, defeating the trust-anchor model. In an eIDAS / EUDI age- or "
     }
   ],
-  "generated_at": "2026-11-19T07:26:36Z",
+  "generated_at": "2026-11-19T20:38:33Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }
