@@ -8,7 +8,122 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-20T00:23:46Z</atom:updated>
+  <atom:updated>2026-11-20T17:11:45Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-42010#findings</atom:id>
+    <atom:title>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL cha</atom:title>
+    <atom:published>2026-05-07T12:16:17Z</atom:published>
+    <atom:updated>2026-11-20T17:11:45Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-42010#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42010" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8
+
+Summary: A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42010
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-85594#findings</atom:id>
+    <atom:title>Traefik versions from v3.7.1 fail to enforce crossProviderNamespaces restrictions on the traefik.ingress.kubernetes.io/service.middlewares Service ann</atom:title>
+    <atom:published>2026-09-04T12:17:22Z</atom:published>
+    <atom:updated>2026-11-20T15:17:58Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-85594#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85594" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 7
+
+Summary: Traefik versions from v3.7.1 fail to enforce crossProviderNamespaces restrictions on the traefik.ingress.kubernetes.io/service.middlewares Service annotation in the Kubernetes Ingress provider. A namespace-limited tenant excluded from the allowlist can attach an operator-owned middleware to its Service, and if that middleware injects backend credentials, recover them at a controlled backend.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-85594
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</atom:id>
+    <atom:title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</atom:title>
+    <atom:published>2026-05-05T16:16:11Z</atom:published>
+    <atom:updated>2026-11-20T15:06:04Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</atom:id>
+    <atom:title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</atom:title>
+    <atom:published>2026-05-05T16:16:11Z</atom:published>
+    <atom:updated>2026-11-20T15:06:01Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-58192#findings</atom:id>
+    <atom:title>appium allows unauthenticated arbitrary file/directory deletion in @appium/storage-plugin</atom:title>
+    <atom:published>2026-11-20T14:34:30Z</atom:published>
+    <atom:updated>2026-11-20T14:34:30Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-58192#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-jwgx-mp9m-jwcr" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.6 (v3.1)
+
+Summary: ## Summary The Appium storage plugin exposes an HTTP endpoint `POST /storage/delete` that takes a user-supplied `name` and deletes it from the server storage folder. The handler passes `name` straight into `path.join(storageRoot, name)` and then `fs.rimraf()` **without any path sanitization**. By sending a `name` containing `../` sequences, an unauthenticated remote client can escape the storage root and **recursively delete arbitrary files and directories** that the Appium process user can write, anywhere on the host filesystem. The same plugin's *upload* path validates the name via `fs.sanitizeName` (`requireValidItemOptions`), but the *delete* path does not an asymmetry that makes the missing validation unambiguous. ### Details Published build (`node_modules/@appium/storage-plugin/build/lib/storage.js`), and source (`packages/storage-plugin/lib/`): - `packages/storage-plugin/lib/stora
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-jwgx-mp9m-jwcr
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-85596#findings</atom:id>
+    <atom:title>Traefik versions &gt;= v3.7.0 and &lt; v3.7.11 contain an authentication bypass in the Kubernetes Ingress NGINX provider. The TLS option generated for an In</atom:title>
+    <atom:published>2026-09-04T12:17:23Z</atom:published>
+    <atom:updated>2026-11-20T13:18:50Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-85596#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85596" type="text/html" />
+    <atom:summary type="text">Severity: HIGH / CVSS 8.2
+
+Summary: Traefik versions &gt;= v3.7.0 and &lt; v3.7.11 contain an authentication bypass in the Kubernetes Ingress NGINX provider. The TLS option generated for an Ingress carrying the nginx.ingress.kubernetes.io/auth-tls-secret annotation was named after the Ingress namespace and name. As a result, two Ingress objects sharing the same host, the same client CA secret, and the same client-authentication mode produced two distinct TLS option names for that host. Traefik treats this as a TLS options conflict and falls back to the entry point's default TLS configuration, which does not request a client certificate, so a route configured with nginx.ingress.kubernetes.io/auth-tls-verify-client: "on" becomes reachable without a client certificate. Only the v3.7 line is affected; the issue is fixed in v3.7.11.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-85596
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Containers &amp; registries" />
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-114516#findings</atom:id>
     <atom:title>Etherpad: Pre-auth arbitrary file read</atom:title>
@@ -278,44 +393,6 @@ Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="Servers &amp; infrastructure" />
     <atom:category term="Cloud &amp; identity" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</atom:id>
-    <atom:title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</atom:title>
-    <atom:published>2026-05-05T16:16:11Z</atom:published>
-    <atom:updated>2026-11-19T22:18:05Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings" type="text/html" />
-    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</atom:id>
-    <atom:title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</atom:title>
-    <atom:published>2026-05-05T16:16:11Z</atom:published>
-    <atom:updated>2026-11-19T22:18:04Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings" type="text/html" />
-    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Denial of service" />
   </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-121707#findings</atom:id>
@@ -887,80 +964,5 @@ Original advisory: https://github.com/advisories/GHSA-6qrw-m8cv-hcxf
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="Containers &amp; registries" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-126553#findings</atom:id>
-    <atom:title>Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload...</atom:title>
-    <atom:published>2026-11-17T18:31:46Z</atom:published>
-    <atom:updated>2026-11-17T18:31:54Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-126553#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-6x63-6qfc-frph" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL
-
-Summary: Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Object Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-6x63-6qfc-frph
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-126552#findings</atom:id>
-    <atom:title>Missing Authentication for Critical Function, OS Command Injection vulnerability in Broadcom...</atom:title>
-    <atom:published>2026-11-17T18:31:46Z</atom:published>
-    <atom:updated>2026-11-17T18:31:46Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-126552#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-37fr-pfqf-86xg" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL
-
-Summary: Missing Authentication for Critical Function, OS Command Injection vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows OS Command Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-37fr-pfqf-86xg
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-126551#findings</atom:id>
-    <atom:title>Use of Hard-coded Cryptographic Key vulnerability in Broadcom AutoSys Workload Automation ...</atom:title>
-    <atom:published>2026-11-17T18:31:46Z</atom:published>
-    <atom:updated>2026-11-17T18:31:46Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-126551#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-gcgf-3c86-345v" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL
-
-Summary: Use of Hard-coded Cryptographic Key vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Session Credential Falsification through Forging.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-gcgf-3c86-345v
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-89788#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: fix tree connection...</atom:title>
-    <atom:published>2026-09-16T09:30:30Z</atom:published>
-    <atom:updated>2026-11-17T12:31:35Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-89788#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-29wc-2986-775f" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: ksmbd: fix tree connection use-after-free in smb2_tree_connect() ksmbd_tree_conn_connect() publishes a new tree connection in sess-&gt;tree_conns with a single reference and returns its pointer to smb2_tree_connect(). The handler continues to initialize the object and build the response after publication. A concurrent session logoff can erase the connection and drop that reference, freeing the object while the handler still uses it. BUG: KASAN: slab-use-after-free in smb2_tree_connect+0xe3d/0xf90 smb2_tree_connect (fs/smb/server/smb2pdu.c:2872) handle_ksmbd_work process_one_work worker_thread kthread After xa_store() succeeds, take a second reference before releasing tree_conns_lock. The original reference belongs to the xarray entry and the second belongs to the creating smb2_tree_connect() handler. Keep the references bal
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-29wc-2986-775f
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
   </atom:entry>
 </atom:feed>
