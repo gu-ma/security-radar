@@ -1,123 +1,99 @@
 {
   "alerts": [
     {
-      "affected": [],
+      "affected": [
+        "@doist/todoist-mcp"
+      ],
       "aliases": [
-        "CVE-2026-99304",
-        "GHSA-gwm4-f7gj-p7vj"
+        "CVE-2026-76807",
+        "GHSA-833v-v58w-294h"
       ],
       "attention_score": 75,
       "categories": [
+        "applications",
+        "dependencies",
         "infrastructure"
       ],
-      "cvss": 9.8,
+      "cvss": 9.3,
       "cvss_version": "3.1",
-      "ecosystems": [],
+      "ecosystems": [
+        "npm"
+      ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-19T20:38:33Z",
-      "id": "CVE-2026-99304",
-      "last_seen": "2026-11-19T20:38:33Z",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-76807",
+      "last_seen": "2026-11-20T07:16:33Z",
       "matched_topics": [
-        "Linux"
+        "npm"
       ],
-      "modified": "2026-11-19T15:32:06Z",
+      "modified": "2026-11-19T20:38:36Z",
       "priority": "review",
-      "published": "2026-11-16T12:31:40Z",
+      "published": "2026-11-19T20:38:35Z",
       "security_topics": [],
       "severity": "critical",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-gwm4-f7gj-p7vj"
+          "url": "https://github.com/advisories/GHSA-833v-v58w-294h"
         }
       ],
-      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-      "summary": "In the Linux kernel, the following vulnerability has been resolved: ceph: fix integer overflow in the snap trace bounds check ceph_update_snap_trace() bounds the two encoded snapid arrays that follow a struct ceph_mds_snap_realm with sizeof(u64) * (num_snaps + num_prior_parent_snaps). Both counts come straight off the wire as __le32, so the addition is evaluated in unsigned int and wraps before sizeof(u64) promotes it to size_t: an MDS sending num_snaps = 1 and num_prior_parent_snaps = 0xffffffff makes the sum zero and the check degenerates to ceph_decode_need(&p, e, 0, bad), which always passes. dup_array() then reads num_snaps * 8 bytes past the end of the message front, which ceph_msg_new2() allocates at exactly front_len bytes. An unsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or compromised MDS with no client-side action, as do the snaptraces carried in an MDS reply ",
-      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: fix integer overflow...",
-      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: ceph: fix integer overflow in the snap trace bounds check ceph_update_snap_trace() bounds the two encoded snapid arrays that follow a struct ceph_mds_snap_realm with sizeof(u64) * (num_snaps + num_prior_parent_snaps). Both counts come straight off the wire as __le32, so the addition is evaluated in unsigned int and wraps before sizeof(u64) promotes it to size_t: an MDS sending num_snaps = 1 and num_prior_parent_snaps = 0xffffffff makes the sum zero and the check degenerates to ceph_decode_need(&p, e, 0, bad), which always passes. dup_array() then reads num_snaps * 8 bytes past the end of the message front, which ceph_msg_new2() allocates at exactly front_len bytes. An unsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or compromised MDS with no client-side action, as do the snaptraces carried in an MDS reply "
-    },
-    {
-      "affected": [],
-      "aliases": [
-        "CVE-2026-99310",
-        "GHSA-2g5x-xxw3-8949"
-      ],
-      "attention_score": 75,
-      "categories": [
-        "infrastructure"
-      ],
-      "cvss": 9.8,
-      "cvss_version": "3.1",
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-19T20:38:33Z",
-      "id": "CVE-2026-99310",
-      "last_seen": "2026-11-19T20:38:33Z",
-      "matched_topics": [
-        "Linux"
-      ],
-      "modified": "2026-11-19T15:32:07Z",
-      "priority": "review",
-      "published": "2026-11-16T12:31:40Z",
-      "security_topics": [],
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-2g5x-xxw3-8949"
-        }
-      ],
-      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-      "summary": "In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp->cl_openowners and reads so_stateids without clp->cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp->cl_lock while client_has_openowners() walks the openowner list.",
-      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: hold cl_lock in...",
-      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp->cl_openowners and reads so_stateids without clp->cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp->cl_lock while client_has_openowners() walks the openowner list."
-    },
-    {
-      "affected": [],
-      "aliases": [
-        "CVE-2026-99306",
-        "GHSA-2p6h-wr8g-2xqx"
-      ],
-      "attention_score": 75,
-      "categories": [
-        "infrastructure"
-      ],
-      "cvss": 9.8,
-      "cvss_version": "3.1",
-      "ecosystems": [],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-19T20:38:33Z",
-      "id": "CVE-2026-99306",
-      "last_seen": "2026-11-19T20:38:33Z",
-      "matched_topics": [
-        "Linux"
-      ],
-      "modified": "2026-11-19T15:32:07Z",
-      "priority": "review",
-      "published": "2026-11-16T12:31:40Z",
-      "security_topics": [],
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-2p6h-wr8g-2xqx"
-        }
-      ],
-      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-      "summary": "In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap->possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the \"in\" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc->max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa",
-      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: reject mdsmaps that...",
-      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap->possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the \"in\" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc->max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa"
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "The self-hosted `todoist-mcp-http` server accepts browser-origin MCP requests with attacker-controlled `Host` and `Origin` headers. A malicious website can use DNS rebinding to route its own origin to a victim's local `127.0.0.1` MCP server, then invoke Todoist MCP tools without a caller credential. This affects `github.com/Doist/todoist-mcp` at commit `d2903e0d945d2a559d71c091337ad6380511e62f`, package version `10.3.1`, when the optional Streamable HTTP server is running. The stdio entrypoint is not browser-reachable. The vulnerable browser-reachable component is `todoist-mcp-http`. The documented HTTP server mode runs all MCP tools with the operator's `TODOIST_API_KEY` and binds to loopback by default: ```bash TODOIST_API_KEY=your-key npx -p @doist/todoist-mcp todoist-mcp-http ``` `src/main-http.ts:28-30` sets the HTTP bind host and port: ```ts const PORT = Number.parseInt(process.env.",
+      "title": "Todoist MCP Server: Browser DNS rebinding lets websites write and delete Todoist data through local MCP server",
+      "why_it_matters": "The self-hosted `todoist-mcp-http` server accepts browser-origin MCP requests with attacker-controlled `Host` and `Origin` headers. A malicious website can use DNS rebinding to route its own origin to a victim's local `127.0.0.1` MCP server, then invoke Todoist MCP tools without a caller credential. This affects `github.com/Doist/todoist-mcp` at commit `d2903e0d945d2a559d71c091337ad6380511e62f`, package version `10.3.1`, when the optional Streamable HTTP server is running. The stdio entrypoint is not browser-reachable. The vulnerable browser-reachable component is `todoist-mcp-http`. The documented HTTP server mode runs all MCP tools with the operator's `TODOIST_API_KEY` and binds to loopback by default: ```bash TODOIST_API_KEY=your-key npx -p @doist/todoist-mcp todoist-mcp-http ``` `src/main-http.ts:28-30` sets the HTTP bind host and port: ```ts const PORT = Number.parseInt(process.env."
     },
     {
       "affected": [
-        "mareforma"
+        "obsidian-sync-mcp"
       ],
       "aliases": [
-        "CVE-2026-71536",
-        "GHSA-hxh5-gp44-rc6p"
+        "CVE-2026-77283",
+        "GHSA-mx6p-3fg7-v6pj"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies",
+        "containers",
+        "infrastructure"
+      ],
+      "cvss": null,
+      "cvss_version": "",
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-77283",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Docker",
+        "npm"
+      ],
+      "modified": "2026-11-19T20:41:20Z",
+      "priority": "review",
+      "published": "2026-11-19T20:41:18Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-mx6p-3fg7-v6pj"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "When obsidian-sync-mcp runs without MCP_AUTH_TOKEN (the documented no-auth mode for local use), the HTTP MCP endpoint does not validate the Host or Origin header before dispatching MCP methods (CWE-350). The no-auth mode's \"local network only\" assumption therefore does not hold: a malicious web page the operator visits can use DNS rebinding to resolve an attacker-controlled hostname to 127.0.0.1 (or the operator's LAN/VPN/Docker-published address) and issue requests the server accepts as trusted local calls, reaching the full tool surface (read_note, write_note, edit_note, delete_note, move_note, list_notes, list_folders, list_tags, get_note_metadata). Affected versions: <= 0.5.6 Patched version: 0.5.7 ## Impact Any deployment running without MCP_AUTH_TOKEN  -  including the README \"Filesystem mode (simplest)\" quickstart and the self-hosted docker-compose setup (where MCP_AUTH_TOKEN defaul",
+      "title": "obsidian-sync-mcp: Missing Host/Origin validation lets a public website drive a victim's Obsidian vault via DNS rebinding (no-auth mode)",
+      "why_it_matters": "When obsidian-sync-mcp runs without MCP_AUTH_TOKEN (the documented no-auth mode for local use), the HTTP MCP endpoint does not validate the Host or Origin header before dispatching MCP methods (CWE-350). The no-auth mode's \"local network only\" assumption therefore does not hold: a malicious web page the operator visits can use DNS rebinding to resolve an attacker-controlled hostname to 127.0.0.1 (or the operator's LAN/VPN/Docker-published address) and issue requests the server accepts as trusted local calls, reaching the full tool surface (read_note, write_note, edit_note, delete_note, move_note, list_notes, list_folders, list_tags, get_note_metadata). Affected versions: <= 0.5.6 Patched version: 0.5.7 ## Impact Any deployment running without MCP_AUTH_TOKEN  -  including the README \"Filesystem mode (simplest)\" quickstart and the self-hosted docker-compose setup (where MCP_AUTH_TOKEN defaul"
+    },
+    {
+      "affected": [
+        "effect"
+      ],
+      "aliases": [
+        "CVE-2026-121707",
+        "GHSA-7589-6fvf-x4pw"
       ],
       "attention_score": 55,
       "categories": [
@@ -126,39 +102,124 @@
       "cvss": null,
       "cvss_version": "",
       "ecosystems": [
-        "pip"
+        "npm"
       ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-19T20:38:33Z",
-      "id": "CVE-2026-71536",
-      "last_seen": "2026-11-19T20:38:33Z",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-121707",
+      "last_seen": "2026-11-20T07:16:33Z",
       "matched_topics": [
-        "Python"
+        "npm"
       ],
-      "modified": "2026-11-19T16:03:40Z",
+      "modified": "2026-11-19T20:51:02Z",
       "priority": "review",
-      "published": "2026-11-19T16:03:39Z",
+      "published": "2026-11-19T20:51:01Z",
       "security_topics": [],
       "severity": "high",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-hxh5-gp44-rc6p"
+          "url": "https://github.com/advisories/GHSA-7589-6fvf-x4pw"
         }
       ],
       "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-      "summary": "## What's wrong `verify_bundle` documents that it verifies \"a bundle's DSSE envelope AND each per-claim signature\", lists \"per-claim signature failure\" among its raised errors, and promises that partial verification never surfaces \"an authenticated bundle that contains some invalid claims\" as success. The code does not do this. The JSON-LD predicate built by `JSONLDExporter._claim_node` carries no signature material (there is no `signatureBundle` field on the node), so the verify loop has nothing cryptographic to check per claim. It only re-derives each claim's canonical-statement digest from the node fields and compares it to the signed subject list: ```python chain_input = _signing.canonical_statement({...node fields...}, node.get(\"evidence\") or {}) expected = hashlib.sha256(chain_input).hexdigest() if subjects[subject_name] != expected: raise BundleVerificationError(...) ``` That dige",
-      "title": "Mareforma: verify_bundle never checks a per-claim signature",
-      "why_it_matters": "## What's wrong `verify_bundle` documents that it verifies \"a bundle's DSSE envelope AND each per-claim signature\", lists \"per-claim signature failure\" among its raised errors, and promises that partial verification never surfaces \"an authenticated bundle that contains some invalid claims\" as success. The code does not do this. The JSON-LD predicate built by `JSONLDExporter._claim_node` carries no signature material (there is no `signatureBundle` field on the node), so the verify loop has nothing cryptographic to check per claim. It only re-derives each claim's canonical-statement digest from the node fields and compares it to the signed subject list: ```python chain_input = _signing.canonical_statement({...node fields...}, node.get(\"evidence\") or {}) expected = hashlib.sha256(chain_input).hexdigest() if subjects[subject_name] != expected: raise BundleVerificationError(...) ``` That dige"
+      "summary": "### Impact `Schema.TemplateLiteral` compiles each `Schema.String` span to the lazy wildcard `[\\s\\S]*?` and decodes input by running the resulting regular expression against it. When a template has two or more `Schema.String` spans, for example: ```ts Schema.TemplateLiteral(Schema.String, \":\", Schema.String, \":\", Schema.String, \"X\") ``` the regex contains several ambiguous wildcards. A non-matching input makes the backtracking engine try combinations across all of them, so matching time grows cubically with input length. A 5,000-character string of `:` characters blocks the event loop for about 15 seconds. Applications that decode untrusted input with such a schema are affected. That includes `Schema.decodeUnknown`, `Schema.decodeUnknownSync` and `Schema.is`, and anything built on them, such as `HttpApi` request payloads and `@effect/rpc` payloads. ### Patches Fixed in `effect@3.22.1` (#6",
+      "title": "Effect: ReDoS in Schema.TemplateLiteral compiled regex",
+      "why_it_matters": "### Impact `Schema.TemplateLiteral` compiles each `Schema.String` span to the lazy wildcard `[\\s\\S]*?` and decodes input by running the resulting regular expression against it. When a template has two or more `Schema.String` spans, for example: ```ts Schema.TemplateLiteral(Schema.String, \":\", Schema.String, \":\", Schema.String, \"X\") ``` the regex contains several ambiguous wildcards. A non-matching input makes the backtracking engine try combinations across all of them, so matching time grows cubically with input length. A 5,000-character string of `:` characters blocks the event loop for about 15 seconds. Applications that decode untrusted input with such a schema are affected. That includes `Schema.decodeUnknown`, `Schema.decodeUnknownSync` and `Schema.is`, and anything built on them, such as `HttpApi` request payloads and `@effect/rpc` payloads. ### Patches Fixed in `effect@3.22.1` (#6"
     },
     {
       "affected": [
-        "@openeudi/openid4vp"
+        "mcp"
       ],
       "aliases": [
-        "CVE-2026-75522",
-        "GHSA-4c2f-96cf-f5fc"
+        "CVE-2026-115563",
+        "GHSA-qx49-fqc8-xw99"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies",
+        "infrastructure",
+        "cloud-identity"
+      ],
+      "cvss": 7.5,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-115563",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-19T22:45:41Z",
+      "priority": "review",
+      "published": "2026-11-19T22:45:40Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-qx49-fqc8-xw99"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Summary In affected versions, the SDK's OAuth client support (`mcp.client.auth`) let the MCP server a client connected to decide where the client's OAuth credentials were sent: - the authorization server metadata `issuer` was not validated on every discovery path, and - stored or pre-provisioned client credentials were not bound to the authorization server they belong to. A malicious or compromised MCP server could therefore direct them to a token endpoint of its choosing: - by naming its own authorization server in its protected resource metadata, or - by publishing none and serving metadata that presents the user's real authorization server as the `issuer`. It would then receive the `client_secret`, authorization code and PKCE `code_verifier` meant for that real server (or, with `PrivateKeyJWTOAuthProvider`, a signed client assertion). ### Am I affected? Yes, if both of these hold:",
+      "title": "Model Context Protocol Python SDK: OAuth client could send credentials to an authorization server chosen by the MCP server",
+      "why_it_matters": "### Summary In affected versions, the SDK's OAuth client support (`mcp.client.auth`) let the MCP server a client connected to decide where the client's OAuth credentials were sent: - the authorization server metadata `issuer` was not validated on every discovery path, and - stored or pre-provisioned client credentials were not bound to the authorization server they belong to. A malicious or compromised MCP server could therefore direct them to a token endpoint of its choosing: - by naming its own authorization server in its protected resource metadata, or - by publishing none and serving metadata that presents the user's real authorization server as the `issuer`. It would then receive the `client_secret`, authorization code and PKCE `code_verifier` meant for that real server (or, with `PrivateKeyJWTOAuthProvider`, a signed client assertion). ### Am I affected? Yes, if both of these hold:"
+    },
+    {
+      "affected": [
+        "github.com/containerd/containerd/v2"
+      ],
+      "aliases": [
+        "CVE-2026-95839",
+        "GHSA-vwhp-8p66-mq4f"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "containers"
+      ],
+      "cvss": null,
+      "cvss_version": "",
+      "ecosystems": [
+        "go"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-95839",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Kubernetes"
+      ],
+      "modified": "2026-11-19T22:46:25Z",
+      "priority": "review",
+      "published": "2026-11-19T22:46:24Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-vwhp-8p66-mq4f"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "### Impact A bug in containerd's image manifest processing causes an unrecovered panic when a child descriptor contains the `io.containerd.manifest.subject` annotation and a malformed digest. Pulling or importing such an image through the transfer service (including default CRI `PullImage` requests) crashes the containerd daemon. In Kubernetes environments, `kubelet` retries failed image pulls with backoff, allowing a pod referencing an untrusted image to repeatedly crash containerd and disrupt container operations on the worker node. ### Patches This bug has been fixed in containerd 2.4.2, 2.3.7, and 2.2.10. Users should update to these versions to resolve the issue. ### Workarounds Restrict pod image references to trusted registries (for example, using a Kubernetes `ValidatingAdmissionPolicy` or admission webhook) and only pull or import images from trusted sources. ### Credits The con",
+      "title": "containerd image-triggered daemon crash via malformed digest in subject-annotated descriptor",
+      "why_it_matters": "### Impact A bug in containerd's image manifest processing causes an unrecovered panic when a child descriptor contains the `io.containerd.manifest.subject` annotation and a malformed digest. Pulling or importing such an image through the transfer service (including default CRI `PullImage` requests) crashes the containerd daemon. In Kubernetes environments, `kubelet` retries failed image pulls with backoff, allowing a pod referencing an untrusted image to repeatedly crash containerd and disrupt container operations on the worker node. ### Patches This bug has been fixed in containerd 2.4.2, 2.3.7, and 2.2.10. Users should update to these versions to resolve the issue. ### Workarounds Restrict pod image references to trusted registries (for example, using a Kubernetes `ValidatingAdmissionPolicy` or admission webhook) and only pull or import images from trusted sources. ### Credits The con"
+    },
+    {
+      "affected": [
+        "codewhale",
+        "codewhale-tui"
+      ],
+      "aliases": [
+        "CVE-2026-83817",
+        "GHSA-8hp3-xxrg-v9c8"
       ],
       "attention_score": 55,
       "categories": [
@@ -167,34 +228,468 @@
       "cvss": 7.5,
       "cvss_version": "3.1",
       "ecosystems": [
-        "npm"
+        "npm",
+        "rust"
       ],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-19T20:38:33Z",
-      "id": "CVE-2026-75522",
-      "last_seen": "2026-11-19T20:38:33Z",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-83817",
+      "last_seen": "2026-11-20T07:16:33Z",
       "matched_topics": [
         "npm"
       ],
-      "modified": "2026-11-19T20:35:58Z",
+      "modified": "2026-11-19T22:47:34Z",
       "priority": "review",
-      "published": "2026-11-19T20:35:57Z",
+      "published": "2026-11-19T22:47:33Z",
       "security_topics": [],
       "severity": "high",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-4c2f-96cf-f5fc"
+          "url": "https://github.com/advisories/GHSA-8hp3-xxrg-v9c8"
         }
       ],
       "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-      "summary": "## Summary `ChainBuilder` (the private RFC 5280 validator behind `TrustEvaluator` and the public credential-parsing API) terminated chain building on **Subject Distinguished Name string equality** rather than on cryptographic closure to a trust anchor. A certificate whose Subject DN string matched a trusted anchor's Subject DN was accepted as the chain terminus **with no signature verification** against the anchor's public key. An attacker who mints a self-signed certificate and copies a trusted anchor's Subject DN string onto it can therefore have that certificate  -  and any credential signed with its private key  -  accepted as issued under a trusted authority. ## Impact A relying party using `@openeudi/openid4vp` to verify OpenID4VP presentations (mdoc / SD-JWT VC) could be induced to accept a **forged credential as genuine**, defeating the trust-anchor model. In an eIDAS / EUDI age- or ",
-      "title": "OpenID4VP: X.509 chain validation accepts a forged certificate that reuses a trusted anchor's Subject DN without verifying its signature",
-      "why_it_matters": "## Summary `ChainBuilder` (the private RFC 5280 validator behind `TrustEvaluator` and the public credential-parsing API) terminated chain building on **Subject Distinguished Name string equality** rather than on cryptographic closure to a trust anchor. A certificate whose Subject DN string matched a trusted anchor's Subject DN was accepted as the chain terminus **with no signature verification** against the anchor's public key. An attacker who mints a self-signed certificate and copies a trusted anchor's Subject DN string onto it can therefore have that certificate  -  and any credential signed with its private key  -  accepted as issued under a trusted authority. ## Impact A relying party using `@openeudi/openid4vp` to verify OpenID4VP presentations (mdoc / SD-JWT VC) could be induced to accept a **forged credential as genuine**, defeating the trust-anchor model. In an eIDAS / EUDI age- or "
+      "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. CodeWhale 0.8.67 and earlier are affected. Version 0.9.0 contains the fix in commit 208421b9d23d81cea3311a1eeb2a2ea81d637686. Users should upgrade to 0.9.0 or later. The original reporter analysis is preserved below. ## Summary CVE-2026-45374 (GHSA-72w5-pf8h-xfp4) hardened the task path so auto-approval must be opted into explicitly: `add_task` uses `req.auto_approve.unwrap_or(false)` (task_manager.rs:868). The automation subsystem was not hardened in kind. `AutomationRecord::task_auto_approve()` resolves an omitted `auto_approve` to `DEFAULT_AUTOMATION_AUTO_APPROVE = true` (automation_manager.rs:29, 101-103), and `enqueue_run_task` builds the `NewTaskRequest` with `auto_approve: Some(automation.task_auto_approve())`  -  i.e. an explicit `Some(true)` (automation_manager.rs:766). Because the field is `Some`, `unwrap_",
+      "title": "CodeWhale: Automation auto_approve defaults to true, bypassing the task-path hardening fix for silent recurring agent execution",
+      "why_it_matters": "### Maintainer resolution The CodeWhale maintainers validated this report. CodeWhale 0.8.67 and earlier are affected. Version 0.9.0 contains the fix in commit 208421b9d23d81cea3311a1eeb2a2ea81d637686. Users should upgrade to 0.9.0 or later. The original reporter analysis is preserved below. ## Summary CVE-2026-45374 (GHSA-72w5-pf8h-xfp4) hardened the task path so auto-approval must be opted into explicitly: `add_task` uses `req.auto_approve.unwrap_or(false)` (task_manager.rs:868). The automation subsystem was not hardened in kind. `AutomationRecord::task_auto_approve()` resolves an omitted `auto_approve` to `DEFAULT_AUTOMATION_AUTO_APPROVE = true` (automation_manager.rs:29, 101-103), and `enqueue_run_task` builds the `NewTaskRequest` with `auto_approve: Some(automation.task_auto_approve())`  -  i.e. an explicit `Some(true)` (automation_manager.rs:766). Because the field is `Some`, `unwrap_"
+    },
+    {
+      "affected": [
+        "codewhale",
+        "codewhale-tui"
+      ],
+      "aliases": [
+        "CVE-2026-83816",
+        "GHSA-3mgh-93r5-r7jf"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 8.1,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "npm",
+        "rust"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-83816",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-19T22:48:14Z",
+      "priority": "review",
+      "published": "2026-11-19T22:48:14Z",
+      "security_topics": [
+        "Remote code execution"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-3mgh-93r5-r7jf"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Maintainer resolution The CodeWhale maintainers validated this report. CodeWhale 0.8.67 and earlier are affected. Version 0.9.0 contains the fix in commit 208421b9d23d81cea3311a1eeb2a2ea81d637686. Users should upgrade to 0.9.0 or later. The original reporter analysis is preserved below. ## Summary The interactive Agent profile of DeepSeek-TUI (CodeWhale) is explicitly documented to gate **every** shell command behind an approval prompt (config.rs:3725-3736). However, `ExecShellTool::approval_requirement_for(&tool_input)` downgrades the requirement from `Required` to `Auto` for any command the classifier deems \"parallel read-only\" (shell.rs:2314-2320). `registered_tool_approval_required` returns `false` for `Auto` **before** the `auto_approve` check runs (turn_loop.rs:37-38), so no prompt is shown even for a user who never enabled YOLO. The classifier `is_parallel_readonly_command` (c",
+      "title": "CodeWhale: exec_shell parallel-readonly classifier auto-approves fd/rg/git grep exec flags enabling silent RCE",
+      "why_it_matters": "### Maintainer resolution The CodeWhale maintainers validated this report. CodeWhale 0.8.67 and earlier are affected. Version 0.9.0 contains the fix in commit 208421b9d23d81cea3311a1eeb2a2ea81d637686. Users should upgrade to 0.9.0 or later. The original reporter analysis is preserved below. ## Summary The interactive Agent profile of DeepSeek-TUI (CodeWhale) is explicitly documented to gate **every** shell command behind an approval prompt (config.rs:3725-3736). However, `ExecShellTool::approval_requirement_for(&tool_input)` downgrades the requirement from `Required` to `Auto` for any command the classifier deems \"parallel read-only\" (shell.rs:2314-2320). `registered_tool_approval_required` returns `false` for `Auto` **before** the `auto_approve` check runs (turn_loop.rs:37-38), so no prompt is shown even for a user who never enabled YOLO. The classifier `is_parallel_readonly_command` (c"
+    },
+    {
+      "affected": [
+        "github.com/reza-gholizade/k8s-mcp-server"
+      ],
+      "aliases": [
+        "CVE-2026-130007",
+        "GHSA-m932-63jc-4jqq"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies",
+        "containers",
+        "infrastructure"
+      ],
+      "cvss": null,
+      "cvss_version": "",
+      "ecosystems": [
+        "go"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-130007",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Kubernetes"
+      ],
+      "modified": "2026-11-19T22:48:33Z",
+      "priority": "review",
+      "published": "2026-11-19T22:48:33Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-m932-63jc-4jqq"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "## Summary When k8s-mcp-server runs in its default SSE transport mode, the MCP `tools/call` endpoint is dispatched with no authentication, session token, or Origin check. Any client that can reach the listening port can enumerate and invoke the server's Kubernetes tools (including destructive/write tools) without credentials, executing with the server's configured cluster privileges. ## Affected Commit be87a6dd72bb6ec1d4886b8548843b99a4638b12 (Merge PR #130) MCP library: github.com/mark3labs/mcp-go v0.57.0 Default mode: sse (SERVER_MODE default), default port 8080, bind 0.0.0.0 ## Root cause (static trace: handleSSE -> handleMessage -> tools/call) - main.go L129: `server.NewSSEServer(s)` is created with no auth option and no contextFunc; L130 `sse.Start(\":\"+port)` binds all interfaces (0.0.0.0). - mcp-go sse.go handleSSE (GET /sse): no auth header check; the server mints a sessionId for ",
+      "title": "k8s-mcp-server: Missing authentication on default SSE/HTTP transport allows unauthenticated Kubernetes tool execution",
+      "why_it_matters": "## Summary When k8s-mcp-server runs in its default SSE transport mode, the MCP `tools/call` endpoint is dispatched with no authentication, session token, or Origin check. Any client that can reach the listening port can enumerate and invoke the server's Kubernetes tools (including destructive/write tools) without credentials, executing with the server's configured cluster privileges. ## Affected Commit be87a6dd72bb6ec1d4886b8548843b99a4638b12 (Merge PR #130) MCP library: github.com/mark3labs/mcp-go v0.57.0 Default mode: sse (SERVER_MODE default), default port 8080, bind 0.0.0.0 ## Root cause (static trace: handleSSE -> handleMessage -> tools/call) - main.go L129: `server.NewSSEServer(s)` is created with no auth option and no contextFunc; L130 `sse.Start(\":\"+port)` binds all interfaces (0.0.0.0). - mcp-go sse.go handleSSE (GET /sse): no auth header check; the server mints a sessionId for "
+    },
+    {
+      "affected": [
+        "nltk"
+      ],
+      "aliases": [
+        "CVE-2026-129223",
+        "GHSA-8846-p9w9-5frf"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 7.5,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-129223",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-19T23:53:19Z",
+      "priority": "review",
+      "published": "2026-11-19T23:53:18Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-8846-p9w9-5frf"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Summary The recursive traversal engines behind WordNetCorpusReader's Synset.tree() and Synset.acyclic_tree() have no maximum call-depth safeguard and default to unlimited depth. They guard against literal cycles, but not against a long, genuinely acyclic relation chain  -  which exhausts the Python call stack the same way as the sibling DependencyGraph finding I reported separately. Real-world exploitability requires the host application to load a custom/foreign WordNet-format lexical resource rather than NLTK's bundled default corpus  -  flagging that narrower scope honestly up front since it affects severity, not validity. ### Details `nltk/util.py`'s `acyclic_depth_first()` (~lines 471-541) and `acyclic_branches_depth_first()` (~lines 544-625) recurse once per graph edge, default to `depth=-1` (\"unlimited\"), and guard against re-visiting the same node via an explicit `traversed` set (",
+      "title": "Natural Language Toolkit (NLTK): Uncontrolled recursion (crash DoS) in Synset.tree()/acyclic_tree() via WordNet relation traversal",
+      "why_it_matters": "### Summary The recursive traversal engines behind WordNetCorpusReader's Synset.tree() and Synset.acyclic_tree() have no maximum call-depth safeguard and default to unlimited depth. They guard against literal cycles, but not against a long, genuinely acyclic relation chain  -  which exhausts the Python call stack the same way as the sibling DependencyGraph finding I reported separately. Real-world exploitability requires the host application to load a custom/foreign WordNet-format lexical resource rather than NLTK's bundled default corpus  -  flagging that narrower scope honestly up front since it affects severity, not validity. ### Details `nltk/util.py`'s `acyclic_depth_first()` (~lines 471-541) and `acyclic_branches_depth_first()` (~lines 544-625) recurse once per graph edge, default to `depth=-1` (\"unlimited\"), and guard against re-visiting the same node via an explicit `traversed` set ("
+    },
+    {
+      "affected": [
+        "nltk"
+      ],
+      "aliases": [
+        "CVE-2026-129222",
+        "GHSA-rh8m-wqhc-qmrf"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 7.5,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-129222",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-19T23:53:42Z",
+      "priority": "review",
+      "published": "2026-11-19T23:53:41Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-rh8m-wqhc-qmrf"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Summary DependencyGraph.tree()/triples() walk the parsed dependency structure using plain, unbounded Python recursion  -  one stack frame per edge in the graph  -  and never use the class's own cycle detector. A crafted dependency-parse file with a few thousand chained tokens (an entirely ordinary-looking long sentence) crashes the process with an unhandled RecursionError the moment .tree() or .triples() is called  -  which is NLTK's own documented usage pattern immediately after loading such a file. ### Details `DependencyGraph._tree()` (~lines 393-406), `.tree()` (~408-417), and `.triples()` (~419-432) in `nltk/parse/dependencygraph.py` rebuild/walk the graph with `Tree(word, [self._tree(dep) for dep in deps])` and `yield from self.triples(node=dep)`  -  ordinary recursive calls, one per edge, with no depth check. `contains_cycle()` is defined on the class (~line 447) but is never invoked ",
+      "title": "Natural Language Toolkit (NLTK): Uncontrolled recursion (crash DoS) in DependencyGraph.tree()/triples()",
+      "why_it_matters": "### Summary DependencyGraph.tree()/triples() walk the parsed dependency structure using plain, unbounded Python recursion  -  one stack frame per edge in the graph  -  and never use the class's own cycle detector. A crafted dependency-parse file with a few thousand chained tokens (an entirely ordinary-looking long sentence) crashes the process with an unhandled RecursionError the moment .tree() or .triples() is called  -  which is NLTK's own documented usage pattern immediately after loading such a file. ### Details `DependencyGraph._tree()` (~lines 393-406), `.tree()` (~408-417), and `.triples()` (~419-432) in `nltk/parse/dependencygraph.py` rebuild/walk the graph with `Tree(word, [self._tree(dep) for dep in deps])` and `yield from self.triples(node=dep)`  -  ordinary recursive calls, one per edge, with no depth check. `contains_cycle()` is defined on the class (~line 447) but is never invoked "
+    },
+    {
+      "affected": [
+        "nltk"
+      ],
+      "aliases": [
+        "CVE-2026-128139",
+        "GHSA-j8g8-j4j7-8j54"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 7.5,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-128139",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "PyPI"
+      ],
+      "modified": "2026-11-19T23:55:00Z",
+      "priority": "review",
+      "published": "2026-11-19T23:54:59Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-j8g8-j4j7-8j54"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "> **affected**: PyPI `nltk` `>= 3.6`  -  `nltk.corpus.reader.xmldocs.XMLCorpusView` streaming read (and the `nps_chat` / `framenet` readers built on it) > **dynamically reproduced**: `3.6` (6/6 checks), `3.9.2` (6/6), `3.10.3` (6/6) and `develop` `6818767b9` (6/6) --- _Source references (`nltk/corpus/reader/xmldocs.py:NNN`) are to commit `6818767b99c24659107eb2be9bccd32a3d4bf045` (`develop`, `v3.10.3-15-g6818767b9`). The released `v3.10.3` wheel's `xmldocs.py` is byte-identical to that commit, so the same line numbers apply to the released wheel._ ### Summary **An attacker who can make a victim read a well-formed XML corpus file whose body contains one large comment or CDATA section can pin a CPU core for a time quadratic in the file size, because `XMLCorpusView._read_xml_fragment` (`nltk/corpus/reader/xmldocs.py`) re-runs a linear whole-buffer validation after every 1 KiB block while the ",
+      "title": "NLTK: XMLCorpusView comment and CDATA parsing permits quadratic CPU denial of service",
+      "why_it_matters": "> **affected**: PyPI `nltk` `>= 3.6`  -  `nltk.corpus.reader.xmldocs.XMLCorpusView` streaming read (and the `nps_chat` / `framenet` readers built on it) > **dynamically reproduced**: `3.6` (6/6 checks), `3.9.2` (6/6), `3.10.3` (6/6) and `develop` `6818767b9` (6/6) --- _Source references (`nltk/corpus/reader/xmldocs.py:NNN`) are to commit `6818767b99c24659107eb2be9bccd32a3d4bf045` (`develop`, `v3.10.3-15-g6818767b9`). The released `v3.10.3` wheel's `xmldocs.py` is byte-identical to that commit, so the same line numbers apply to the released wheel._ ### Summary **An attacker who can make a victim read a well-formed XML corpus file whose body contains one large comment or CDATA section can pin a CPU core for a time quadratic in the file size, because `XMLCorpusView._read_xml_fragment` (`nltk/corpus/reader/xmldocs.py`) re-runs a linear whole-buffer validation after every 1 KiB block while the "
+    },
+    {
+      "affected": [
+        "flyto-core"
+      ],
+      "aliases": [
+        "CVE-2026-77312",
+        "GHSA-p34x-fmph-9fjx"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies",
+        "infrastructure"
+      ],
+      "cvss": 10.0,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-77312",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "PyPI"
+      ],
+      "modified": "2026-11-20T00:09:03Z",
+      "priority": "review",
+      "published": "2026-11-20T00:09:02Z",
+      "security_topics": [
+        "Remote code execution"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-p34x-fmph-9fjx"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "# [CRITICAL] Arbitrary file write via unguarded `data.*` / `file.*` write modules  -  incomplete fix of GHSA-2956 - **CWE:** CWE-22 (Path Traversal) / CWE-73 (External Control of File Name or Path); impact reaches CWE-94 (code execution via file overwrite). - **CVSS v3.1:** `AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H` = **9.3 Critical** (S:C because a write escapes the intended sandbox confinement into the host filesystem / other components). - AV:N  -  reachable via the MCP server / recipe engine (`execute_module`). AC:L  -  deterministic. PR:L  -  any client able to run a module/recipe (the same attacker model as GHSA-2956; unauthenticated on the HTTP MCP surface per CVE-2026-55786). UI:N. S:C  -  escapes `FLYTO_SANDBOX_DIR`. C/I/A:H  -  arbitrary-content write to any absolute path → overwrite app code / recipes / `~/.bashrc` / cron / `authorized_keys` → RCE. - **Affected component:** `flyto-core` (PyPI ",
+      "title": "Flyto2 Core: Arbitrary file write via unguarded data.*/file.* modules (incomplete fix of CVE-2026-67429)",
+      "why_it_matters": "# [CRITICAL] Arbitrary file write via unguarded `data.*` / `file.*` write modules  -  incomplete fix of GHSA-2956 - **CWE:** CWE-22 (Path Traversal) / CWE-73 (External Control of File Name or Path); impact reaches CWE-94 (code execution via file overwrite). - **CVSS v3.1:** `AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H` = **9.3 Critical** (S:C because a write escapes the intended sandbox confinement into the host filesystem / other components). - AV:N  -  reachable via the MCP server / recipe engine (`execute_module`). AC:L  -  deterministic. PR:L  -  any client able to run a module/recipe (the same attacker model as GHSA-2956; unauthenticated on the HTTP MCP surface per CVE-2026-55786). UI:N. S:C  -  escapes `FLYTO_SANDBOX_DIR`. C/I/A:H  -  arbitrary-content write to any absolute path → overwrite app code / recipes / `~/.bashrc` / cron / `authorized_keys` → RCE. - **Affected component:** `flyto-core` (PyPI "
+    },
+    {
+      "affected": [
+        "flyto-core"
+      ],
+      "aliases": [
+        "CVE-2026-77316",
+        "GHSA-6pm8-6f34-9v3g"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 7.1,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-77316",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "PyPI"
+      ],
+      "modified": "2026-11-20T00:11:26Z",
+      "priority": "review",
+      "published": "2026-11-20T00:11:24Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-6pm8-6f34-9v3g"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "# [MEDIUM] SSRF guard bypass via DNS rebinding  -  validate_url_ssrf resolves-then-connects without pinning - **CWE:** CWE-918 (SSRF) / CWE-367 (TOCTOU). - **CVSS v3.1:** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N` = **6.8 Medium** (AC:H  -  needs attacker-controlled DNS with a low/zero TTL and to flip the answer between the guard's lookup and the connection's lookup; S:C  -  reaches internal/metadata services the guard is meant to block; C:H  -  e.g. cloud metadata credentials at 169.254.169.254). - **Affected component:** `flyto-core` (PyPI `flyto-core`), HEAD `ae2b38e` (v2.26.7). `src/core/utils.py::validate_url_ssrf` (resolution at `getaddrinfo` ~L512, `is_private_ip` check ~L515) and every consumer: `guarded_aiohttp_request()`, `enforce_outbound_url()`/`validate_url_with_env_config()`  -  i.e. `http.get/request/batch`, `graphql.query/mutation`, `monitor.http_check`, `notification.{slack,discord,tea",
+      "title": "Flyto2 Core: SSRF guard bypass via DNS rebinding (validate_url_ssrf resolves-then-connects without pinning)",
+      "why_it_matters": "# [MEDIUM] SSRF guard bypass via DNS rebinding  -  validate_url_ssrf resolves-then-connects without pinning - **CWE:** CWE-918 (SSRF) / CWE-367 (TOCTOU). - **CVSS v3.1:** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N` = **6.8 Medium** (AC:H  -  needs attacker-controlled DNS with a low/zero TTL and to flip the answer between the guard's lookup and the connection's lookup; S:C  -  reaches internal/metadata services the guard is meant to block; C:H  -  e.g. cloud metadata credentials at 169.254.169.254). - **Affected component:** `flyto-core` (PyPI `flyto-core`), HEAD `ae2b38e` (v2.26.7). `src/core/utils.py::validate_url_ssrf` (resolution at `getaddrinfo` ~L512, `is_private_ip` check ~L515) and every consumer: `guarded_aiohttp_request()`, `enforce_outbound_url()`/`validate_url_with_env_config()`  -  i.e. `http.get/request/batch`, `graphql.query/mutation`, `monitor.http_check`, `notification.{slack,discord,tea"
+    },
+    {
+      "affected": [
+        "jupyter-mcp-server"
+      ],
+      "aliases": [
+        "CVE-2026-77318",
+        "GHSA-24pw-rf5p-mgp7"
+      ],
+      "attention_score": 55,
+      "categories": [
+        "dependencies",
+        "infrastructure",
+        "ai-ml"
+      ],
+      "cvss": null,
+      "cvss_version": "",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-77318",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Jupyter"
+      ],
+      "modified": "2026-11-20T00:12:16Z",
+      "priority": "review",
+      "published": "2026-11-20T00:12:14Z",
+      "security_topics": [],
+      "severity": "high",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-24pw-rf5p-mgp7"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "Standalone `streamable-http` mode in `datalayer/jupyter-mcp-server` requires `MCP_TOKEN` for `/mcp`, but the custom management routes mounted on the same application do not enforce that token. An unauthenticated network caller can invoke `PUT /api/connect`, choose the Jupyter backend URL and token fields, reset the server context, and make the MCP server start a kernel client against attacker-controlled infrastructure. The same missing authentication affects the state-changing `DELETE /api/stop` route. The intended authentication boundary is documented in the security guide and enforced during startup: ```text docs/docs/reference/security/index.mdx:15 All MCP endpoints require Bearer token authentication. docs/docs/reference/security/index.mdx:25 Starting with version 1.0.0, MCP client authentication is required for the streamable-http transport. ``` The CLI enforces that boundary for th",
+      "title": "Jupyter MCP Server: Unauthenticated management routes can hijack the Jupyter backend in standalone HTTP mode",
+      "why_it_matters": "Standalone `streamable-http` mode in `datalayer/jupyter-mcp-server` requires `MCP_TOKEN` for `/mcp`, but the custom management routes mounted on the same application do not enforce that token. An unauthenticated network caller can invoke `PUT /api/connect`, choose the Jupyter backend URL and token fields, reset the server context, and make the MCP server start a kernel client against attacker-controlled infrastructure. The same missing authentication affects the state-changing `DELETE /api/stop` route. The intended authentication boundary is documented in the security guide and enforced during startup: ```text docs/docs/reference/security/index.mdx:15 All MCP endpoints require Bearer token authentication. docs/docs/reference/security/index.mdx:25 Starting with version 1.0.0, MCP client authentication is required for the streamable-http transport. ``` The CLI enforces that boundary for th"
+    },
+    {
+      "affected": [
+        "jupyter-mcp-server"
+      ],
+      "aliases": [
+        "CVE-2026-77359",
+        "GHSA-9x8x-crjq-g64h"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "applications",
+        "dependencies",
+        "infrastructure",
+        "ai-ml"
+      ],
+      "cvss": null,
+      "cvss_version": "",
+      "ecosystems": [
+        "pip"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-77359",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "Jupyter"
+      ],
+      "modified": "2026-11-20T00:12:52Z",
+      "priority": "review",
+      "published": "2026-11-20T00:12:51Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-9x8x-crjq-g64h"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "Standalone `streamable-http` mode in `datalayer/jupyter-mcp-server` rejects forged `Host` and `Origin` headers on `/mcp`, but custom management routes mounted on the same application do not get the same browser-origin protection. A malicious website can keep an attacker origin while its hostname resolves to `127.0.0.1` or a private target address, then send `PUT /api/connect` to replace the MCP server's active Jupyter backend. The route accepts the browser-shaped request and makes the server start a kernel client against attacker-controlled infrastructure. The protected `/mcp` endpoint shows the intended browser-origin boundary. With `MCP_TOKEN` configured, `/mcp` rejects forged browser headers: ```text POST /mcp with Authorization: Bearer SCAN_MCP_TOKEN Host: attacker.example:8142 Origin: http://attacker.example:8142 HTTP 421 Invalid Host header ``` The vulnerable route is `jupyter_mcp_",
+      "title": "Jupyter MCP Server: Browser DNS rebinding can hijack the Jupyter backend through management routes",
+      "why_it_matters": "Standalone `streamable-http` mode in `datalayer/jupyter-mcp-server` rejects forged `Host` and `Origin` headers on `/mcp`, but custom management routes mounted on the same application do not get the same browser-origin protection. A malicious website can keep an attacker origin while its hostname resolves to `127.0.0.1` or a private target address, then send `PUT /api/connect` to replace the MCP server's active Jupyter backend. The route accepts the browser-shaped request and makes the server start a kernel client against attacker-controlled infrastructure. The protected `/mcp` endpoint shows the intended browser-origin boundary. With `MCP_TOKEN` configured, `/mcp` rejects forged browser headers: ```text POST /mcp with Authorization: Bearer SCAN_MCP_TOKEN Host: attacker.example:8142 Origin: http://attacker.example:8142 HTTP 421 Invalid Host header ``` The vulnerable route is `jupyter_mcp_"
+    },
+    {
+      "affected": [
+        "ep_etherpad-lite"
+      ],
+      "aliases": [
+        "CVE-2026-114516",
+        "GHSA-mc8w-wjhw-45x5"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies",
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-20T07:16:33Z",
+      "id": "CVE-2026-114516",
+      "last_seen": "2026-11-20T07:16:33Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-20T00:23:46Z",
+      "priority": "review",
+      "published": "2026-11-20T00:23:45Z",
+      "security_topics": [
+        "Remote code execution"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-mc8w-wjhw-45x5"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Summary An unauthenticated path‑traversal / arbitrary file read vulnerability in Etherpad's /static/* handler allows any remote, unauthenticated user to read any file on the server's filesystem (e.g. GET /static/plugins/ep_etherpad-lite/static/..%5C..%5C..%5C..%5C..%5C..%5C..%5Cetc/passwd returns /etc/passwd) available to the user running the etherpad software. Because the endpoint is mounted before the authentication middleware, no credentials, session, or configuration change are required. The read primitive could escalate to a full server compromise: on a typical deployment by disclosing settings.json / credentials.json / /proc/self/environ, which contain the admin password, giving an attacker an admin session and, through the admin plugin installer, remote code execution. ### Details Etherpad serves plugin static assets through src/node/utils/Minify.ts. The request path is first ",
+      "title": "Etherpad: Pre-auth arbitrary file read",
+      "why_it_matters": "### Summary An unauthenticated path‑traversal / arbitrary file read vulnerability in Etherpad's /static/* handler allows any remote, unauthenticated user to read any file on the server's filesystem (e.g. GET /static/plugins/ep_etherpad-lite/static/..%5C..%5C..%5C..%5C..%5C..%5C..%5Cetc/passwd returns /etc/passwd) available to the user running the etherpad software. Because the endpoint is mounted before the authentication middleware, no credentials, session, or configuration change are required. The read primitive could escalate to a full server compromise: on a typical deployment by disclosing settings.json / credentials.json / /proc/self/environ, which contain the admin password, giving an attacker an admin session and, through the admin plugin installer, remote code execution. ### Details Etherpad serves plugin static assets through src/node/utils/Minify.ts. The request path is first "
     }
   ],
-  "generated_at": "2026-11-19T20:38:33Z",
+  "generated_at": "2026-11-20T07:16:33Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }
