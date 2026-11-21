@@ -18,11 +18,11 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-123710",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Quay"
     ],
-    "modified": "2026-11-13T00:32:54Z",
+    "modified": "2026-11-21T00:32:33Z",
     "priority": "review",
     "published": "2026-11-11T14:00:00Z",
     "security_topics": [
@@ -63,11 +63,11 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-110697",
-    "last_seen": "2026-11-14T18:02:08Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Quay"
     ],
-    "modified": "2026-11-13T00:31:51Z",
+    "modified": "2026-11-21T00:32:33Z",
     "priority": "review",
     "published": "2026-11-11T14:00:00Z",
     "security_topics": [
@@ -109,9 +109,9 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-123890",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
-    "modified": "2026-11-20T00:00:00Z",
+    "modified": "2026-11-20T21:32:46Z",
     "priority": "information",
     "published": "2026-11-19T15:31:13Z",
     "security_topics": [
@@ -153,9 +153,9 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-17T20:55:55Z",
     "id": "CVE-2026-129448",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
-    "modified": "2026-11-20T00:00:00Z",
+    "modified": "2026-11-20T21:31:34Z",
     "priority": "information",
     "published": "2026-11-17T12:31:38Z",
     "security_topics": [
@@ -179,6 +179,48 @@
   },
   {
     "affected": [
+      "Cisco",
+      "Expressway Series"
+    ],
+    "aliases": [
+      "CVE-2026-76466",
+      "GHSA-p2jr-qv63-hjch"
+    ],
+    "attention_score": 125,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": true,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-20T20:21:33Z",
+    "id": "CVE-2026-76466",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:31:33Z",
+    "priority": "information",
+    "published": "2026-10-21T18:33:19Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-p2jr-qv63-hjch"
+      }
+    ],
+    "suggested_next_step": "Review the vendor advisory promptly. Check relevant installed product versions and follow the vendor's mitigation guidance.",
+    "summary": "A vulnerability in the database service feature of Cisco Expressway Series could allow an unauthenticated, remote attacker with network access to a Cisco Expressway device to execute arbitrary operating system commands as&nbsp;root. This vulnerability is due to the use of persistent cookies. Additionally, there is insufficient validation of client certificates when the TLS Verify Mode is set to Enabled for clustering, which means that client certificates are not validated. An attacker with possession of the cookies could exploit this vulnerability by connecting to the database service and invoking specific remote procedure call (RPC) commands. A successful exploit could allow the attacker to execute arbitrary commands as root on the underlying operating system of an affected device. Note: Cisco Expressway Series refers to Cisco Expressway Core (Expressway-C) devices and Cisco Expressway ",
+    "title": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
+    "why_it_matters": "A vulnerability in the database service feature of Cisco Expressway Series could allow an unauthenticated, remote attacker with network access to a Cisco Expressway device to execute arbitrary operating system commands as&nbsp;root. This vulnerability is due to the use of persistent cookies. Additionally, there is insufficient validation of client certificates when the TLS Verify Mode is set to Enabled for clustering, which means that client certificates are not validated. An attacker with possession of the cookies could exploit this vulnerability by connecting to the database service and invoking specific remote procedure call (RPC) commands. A successful exploit could allow the attacker to execute arbitrary commands as root on the underlying operating system of an affected device. Note: Cisco Expressway Series refers to Cisco Expressway Core (Expressway-C) devices and Cisco Expressway "
+  },
+  {
+    "affected": [
       "Apache",
       "Axis"
     ],
@@ -197,7 +239,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-90436",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T21:31:18Z",
     "priority": "information",
@@ -241,7 +283,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-90817",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T21:31:16Z",
     "priority": "information",
@@ -285,7 +327,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2024-10441",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T21:31:15Z",
     "priority": "information",
@@ -809,7 +851,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2025-42884",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:00:00Z",
     "priority": "information",
@@ -826,43 +868,6 @@
     "summary": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
     "title": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
     "why_it_matters": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations."
-  },
-  {
-    "affected": [
-      "Cisco",
-      "Expressway Series"
-    ],
-    "aliases": [
-      "CVE-2026-76466"
-    ],
-    "attention_score": 80,
-    "categories": [
-      "unclassified"
-    ],
-    "cvss": null,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": true,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-20T20:21:33Z",
-    "id": "CVE-2026-76466",
-    "last_seen": "2026-11-20T20:21:33Z",
-    "matched_topics": [],
-    "modified": "2026-11-20T00:00:00Z",
-    "priority": "information",
-    "published": "2026-11-20T00:00:00Z",
-    "security_topics": [],
-    "severity": "unknown",
-    "sources": [
-      {
-        "name": "CISA KEV",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
-      }
-    ],
-    "suggested_next_step": "Review the vendor advisory promptly. Check relevant installed product versions and follow the vendor's mitigation guidance.",
-    "summary": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
-    "title": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
-    "why_it_matters": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service."
   },
   {
     "affected": [
@@ -883,7 +888,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-40217",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T00:00:00Z",
     "priority": "information",
@@ -1279,6 +1284,43 @@
     "why_it_matters": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA)."
   },
   {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-133949",
+      "GHSA-jg88-vh4g-v698"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-133949",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "Python"
+    ],
+    "modified": "2026-11-20T21:31:53Z",
+    "priority": "review",
+    "published": "2026-11-20T21:31:50Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jg88-vh4g-v698"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. Upgrading to a secure version of pip should be done either by first upgrading Python to a version that rejects the compromised intermediates (CVE-2026-115557) or use hash pinning with a known-secure version of pip. pip is not vulnerable when using a Python version that rejects the compromised certificates. See the references below for more information.",
+    "title": "pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. ...",
+    "why_it_matters": "pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. Upgrading to a secure version of pip should be done either by first upgrading Python to a version that rejects the compromised intermediates (CVE-2026-115557) or use hash pinning with a known-secure version of pip. pip is not vulnerable when using a Python version that rejects the compromised certificates. See the references below for more information."
+  },
+  {
     "affected": [
       "gnu gnutls",
       "redhat ai inference server",
@@ -1309,7 +1351,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-42010",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1357,7 +1399,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-34000",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1405,7 +1447,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-34002",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1449,7 +1491,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-114516",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -1495,7 +1537,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77359",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Jupyter"
     ],
@@ -1537,7 +1579,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77312",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "PyPI"
     ],
@@ -1578,7 +1620,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-68791",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -1621,7 +1663,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-76807",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -1664,7 +1706,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-30793",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Linux",
       "Microsoft"
@@ -1955,7 +1997,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-111497",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Linux",
       "Microsoft",
@@ -2000,7 +2042,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-115338",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -5757,6 +5799,260 @@
   },
   {
     "affected": [
+      "@tmlmobilidade/utils"
+    ],
+    "aliases": [
+      "CVE-2026-45325",
+      "GHSA-cmxg-94mg-jq94"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 8.2,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "npm"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-45325",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "npm"
+    ],
+    "modified": "2026-11-21T05:15:45Z",
+    "priority": "review",
+    "published": "2026-05-18T17:07:04Z",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-cmxg-94mg-jq94"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "### Impact Prototype pollution vulnerability in @tmlmobilidade/utils for setValueAtPath(). ### Patches A fix is available in versions 20260509.340.15 and up.",
+    "title": "@tmlmobilidade/utils has prototype pollution in its setValueAtPath",
+    "why_it_matters": "### Impact Prototype pollution vulnerability in @tmlmobilidade/utils for setValueAtPath(). ### Patches A fix is available in versions 20260509.340.15 and up."
+  },
+  {
+    "affected": [
+      "@budibase/server"
+    ],
+    "aliases": [
+      "CVE-2026-122247",
+      "GHSA-25qc-m4pw-2w8r"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies",
+      "infrastructure"
+    ],
+    "cvss": 8.2,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "npm"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-122247",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "npm"
+    ],
+    "modified": "2026-11-20T23:50:04Z",
+    "priority": "review",
+    "published": "2026-11-20T23:50:01Z",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-25qc-m4pw-2w8r"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "## Description ### Summary On a self-hosted, single-tenant Budibase instance (`multiTenancy:false`), the public bootstrap endpoint `POST /api/global/users/init` remains fully exploitable **after** the instance has been provisioned. Its \"already initialised\" guard (`checkAnyUserExists()`) is evaluated inside a **tenant-scoped** database context derived from an **attacker-controlled `tenantId`** in the request body. Because the tenancy layer never constrains that `tenantId` to the only legitimate tenant (`default`) on a single-tenant deployment, an unauthenticated attacker simply supplies any unused tenant name to make the guard see an empty user list, and the endpoint then creates a brand-new CouchDB database (`<tenantId>_global-db`) and a **global-admin** user document (`admin.global = true`, `builder.global = true`) inside it - with no authentication and no CSRF token. This is (a) a byp",
+    "title": "Budibase: Unauthenticated global-admin & database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`)",
+    "why_it_matters": "## Description ### Summary On a self-hosted, single-tenant Budibase instance (`multiTenancy:false`), the public bootstrap endpoint `POST /api/global/users/init` remains fully exploitable **after** the instance has been provisioned. Its \"already initialised\" guard (`checkAnyUserExists()`) is evaluated inside a **tenant-scoped** database context derived from an **attacker-controlled `tenantId`** in the request body. Because the tenancy layer never constrains that `tenantId` to the only legitimate tenant (`default`) on a single-tenant deployment, an unauthenticated attacker simply supplies any unused tenant name to make the guard see an empty user list, and the endpoint then creates a brand-new CouchDB database (`<tenantId>_global-db`) and a **global-admin** user document (`admin.global = true`, `builder.global = true`) inside it - with no authentication and no CSRF token. This is (a) a byp"
+  },
+  {
+    "affected": [
+      "@budibase/server"
+    ],
+    "aliases": [
+      "CVE-2026-122244",
+      "GHSA-r2q3-7m4h-63qg"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies",
+      "infrastructure"
+    ],
+    "cvss": 7.7,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "npm"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-122244",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "npm"
+    ],
+    "modified": "2026-11-20T23:49:49Z",
+    "priority": "review",
+    "published": "2026-11-20T23:49:47Z",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-r2q3-7m4h-63qg"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "## Description ### Summary A **low-privileged application end-user** (role `BASIC` - **not** a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ordinary row data. When a **builder or admin** later opens that table in the Budibase Builder and evaluates any Handlebars binding whose Preview surfaces the value (the Data-section **Formula** column editor, or any binding drawer), the stored value is rendered as **raw HTML** and the attacker's JavaScript executes in the Builder's origin. The Builder SPA is served by nginx with **no Content-Security-Policy** (the CSP middleware only decorates the server-rendered *published-app* document, not `/builder/`). The injected script therefore runs unrestricted in the highest-trust surface of the product - the admin/builder session that can create datasources, run server-side Java",
+    "title": "Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin",
+    "why_it_matters": "## Description ### Summary A **low-privileged application end-user** (role `BASIC` - **not** a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ordinary row data. When a **builder or admin** later opens that table in the Budibase Builder and evaluates any Handlebars binding whose Preview surfaces the value (the Data-section **Formula** column editor, or any binding drawer), the stored value is rendered as **raw HTML** and the attacker's JavaScript executes in the Builder's origin. The Builder SPA is served by nginx with **no Content-Security-Policy** (the CSP middleware only decorates the server-rendered *published-app* document, not `/builder/`). The injected script therefore runs unrestricted in the highest-trust surface of the product - the admin/builder session that can create datasources, run server-side Java"
+  },
+  {
+    "affected": [
+      "svglib"
+    ],
+    "aliases": [
+      "CVE-2026-132275",
+      "GHSA-555j-qj3j-c8jv"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 7.5,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "pip"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-132275",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "Python"
+    ],
+    "modified": "2026-11-20T23:47:59Z",
+    "priority": "review",
+    "published": "2026-11-20T23:47:58Z",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-555j-qj3j-c8jv"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "# Summary `svg2rlg()` expands `<use>` references without any limit on the total number of expansions. Only direct cycles are rejected (`CircularRefError`). A group containing N `<use>` elements that point to another such group multiplies the work by N per nesting level, so an SVG of about 1.4 KB makes svglib clone and render over 100,000 nodes, taking tens of seconds of CPU time and hundreds of MiB of memory. Each additional level adds about 245 bytes to the document and multiplies time by ~10. This is the SVG `<use>` variant of the XML \"billion laughs\" attack (the same class as librsvg CVE-2019-20446). # Details `SvgRenderer.renderUse()` in `src/svglib/svglib.py`: ```python try: item = self.xlink_href_target(node, group=group) except CircularRefError: node.parent.etree_element.remove(node.etree_element) return group ... if len(node.getchildren()) == 0: # Append a copy of the referenced ",
+    "title": "svglib: Exponential resource consumption via nested <use> references in svg2rlg",
+    "why_it_matters": "# Summary `svg2rlg()` expands `<use>` references without any limit on the total number of expansions. Only direct cycles are rejected (`CircularRefError`). A group containing N `<use>` elements that point to another such group multiplies the work by N per nesting level, so an SVG of about 1.4 KB makes svglib clone and render over 100,000 nodes, taking tens of seconds of CPU time and hundreds of MiB of memory. Each additional level adds about 245 bytes to the document and multiplies time by ~10. This is the SVG `<use>` variant of the XML \"billion laughs\" attack (the same class as librsvg CVE-2019-20446). # Details `SvgRenderer.renderUse()` in `src/svglib/svglib.py`: ```python try: item = self.xlink_href_target(node, group=group) except CircularRefError: node.parent.etree_element.remove(node.etree_element) return group ... if len(node.getchildren()) == 0: # Append a copy of the referenced "
+  },
+  {
+    "affected": [
+      "ait-gui"
+    ],
+    "aliases": [
+      "CVE-2026-77309",
+      "GHSA-jrjx-9jjw-747m"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies",
+      "infrastructure"
+    ],
+    "cvss": 8.8,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "pip"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-77309",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "Python"
+    ],
+    "modified": "2026-11-20T23:36:41Z",
+    "priority": "review",
+    "published": "2026-11-20T23:36:41Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jrjx-9jjw-747m"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "## Summary A security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, followed by a malicious POST /script/run request containing an absolute file path that bypasses the configured script directory restrictions. ### Patches * 2.5.1 ### Impact This vulnerability allows unauthenticated remote code execution on the AIT-GUI server. Any attacker with network access can execute arbitrary Python code with daemon privileges. ## Details _Chain:_ 1. `POST /tlm/query` writes the user-controlled `fields` value into `fields_in.txt` under the AIT-GUI static directory. * If the supplied `dataDir` has no `.pcap` files, the route returns the expected `400 Bad Request` before deleting that file. 2. `POST /script/run` accepts `scriptPath=../static/fields_in.txt`. * AIT-GUI re",
+    "title": "AIT-GUI route chain allows unauthenticated Python execution in server process",
+    "why_it_matters": "## Summary A security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, followed by a malicious POST /script/run request containing an absolute file path that bypasses the configured script directory restrictions. ### Patches * 2.5.1 ### Impact This vulnerability allows unauthenticated remote code execution on the AIT-GUI server. Any attacker with network access can execute arbitrary Python code with daemon privileges. ## Details _Chain:_ 1. `POST /tlm/query` writes the user-controlled `fields` value into `fields_in.txt` under the AIT-GUI static directory. * If the supplied `dataDir` has no `.pcap` files, the route returns the expected `400 Bad Request` before deleting that file. 2. `POST /script/run` accepts `scriptPath=../static/fields_in.txt`. * AIT-GUI re"
+  },
+  {
+    "affected": [
+      "aedes"
+    ],
+    "aliases": [
+      "CVE-2026-63341",
+      "GHSA-xxqp-5qx8-gj5q"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 7.5,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "npm"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-63341",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [
+      "Node.js",
+      "npm"
+    ],
+    "modified": "2026-11-20T23:32:36Z",
+    "priority": "review",
+    "published": "2026-11-20T23:32:35Z",
+    "security_topics": [
+      "Denial of service"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-xxqp-5qx8-gj5q"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "### Summary A remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message (via PUBLISH or SUBSCRIBE), or by setting a Will message with such a topic, containing a highly recursive topic string (e.g., with thousands of '/' delimiters). The lack of input validation and error handling leads to an uncaught exception in an internal routing library, terminating the entire Node.js application. ### Details The Aedes broker fails to enforce limits on the depth or structural complexity of MQTT topic strings. When a client publishes to or subscribes to a topic with excessive levels of recursion, the internal routing logic cascading into the qlobber library (via mqemitter) reaches an hard-coded limit within the qlobber._split_words function. This function throws a hard ",
+    "title": "Aedes has Uncaught Exception and Uncontrolled Resource Consumption",
+    "why_it_matters": "### Summary A remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message (via PUBLISH or SUBSCRIBE), or by setting a Will message with such a topic, containing a highly recursive topic string (e.g., with thousands of '/' delimiters). The lack of input validation and error handling leads to an uncaught exception in an internal routing library, terminating the entire Node.js application. ### Details The Aedes broker fails to enforce limits on the depth or structural complexity of MQTT topic strings. When a client publishes to or subscribes to a topic with excessive levels of recursion, the internal routing logic cascading into the qlobber library (via mqemitter) reaches an hard-coded limit within the qlobber._split_words function. This function throws a hard "
+  },
+  {
+    "affected": [
       "traefik traefik"
     ],
     "aliases": [
@@ -5773,7 +6069,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85594",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -5815,7 +6111,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-58192",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -5854,7 +6150,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85596",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -5899,7 +6195,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77318",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Jupyter"
     ],
@@ -5940,7 +6236,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77316",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "PyPI"
     ],
@@ -5981,7 +6277,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-128139",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "PyPI"
     ],
@@ -6024,7 +6320,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-129222",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Python"
     ],
@@ -6067,7 +6363,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-129223",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Python"
     ],
@@ -6112,7 +6408,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-130007",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -6155,7 +6451,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-83816",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -6200,7 +6496,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-83817",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -6241,7 +6537,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-95839",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -6284,7 +6580,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-115563",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Python"
     ],
@@ -6325,7 +6621,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-121707",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -6368,7 +6664,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77283",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Docker",
       "npm"
@@ -6410,7 +6706,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-75522",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -6451,7 +6747,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-17T20:55:55Z",
     "id": "CVE-2026-112366",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Node.js",
       "npm"
@@ -6495,7 +6791,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-71536",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Python"
     ],
@@ -6540,7 +6836,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-63129",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -6581,7 +6877,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-68903",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -6622,7 +6918,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-73864",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "npm"
     ],
@@ -6663,7 +6959,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-63496",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [
       "Node.js",
       "npm"
@@ -8798,6 +9094,260 @@
     "why_it_matters": "### Summary The `POST /__nuxt_content/:collection/query` endpoint in `@nuxt/content` accepts an attacker-controlled `sql` field from the HTTP request body and executes it against a local SQLite database after passing it through an insufficient validator (`assertSafeQuery`). The validator only blocks a small set of SQL command keywords and does not reject expensive SQLite built-in functions such as `randomblob()`, `zeroblob()`, `hex()`, or `length()`. An unauthenticated remote attacker can craft a single request that forces SQLite to allocate hundreds of megabytes of memory and perform CPU-intensive work, causing server-wide denial of service. This endpoint is enabled by default for every collection and requires no authentication. ### Details The vulnerability spans three source files: **Route registration  -  `src/module.ts:207-208`** The Nuxt Content module registers a public HTTP POST ha"
   },
   {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-120539",
+      "GHSA-j47j-q6m5-x2fg"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications",
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-120539",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-21T06:30:30Z",
+    "priority": "information",
+    "published": "2026-11-21T06:16:33.227",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-j47j-q6m5-x2fg"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a double-quoted string and evaluating it with eval(). Because PHP interpolates double-quoted strings, a payload of the form {${...}} in the URL path is executed during interpolation, so no quote breakout is required and WordPress' slashing does not mitigate it. This makes it possible for unauthenticated attackers to execute arbitrary code on the server with a single GET request. The affected conditions ship enabled by default and are evaluated before any logged-in check, so no plugin configuration is needed; the site must have BuddyPress and Paid Memberships Pro active alongside this plugin.",
+    "title": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in...",
+    "why_it_matters": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a double-quoted string and evaluating it with eval(). Because PHP interpolates double-quoted strings, a payload of the form {${...}} in the URL path is executed during interpolation, so no quote breakout is required and WordPress' slashing does not mitigate it. This makes it possible for unauthenticated attackers to execute arbitrary code on the server with a single GET request. The affected conditions ship enabled by default and are evaluated before any logged-in check, so no plugin configuration is needed; the site must have BuddyPress and Paid Memberships Pro active alongside this plugin."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-95517",
+      "GHSA-mqvp-jwc5-xgv2"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-95517",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:32:51Z",
+    "priority": "information",
+    "published": "2026-11-20T00:31:35Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mqvp-jwc5-xgv2"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Reliance on obfuscation or encryption of Security-Relevant inputs without integrity checking, Improper validation of integrity check value, Cleartext transmission of sensitive information vulnerability in the EncryptInterceptor of Apache Tomcat. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.13 through 9.0.123. The following versions were EOL at the time the CVE was created but are known to be affected: from 8.5.38 through 8.5.100, from 7.0.100 through 7.0.109. Other unsupported versions may also be affected. Users are recommended to upgrade to version 11.0.29, 10.1.62 or 9.0.124 and switch to TLS-PSK to encrypt cluster communication, which fixes the issue. Note: Tomcat 11.0.28 was not released",
+    "title": "Reliance on obfuscation or encryption of Security-Relevant inputs without integrity checking,...",
+    "why_it_matters": "Reliance on obfuscation or encryption of Security-Relevant inputs without integrity checking, Improper validation of integrity check value, Cleartext transmission of sensitive information vulnerability in the EncryptInterceptor of Apache Tomcat. This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.13 through 9.0.123. The following versions were EOL at the time the CVE was created but are known to be affected: from 8.5.38 through 8.5.100, from 7.0.100 through 7.0.109. Other unsupported versions may also be affected. Users are recommended to upgrade to version 11.0.29, 10.1.62 or 9.0.124 and switch to TLS-PSK to encrypt cluster communication, which fixes the issue. Note: Tomcat 11.0.28 was not released"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-118028",
+      "GHSA-hjgg-fgrg-v37h"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-118028",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:32:50Z",
+    "priority": "information",
+    "published": "2026-11-20T00:31:32Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hjgg-fgrg-v37h"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Execution After Redirect (EAR) vulnerability in Apache Tomcat in RedirectValve affecting flags [F], [G] and [R]. This issue affects Apache Tomcat: from 11.0.0-M18 through 11.0.27, from 10.1.20 through 10.1.61, from 9.0.87 through 9.0.123. The following versions were EOL at the time the CVE was created but are known to be affected: 8.5.100. Other unsupported versions may also be affected. Users are recommended to upgrade to version 11.0.29, 10.1.62, 9.0.124, which fixes the issue. Note: Tomcat 11.0.28 was not released",
+    "title": "Execution After Redirect (EAR) vulnerability in Apache Tomcat in RedirectValve affecting flags [F...",
+    "why_it_matters": "Execution After Redirect (EAR) vulnerability in Apache Tomcat in RedirectValve affecting flags [F], [G] and [R]. This issue affects Apache Tomcat: from 11.0.0-M18 through 11.0.27, from 10.1.20 through 10.1.61, from 9.0.87 through 9.0.123. The following versions were EOL at the time the CVE was created but are known to be affected: 8.5.100. Other unsupported versions may also be affected. Users are recommended to upgrade to version 11.0.29, 10.1.62, 9.0.124, which fixes the issue. Note: Tomcat 11.0.28 was not released"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-129175",
+      "GHSA-8rqw-mpp3-5wvc"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-129175",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:32:00Z",
+    "priority": "information",
+    "published": "2026-11-20T21:31:51Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8rqw-mpp3-5wvc"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "U.S Department of the Interior Unstable Slope Management Program allows an unauthenticated user to inject unauthorized SQL commands that allow the attacker to gain root access and complete control over the database. Fixed on or around 2026-10-19.",
+    "title": "U.S Department of the Interior Unstable Slope Management Program allows an unauthenticated user...",
+    "why_it_matters": "U.S Department of the Interior Unstable Slope Management Program allows an unauthenticated user to inject unauthorized SQL commands that allow the attacker to gain root access and complete control over the database. Fixed on or around 2026-10-19."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-133968",
+      "GHSA-2f43-rwqm-6h67"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-133968",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:31:50Z",
+    "priority": "information",
+    "published": "2026-11-20T21:31:50Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2f43-rwqm-6h67"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.",
+    "title": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code...",
+    "why_it_matters": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-121385",
+      "GHSA-c5jm-26vg-v4hm"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-121385",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:31:45Z",
+    "priority": "information",
+    "published": "2026-11-20T06:32:01Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c5jm-26vg-v4hm"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The User Registration Aide WordPress plugin through 1.5.3.8 does not verify the current password or a reset token before changing a user's password, allowing unauthenticated attackers who know a user's username and email address to change the password of any account, including administrators, and take it over.",
+    "title": "The User Registration Aide WordPress plugin through 1.5.3.8 does not verify the current password...",
+    "why_it_matters": "The User Registration Aide WordPress plugin through 1.5.3.8 does not verify the current password or a reset token before changing a user's password, allowing unauthenticated attackers who know a user's username and email address to change the password of any account, including administrators, and take it over."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-116561",
+      "GHSA-4jfr-f6xv-2r6w"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-116561",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T21:31:41Z",
+    "priority": "information",
+    "published": "2026-11-20T00:31:31Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4jfr-f6xv-2r6w"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Improper cleanup on thrown exception vulnerability in Apache Tomcat meant that an HTTP 200 response was sent rather than an HTTP 500 response after a AuthException was thrown during Jakarta Authentication secureResponse(). This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.0.M1 through 9.0.123. The following versions were EOL at the time the CVE was created but are known to be affected: from 8.5.0 through 8.5.100. Other unsupported versions may also be affected. Users are recommended to upgrade to version 11.0.29, 10.0.62 or 9.0.124, which fix the issue. Note: Tomcat 11.0.28 was not released",
+    "title": "Improper cleanup on thrown exception vulnerability in Apache Tomcat meant that an HTTP 200...",
+    "why_it_matters": "Improper cleanup on thrown exception vulnerability in Apache Tomcat meant that an HTTP 200 response was sent rather than an HTTP 500 response after a AuthException was thrown during Jakarta Authentication secureResponse(). This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.0.M1 through 9.0.123. The following versions were EOL at the time the CVE was created but are known to be affected: from 8.5.0 through 8.5.100. Other unsupported versions may also be affected. Users are recommended to upgrade to version 11.0.29, 10.0.62 or 9.0.124, which fix the issue. Note: Tomcat 11.0.28 was not released"
+  },
+  {
     "affected": [
       "fit2cloud jumpserver"
     ],
@@ -8815,7 +9365,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104126",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T19:44:32.290",
     "priority": "information",
@@ -8852,7 +9402,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133872",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T18:31:40Z",
     "priority": "information",
@@ -8887,7 +9437,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-115407",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T18:31:40Z",
     "priority": "information",
@@ -8922,7 +9472,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133325",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T18:31:29Z",
     "priority": "information",
@@ -8957,7 +9507,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T07:29:14Z",
     "id": "CVE-2026-115139",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T18:31:25Z",
     "priority": "information",
@@ -8996,7 +9546,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-132660",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:43Z",
     "priority": "information",
@@ -9031,7 +9581,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-132658",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:43Z",
     "priority": "information",
@@ -9066,7 +9616,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-126054",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:43Z",
     "priority": "information",
@@ -9101,7 +9651,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-129039",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:42Z",
     "priority": "information",
@@ -9136,7 +9686,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-14914",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:42Z",
     "priority": "information",
@@ -9171,7 +9721,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-80188",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:42Z",
     "priority": "information",
@@ -9208,7 +9758,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-129043",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:42Z",
     "priority": "information",
@@ -9243,7 +9793,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-129073",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:42Z",
     "priority": "information",
@@ -9280,7 +9830,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-101340",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:41Z",
     "priority": "information",
@@ -9315,7 +9865,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-132659",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:38Z",
     "priority": "information",
@@ -9351,7 +9901,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-127027",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:31:38Z",
     "priority": "information",
@@ -9389,7 +9939,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85595",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:17:58.367",
     "priority": "information",
@@ -9430,7 +9980,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104099",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:51:28Z",
     "priority": "information",
@@ -9467,7 +10017,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-121481",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:32:20Z",
     "priority": "information",
@@ -9502,7 +10052,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-123633",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:32:20Z",
     "priority": "information",
@@ -9539,7 +10089,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-123007",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:32:20Z",
     "priority": "information",
@@ -9574,7 +10124,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-123634",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:32:20Z",
     "priority": "information",
@@ -9611,7 +10161,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-120681",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:25Z",
     "priority": "information",
@@ -9648,7 +10198,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-127057",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:25Z",
     "priority": "information",
@@ -9683,7 +10233,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-129713",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:24Z",
     "priority": "information",
@@ -9720,7 +10270,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-124772",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:24Z",
     "priority": "information",
@@ -9757,7 +10307,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133648",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:16Z",
     "priority": "information",
@@ -9794,7 +10344,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-124770",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:15Z",
     "priority": "information",
@@ -9831,7 +10381,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-113425",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:14Z",
     "priority": "information",
@@ -9868,7 +10418,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-121810",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:31:13Z",
     "priority": "information",
@@ -9927,7 +10477,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-109618",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:18:18.987",
     "priority": "information",
@@ -9964,7 +10514,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-129056",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T09:31:36Z",
     "priority": "information",
@@ -10001,7 +10551,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133493",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T09:31:36Z",
     "priority": "information",
@@ -10043,7 +10593,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-117601",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T06:33:03Z",
     "priority": "information",
@@ -10078,7 +10628,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-58936",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T05:17:20Z",
     "priority": "information",
@@ -10115,7 +10665,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-58876",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T05:17:12Z",
     "priority": "information",
@@ -10153,7 +10703,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-21622",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T04:17:11.007",
     "priority": "information",
@@ -10191,7 +10741,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-133528",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T03:32:50Z",
     "priority": "information",
@@ -10226,7 +10776,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-65094",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T03:32:47Z",
     "priority": "information",
@@ -10261,7 +10811,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-132079",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:32:27Z",
     "priority": "information",
@@ -10296,7 +10846,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-107494",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:32:26Z",
     "priority": "information",
@@ -10335,7 +10885,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77369",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:14:15Z",
     "priority": "information",
@@ -10376,7 +10926,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77367",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:13:19Z",
     "priority": "information",
@@ -10417,7 +10967,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63344",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:06:53Z",
     "priority": "information",
@@ -10458,7 +11008,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63346",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:06:31Z",
     "priority": "information",
@@ -10497,7 +11047,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63345",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:06:06Z",
     "priority": "information",
@@ -10538,7 +11088,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-128138",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T23:55:55Z",
     "priority": "information",
@@ -11178,7 +11728,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-97205",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T19:23:49.147",
     "priority": "information",
@@ -11747,7 +12297,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-63412",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T16:18:46Z",
     "priority": "information",
@@ -11788,7 +12338,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-63413",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T16:12:25Z",
     "priority": "information",
@@ -11829,7 +12379,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-63411",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T16:12:12Z",
     "priority": "information",
@@ -12528,7 +13078,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-75521",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T00:45:46Z",
     "priority": "information",
@@ -12643,7 +13193,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-130778",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T21:31:48Z",
     "priority": "information",
@@ -12762,7 +13312,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-130786",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T21:31:47Z",
     "priority": "information",
@@ -13367,7 +13917,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-69157",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T20:42:35Z",
     "priority": "information",
@@ -14945,7 +15495,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-17332",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T18:09:33.660",
     "priority": "information",
@@ -14981,7 +15531,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-17333",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T18:04:58.213",
     "priority": "information",
@@ -15020,7 +15570,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-130001",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T16:28:30Z",
     "priority": "information",
@@ -15058,7 +15608,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-46619",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T15:58:03.363",
     "priority": "information",
@@ -16137,7 +16687,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2025-13392",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T08:17:17.710",
     "priority": "information",
@@ -32746,6 +33296,130 @@
     "why_it_matters": "Traefik is an HTTP reverse proxy and load balancer. Prior to 2.11.46, 3.6.17, and 3.7.1, Traefik's Kubernetes Gateway API provider allows a tenant with HTTPRoute creation permissions to expose the REST provider handler, bypassing the providers.rest.insecure=false setting. The Gateway provider accepts any TraefikService backend reference whose name ends with @internal, making it possible to route traffic to rest@internal in addition to the intended api@internal. In shared Gateway deployments where the REST provider is enabled, this allows a low-privileged actor to gain live dynamic configuration write access to Traefik, enabling unauthorized reconfiguration of routers and services. This vulnerability is fixed in 2.11.46, 3.6.17, and 3.7.1."
   },
   {
+    "affected": [
+      "github.com/lxc/incus",
+      "github.com/lxc/incus/v6",
+      "github.com/lxc/incus/v7"
+    ],
+    "aliases": [
+      "CVE-2026-55621",
+      "GHSA-64f3-v33m-w89f"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 7.7,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "go"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-55621",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-21T05:15:44Z",
+    "priority": "information",
+    "published": "2026-08-28T18:52:05Z",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-64f3-v33m-w89f"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "### Summary Missing authorization checks exist for custom volume copying where an attacker who knows the name of a project that they don't have access to and the name of a custom volume in that project can copy the custom volume to a new project. This issue could allow an attacker to access secrets in custom volumes they are not authorized to access. ### Details The storage volume creation handler authorizes creation in the target project, then passes `req.Source.Project` into the custom-volume copy path without checking that the caller can view the source volume. `req.Source.Project` is the attacker-controlled field. It is resolved to a storage volume project name and passed directly to `CreateCustomVolumeFromCopy`. No `allowPermission` or entitlement check (e.g. `CanView` on the source volume) is performed. The copy must occur on the same server. However, once the copy has been done, n",
+    "title": "Incus has a project restriction bypass for custom volume copy across projects",
+    "why_it_matters": "### Summary Missing authorization checks exist for custom volume copying where an attacker who knows the name of a project that they don't have access to and the name of a custom volume in that project can copy the custom volume to a new project. This issue could allow an attacker to access secrets in custom volumes they are not authorized to access. ### Details The storage volume creation handler authorizes creation in the target project, then passes `req.Source.Project` into the custom-volume copy path without checking that the caller can view the source volume. `req.Source.Project` is the attacker-controlled field. It is resolved to a storage volume project name and passed directly to `CreateCustomVolumeFromCopy`. No `allowPermission` or entitlement check (e.g. `CanView` on the source volume) is performed. The copy must occur on the same server. However, once the copy has been done, n"
+  },
+  {
+    "affected": [
+      "github.com/siyuan-note/siyuan/kernel"
+    ],
+    "aliases": [
+      "CVE-2026-33203",
+      "GHSA-3g9h-9hp4-654v"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 7.5,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "go"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-33203",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-21T05:15:31Z",
+    "priority": "information",
+    "published": "2026-03-18T20:11:00Z",
+    "security_topics": [
+      "Authentication & authorization",
+      "Denial of service"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3g9h-9hp4-654v"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "## Summary The SiYuan kernel WebSocket server accepts unauthenticated connections when a specific “auth keepalive” query parameter is present. After connection, incoming messages are parsed using unchecked type assertions on attacker-controlled JSON. A remote attacker can send malformed messages that trigger a runtime panic, potentially crashing the kernel process and causing denial of service. ## Details **1. Authentication Bypass via Keepalive Query** Unauthenticated connections are accepted if the request URI matches a specific pattern intended for an authentication page keepalive. **File: kernel/server/serve.go** ``` if !authOk { authOk = strings.Contains(s.Request.RequestURI, \"/ws?app=siyuan\") && strings.Contains(s.Request.RequestURI, \"&id=auth&type=auth\") } ``` **2. Unsafe Type Assertions on Untrusted Input** Incoming JSON messages are parsed into a generic map and fields are acces",
+    "title": "SiYuan has an Unauthenticated WebSocket DoS via Auth Keepalive Bypass",
+    "why_it_matters": "## Summary The SiYuan kernel WebSocket server accepts unauthenticated connections when a specific “auth keepalive” query parameter is present. After connection, incoming messages are parsed using unchecked type assertions on attacker-controlled JSON. A remote attacker can send malformed messages that trigger a runtime panic, potentially crashing the kernel process and causing denial of service. ## Details **1. Authentication Bypass via Keepalive Query** Unauthenticated connections are accepted if the request URI matches a specific pattern intended for an authentication page keepalive. **File: kernel/server/serve.go** ``` if !authOk { authOk = strings.Contains(s.Request.RequestURI, \"/ws?app=siyuan\") && strings.Contains(s.Request.RequestURI, \"&id=auth&type=auth\") } ``` **2. Unsafe Type Assertions on Untrusted Input** Incoming JSON messages are parsed into a generic map and fields are acces"
+  },
+  {
+    "affected": [
+      "contao/core-bundle"
+    ],
+    "aliases": [
+      "CVE-2026-104883",
+      "GHSA-r9qp-pqx5-8369"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 7.2,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "composer"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-104883",
+    "last_seen": "2026-11-21T07:08:44Z",
+    "matched_topics": [],
+    "modified": "2026-11-20T23:45:43Z",
+    "priority": "information",
+    "published": "2026-11-20T23:45:41Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-r9qp-pqx5-8369"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Commit `2b83a60f7763` (5.7.3) hardened the template editor: it added `TemplateEditorModuleVoter` + `CheckTemplateEditorSaveListener` so a non-admin cannot self-grant the `tpl_editor` backend module (editable PHP-capable templates permit server-side code execution). That voter supports only the `modules` field and the literal value `tpl_editor`. The equally RCE-capable `theme_import` capability lives in a different field - the `themes` checkbox field (tl_user_group.php:98-105 options include `theme_import`; identical on tl_user.php:248-253) - which has no save_callback and no voter. `TemplateEditorModuleVoter` is the only DC voter registered for tl_user_group, and it does not cover the `themes` field. So a delegated user manager can add `theme_import` to their own (or a managed) account. Live repro (Contao 5.7.9): 1. As admin, create a non-admin backend group with the `user` (or `group`) ",
+    "title": "contao/core-bundle: Non-admin users can self-grant permissions that implicitly make them administrators",
+    "why_it_matters": "Commit `2b83a60f7763` (5.7.3) hardened the template editor: it added `TemplateEditorModuleVoter` + `CheckTemplateEditorSaveListener` so a non-admin cannot self-grant the `tpl_editor` backend module (editable PHP-capable templates permit server-side code execution). That voter supports only the `modules` field and the literal value `tpl_editor`. The equally RCE-capable `theme_import` capability lives in a different field - the `themes` checkbox field (tl_user_group.php:98-105 options include `theme_import`; identical on tl_user.php:248-253) - which has no save_callback and no voter. `TemplateEditorModuleVoter` is the only DC voter registered for tl_user_group, and it does not cover the `themes` field. So a delegated user manager can add `theme_import` to their own (or a managed) account. Live repro (Contao 5.7.9): 1. As admin, create a non-admin backend group with the `user` (or `group`) "
+  },
+  {
     "affected": [],
     "aliases": [
       "CVE-2026-133680"
@@ -32761,7 +33435,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133680",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T20:17:35.970",
     "priority": "information",
@@ -32799,7 +33473,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85597",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:17:58.513",
     "priority": "information",
@@ -32835,7 +33509,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2025-34267",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:17:36.370",
     "priority": "information",
@@ -32877,7 +33551,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-105803",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:59:41Z",
     "priority": "information",
@@ -32917,7 +33591,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-105802",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:58:55Z",
     "priority": "information",
@@ -32956,7 +33630,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-103026",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:56:04Z",
     "priority": "information",
@@ -32995,7 +33669,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-130176",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:54:52Z",
     "priority": "information",
@@ -33036,7 +33710,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-115463",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:52:33Z",
     "priority": "information",
@@ -33076,7 +33750,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-69261",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:49:48Z",
     "priority": "information",
@@ -33116,7 +33790,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-69260",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:47:03Z",
     "priority": "information",
@@ -33155,7 +33829,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-103035",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:45:06Z",
     "priority": "information",
@@ -33196,7 +33870,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104199",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:43:42Z",
     "priority": "information",
@@ -33237,7 +33911,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-115578",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:42:22Z",
     "priority": "information",
@@ -33277,7 +33951,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104129",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:41:43Z",
     "priority": "information",
@@ -33316,7 +33990,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-63184",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:35:31Z",
     "priority": "information",
@@ -33352,7 +34026,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133500",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T09:20:07.207",
     "priority": "information",
@@ -33391,7 +34065,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-28808",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T06:17:23.400",
     "priority": "information",
@@ -33430,7 +34104,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-23941",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T06:17:22.380",
     "priority": "information",
@@ -33469,7 +34143,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-35582",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T05:17:07Z",
     "priority": "information",
@@ -33510,7 +34184,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-103025",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:20:53Z",
     "priority": "information",
@@ -33551,7 +34225,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-62955",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:17:48Z",
     "priority": "information",
@@ -33593,7 +34267,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77315",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:10:15Z",
     "priority": "information",
@@ -33632,7 +34306,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77313",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:09:24Z",
     "priority": "information",
@@ -33671,7 +34345,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-59988",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:08:12Z",
     "priority": "information",
@@ -33710,7 +34384,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63415",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:07:33Z",
     "priority": "information",
@@ -33749,7 +34423,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-58210",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:04:47Z",
     "priority": "information",
@@ -33789,7 +34463,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-128135",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T23:59:16Z",
     "priority": "information",
@@ -33828,7 +34502,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-129229",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T23:50:05Z",
     "priority": "information",
@@ -33869,7 +34543,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-129234",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T23:46:56Z",
     "priority": "information",
@@ -33908,7 +34582,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-129302",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T22:49:34Z",
     "priority": "information",
@@ -33949,7 +34623,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-97698",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T22:44:43Z",
     "priority": "information",
@@ -33990,7 +34664,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-97699",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T22:44:01Z",
     "priority": "information",
@@ -34031,7 +34705,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-121716",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T22:41:46Z",
     "priority": "information",
@@ -34070,7 +34744,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-130008",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T22:25:55Z",
     "priority": "information",
@@ -34109,7 +34783,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-128073",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:49:37Z",
     "priority": "information",
@@ -34148,7 +34822,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-102529",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:49:01Z",
     "priority": "information",
@@ -34189,7 +34863,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-61713",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:45:23Z",
     "priority": "information",
@@ -34229,7 +34903,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-61689",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:44:33Z",
     "priority": "information",
@@ -34269,7 +34943,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-59975",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:43:02Z",
     "priority": "information",
@@ -34310,7 +34984,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-76090",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:39:27Z",
     "priority": "information",
@@ -34351,7 +35025,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-62964",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:36:32Z",
     "priority": "information",
@@ -34391,7 +35065,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-76101",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:35:35Z",
     "priority": "information",
@@ -34430,7 +35104,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-76818",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T20:34:54Z",
     "priority": "information",
@@ -34469,7 +35143,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-71535",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T16:07:38Z",
     "priority": "information",
@@ -34508,7 +35182,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-58213",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T15:56:57Z",
     "priority": "information",
@@ -34549,7 +35223,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-76088",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T00:53:52Z",
     "priority": "information",
@@ -34590,7 +35264,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2024-7043",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-19T00:14:34Z",
     "priority": "information",
@@ -34660,7 +35334,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-132142",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T22:17:20.310",
     "priority": "information",
@@ -34768,7 +35442,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-71861",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T21:16:45Z",
     "priority": "information",
@@ -34807,7 +35481,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-71481",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T20:48:19Z",
     "priority": "information",
@@ -34846,7 +35520,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-69158",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T20:42:50Z",
     "priority": "information",
@@ -34885,7 +35559,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-69156",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T20:42:16Z",
     "priority": "information",
@@ -34925,7 +35599,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-69155",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T20:41:47Z",
     "priority": "information",
@@ -35031,7 +35705,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-46498",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T15:59:36.967",
     "priority": "information",
@@ -35067,7 +35741,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T20:32:15Z",
     "id": "CVE-2026-47426",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T15:37:35.753",
     "priority": "information",
@@ -35106,7 +35780,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T07:29:14Z",
     "id": "CVE-2026-54263",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T00:32:14Z",
     "priority": "information",
@@ -35145,7 +35819,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-14T06:24:14Z",
     "id": "CVE-2026-126303",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T00:26:23Z",
     "priority": "information",
@@ -35186,7 +35860,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-18T07:29:14Z",
     "id": "CVE-2024-34069",
-    "last_seen": "2026-11-20T20:21:33Z",
+    "last_seen": "2026-11-21T07:08:44Z",
     "matched_topics": [],
     "modified": "2026-11-18T00:16:57Z",
     "priority": "information",

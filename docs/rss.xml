@@ -7,7 +7,167 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 20 Nov 2026 17:11:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 05:15:45 GMT</lastBuildDate>
+    <item>
+      <title>@tmlmobilidade/utils has prototype pollution in its setValueAtPath</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-45325#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-45325#findings</guid>
+      <pubDate>Mon, 18 May 2026 17:07:04 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 8.2 (v3.1)
+
+Summary: ### Impact Prototype pollution vulnerability in @tmlmobilidade/utils for setValueAtPath(). ### Patches A fix is available in versions 20260509.340.15 and up.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-cmxg-94mg-jq94
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-cmxg-94mg-jq94" type="text/html" />
+    </item>
+    <item>
+      <title>Red Hat Quay security advisory CVE-2026-123710</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-123710#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-123710#findings</guid>
+      <pubDate>Wed, 11 Nov 2026 14:00:00 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: A flaw was found in Red Hat Quay. An unauthenticated client can obtain an anonymous registry token with an audience it controls, present that token to the service key rotation endpoint, and install its own approved signing key with no expiry. Registry tokens signed with that key are accepted for any repository, allowing read and write access to private images and replacement of repository tags.
+
+Suggested next step: Review the original advisory and affected build or distribution components. Verify upstream status before changing dependencies.
+
+Original advisory: https://access.redhat.com/security/cve/CVE-2026-123710
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Containers &amp; registries</category>
+      <category>Supply chain</category>
+      <atom:link rel="related" href="https://access.redhat.com/security/cve/CVE-2026-123710" type="text/html" />
+    </item>
+    <item>
+      <title>Red Hat Quay security advisory CVE-2026-110697</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-110697#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-110697#findings</guid>
+      <pubDate>Wed, 11 Nov 2026 14:00:00 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.9 (v3.1)
+
+Summary: A flaw was found in Quay where the robot account listing function constructs a SQL LIKE pattern from user-controlled namespace names without escaping wildcard metacharacters. An attacker who creates a namespace containing an underscore character can match and retrieve robot accounts and their decrypted authentication tokens from other tenants' namespaces, leading to cross-tenant credential theft and unauthorized image operations.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://access.redhat.com/security/cve/CVE-2026-110697
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Containers &amp; registries</category>
+      <category>Authentication &amp; authorization</category>
+      <atom:link rel="related" href="https://access.redhat.com/security/cve/CVE-2026-110697" type="text/html" />
+    </item>
+    <item>
+      <title>Budibase: Unauthenticated global-admin &amp; database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`)</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-122247#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-122247#findings</guid>
+      <pubDate>Fri, 20 Nov 2026 23:50:01 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 8.2 (v3.1)
+
+Summary: ## Description ### Summary On a self-hosted, single-tenant Budibase instance (`multiTenancy:false`), the public bootstrap endpoint `POST /api/global/users/init` remains fully exploitable **after** the instance has been provisioned. Its "already initialised" guard (`checkAnyUserExists()`) is evaluated inside a **tenant-scoped** database context derived from an **attacker-controlled `tenantId`** in the request body. Because the tenancy layer never constrains that `tenantId` to the only legitimate tenant (`default`) on a single-tenant deployment, an unauthenticated attacker simply supplies any unused tenant name to make the guard see an empty user list, and the endpoint then creates a brand-new CouchDB database (`&lt;tenantId&gt;_global-db`) and a **global-admin** user document (`admin.global = true`, `builder.global = true`) inside it - with no authentication and no CSRF token. This is (a) a byp
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-25qc-m4pw-2w8r
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-25qc-m4pw-2w8r" type="text/html" />
+    </item>
+    <item>
+      <title>Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-122244#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-122244#findings</guid>
+      <pubDate>Fri, 20 Nov 2026 23:49:47 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.7 (v3.1)
+
+Summary: ## Description ### Summary A **low-privileged application end-user** (role `BASIC` - **not** a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ordinary row data. When a **builder or admin** later opens that table in the Budibase Builder and evaluates any Handlebars binding whose Preview surfaces the value (the Data-section **Formula** column editor, or any binding drawer), the stored value is rendered as **raw HTML** and the attacker's JavaScript executes in the Builder's origin. The Builder SPA is served by nginx with **no Content-Security-Policy** (the CSP middleware only decorates the server-rendered *published-app* document, not `/builder/`). The injected script therefore runs unrestricted in the highest-trust surface of the product - the admin/builder session that can create datasources, run server-side Java
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-r2q3-7m4h-63qg
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-r2q3-7m4h-63qg" type="text/html" />
+    </item>
+    <item>
+      <title>svglib: Exponential resource consumption via nested &lt;use&gt; references in svg2rlg</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-132275#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-132275#findings</guid>
+      <pubDate>Fri, 20 Nov 2026 23:47:58 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: # Summary `svg2rlg()` expands `&lt;use&gt;` references without any limit on the total number of expansions. Only direct cycles are rejected (`CircularRefError`). A group containing N `&lt;use&gt;` elements that point to another such group multiplies the work by N per nesting level, so an SVG of about 1.4 KB makes svglib clone and render over 100,000 nodes, taking tens of seconds of CPU time and hundreds of MiB of memory. Each additional level adds about 245 bytes to the document and multiplies time by ~10. This is the SVG `&lt;use&gt;` variant of the XML "billion laughs" attack (the same class as librsvg CVE-2019-20446). # Details `SvgRenderer.renderUse()` in `src/svglib/svglib.py`: ```python try: item = self.xlink_href_target(node, group=group) except CircularRefError: node.parent.etree_element.remove(node.etree_element) return group ... if len(node.getchildren()) == 0: # Append a copy of the referenced 
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-555j-qj3j-c8jv
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-555j-qj3j-c8jv" type="text/html" />
+    </item>
+    <item>
+      <title>AIT-GUI route chain allows unauthenticated Python execution in server process</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-77309#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-77309#findings</guid>
+      <pubDate>Fri, 20 Nov 2026 23:36:41 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 8.8 (v3.1)
+
+Summary: ## Summary A security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, followed by a malicious POST /script/run request containing an absolute file path that bypasses the configured script directory restrictions. ### Patches * 2.5.1 ### Impact This vulnerability allows unauthenticated remote code execution on the AIT-GUI server. Any attacker with network access can execute arbitrary Python code with daemon privileges. ## Details _Chain:_ 1. `POST /tlm/query` writes the user-controlled `fields` value into `fields_in.txt` under the AIT-GUI static directory. * If the supplied `dataDir` has no `.pcap` files, the route returns the expected `400 Bad Request` before deleting that file. 2. `POST /script/run` accepts `scriptPath=../static/fields_in.txt`. * AIT-GUI re
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-jrjx-9jjw-747m
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Servers &amp; infrastructure</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-jrjx-9jjw-747m" type="text/html" />
+    </item>
+    <item>
+      <title>Aedes has Uncaught Exception and Uncontrolled Resource Consumption</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-63341#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-63341#findings</guid>
+      <pubDate>Fri, 20 Nov 2026 23:32:35 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.5 (v3.1)
+
+Summary: ### Summary A remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message (via PUBLISH or SUBSCRIBE), or by setting a Will message with such a topic, containing a highly recursive topic string (e.g., with thousands of '/' delimiters). The lack of input validation and error handling leads to an uncaught exception in an internal routing library, terminating the entire Node.js application. ### Details The Aedes broker fails to enforce limits on the depth or structural complexity of MQTT topic strings. When a client publishes to or subscribes to a topic with excessive levels of recursion, the internal routing logic cascading into the qlobber library (via mqemitter) reaches an hard-coded limit within the qlobber._split_words function. This function throws a hard 
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-xxqp-5qx8-gj5q
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-xxqp-5qx8-gj5q" type="text/html" />
+    </item>
+    <item>
+      <title>pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. ...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-133949#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-133949#findings</guid>
+      <pubDate>Fri, 20 Nov 2026 21:31:50 GMT</pubDate>
+      <description>Severity: CRITICAL
+
+Summary: pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. Upgrading to a secure version of pip should be done either by first upgrading Python to a version that rejects the compromised intermediates (CVE-2026-115557) or use hash pinning with a known-secure version of pip. pip is not vulnerable when using a Python version that rejects the compromised certificates. See the references below for more information.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-jg88-vh4g-v698
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-jg88-vh4g-v698" type="text/html" />
+    </item>
     <item>
       <title>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL cha</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2026-42010#findings</link>
@@ -750,169 +910,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Applications</category>
       <category>Libraries &amp; dependencies</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-r755-ggqh-772w" type="text/html" />
-    </item>
-    <item>
-      <title>SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-130678#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-130678#findings</guid>
-      <pubDate>Wed, 18 Nov 2026 12:31:28 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9 (v3.1)
-
-Summary: SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability that allows attackers to execute script by storing malicious Attribute View column names rendered unescaped in col.ts. Attackers can inject HTML via addAttributeViewKey, .sy.zip import, or sync, and when a victim adds or duplicates the column, insertAdjacentHTML runs JavaScript with Node.js privileges for desktop code execution.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-m9xr-rqfh-qjpx
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-m9xr-rqfh-qjpx" type="text/html" />
-    </item>
-    <item>
-      <title>Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material und</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2025-34206#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2025-34206#findings</guid>
-      <pubDate>Fri, 19 Sep 2025 19:15:41 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.3
-
-Summary: Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material under /var/www/efs_storage into many Docker containers with overly-permissive filesystem permissions. Files such as secrets.env, GPG-encrypted blobs in .secrets, MySQL client keys, and application session files are accessible from multiple containers. An attacker who controls or reaches any container can read or modify these artifacts, leading to credential theft, RCE via Laravel APP_KEY, Portainer takeover, and full compromise.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2025-34206
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Containers &amp; registries</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Remote code execution</category>
-      <category>Authentication &amp; authorization</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2025-34206" type="text/html" />
-    </item>
-    <item>
-      <title>Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) contains multiple Docker containers that run pri</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2025-34204#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2025-34204#findings</guid>
-      <pubDate>Fri, 19 Sep 2025 19:15:41 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 8.7
-
-Summary: Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) contains multiple Docker containers that run primary application processes (for example PHP workers, Node.js servers and custom binaries) as the root user. This increases the blast radius of a container compromise and enables lateral movement and host compromise when a container is breached.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2025-34204
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Containers &amp; registries</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2025-34204" type="text/html" />
-    </item>
-    <item>
-      <title>In the Linux kernel, the following vulnerability has been resolved:
-
-xfrm: iptfs: propagate...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-64566#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-64566#findings</guid>
-      <pubDate>Wed, 05 Aug 2026 09:31:17 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: xfrm: iptfs: propagate SKBFL_SHARED_FRAG in iptfs_skb_add_frags() When iptfs_skb_add_frags() copies frag references from the source frag walk into a new SKB, it increments the page reference count via __skb_frag_ref() but does not propagate SKBFL_SHARED_FRAG to the destination SKB's skb_shinfo-&gt;flags. If the source SKB carries shared frags (e.g. from a page-pool backed receive path), the new inner SKB will appear to ESP as having privately owned frags. A subsequent esp_input() call for a nested transport-mode SA then takes the no-COW fast path and decrypts in place, writing over pages that are still referenced by the outer IPTFS SKB. This causes kernel-visible memory corruption and can trigger a panic. All other frag-transfer helpers in the kernel (skb_try_coalesce, skb_gro_receive, __pskb_copy_fclone, skb_shift, skb_seg
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-wr7x-h83j-8fqg
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-wr7x-h83j-8fqg" type="text/html" />
-    </item>
-    <item>
-      <title>libp2p: gossipsub creates a permanent topics-map entry per distinct subscription with no cap in the default config</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-119793#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-119793#findings</guid>
-      <pubDate>Tue, 17 Nov 2026 21:06:20 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary A single gossipsub peer can grow a node's `topics` map without bound by flooding subscription RPCs, because the default configuration has no global, per-peer, or topic-length cap and peer scoring does not penalise subscription volume. The peer is never greylisted, so the growth continues toward OOM. ### Details `handleReceivedSubscription` (`packages/gossipsub/src/gossipsub.ts:1028`, line 1036) runs `this.topics.set(topic, new Set())` for every distinct topic string: ```ts private handleReceivedSubscription (from, topic, subscribe) { let topicSet = this.topics.get(topic) if (subscribe) { if (topicSet == null) { topicSet = new Set() this.topics.set(topic, topicSet) // no global cap, no per-peer cap } topicSet.add(from.toString()) } } ``` The only topical gate (`gossipsub.ts:981`, `if (this.allowedTopics != null &amp;&amp; !this.allowedTopics.has(topic)) return`) is skipped when `allow
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-x2vm-cf3p-m2w8
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-x2vm-cf3p-m2w8" type="text/html" />
-    </item>
-    <item>
-      <title>libp2p: ASN.1 DER decoder drives an unbounded synchronous loop on attacker-controlled length fields, stalling the Node event loop pre-auth</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-110789#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-110789#findings</guid>
-      <pubDate>Tue, 17 Nov 2026 21:05:08 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary A remote peer can stall a js-libp2p node's entire event loop for ~4–5 seconds per connection (and transiently allocate ~2 GB) by sending a ~15-byte crafted `publicKey` inside an Identify message. The malformed key reaches the DER decoder before any peer-id/signature check, so the attack is pre-auth and repeatable indefinitely by reconnecting. ### Details `packages/crypto/src/keys/rsa/der.ts` `readLength()` parses DER long-form lengths with no comparison to `buf.byteLength`, and `readInteger()` then loops over the attacker-claimed length: ```ts function readInteger (buf, context) { const length = readLength(buf, context) // attacker-controlled, claims up to 2^64 const end = context.offset + length for (let i = context.offset; i &lt; end; i++) // runs far past buf.byteLength vals.push(buf[i]) // pushes `undefined` past the end } ``` The blob reaches the parser pre-auth: Identify r
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-rvfr-cqwq-rc4j
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-rvfr-cqwq-rc4j" type="text/html" />
-    </item>
-    <item>
-      <title>Backstage is an open framework for building developer portals, and @backstage/plugin-techdocs-node provides common node.js functionalities for TechDoc</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-25153#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-25153#findings</guid>
-      <pubDate>Fri, 30 Jan 2026 22:15:56 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1
-
-Summary: Backstage is an open framework for building developer portals, and @backstage/plugin-techdocs-node provides common node.js functionalities for TechDocs. In versions of @backstage/plugin-techdocs-node prior to 1.13.11 and 1.14.1, when TechDocs is configured with `runIn: local`, a malicious actor who can submit or modify a repository's `mkdocs.yml` file can execute arbitrary Python code on the TechDocs build server via MkDocs hooks configuration. @backstage/plugin-techdocs-node versions 1.13.11 and 1.14.1 contain a fix. The fix introduces an allowlist of supported MkDocs configuration keys. Unsupported configuration keys (including `hooks`) are now removed from `mkdocs.yml` before running the generator, with a warning logged to indicate which keys were removed. Users of `@techdocs/cli` should also upgrade to the latest version, which includes the fixed `@backstage/plugin-techdocs-node` dep
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-25153
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-25153" type="text/html" />
-    </item>
-    <item>
-      <title>Phoenix: Format String Injection in applyChatTemplate</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-53998#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-53998#findings</guid>
-      <pubDate>Tue, 17 Nov 2026 20:02:29 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 10 (v3.1)
-
-Summary: - Summary A format string injection vulnerability in the applyChatTemplate GraphQL endpoint allows an attacker to read server-side environment variables, cryptographic secrets, and internal module attributes directly from the API response. On default Phoenix installations where authentication is disabled the endpoint is reachable with no credentials. On auth-enabled deployments, any account regardless of privilege level is sufficient to exploit it. - Impact Server filesystem paths, loaded Python module names, and internal configuration constants are fully disclosed, an attacker with network access can read the full server `os.environ` including the admin credentials hardcoded in `phoenix.auth`. Successful exploitation allows an attacker to extract PHOENIX_SECRET, the master key used to sign all JWTs and derive the Fernet encryption key protecting stored credentials (LLM API keys, OAuth t
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-gfv3-m769-5xm3
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Cloud &amp; identity</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-gfv3-m769-5xm3" type="text/html" />
-    </item>
-    <item>
-      <title>Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-119192#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-119192#findings</guid>
-      <pubDate>Tue, 10 Nov 2026 15:57:34 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary RSASSA-PKCS1-v1_5 signature verification (`publicKey.verify()` with the default scheme, also used by X.509 certificate and PKCS#7 verification) accepted non-canonical BER encodings of the DigestInfo, such as NULL parameters with content and non-minimal lengths. These leave attacker-controlled bytes inside an accepted DigestInfo, which allows signatures to be forged without the private key for RSA keys with a low public exponent (e=3). Fixed in node-forge 1.4.1. ### Details In `lib/rsa.js`, `key.verify()` with the default `RSASSA-PKCS1-V1_5` scheme removes the padding, parses the recovered DigestInfo with the lenient BER parser `asn1.fromDer()` and checks its structure with `asn1.validate()` against `digestInfoValidator`. Neither requires a canonical DER encoding, so verification accepted, among others: - NULL parameters with content bytes (e.g. `05 40 &lt;64 bytes&gt;`) - non-NULL 
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-6qrw-m8cv-hcxf
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Containers &amp; registries</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-6qrw-m8cv-hcxf" type="text/html" />
     </item>
   </channel>
 </rss>
