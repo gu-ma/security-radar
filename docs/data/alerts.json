@@ -1,6 +1,451 @@
 {
-  "alerts": [],
-  "generated_at": "2026-11-22T06:49:12Z",
+  "alerts": [
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99356",
+        "GHSA-8c64-89jh-jj83"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99356",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:13Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:21Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-8c64-89jh-jj83"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: SUNRPC: Do not credit control-record octets to the RPC stream svc_tcp_sock_recv_cmsg() receives up to two octets into a local buffer, and returns that count for any record type other than TLS_RECORD_TYPE_ALERT. Nothing reached the caller's buffer, but svc_tcp_read_marker() adds the count to sk_tcplen and svc_tcp_read_msg()'s caller adds it to sk_datalen. The RPC stream advances over octets it never received. The fragment marker is assembled from stale sk_marker octets. The message body comes from pages nothing wrote. A conforming client reaches this. RFC 8446 Section 4.6.3 lets either peer send KeyUpdate once it has sent its Finished, and svcsock has no rekey path. kTLS leaves the partially consumed record on ctx->rx_list, so the body drains two octets per svc_tcp_recvfrom() call. Each pair is credited the same way. Retu",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: Do not credit...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: SUNRPC: Do not credit control-record octets to the RPC stream svc_tcp_sock_recv_cmsg() receives up to two octets into a local buffer, and returns that count for any record type other than TLS_RECORD_TYPE_ALERT. Nothing reached the caller's buffer, but svc_tcp_read_marker() adds the count to sk_tcplen and svc_tcp_read_msg()'s caller adds it to sk_datalen. The RPC stream advances over octets it never received. The fragment marker is assembled from stale sk_marker octets. The message body comes from pages nothing wrote. A conforming client reaches this. RFC 8446 Section 4.6.3 lets either peer send KeyUpdate once it has sent its Finished, and svcsock has no rekey path. kTLS leaves the partially consumed record on ctx->rx_list, so the body drains two octets per svc_tcp_recvfrom() call. Each pair is credited the same way. Retu"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99366",
+        "GHSA-r4qc-2gcr-r82j"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99366",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:14Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:22Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-r4qc-2gcr-r82j"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: nfsd: don't modify a session slot when replaying its cached reply nfsd4_sequence() claims a session slot by setting NFSD4_SLOT_INUSE under nn->client_lock. A reply served from the slot's reply cache does not claim it, and that distinction lived only in cstate->status, which nfsd4_sequence() set to nfserr_replay_cache. Commit cc028a10a48c (\"NFSD: Hoist status code encoding into XDR encoder functions\") moved nfsd4_proc_compound()'s cstate->status assignment below the out: label, and the replay path's goto out was the one path that relied on skipping it. The test in nfsd4_sequence_done() therefore no longer identifies a replay, and every replay now stores its reply and clears NFSD4_SLOT_INUSE as though it owned the slot. NFSD4_SLOT_INUSE is the interlock: check_slot_seqid() rejects every sequence id for a slot that is in us",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: don't modify a session...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: nfsd: don't modify a session slot when replaying its cached reply nfsd4_sequence() claims a session slot by setting NFSD4_SLOT_INUSE under nn->client_lock. A reply served from the slot's reply cache does not claim it, and that distinction lived only in cstate->status, which nfsd4_sequence() set to nfserr_replay_cache. Commit cc028a10a48c (\"NFSD: Hoist status code encoding into XDR encoder functions\") moved nfsd4_proc_compound()'s cstate->status assignment below the out: label, and the replay path's goto out was the one path that relied on skipping it. The test in nfsd4_sequence_done() therefore no longer identifies a replay, and every replay now stores its reply and clears NFSD4_SLOT_INUSE as though it owned the slot. NFSD4_SLOT_INUSE is the interlock: check_slot_seqid() rejects every sequence id for a slot that is in us"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99385",
+        "GHSA-wpgh-9h8m-65v9"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99385",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:14Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:22Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-wpgh-9h8m-65v9"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix buffer overflow in SMB2_tcon() In SMB2_tcon(), unc_path is allocated with a fixed buffer size of MAX_SHARENAME_LENGTH * 2 bytes (672 bytes). However, the user-controlled UNC path (tree) length is passed to cifs_strtoUTF16(), which assumes the destination buffer is large enough and writes strlen(tree) + 1 UTF-16 code units. Commit 62a1a439e0fd (\"cifs: clean up handling of unc= option\") removed the length check on UNC mount options, allowing mount paths to exceed MAX_SHARENAME_LENGTH while retaining the fixed-size buffer allocation in SMB2_tcon(). Consequently, an oversized UNC string causes cifs_strtoUTF16() to write past the end of the heap object, resulting in a slab-out-of-bounds write. Furthermore, if a tree exceeds MAX_TREE_SIZE characters, strscpy() truncates it in cifs_tcon::tree_name, causing subs",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix buffer...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix buffer overflow in SMB2_tcon() In SMB2_tcon(), unc_path is allocated with a fixed buffer size of MAX_SHARENAME_LENGTH * 2 bytes (672 bytes). However, the user-controlled UNC path (tree) length is passed to cifs_strtoUTF16(), which assumes the destination buffer is large enough and writes strlen(tree) + 1 UTF-16 code units. Commit 62a1a439e0fd (\"cifs: clean up handling of unc= option\") removed the length check on UNC mount options, allowing mount paths to exceed MAX_SHARENAME_LENGTH while retaining the fixed-size buffer allocation in SMB2_tcon(). Consequently, an oversized UNC string causes cifs_strtoUTF16() to write past the end of the heap object, resulting in a slab-out-of-bounds write. Furthermore, if a tree exceeds MAX_TREE_SIZE characters, strscpy() truncates it in cifs_tcon::tree_name, causing subs"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99362",
+        "GHSA-cvg6-q922-q66p"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99362",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:14Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:22Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-cvg6-q922-q66p"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: nfsd: preflight SEQUENCE replies before accepting a slot nfsd4_sequence() narrows the reply buffer to the session's cached reply limit before it accepts the slot seqid. A client may negotiate ca_maxresponsesize_cached down to NFSD_MIN_HDR_SEQ_SZ, and nfsd4_alloc_slot() then gives every slot a zero-length sl_data[]. A COMPOUND tag can fill that narrowed buffer until it holds the SEQUENCE opcode but not the status word that follows. nfsd4_encode_operation() returns without running nfsd4_encode_sequence(), so cstate.data_offset stays zero. It leaves op->status at nfs_ok as well, so the COMPOUND is treated as having succeeded. nfsd4_store_cache_entry() declines to cache a lone SEQUENCE that returned an error. That test reads the status the operation reported, so it passes here. The copy starts at offset zero and takes the wh",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: preflight SEQUENCE...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: nfsd: preflight SEQUENCE replies before accepting a slot nfsd4_sequence() narrows the reply buffer to the session's cached reply limit before it accepts the slot seqid. A client may negotiate ca_maxresponsesize_cached down to NFSD_MIN_HDR_SEQ_SZ, and nfsd4_alloc_slot() then gives every slot a zero-length sl_data[]. A COMPOUND tag can fill that narrowed buffer until it holds the SEQUENCE opcode but not the status word that follows. nfsd4_encode_operation() returns without running nfsd4_encode_sequence(), so cstate.data_offset stays zero. It leaves op->status at nfs_ok as well, so the COMPOUND is treated as having succeeded. nfsd4_store_cache_entry() declines to cache a lone SEQUENCE that returned an error. That test reads the status the operation reported, so it passes here. The copy starts at offset zero and takes the wh"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99680",
+        "GHSA-5jwv-gfcx-x7jc"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.4,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99680",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:19Z",
+      "priority": "review",
+      "published": "2026-11-20T06:32:07Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-5jwv-gfcx-x7jc"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: xfs: mark the inode preallocated for pNFS write layouts past EOF xfs_fs_map_blocks() marks the inode XFS_DIFLAG_PREALLOC only when it allocates blocks for a write layout. A write layout past EOF can also hand out allocated blocks, such as speculative preallocation. blockgc then frees them under the layout, and another file may get them. Mark the inode whenever a write mapping ends past EOF.",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: mark the inode...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: xfs: mark the inode preallocated for pNFS write layouts past EOF xfs_fs_map_blocks() marks the inode XFS_DIFLAG_PREALLOC only when it allocates blocks for a write layout. A write layout past EOF can also hand out allocated blocks, such as speculative preallocation. blockgc then frees them under the layout, and another file may get them. Mark the inode whenever a write mapping ends past EOF."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99676",
+        "GHSA-pw2h-9h4h-hf7q"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99676",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:19Z",
+      "priority": "review",
+      "published": "2026-11-20T06:32:06Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-pw2h-9h4h-hf7q"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: net: restore refcount ordering for lockless socket access Before commit fb041bb7c0a9 (\"locking/refcount: Consolidate implementations of refcount_t\"), default builds implemented refcount_inc_not_zero() using atomic_add_unless(), which provided full memory ordering on success. The commit removed that ordering on weakly ordered architectures, allowing accesses after a successful reference acquisition to be reordered before it. Use refcount_inc_not_zero_acquire() in the IPv4 and IPv6 established lookups and in inet_twsk_purge(), where the socket is validated again after taking a reference. bpf_sk_assign() can receive a socket pointer obtained through BTF without a reference. Use acquire ordering when it takes its own reference for a refcounted socket. Use refcount_set_release() when setting refcounts in the SYN cookie, TCP F",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: restore refcount...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: net: restore refcount ordering for lockless socket access Before commit fb041bb7c0a9 (\"locking/refcount: Consolidate implementations of refcount_t\"), default builds implemented refcount_inc_not_zero() using atomic_add_unless(), which provided full memory ordering on success. The commit removed that ordering on weakly ordered architectures, allowing accesses after a successful reference acquisition to be reordered before it. Use refcount_inc_not_zero_acquire() in the IPv4 and IPv6 established lookups and in inet_twsk_purge(), where the socket is validated again after taking a reference. bpf_sk_assign() can receive a socket pointer obtained through BTF without a reference. Use acquire ordering when it takes its own reference for a refcounted socket. Use refcount_set_release() when setting refcounts in the SYN cookie, TCP F"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99679",
+        "GHSA-8hpm-jfww-669v"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.4,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99679",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:31:19Z",
+      "priority": "review",
+      "published": "2026-11-20T06:32:07Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-8hpm-jfww-669v"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: xfs: refuse a pNFS LAYOUTCOMMIT of a range without blocks A client can commit a hole in a LAYOUTCOMMIT, because nfsd does not check the extents against its layouts. xfs_iomap_write_unwritten() then allocates written blocks there. A large hole overruns the block reservation and shuts XFS down. A small one exposes stale data. Refuse such a range with -EIO, using XFS_BMAPI_CONVERT_ONLY.",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: refuse a pNFS...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: xfs: refuse a pNFS LAYOUTCOMMIT of a range without blocks A client can commit a hole in a LAYOUTCOMMIT, because nfsd does not check the extents against its layouts. xfs_iomap_write_unwritten() then allocates written blocks there. A large hole overruns the block reservation and shuts XFS down. A small one exposes stale data. Refuse such a range with -EIO, using XFS_BMAPI_CONVERT_ONLY."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99370",
+        "GHSA-wr7p-m5x2-fh88"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.4,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99370",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:32:17Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:22Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-wr7p-m5x2-fh88"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: NFSD: copy SETXATTR data from all XDR buffer segments nfsd4_vbuf_from_vector() manually copies the head followed by whole pages starting at offset zero. This assumes that all remaining data starts at the beginning of the page array and that no data is stored in the tail. However, nfsd4_decode_setxattr() passes an xdr_buf returned by xdr_stream_subsegment(). Such a sub-buffer can have a nonzero page_base and can span its page and tail segments. Ignoring that layout can copy the wrong bytes into the value passed to vfs_setxattr(). Use read_bytes_from_xdr_buf(), which observes the complete xdr_buf layout.",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: copy SETXATTR data...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: NFSD: copy SETXATTR data from all XDR buffer segments nfsd4_vbuf_from_vector() manually copies the head followed by whole pages starting at offset zero. This assumes that all remaining data starts at the beginning of the page array and that no data is stored in the tail. However, nfsd4_decode_setxattr() passes an xdr_buf returned by xdr_stream_subsegment(). Such a sub-buffer can have a nonzero page_base and can span its page and tail segments. Ignoring that layout can copy the wrong bytes into the value passed to vfs_setxattr(). Use read_bytes_from_xdr_buf(), which observes the complete xdr_buf layout."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99513",
+        "GHSA-p68w-hqqq-m236"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99513",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:32:23Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:27Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-p68w-hqqq-m236"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: lockd: Fix use-after-free in nlmsvc_retry_blocked nlmsvc_retry_blocked() examines the block at the head of nlm_blocked under nlm_blocked_lock, then releases the lock before calling nlmsvc_grant_blocked() or retry_deferred_block(). The nlm_blocked list reference is all that keeps the block alive across that window. nlmsvc_grant_blocked() does take one of its own, but not until after the lock has been dropped. Unmounting the nfsd filesystem while a lock request is still blocked reaches nlmsvc_traverse_blocks(), which drops the list reference and frees the block along with the nlm_rqst hanging off it. BUG: KASAN: slab-use-after-free in nlm_async_call+0xd6/0x230 Read of size 8 at addr ffff88811b04c808 by task lockd/8377 nlm_async_call+0xd6/0x230 nlmsvc_retry_blocked+0x61c/0x800 lockd+0x144/0x1c0 Freed by task 8392: nlmsvc_re",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nlockd: Fix use-after-free in...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: lockd: Fix use-after-free in nlmsvc_retry_blocked nlmsvc_retry_blocked() examines the block at the head of nlm_blocked under nlm_blocked_lock, then releases the lock before calling nlmsvc_grant_blocked() or retry_deferred_block(). The nlm_blocked list reference is all that keeps the block alive across that window. nlmsvc_grant_blocked() does take one of its own, but not until after the lock has been dropped. Unmounting the nfsd filesystem while a lock request is still blocked reaches nlmsvc_traverse_blocks(), which drops the list reference and frees the block along with the nlm_rqst hanging off it. BUG: KASAN: slab-use-after-free in nlm_async_call+0xd6/0x230 Read of size 8 at addr ffff88811b04c808 by task lockd/8377 nlm_async_call+0xd6/0x230 nlmsvc_retry_blocked+0x61c/0x800 lockd+0x144/0x1c0 Freed by task 8392: nlmsvc_re"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99544",
+        "GHSA-8c3c-2hvv-f3jx"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.3,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99544",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:32:23Z",
+      "priority": "review",
+      "published": "2026-11-19T15:31:28Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-8c3c-2hvv-f3jx"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: Drivers: hv: vmbus: Bounds check the shared ring buffer indices In a CoCo VM the host is untrusted. Since the VMBus ring buffer read and write indices live in shared memory, the guest has to treat both as potentially malicious. hv_ringbuffer_write() copies into the ring at write_index with no bounds checking, so the host can make the guest write packet data at any offset up to 4 GiB past the start of the ring buffer. read_index matters too: the available space derived from both indices is the only bound on how much is copied, and an out-of-range index can make it far larger than the ring. The fix is to validate both indices before use and to use the validated snapshot instead of re-accessing. For invalid indices, hv_ringbuffer_write() logs and returns -EIO. One re-read of write_index is left unchecked in this patch: hv_g",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nDrivers: hv: vmbus: Bounds...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: Drivers: hv: vmbus: Bounds check the shared ring buffer indices In a CoCo VM the host is untrusted. Since the VMBus ring buffer read and write indices live in shared memory, the guest has to treat both as potentially malicious. hv_ringbuffer_write() copies into the ring at write_index with no bounds checking, so the host can make the guest write packet data at any offset up to 4 GiB past the start of the ring buffer. read_index matters too: the available space derived from both indices is the only bound on how much is copied, and an out-of-range index can make it far larger than the ring. The fix is to validate both indices before use and to use the validated snapshot instead of re-accessing. For invalid indices, hv_ringbuffer_write() logs and returns -EIO. One re-read of write_index is left unchecked in this patch: hv_g"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99590",
+        "GHSA-55q4-ccgm-63vh"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99590",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:32:24Z",
+      "priority": "review",
+      "published": "2026-11-20T06:32:03Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-55q4-ccgm-63vh"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: ceph: clamp the inline data length in ceph_fill_inline_data() The MDS decides how much inline data to attach to a reply, and the client parses inline_len without any upper bound: ceph_decode_need() only verifies that the message actually carries that many bytes. ceph_fill_inline_data() then copies the data into a single folio with no length check, so a malicious or buggy MDS returning more inline data than the folio can hold writes past its end. Clamp the length to folio_size() so both callers, handle_cap_grant() and fill_inode(), are covered.",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: clamp the inline data...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: ceph: clamp the inline data length in ceph_fill_inline_data() The MDS decides how much inline data to attach to a reply, and the client parses inline_len without any upper bound: ceph_decode_need() only verifies that the message actually carries that many bytes. ceph_fill_inline_data() then copies the data into a single folio with no length check, so a malicious or buggy MDS returning more inline data than the folio can hold writes past its end. Clamp the length to folio_size() so both callers, handle_cap_grant() and fill_inode(), are covered."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-99634",
+        "GHSA-pmjw-rj44-w725"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-22T19:41:14Z",
+      "id": "CVE-2026-99634",
+      "last_seen": "2026-11-22T19:41:14Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-22T12:32:24Z",
+      "priority": "review",
+      "published": "2026-11-20T06:32:05Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-pmjw-rj44-w725"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "In the Linux kernel, the following vulnerability has been resolved: mptcp: do not use Fast Open on MP_JOIN subflows tcp_fastopen_create_child() hands the SYN packet itself to subflow_syn_recv_sock(). For an MP_JOIN request this takes the fatal fallback: the cloned child is destroyed and handed back with drop_req flagged, but tcp_fastopen_create_child() does not check the flag and queues it, so accept() can expose the freed child. MP_JOIN cannot use Fast Open: data on a subflow requires the completed HMAC exchange (RFC 8684, sec. 3.2). Refuse it (only the TFO path passes a SYN skb here) and let tcp_conn_request() fall back to the regular MP_JOIN handshake; also strip the Fast Open cookie from MP_JOIN SYN/ACKs. [ Moving code to avoid clearing TS and consolidating checks. ]",
+      "title": "In the Linux kernel, the following vulnerability has been resolved:\n\nmptcp: do not use Fast Open...",
+      "why_it_matters": "In the Linux kernel, the following vulnerability has been resolved: mptcp: do not use Fast Open on MP_JOIN subflows tcp_fastopen_create_child() hands the SYN packet itself to subflow_syn_recv_sock(). For an MP_JOIN request this takes the fatal fallback: the cloned child is destroyed and handed back with drop_req flagged, but tcp_fastopen_create_child() does not check the flag and queues it, so accept() can expose the freed child. MP_JOIN cannot use Fast Open: data on a subflow requires the completed HMAC exchange (RFC 8684, sec. 3.2). Refuse it (only the TFO path passes a SYN skb here) and let tcp_conn_request() fall back to the regular MP_JOIN handshake; also strip the Fast Open cookie from MP_JOIN SYN/ACKs. [ Moving code to avoid clearing TS and consolidating checks. ]"
+    }
+  ],
+  "generated_at": "2026-11-22T19:41:14Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }
