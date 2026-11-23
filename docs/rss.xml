@@ -7,7 +7,25 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 22 Nov 2026 12:32:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 00:30:26 GMT</lastBuildDate>
+    <item>
+      <title>binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings</guid>
+      <pubDate>Mon, 23 Nov 2026 00:30:25 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 8.1 (v3.1)
+
+Summary: binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-hhq6-2gpv-hrf4
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-hhq6-2gpv-hrf4" type="text/html" />
+    </item>
     <item>
       <title>In the Linux kernel, the following vulnerability has been resolved:
 
@@ -905,25 +923,6 @@ Original advisory: https://github.com/advisories/GHSA-2g5x-xxw3-8949
 Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-2g5x-xxw3-8949" type="text/html" />
-    </item>
-    <item>
-      <title>In the Linux kernel, the following vulnerability has been resolved:
-
-ceph: reject mdsmaps that...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings</guid>
-      <pubDate>Mon, 16 Nov 2026 12:31:40 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap-&gt;possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the "in" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc-&gt;max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-2p6h-wr8g-2xqx
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-2p6h-wr8g-2xqx" type="text/html" />
     </item>
   </channel>
 </rss>

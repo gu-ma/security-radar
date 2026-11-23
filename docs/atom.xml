@@ -8,7 +8,26 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-22T12:32:24Z</atom:updated>
+  <atom:updated>2026-11-23T00:30:26Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings</atom:id>
+    <atom:title>binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers...</atom:title>
+    <atom:published>2026-11-23T00:30:25Z</atom:published>
+    <atom:updated>2026-11-23T00:30:26Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-hhq6-2gpv-hrf4" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 8.1 (v3.1)
+
+Summary: binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-hhq6-2gpv-hrf4
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99634#findings</atom:id>
     <atom:title>In the Linux kernel, the following vulnerability has been resolved:
@@ -952,26 +971,6 @@ Summary: In the Linux kernel, the following vulnerability has been resolved: nfs
 Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
 
 Original advisory: https://github.com/advisories/GHSA-2g5x-xxw3-8949
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-ceph: reject mdsmaps that...</atom:title>
-    <atom:published>2026-11-16T12:31:40Z</atom:published>
-    <atom:updated>2026-11-19T15:32:07Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-2p6h-wr8g-2xqx" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap-&gt;possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the "in" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc-&gt;max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-2p6h-wr8g-2xqx
 
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Servers &amp; infrastructure" />

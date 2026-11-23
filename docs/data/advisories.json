@@ -109,7 +109,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-133949",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Python",
       "Quay"
@@ -154,7 +154,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-123890",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T21:32:46Z",
     "priority": "information",
@@ -198,7 +198,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-17T20:55:55Z",
     "id": "CVE-2026-129448",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T21:31:34Z",
     "priority": "information",
@@ -242,7 +242,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-76466",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T21:31:33Z",
     "priority": "information",
@@ -692,7 +692,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134366",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Quay"
     ],
@@ -732,7 +732,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134367",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Quay"
     ],
@@ -750,9 +750,9 @@
       }
     ],
     "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
-    "summary": "A flaw was found in pypdf. An attacker can cause a Denial of Service (DoS) by supplying a specially crafted PDF document containing XML Forms Architecture (XFA) forms with numerous fields. When the application parses these forms, it consumes excessive memory, which can lead to application crashes or system unresponsiveness.",
+    "summary": "pypdf 2.4.2 before 7.0.0 contains a resource exhaustion vulnerability in its handling of XFA forms that allows attackers to cause excessive memory consumption. Attackers can supply a crafted PDF containing XFA forms with many small fields so that loading the forms consumes large amounts of memory, causing a denial of service.",
     "title": "pypdf: pypdf: Denial of Service via crafted XFA forms",
-    "why_it_matters": "A flaw was found in pypdf. An attacker can cause a Denial of Service (DoS) by supplying a specially crafted PDF document containing XML Forms Architecture (XFA) forms with numerous fields. When the application parses these forms, it consumes excessive memory, which can lead to application crashes or system unresponsiveness."
+    "why_it_matters": "pypdf 2.4.2 before 7.0.0 contains a resource exhaustion vulnerability in its handling of XFA forms that allows attackers to cause excessive memory consumption. Attackers can supply a crafted PDF containing XFA forms with many small fields so that loading the forms consumes large amounts of memory, causing a denial of service."
   },
   {
     "affected": [
@@ -772,7 +772,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134651",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Quay"
     ],
@@ -812,7 +812,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T19:16:15Z",
     "id": "CVE-2026-133937",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Quay"
     ],
@@ -853,7 +853,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T19:16:15Z",
     "id": "CVE-2026-133958",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Quay"
     ],
@@ -1094,7 +1094,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134364",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Quay"
     ],
@@ -1135,7 +1135,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2025-42884",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:00:00Z",
     "priority": "information",
@@ -1570,6 +1570,45 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-134814",
+      "GHSA-hhq6-2gpv-hrf4"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 8.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T07:39:52Z",
+    "id": "CVE-2026-134814",
+    "last_seen": "2026-11-23T07:39:52Z",
+    "matched_topics": [
+      "Node.js"
+    ],
+    "modified": "2026-11-23T00:30:26Z",
+    "priority": "review",
+    "published": "2026-11-23T00:30:25Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hhq6-2gpv-hrf4"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled.",
+    "title": "binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers...",
+    "why_it_matters": "binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled."
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-99590",
       "GHSA-55q4-ccgm-63vh"
     ],
@@ -1584,7 +1623,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99590",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1621,7 +1660,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99634",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1658,7 +1697,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99513",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1695,7 +1734,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99544",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1732,7 +1771,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99370",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1769,7 +1808,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99680",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1806,7 +1845,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99676",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1843,7 +1882,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99679",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1880,7 +1919,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99366",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1917,7 +1956,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99385",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1954,7 +1993,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99362",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1991,7 +2030,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99356",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2042,7 +2081,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-42010",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2090,7 +2129,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-34000",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2138,7 +2177,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-34002",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2182,7 +2221,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-114516",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "npm"
     ],
@@ -2228,7 +2267,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77359",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Jupyter"
     ],
@@ -2270,7 +2309,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77312",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "PyPI"
     ],
@@ -6509,7 +6548,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-45325",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "npm"
     ],
@@ -6551,7 +6590,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-122247",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "npm"
     ],
@@ -6593,7 +6632,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-122244",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "npm"
     ],
@@ -6634,7 +6673,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-132275",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Python"
     ],
@@ -6676,7 +6715,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-77309",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Python"
     ],
@@ -6719,7 +6758,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-63341",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Node.js",
       "npm"
@@ -6760,7 +6799,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85594",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -6802,7 +6841,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-58192",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "npm"
     ],
@@ -6841,7 +6880,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85596",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Kubernetes"
     ],
@@ -6886,7 +6925,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77318",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "Jupyter"
     ],
@@ -6927,7 +6966,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77316",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [
       "PyPI"
     ],
@@ -9787,6 +9826,150 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-134838",
+      "GHSA-mmvq-qj3r-2cpq"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 7.4,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T07:39:52Z",
+    "id": "CVE-2026-134838",
+    "last_seen": "2026-11-23T07:39:52Z",
+    "matched_topics": [],
+    "modified": "2026-11-23T00:30:35Z",
+    "priority": "information",
+    "published": "2026-11-23T00:30:28Z",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-mmvq-qj3r-2cpq"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Weblate before 2026.11 contains an account takeover vulnerability in the reset_password view that allows unauthenticated attackers to reset victim passwords by abusing case-insensitive Unicode e-mail matching. Attackers controlling a lookalike mailbox using a dotless i or other case-folding variant receive the victim's reset link, since it is sent to the typed address, and set a new password.",
+    "title": "Weblate before 2026.11 contains an account takeover vulnerability in the reset_password view that...",
+    "why_it_matters": "Weblate before 2026.11 contains an account takeover vulnerability in the reset_password view that allows unauthenticated attackers to reset victim passwords by abusing case-insensitive Unicode e-mail matching. Attackers controlling a lookalike mailbox using a dotless i or other case-folding variant receive the victim's reset link, since it is sent to the typed address, and set a new password."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-134815",
+      "GHSA-24pq-g7mp-w876"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T07:39:52Z",
+    "id": "CVE-2026-134815",
+    "last_seen": "2026-11-23T07:39:52Z",
+    "matched_topics": [],
+    "modified": "2026-11-23T00:30:26Z",
+    "priority": "information",
+    "published": "2026-11-23T00:30:25Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-24pq-g7mp-w876"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "simple-git before 4.1.0 contains an argument injection vulnerability that allows attackers to bypass the allowUnsafePack guard by supplying the --exec option to non-push git operations. Attackers who influence arguments passed to listRemote() or raw() can inject --exec for ls-remote, archive, fetch-pack or send-pack to execute commands on the host.",
+    "title": "simple-git before 4.1.0 contains an argument injection vulnerability that allows attackers to...",
+    "why_it_matters": "simple-git before 4.1.0 contains an argument injection vulnerability that allows attackers to bypass the allowUnsafePack guard by supplying the --exec option to non-push git operations. Attackers who influence arguments passed to listRemote() or raw() can inject --exec for ls-remote, archive, fetch-pack or send-pack to execute commands on the host."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-134624",
+      "GHSA-g4r8-gwqr-j289"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T07:39:52Z",
+    "id": "CVE-2026-134624",
+    "last_seen": "2026-11-23T07:39:52Z",
+    "matched_topics": [],
+    "modified": "2026-11-22T21:30:24Z",
+    "priority": "information",
+    "published": "2026-11-22T21:30:18Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-g4r8-gwqr-j289"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+    "title": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the...",
+    "why_it_matters": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-133968",
+      "GHSA-2f43-rwqm-6h67"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-21T07:08:44Z",
+    "id": "CVE-2026-133968",
+    "last_seen": "2026-11-23T07:39:52Z",
+    "matched_topics": [],
+    "modified": "2026-11-22T21:30:18Z",
+    "priority": "information",
+    "published": "2026-11-20T21:31:50Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2f43-rwqm-6h67"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.",
+    "title": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code...",
+    "why_it_matters": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026."
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-131754",
       "GHSA-7jwg-jc4p-j4xh"
     ],
@@ -9801,7 +9984,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-131754",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-22T15:31:34Z",
     "priority": "information",
@@ -9836,7 +10019,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-131782",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-22T15:31:34Z",
     "priority": "information",
@@ -9871,7 +10054,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T06:49:12Z",
     "id": "CVE-2026-125294",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-21T21:30:20Z",
     "priority": "information",
@@ -9912,7 +10095,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T19:16:15Z",
     "id": "CVE-2026-133993",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-21T18:30:51Z",
     "priority": "information",
@@ -9951,7 +10134,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T19:16:15Z",
     "id": "CVE-2026-134292",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-21T18:30:28Z",
     "priority": "information",
@@ -10137,7 +10320,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-120539",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-21T06:30:30Z",
     "priority": "information",
@@ -10269,43 +10452,6 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-133968",
-      "GHSA-2f43-rwqm-6h67"
-    ],
-    "attention_score": 45,
-    "categories": [
-      "unclassified"
-    ],
-    "cvss": 9.8,
-    "cvss_version": "3.1",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-21T07:08:44Z",
-    "id": "CVE-2026-133968",
-    "last_seen": "2026-11-21T19:16:15Z",
-    "matched_topics": [],
-    "modified": "2026-11-20T21:31:50Z",
-    "priority": "information",
-    "published": "2026-11-20T21:31:50Z",
-    "security_topics": [
-      "Remote code execution"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "GitHub Advisory Database",
-        "url": "https://github.com/advisories/GHSA-2f43-rwqm-6h67"
-      }
-    ],
-    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.",
-    "title": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code...",
-    "why_it_matters": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026."
-  },
-  {
-    "affected": [],
-    "aliases": [
       "CVE-2026-121385",
       "GHSA-c5jm-26vg-v4hm"
     ],
@@ -10391,7 +10537,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104126",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T19:44:32.290",
     "priority": "information",
@@ -10965,7 +11111,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85595",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:17:58.367",
     "priority": "information",
@@ -11006,7 +11152,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104099",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:51:28Z",
     "priority": "information",
@@ -11503,7 +11649,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-109618",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T12:18:18.987",
     "priority": "information",
@@ -11619,7 +11765,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-117601",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T06:33:03Z",
     "priority": "information",
@@ -11911,7 +12057,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77369",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:14:15Z",
     "priority": "information",
@@ -11952,7 +12098,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77367",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:13:19Z",
     "priority": "information",
@@ -11993,7 +12139,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63344",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:06:53Z",
     "priority": "information",
@@ -12034,7 +12180,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63346",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:06:31Z",
     "priority": "information",
@@ -12073,7 +12219,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63345",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:06:06Z",
     "priority": "information",
@@ -34344,7 +34490,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-55621",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-21T05:15:44Z",
     "priority": "information",
@@ -34383,7 +34529,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-33203",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-21T05:15:31Z",
     "priority": "information",
@@ -34425,7 +34571,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-104883",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T23:45:43Z",
     "priority": "information",
@@ -34461,7 +34607,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133680",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T20:17:35.970",
     "priority": "information",
@@ -34499,7 +34645,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-85597",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:17:58.513",
     "priority": "information",
@@ -34535,7 +34681,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2025-34267",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T15:17:36.370",
     "priority": "information",
@@ -34577,7 +34723,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-105803",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:59:41Z",
     "priority": "information",
@@ -34617,7 +34763,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-105802",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:58:55Z",
     "priority": "information",
@@ -34656,7 +34802,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-103026",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:56:04Z",
     "priority": "information",
@@ -34695,7 +34841,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-130176",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:54:52Z",
     "priority": "information",
@@ -34736,7 +34882,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-115463",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:52:33Z",
     "priority": "information",
@@ -34776,7 +34922,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-69261",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:49:48Z",
     "priority": "information",
@@ -34816,7 +34962,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-69260",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:47:03Z",
     "priority": "information",
@@ -34855,7 +35001,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-103035",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:45:06Z",
     "priority": "information",
@@ -34896,7 +35042,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104199",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:43:42Z",
     "priority": "information",
@@ -34937,7 +35083,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-115578",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:42:22Z",
     "priority": "information",
@@ -34977,7 +35123,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-104129",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:41:43Z",
     "priority": "information",
@@ -35016,7 +35162,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-63184",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T14:35:31Z",
     "priority": "information",
@@ -35052,7 +35198,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T20:21:33Z",
     "id": "CVE-2026-133500",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T09:20:07.207",
     "priority": "information",
@@ -35169,7 +35315,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-35582",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T05:17:07Z",
     "priority": "information",
@@ -35210,7 +35356,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-103025",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:20:53Z",
     "priority": "information",
@@ -35251,7 +35397,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-62955",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:17:48Z",
     "priority": "information",
@@ -35293,7 +35439,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77315",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:10:15Z",
     "priority": "information",
@@ -35332,7 +35478,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-77313",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:09:24Z",
     "priority": "information",
@@ -35371,7 +35517,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-59988",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:08:12Z",
     "priority": "information",
@@ -35410,7 +35556,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-63415",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:07:33Z",
     "priority": "information",
@@ -35449,7 +35595,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-58210",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-23T07:39:52Z",
     "matched_topics": [],
     "modified": "2026-11-20T00:04:47Z",
     "priority": "information",
