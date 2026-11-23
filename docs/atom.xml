@@ -8,7 +8,574 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-23T00:30:26Z</atom:updated>
+  <atom:updated>2026-11-23T22:22:36Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-70193#findings</atom:id>
+    <atom:title>Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute</atom:title>
+    <atom:published>2026-11-23T22:22:36Z</atom:published>
+    <atom:updated>2026-11-23T22:22:36Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-70193#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-70193" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.9
+
+Summary: Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-70193
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Applications" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-113824#findings</atom:id>
+    <atom:title>Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.</atom:title>
+    <atom:published>2026-11-23T22:19:04Z</atom:published>
+    <atom:updated>2026-11-23T22:19:05Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-113824#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-113824" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-113824
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Unclassified" />
+    <atom:category term="Privilege escalation" />
+    <atom:category term="Authentication &amp; authorization" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-135211#findings</atom:id>
+    <atom:title>BISHENG before 3.0.0 contains a missing authentication vulnerability in the /api/v2/workflow...</atom:title>
+    <atom:published>2026-11-23T18:31:51Z</atom:published>
+    <atom:updated>2026-11-23T18:31:59Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-135211#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-c77f-gpj5-jhq5" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 8.1 (v3.1)
+
+Summary: BISHENG before 3.0.0 contains a missing authentication vulnerability in the /api/v2/workflow/invoke and /api/v2/workflow/stop routes that allows unauthenticated attackers to run workflows as the administrator. Attackers knowing a workflow UUID can supply an override replacing a Code node's code parameter with Python passed to exec(), achieving remote code execution, or stop other users' workflow sessions.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-c77f-gpj5-jhq5
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-133469#findings</atom:id>
+    <atom:title>Xen Orchestra: Empty-object login token</atom:title>
+    <atom:published>2026-11-23T17:29:29Z</atom:published>
+    <atom:updated>2026-11-23T17:29:30Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-133469#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: ### Summary REST cookie parsing turns `authenticationToken=j:%7B%7D` into `{}`. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats `{}` as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated `/rest/v0/users/me/authentication_tokens` route then returns reusable login token IDs. ### Details 1. In `packages/xo-server/src/api/session.mjs`, function `signIn(credentials)` has **no `params` schema** (unlike the deprecated `signInWithToken`, which declares `token: { type: 'string' }`), so `credentials.token` can be any JSON value. 2. `packages/xo-server/src/xo-mixins/authentication.mjs`, token provider: ```js this.registerAuthenticationProvider(async ({ token: tokenId }, { ip } = {}) =&gt; { if (!tokenId) return // {} is truthy → passes const toke
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2r3w-c2vx-fv5g
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Libraries &amp; dependencies" />
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-59090#findings</atom:id>
+    <atom:title>A flaw was found in GIMP's PSD file format plugin. This vulnerability, an unsigned integer underflow in the `block_rem` variable, occurs when a user o</atom:title>
+    <atom:published>2026-08-10T13:19:51Z</atom:published>
+    <atom:updated>2026-11-23T16:17:49Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-59090#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-59090" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.9
+
+Summary: A flaw was found in GIMP's PSD file format plugin. This vulnerability, an unsigned integer underflow in the `block_rem` variable, occurs when a user opens a specially crafted `.psd` image file. The underflow leads to parser confusion, enabling an attacker to inject arbitrary data as layer resource blocks. This can ultimately result in arbitrary code execution, allowing the attacker to run malicious code on the victim's system.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-59090
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Remote code execution" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-58016#findings</atom:id>
+    <atom:title>A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malfor</atom:title>
+    <atom:published>2026-06-30T13:19:17Z</atom:published>
+    <atom:updated>2026-11-23T16:17:48Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-58016#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-58016" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in GLib. A state confusion issue exists in g_dbus_node_info_new_for_xml() in the gio/gdbusintrospection.c file when processing malformed D-Bus introspection XML, specifically with a `node` element nested within other elements like `method`, `signal`, `property` or `arg`. This issue can cause an unsigned integer overflow and lead to an out-of-bounds read, resulting in a denial of service.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-58016
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-28369#findings</atom:id>
+    <atom:title>A flaw was found in Undertow. When Undertow receives an HTTP request where the first header line starts with one or more spaces, it incorrectly proces</atom:title>
+    <atom:published>2026-03-27T17:16:28Z</atom:published>
+    <atom:updated>2026-11-23T16:17:47Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-28369#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-28369" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in Undertow. When Undertow receives an HTTP request where the first header line starts with one or more spaces, it incorrectly processes the request by stripping these leading spaces. This behavior, which violates HTTP standards, can be exploited by a remote attacker to perform request smuggling. Request smuggling allows an attacker to bypass security mechanisms, access restricted information, or manipulate web caches, potentially leading to unauthorized actions or data exposure.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-28369
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Data exposure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-28368#findings</atom:id>
+    <atom:title>A flaw was found in Undertow. This vulnerability allows a remote attacker to construct specially crafted requests where header names are parsed differ</atom:title>
+    <atom:published>2026-03-27T17:16:27Z</atom:published>
+    <atom:updated>2026-11-23T16:17:46Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-28368#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-28368" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in Undertow. This vulnerability allows a remote attacker to construct specially crafted requests where header names are parsed differently by Undertow compared to upstream proxies. This discrepancy in header interpretation can be exploited to launch request smuggling attacks, potentially bypassing security controls and accessing unauthorized resources.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-28368
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-135163#findings</atom:id>
+    <atom:title>Okou API before 1.762.0 contains a missing authentication vulnerability in its Microsoft Teams,...</atom:title>
+    <atom:published>2026-11-23T15:32:46Z</atom:published>
+    <atom:updated>2026-11-23T15:32:46Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-135163#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-253q-jq6w-hqq3" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 7.4 (v3.1)
+
+Summary: Okou API before 1.762.0 contains a missing authentication vulnerability in its Microsoft Teams, legacy Slack, and GitHub App integration OAuth flows that trusts caller-supplied userId and orgId values. Unauthenticated attackers who know a member's identifiers can complete the flow with their own external account to bind that identity or installation to the victim's Okou user and organization.
+
+Suggested next step: Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.
+
+Original advisory: https://github.com/advisories/GHSA-253q-jq6w-hqq3
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Cloud &amp; identity" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-102560#findings</atom:id>
+    <atom:title>A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations use</atom:title>
+    <atom:published>2026-09-29T18:17:08Z</atom:published>
+    <atom:updated>2026-11-23T15:17:21Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-102560#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102560" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8
+
+Summary: A flaw was found in libsoup. When the permessage-deflate WebSocket extension compresses a very large outgoing message, truncated size calculations used for GByteArray growth could wrap, causing zlib to write past the allocated buffer and resulting in a heap buffer overflow.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-102560
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99310#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: hold cl_lock in...</atom:title>
+    <atom:published>2026-11-16T12:31:40Z</atom:published>
+    <atom:updated>2026-11-23T09:31:44Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99310#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-2g5x-xxw3-8949" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp-&gt;cl_openowners and reads so_stateids without clp-&gt;cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp-&gt;cl_lock while client_has_openowners() walks the openowner list.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2g5x-xxw3-8949
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-31705#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: fix out-of-bounds...</atom:title>
+    <atom:published>2026-05-01T15:30:33Z</atom:published>
+    <atom:updated>2026-11-23T09:31:37Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-31705#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-5jgf-2w89-7334" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ksmbd: fix out-of-bounds write in smb2_get_ea() EA alignment smb2_get_ea() applies 4-byte alignment padding via memset() after writing each EA entry. The bounds check on buf_free_len is performed before the value memcpy, but the alignment memset fires unconditionally afterward with no check on remaining space. When the EA value exactly fills the remaining buffer (buf_free_len == 0 after value subtraction), the alignment memset writes 1-3 NUL bytes past the buf_free_len boundary. In compound requests where the response buffer is shared across commands, the first command (e.g., READ) can consume most of the buffer, leaving a tight remainder for the QUERY_INFO EA response. The alignment memset then overwrites past the physical kvmalloc allocation into adjacent kernel heap memory. Add a bounds check before the alignment mems
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-5jgf-2w89-7334
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2025-40074#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ipv4: start using...</atom:title>
+    <atom:published>2025-10-28T12:30:17Z</atom:published>
+    <atom:updated>2026-11-23T09:31:37Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2025-40074#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-g35w-4vfx-hjpg" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ipv4: start using dst_dev_rcu() Change icmpv4_xrlim_allow(), ip_defrag() to prevent possible UAF. Change ipmr_prepare_xmit(), ipmr_queue_fwd_xmit(), ip_mr_output(), ipv4_neigh_lookup() to use lockdep enabled dst_dev_rcu().
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-g35w-4vfx-hjpg
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99680#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+xfs: mark the inode...</atom:title>
+    <atom:published>2026-11-20T06:32:07Z</atom:published>
+    <atom:updated>2026-11-23T09:31:00Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99680#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-5jwv-gfcx-x7jc" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: xfs: mark the inode preallocated for pNFS write layouts past EOF xfs_fs_map_blocks() marks the inode XFS_DIFLAG_PREALLOC only when it allocates blocks for a write layout. A write layout past EOF can also hand out allocated blocks, such as speculative preallocation. blockgc then frees them under the layout, and another file may get them. Mark the inode whenever a write mapping ends past EOF.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-5jwv-gfcx-x7jc
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99679#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+xfs: refuse a pNFS...</atom:title>
+    <atom:published>2026-11-20T06:32:07Z</atom:published>
+    <atom:updated>2026-11-23T09:30:59Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99679#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-8hpm-jfww-669v" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: xfs: refuse a pNFS LAYOUTCOMMIT of a range without blocks A client can commit a hole in a LAYOUTCOMMIT, because nfsd does not check the extents against its layouts. xfs_iomap_write_unwritten() then allocates written blocks there. A large hole overruns the block reservation and shuts XFS down. A small one exposes stale data. Refuse such a range with -EIO, using XFS_BMAPI_CONVERT_ONLY.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-8hpm-jfww-669v
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99634#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+mptcp: do not use Fast Open...</atom:title>
+    <atom:published>2026-11-20T06:32:05Z</atom:published>
+    <atom:updated>2026-11-23T09:30:55Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99634#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-pmjw-rj44-w725" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: mptcp: do not use Fast Open on MP_JOIN subflows tcp_fastopen_create_child() hands the SYN packet itself to subflow_syn_recv_sock(). For an MP_JOIN request this takes the fatal fallback: the cloned child is destroyed and handed back with drop_req flagged, but tcp_fastopen_create_child() does not check the flag and queues it, so accept() can expose the freed child. MP_JOIN cannot use Fast Open: data on a subflow requires the completed HMAC exchange (RFC 8684, sec. 3.2). Refuse it (only the TFO path passes a SYN skb here) and let tcp_conn_request() fall back to the regular MP_JOIN handshake; also strip the Fast Open cookie from MP_JOIN SYN/ACKs. [ Moving code to avoid clearing TS and consolidating checks. ]
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-pmjw-rj44-w725
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99590#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ceph: clamp the inline data...</atom:title>
+    <atom:published>2026-11-20T06:32:03Z</atom:published>
+    <atom:updated>2026-11-23T09:30:50Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99590#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-55q4-ccgm-63vh" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: clamp the inline data length in ceph_fill_inline_data() The MDS decides how much inline data to attach to a reply, and the client parses inline_len without any upper bound: ceph_decode_need() only verifies that the message actually carries that many bytes. ceph_fill_inline_data() then copies the data into a single folio with no length check, so a malicious or buggy MDS returning more inline data than the folio can hold writes past its end. Clamp the length to folio_size() so both callers, handle_cap_grant() and fill_inode(), are covered.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-55q4-ccgm-63vh
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99544#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+Drivers: hv: vmbus: Bounds...</atom:title>
+    <atom:published>2026-11-19T15:31:28Z</atom:published>
+    <atom:updated>2026-11-23T09:30:48Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99544#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-8c3c-2hvv-f3jx" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: Drivers: hv: vmbus: Bounds check the shared ring buffer indices In a CoCo VM the host is untrusted. Since the VMBus ring buffer read and write indices live in shared memory, the guest has to treat both as potentially malicious. hv_ringbuffer_write() copies into the ring at write_index with no bounds checking, so the host can make the guest write packet data at any offset up to 4 GiB past the start of the ring buffer. read_index matters too: the available space derived from both indices is the only bound on how much is copied, and an out-of-range index can make it far larger than the ring. The fix is to validate both indices before use and to use the validated snapshot instead of re-accessing. For invalid indices, hv_ringbuffer_write() logs and returns -EIO. One re-read of write_index is left unchecked in this patch: hv_g
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-8c3c-2hvv-f3jx
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99513#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+lockd: Fix use-after-free in...</atom:title>
+    <atom:published>2026-11-19T15:31:27Z</atom:published>
+    <atom:updated>2026-11-23T09:30:47Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99513#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-p68w-hqqq-m236" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: lockd: Fix use-after-free in nlmsvc_retry_blocked nlmsvc_retry_blocked() examines the block at the head of nlm_blocked under nlm_blocked_lock, then releases the lock before calling nlmsvc_grant_blocked() or retry_deferred_block(). The nlm_blocked list reference is all that keeps the block alive across that window. nlmsvc_grant_blocked() does take one of its own, but not until after the lock has been dropped. Unmounting the nfsd filesystem while a lock request is still blocked reaches nlmsvc_traverse_blocks(), which drops the list reference and frees the block along with the nlm_rqst hanging off it. BUG: KASAN: slab-use-after-free in nlm_async_call+0xd6/0x230 Read of size 8 at addr ffff88811b04c808 by task lockd/8377 nlm_async_call+0xd6/0x230 nlmsvc_retry_blocked+0x61c/0x800 lockd+0x144/0x1c0 Freed by task 8392: nlmsvc_re
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-p68w-hqqq-m236
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99385#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+smb: client: fix buffer...</atom:title>
+    <atom:published>2026-11-19T15:31:22Z</atom:published>
+    <atom:updated>2026-11-23T09:30:42Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99385#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-wpgh-9h8m-65v9" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: smb: client: fix buffer overflow in SMB2_tcon() In SMB2_tcon(), unc_path is allocated with a fixed buffer size of MAX_SHARENAME_LENGTH * 2 bytes (672 bytes). However, the user-controlled UNC path (tree) length is passed to cifs_strtoUTF16(), which assumes the destination buffer is large enough and writes strlen(tree) + 1 UTF-16 code units. Commit 62a1a439e0fd ("cifs: clean up handling of unc= option") removed the length check on UNC mount options, allowing mount paths to exceed MAX_SHARENAME_LENGTH while retaining the fixed-size buffer allocation in SMB2_tcon(). Consequently, an oversized UNC string causes cifs_strtoUTF16() to write past the end of the heap object, resulting in a slab-out-of-bounds write. Furthermore, if a tree exceeds MAX_TREE_SIZE characters, strscpy() truncates it in cifs_tcon::tree_name, causing subs
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-wpgh-9h8m-65v9
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99366#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: don't modify a session...</atom:title>
+    <atom:published>2026-11-19T15:31:22Z</atom:published>
+    <atom:updated>2026-11-23T09:30:42Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99366#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-r4qc-2gcr-r82j" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: don't modify a session slot when replaying its cached reply nfsd4_sequence() claims a session slot by setting NFSD4_SLOT_INUSE under nn-&gt;client_lock. A reply served from the slot's reply cache does not claim it, and that distinction lived only in cstate-&gt;status, which nfsd4_sequence() set to nfserr_replay_cache. Commit cc028a10a48c ("NFSD: Hoist status code encoding into XDR encoder functions") moved nfsd4_proc_compound()'s cstate-&gt;status assignment below the out: label, and the replay path's goto out was the one path that relied on skipping it. The test in nfsd4_sequence_done() therefore no longer identifies a replay, and every replay now stores its reply and clears NFSD4_SLOT_INUSE as though it owned the slot. NFSD4_SLOT_INUSE is the interlock: check_slot_seqid() rejects every sequence id for a slot that is in us
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-r4qc-2gcr-r82j
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99370#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+NFSD: copy SETXATTR data...</atom:title>
+    <atom:published>2026-11-19T15:31:22Z</atom:published>
+    <atom:updated>2026-11-23T09:30:41Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99370#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-wr7p-m5x2-fh88" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: NFSD: copy SETXATTR data from all XDR buffer segments nfsd4_vbuf_from_vector() manually copies the head followed by whole pages starting at offset zero. This assumes that all remaining data starts at the beginning of the page array and that no data is stored in the tail. However, nfsd4_decode_setxattr() passes an xdr_buf returned by xdr_stream_subsegment(). Such a sub-buffer can have a nonzero page_base and can span its page and tail segments. Ignoring that layout can copy the wrong bytes into the value passed to vfs_setxattr(). Use read_bytes_from_xdr_buf(), which observes the complete xdr_buf layout.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-wr7p-m5x2-fh88
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99362#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+nfsd: preflight SEQUENCE...</atom:title>
+    <atom:published>2026-11-19T15:31:22Z</atom:published>
+    <atom:updated>2026-11-23T09:30:41Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99362#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-cvg6-q922-q66p" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: preflight SEQUENCE replies before accepting a slot nfsd4_sequence() narrows the reply buffer to the session's cached reply limit before it accepts the slot seqid. A client may negotiate ca_maxresponsesize_cached down to NFSD_MIN_HDR_SEQ_SZ, and nfsd4_alloc_slot() then gives every slot a zero-length sl_data[]. A COMPOUND tag can fill that narrowed buffer until it holds the SEQUENCE opcode but not the status word that follows. nfsd4_encode_operation() returns without running nfsd4_encode_sequence(), so cstate.data_offset stays zero. It leaves op-&gt;status at nfs_ok as well, so the COMPOUND is treated as having succeeded. nfsd4_store_cache_entry() declines to cache a lone SEQUENCE that returned an error. That test reads the status the operation reported, so it passes here. The copy starts at offset zero and takes the wh
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-cvg6-q922-q66p
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99356#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+SUNRPC: Do not credit...</atom:title>
+    <atom:published>2026-11-19T15:31:21Z</atom:published>
+    <atom:updated>2026-11-23T09:30:40Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99356#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-8c64-89jh-jj83" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: SUNRPC: Do not credit control-record octets to the RPC stream svc_tcp_sock_recv_cmsg() receives up to two octets into a local buffer, and returns that count for any record type other than TLS_RECORD_TYPE_ALERT. Nothing reached the caller's buffer, but svc_tcp_read_marker() adds the count to sk_tcplen and svc_tcp_read_msg()'s caller adds it to sk_datalen. The RPC stream advances over octets it never received. The fragment marker is assembled from stale sk_marker octets. The message body comes from pages nothing wrote. A conforming client reaches this. RFC 8446 Section 4.6.3 lets either peer send KeyUpdate once it has sent its Finished, and svcsock has no rekey path. kTLS leaves the partially consumed record on ctx-&gt;rx_list, so the body drains two octets per svc_tcp_recvfrom() call. Each pair is credited the same way. Retu
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-8c64-89jh-jj83
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ceph: reject mdsmaps that...</atom:title>
+    <atom:published>2026-11-16T12:31:40Z</atom:published>
+    <atom:updated>2026-11-23T09:30:39Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99306#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-2p6h-wr8g-2xqx" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks check_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks it with newmap-&gt;possible_max_rank, which comes straight off the wire: ceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then overwrites it with the size of the "in" set. Neither is bounded by CEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks than the bitmap holds makes test_bit() read past the end of targets[]. The clear_bit() loop above indexes the same bitmap, though it is additionally bounded by mdsc-&gt;max_sessions. The map arrives on the monitor connection, which is unauthenticated in legacy msgr mode. CEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the reserved inode ranges in super.h are laid out one rank apart over that spa
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2p6h-wr8g-2xqx
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99304#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+ceph: fix integer overflow...</atom:title>
+    <atom:published>2026-11-16T12:31:40Z</atom:published>
+    <atom:updated>2026-11-23T09:30:38Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99304#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-gwm4-f7gj-p7vj" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: fix integer overflow in the snap trace bounds check ceph_update_snap_trace() bounds the two encoded snapid arrays that follow a struct ceph_mds_snap_realm with sizeof(u64) * (num_snaps + num_prior_parent_snaps). Both counts come straight off the wire as __le32, so the addition is evaluated in unsigned int and wraps before sizeof(u64) promotes it to size_t: an MDS sending num_snaps = 1 and num_prior_parent_snaps = 0xffffffff makes the sum zero and the check degenerates to ceph_decode_need(&amp;p, e, 0, bad), which always passes. dup_array() then reads num_snaps * 8 bytes past the end of the message front, which ceph_msg_new2() allocates at exactly front_len bytes. An unsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or compromised MDS with no client-side action, as do the snaptraces carried in an MDS reply 
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-gwm4-f7gj-p7vj
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-90036#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+NFSD: Prevent client use...</atom:title>
+    <atom:published>2026-09-16T12:30:46Z</atom:published>
+    <atom:updated>2026-11-23T09:30:32Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-90036#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-j6h5-vv56-hq58" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: NFSD: Prevent client use-after-free during blocked-lock reaping A bare lock owner -- its only remaining reference a blocked lock on nn-&gt;blocked_locks_lru -- holds a raw pointer to its nfs4_client but no reference keeping the client alive. When the per-net laundromat reaps such a lock, freeing the nbl drops the owner reference held through flc_owner, and the final nfs4_put_stateowner() takes the client's cl_lock. Because the laundromat detaches the nbl first, __destroy_client() no longer finds it, so a concurrent force_expire_client() can free the client before nfs4_put_stateowner() runs, dereferencing cl_lock in freed memory. Pin the client with cl_rpc_users before dropping nn-&gt;blocked_locks_lock, and skip clients already expiring, whose blocked locks __destroy_client() frees while holding an owner reference. Take nn-&gt;cl
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-j6h5-vv56-hq58
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-80612#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+net: lwtunnel: Drop skb...</atom:title>
+    <atom:published>2026-08-28T09:31:46Z</atom:published>
+    <atom:updated>2026-11-23T09:30:31Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-80612#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-gcxj-phfp-fv28" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: net: lwtunnel: Drop skb metadata before LWT encapsulation skb metadata is meant for passing information between XDP and TC. It lives in the skb headroom, immediately before skb-&gt;data. LWT programs cannot access the __sk_buff-&gt;data_meta pseudo-pointer to metadata. However, LWT encapsulation prepends outer headers, moving skb-&gt;data back over the headroom where the metadata sits. On an RX-originated (forwarded) packet that still carries XDP metadata this goes wrong in two different ways, depending on the encap type: 1. Non-BPF LWT encaps (mpls, seg6, ioam6 ...) call skb_push()/skb_pull() and silently overwrite the metadata that sits in the headroom. 2) BPF LWT xmit calls bpf_skb_change_head(), which uses skb_data_move(). That helper expects metadata immediately before skb-&gt;data. But since the IP output path runs LWT xmit be
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-gcxj-phfp-fv28
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-68136#findings</atom:id>
+    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
+
+net: gro: fix double...</atom:title>
+    <atom:published>2026-08-10T15:33:37Z</atom:published>
+    <atom:updated>2026-11-23T09:30:31Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-68136#findings" type="text/html" />
+    <atom:link rel="related" href="https://github.com/advisories/GHSA-p4gp-483j-wr28" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: net: gro: fix double aggregation of flush-marked skbs Commit 0ab03f353d36 ("net-gro: Fix GRO flush when receiving a GSO packet.") added a flush check to skb_gro_receive(), but skb_gro_receive_list() lacks the same validation. As a result, packets marked with NAPI_GRO_CB(skb)-&gt;flush may still be re-aggregated. This allows already-GRO'd packets with existing frag_list to be re-aggregated into a new GRO session, corrupting the frag_list chain structure. When skb_segment() attempts to unpack these malformed packets, it encounters invalid state and triggers a kernel panic. Scenario (Tethering/Device forwarding): 1. Driver: Generated aggregated packet P1 via LRO with frag_list 2. Dev A: Receives aggregated fraglist packet and flush flag set 3. Dev A: Re-enters GRO, skb_gro_receive_list() is called 4. Missing flush check allows
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-p4gp-483j-wr28
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings</atom:id>
     <atom:title>binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers...</atom:title>
@@ -29,146 +596,6 @@ Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Remote code execution" />
   </atom:entry>
   <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99634#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-mptcp: do not use Fast Open...</atom:title>
-    <atom:published>2026-11-20T06:32:05Z</atom:published>
-    <atom:updated>2026-11-22T12:32:24Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99634#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-pmjw-rj44-w725" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: mptcp: do not use Fast Open on MP_JOIN subflows tcp_fastopen_create_child() hands the SYN packet itself to subflow_syn_recv_sock(). For an MP_JOIN request this takes the fatal fallback: the cloned child is destroyed and handed back with drop_req flagged, but tcp_fastopen_create_child() does not check the flag and queues it, so accept() can expose the freed child. MP_JOIN cannot use Fast Open: data on a subflow requires the completed HMAC exchange (RFC 8684, sec. 3.2). Refuse it (only the TFO path passes a SYN skb here) and let tcp_conn_request() fall back to the regular MP_JOIN handshake; also strip the Fast Open cookie from MP_JOIN SYN/ACKs. [ Moving code to avoid clearing TS and consolidating checks. ]
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-pmjw-rj44-w725
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99590#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-ceph: clamp the inline data...</atom:title>
-    <atom:published>2026-11-20T06:32:03Z</atom:published>
-    <atom:updated>2026-11-22T12:32:24Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99590#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-55q4-ccgm-63vh" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: ceph: clamp the inline data length in ceph_fill_inline_data() The MDS decides how much inline data to attach to a reply, and the client parses inline_len without any upper bound: ceph_decode_need() only verifies that the message actually carries that many bytes. ceph_fill_inline_data() then copies the data into a single folio with no length check, so a malicious or buggy MDS returning more inline data than the folio can hold writes past its end. Clamp the length to folio_size() so both callers, handle_cap_grant() and fill_inode(), are covered.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-55q4-ccgm-63vh
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99544#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-Drivers: hv: vmbus: Bounds...</atom:title>
-    <atom:published>2026-11-19T15:31:28Z</atom:published>
-    <atom:updated>2026-11-22T12:32:23Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99544#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-8c3c-2hvv-f3jx" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: Drivers: hv: vmbus: Bounds check the shared ring buffer indices In a CoCo VM the host is untrusted. Since the VMBus ring buffer read and write indices live in shared memory, the guest has to treat both as potentially malicious. hv_ringbuffer_write() copies into the ring at write_index with no bounds checking, so the host can make the guest write packet data at any offset up to 4 GiB past the start of the ring buffer. read_index matters too: the available space derived from both indices is the only bound on how much is copied, and an out-of-range index can make it far larger than the ring. The fix is to validate both indices before use and to use the validated snapshot instead of re-accessing. For invalid indices, hv_ringbuffer_write() logs and returns -EIO. One re-read of write_index is left unchecked in this patch: hv_g
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-8c3c-2hvv-f3jx
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99513#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-lockd: Fix use-after-free in...</atom:title>
-    <atom:published>2026-11-19T15:31:27Z</atom:published>
-    <atom:updated>2026-11-22T12:32:23Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99513#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-p68w-hqqq-m236" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: lockd: Fix use-after-free in nlmsvc_retry_blocked nlmsvc_retry_blocked() examines the block at the head of nlm_blocked under nlm_blocked_lock, then releases the lock before calling nlmsvc_grant_blocked() or retry_deferred_block(). The nlm_blocked list reference is all that keeps the block alive across that window. nlmsvc_grant_blocked() does take one of its own, but not until after the lock has been dropped. Unmounting the nfsd filesystem while a lock request is still blocked reaches nlmsvc_traverse_blocks(), which drops the list reference and frees the block along with the nlm_rqst hanging off it. BUG: KASAN: slab-use-after-free in nlm_async_call+0xd6/0x230 Read of size 8 at addr ffff88811b04c808 by task lockd/8377 nlm_async_call+0xd6/0x230 nlmsvc_retry_blocked+0x61c/0x800 lockd+0x144/0x1c0 Freed by task 8392: nlmsvc_re
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-p68w-hqqq-m236
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99370#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-NFSD: copy SETXATTR data...</atom:title>
-    <atom:published>2026-11-19T15:31:22Z</atom:published>
-    <atom:updated>2026-11-22T12:32:17Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99370#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-wr7p-m5x2-fh88" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: NFSD: copy SETXATTR data from all XDR buffer segments nfsd4_vbuf_from_vector() manually copies the head followed by whole pages starting at offset zero. This assumes that all remaining data starts at the beginning of the page array and that no data is stored in the tail. However, nfsd4_decode_setxattr() passes an xdr_buf returned by xdr_stream_subsegment(). Such a sub-buffer can have a nonzero page_base and can span its page and tail segments. Ignoring that layout can copy the wrong bytes into the value passed to vfs_setxattr(). Use read_bytes_from_xdr_buf(), which observes the complete xdr_buf layout.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-wr7p-m5x2-fh88
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99680#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-xfs: mark the inode...</atom:title>
-    <atom:published>2026-11-20T06:32:07Z</atom:published>
-    <atom:updated>2026-11-22T12:31:19Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99680#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-5jwv-gfcx-x7jc" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: xfs: mark the inode preallocated for pNFS write layouts past EOF xfs_fs_map_blocks() marks the inode XFS_DIFLAG_PREALLOC only when it allocates blocks for a write layout. A write layout past EOF can also hand out allocated blocks, such as speculative preallocation. blockgc then frees them under the layout, and another file may get them. Mark the inode whenever a write mapping ends past EOF.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-5jwv-gfcx-x7jc
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99679#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-xfs: refuse a pNFS...</atom:title>
-    <atom:published>2026-11-20T06:32:07Z</atom:published>
-    <atom:updated>2026-11-22T12:31:19Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99679#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-8hpm-jfww-669v" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.4 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: xfs: refuse a pNFS LAYOUTCOMMIT of a range without blocks A client can commit a hole in a LAYOUTCOMMIT, because nfsd does not check the extents against its layouts. xfs_iomap_write_unwritten() then allocates written blocks there. A large hole overruns the block reservation and shuts XFS down. A small one exposes stale data. Refuse such a range with -EIO, using XFS_BMAPI_CONVERT_ONLY.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-8hpm-jfww-669v
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99676#findings</atom:id>
     <atom:title>In the Linux kernel, the following vulnerability has been resolved:
 
@@ -184,86 +611,6 @@ Summary: In the Linux kernel, the following vulnerability has been resolved: net
 Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
 
 Original advisory: https://github.com/advisories/GHSA-pw2h-9h4h-hf7q
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99385#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: fix buffer...</atom:title>
-    <atom:published>2026-11-19T15:31:22Z</atom:published>
-    <atom:updated>2026-11-22T12:31:14Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99385#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-wpgh-9h8m-65v9" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: smb: client: fix buffer overflow in SMB2_tcon() In SMB2_tcon(), unc_path is allocated with a fixed buffer size of MAX_SHARENAME_LENGTH * 2 bytes (672 bytes). However, the user-controlled UNC path (tree) length is passed to cifs_strtoUTF16(), which assumes the destination buffer is large enough and writes strlen(tree) + 1 UTF-16 code units. Commit 62a1a439e0fd ("cifs: clean up handling of unc= option") removed the length check on UNC mount options, allowing mount paths to exceed MAX_SHARENAME_LENGTH while retaining the fixed-size buffer allocation in SMB2_tcon(). Consequently, an oversized UNC string causes cifs_strtoUTF16() to write past the end of the heap object, resulting in a slab-out-of-bounds write. Furthermore, if a tree exceeds MAX_TREE_SIZE characters, strscpy() truncates it in cifs_tcon::tree_name, causing subs
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-wpgh-9h8m-65v9
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99366#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-nfsd: don't modify a session...</atom:title>
-    <atom:published>2026-11-19T15:31:22Z</atom:published>
-    <atom:updated>2026-11-22T12:31:14Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99366#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-r4qc-2gcr-r82j" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: don't modify a session slot when replaying its cached reply nfsd4_sequence() claims a session slot by setting NFSD4_SLOT_INUSE under nn-&gt;client_lock. A reply served from the slot's reply cache does not claim it, and that distinction lived only in cstate-&gt;status, which nfsd4_sequence() set to nfserr_replay_cache. Commit cc028a10a48c ("NFSD: Hoist status code encoding into XDR encoder functions") moved nfsd4_proc_compound()'s cstate-&gt;status assignment below the out: label, and the replay path's goto out was the one path that relied on skipping it. The test in nfsd4_sequence_done() therefore no longer identifies a replay, and every replay now stores its reply and clears NFSD4_SLOT_INUSE as though it owned the slot. NFSD4_SLOT_INUSE is the interlock: check_slot_seqid() rejects every sequence id for a slot that is in us
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-r4qc-2gcr-r82j
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99362#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-nfsd: preflight SEQUENCE...</atom:title>
-    <atom:published>2026-11-19T15:31:22Z</atom:published>
-    <atom:updated>2026-11-22T12:31:14Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99362#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-cvg6-q922-q66p" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: preflight SEQUENCE replies before accepting a slot nfsd4_sequence() narrows the reply buffer to the session's cached reply limit before it accepts the slot seqid. A client may negotiate ca_maxresponsesize_cached down to NFSD_MIN_HDR_SEQ_SZ, and nfsd4_alloc_slot() then gives every slot a zero-length sl_data[]. A COMPOUND tag can fill that narrowed buffer until it holds the SEQUENCE opcode but not the status word that follows. nfsd4_encode_operation() returns without running nfsd4_encode_sequence(), so cstate.data_offset stays zero. It leaves op-&gt;status at nfs_ok as well, so the COMPOUND is treated as having succeeded. nfsd4_store_cache_entry() declines to cache a lone SEQUENCE that returned an error. That test reads the status the operation reported, so it passes here. The copy starts at offset zero and takes the wh
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-cvg6-q922-q66p
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99356#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-SUNRPC: Do not credit...</atom:title>
-    <atom:published>2026-11-19T15:31:21Z</atom:published>
-    <atom:updated>2026-11-22T12:31:13Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99356#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-8c64-89jh-jj83" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: SUNRPC: Do not credit control-record octets to the RPC stream svc_tcp_sock_recv_cmsg() receives up to two octets into a local buffer, and returns that count for any record type other than TLS_RECORD_TYPE_ALERT. Nothing reached the caller's buffer, but svc_tcp_read_marker() adds the count to sk_tcplen and svc_tcp_read_msg()'s caller adds it to sk_datalen. The RPC stream advances over octets it never received. The fragment marker is assembled from stale sk_marker octets. The message body comes from pages nothing wrote. A conforming client reaches this. RFC 8446 Section 4.6.3 lets either peer send KeyUpdate once it has sent its Finished, and svcsock has no rekey path. kTLS leaves the partially consumed record on ctx-&gt;rx_list, so the body drains two octets per svc_tcp_recvfrom() call. Each pair is credited the same way. Retu
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-8c64-89jh-jj83
 
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Servers &amp; infrastructure" />
@@ -631,348 +978,5 @@ Original advisory: https://github.com/advisories/GHSA-6pm8-6f34-9v3g
 
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-77312#findings</atom:id>
-    <atom:title>Flyto2 Core: Arbitrary file write via unguarded data.*/file.* modules (incomplete fix of CVE-2026-67429)</atom:title>
-    <atom:published>2026-11-20T00:09:02Z</atom:published>
-    <atom:updated>2026-11-20T00:09:03Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-77312#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-p34x-fmph-9fjx" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 10 (v3.1)
-
-Summary: # [CRITICAL] Arbitrary file write via unguarded `data.*` / `file.*` write modules  -  incomplete fix of GHSA-2956 - **CWE:** CWE-22 (Path Traversal) / CWE-73 (External Control of File Name or Path); impact reaches CWE-94 (code execution via file overwrite). - **CVSS v3.1:** `AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H` = **9.3 Critical** (S:C because a write escapes the intended sandbox confinement into the host filesystem / other components). - AV:N  -  reachable via the MCP server / recipe engine (`execute_module`). AC:L  -  deterministic. PR:L  -  any client able to run a module/recipe (the same attacker model as GHSA-2956; unauthenticated on the HTTP MCP surface per CVE-2026-55786). UI:N. S:C  -  escapes `FLYTO_SANDBOX_DIR`. C/I/A:H  -  arbitrary-content write to any absolute path → overwrite app code / recipes / `~/.bashrc` / cron / `authorized_keys` → RCE. - **Affected component:** `flyto-
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-p34x-fmph-9fjx
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-128139#findings</atom:id>
-    <atom:title>NLTK: XMLCorpusView comment and CDATA parsing permits quadratic CPU denial of service</atom:title>
-    <atom:published>2026-11-19T23:54:59Z</atom:published>
-    <atom:updated>2026-11-19T23:55:00Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-128139#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-j8g8-j4j7-8j54" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: &gt; **affected**: PyPI `nltk` `&gt;= 3.6`  -  `nltk.corpus.reader.xmldocs.XMLCorpusView` streaming read (and the `nps_chat` / `framenet` readers built on it) &gt; **dynamically reproduced**: `3.6` (6/6 checks), `3.9.2` (6/6), `3.10.3` (6/6) and `develop` `6818767b9` (6/6) --- _Source references (`nltk/corpus/reader/xmldocs.py:NNN`) are to commit `6818767b99c24659107eb2be9bccd32a3d4bf045` (`develop`, `v3.10.3-15-g6818767b9`). The released `v3.10.3` wheel's `xmldocs.py` is byte-identical to that commit, so the same line numbers apply to the released wheel._ ### Summary **An attacker who can make a victim read a well-formed XML corpus file whose body contains one large comment or CDATA section can pin a CPU core for a time quadratic in the file size, because `XMLCorpusView._read_xml_fragment` (`nltk/corpus/reader/xmldocs.py`) re-runs a linear whole-buffer validation after every 1 KiB block while th
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-j8g8-j4j7-8j54
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-129222#findings</atom:id>
-    <atom:title>Natural Language Toolkit (NLTK): Uncontrolled recursion (crash DoS) in DependencyGraph.tree()/triples()</atom:title>
-    <atom:published>2026-11-19T23:53:41Z</atom:published>
-    <atom:updated>2026-11-19T23:53:42Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-129222#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-rh8m-wqhc-qmrf" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary DependencyGraph.tree()/triples() walk the parsed dependency structure using plain, unbounded Python recursion  -  one stack frame per edge in the graph  -  and never use the class's own cycle detector. A crafted dependency-parse file with a few thousand chained tokens (an entirely ordinary-looking long sentence) crashes the process with an unhandled RecursionError the moment .tree() or .triples() is called  -  which is NLTK's own documented usage pattern immediately after loading such a file. ### Details `DependencyGraph._tree()` (~lines 393-406), `.tree()` (~408-417), and `.triples()` (~419-432) in `nltk/parse/dependencygraph.py` rebuild/walk the graph with `Tree(word, [self._tree(dep) for dep in deps])` and `yield from self.triples(node=dep)`  -  ordinary recursive calls, one per edge, with no depth check. `contains_cycle()` is defined on the class (~line 447) but is never 
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-rh8m-wqhc-qmrf
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-129223#findings</atom:id>
-    <atom:title>Natural Language Toolkit (NLTK): Uncontrolled recursion (crash DoS) in Synset.tree()/acyclic_tree() via WordNet relation traversal</atom:title>
-    <atom:published>2026-11-19T23:53:18Z</atom:published>
-    <atom:updated>2026-11-19T23:53:19Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-129223#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-8846-p9w9-5frf" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary The recursive traversal engines behind WordNetCorpusReader's Synset.tree() and Synset.acyclic_tree() have no maximum call-depth safeguard and default to unlimited depth. They guard against literal cycles, but not against a long, genuinely acyclic relation chain  -  which exhausts the Python call stack the same way as the sibling DependencyGraph finding I reported separately. Real-world exploitability requires the host application to load a custom/foreign WordNet-format lexical resource rather than NLTK's bundled default corpus  -  flagging that narrower scope honestly up front since it affects severity, not validity. ### Details `nltk/util.py`'s `acyclic_depth_first()` (~lines 471-541) and `acyclic_branches_depth_first()` (~lines 544-625) recurse once per graph edge, default to `depth=-1` ("unlimited"), and guard against re-visiting the same node via an explicit `traversed` s
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-8846-p9w9-5frf
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-68791#findings</atom:id>
-    <atom:title>Incorrect authorization in Azure Machine Learning allows an unauthorized attacker to disclose information over a network.</atom:title>
-    <atom:published>2026-09-17T23:18:08Z</atom:published>
-    <atom:updated>2026-11-19T23:21:33Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-68791#findings" type="text/html" />
-    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-68791" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 10
-
-Summary: Incorrect authorization in Azure Machine Learning allows an unauthorized attacker to disclose information over a network.
-
-Suggested next step: Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-68791
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Cloud &amp; identity" />
-    <atom:category term="AI &amp; ML tooling" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-130007#findings</atom:id>
-    <atom:title>k8s-mcp-server: Missing authentication on default SSE/HTTP transport allows unauthenticated Kubernetes tool execution</atom:title>
-    <atom:published>2026-11-19T22:48:33Z</atom:published>
-    <atom:updated>2026-11-19T22:48:33Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-130007#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-m932-63jc-4jqq" type="text/html" />
-    <atom:summary type="text">Severity: HIGH
-
-Summary: ## Summary When k8s-mcp-server runs in its default SSE transport mode, the MCP `tools/call` endpoint is dispatched with no authentication, session token, or Origin check. Any client that can reach the listening port can enumerate and invoke the server's Kubernetes tools (including destructive/write tools) without credentials, executing with the server's configured cluster privileges. ## Affected Commit be87a6dd72bb6ec1d4886b8548843b99a4638b12 (Merge PR #130) MCP library: github.com/mark3labs/mcp-go v0.57.0 Default mode: sse (SERVER_MODE default), default port 8080, bind 0.0.0.0 ## Root cause (static trace: handleSSE -&gt; handleMessage -&gt; tools/call) - main.go L129: `server.NewSSEServer(s)` is created with no auth option and no contextFunc; L130 `sse.Start(":"+port)` binds all interfaces (0.0.0.0). - mcp-go sse.go handleSSE (GET /sse): no auth header check; the server mints a sessionId for 
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-m932-63jc-4jqq
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Containers &amp; registries" />
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-83816#findings</atom:id>
-    <atom:title>CodeWhale: exec_shell parallel-readonly classifier auto-approves fd/rg/git grep exec flags enabling silent RCE</atom:title>
-    <atom:published>2026-11-19T22:48:14Z</atom:published>
-    <atom:updated>2026-11-19T22:48:14Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-83816#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-3mgh-93r5-r7jf" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 8.1 (v3.1)
-
-Summary: ### Maintainer resolution The CodeWhale maintainers validated this report. CodeWhale 0.8.67 and earlier are affected. Version 0.9.0 contains the fix in commit 208421b9d23d81cea3311a1eeb2a2ea81d637686. Users should upgrade to 0.9.0 or later. The original reporter analysis is preserved below. ## Summary The interactive Agent profile of DeepSeek-TUI (CodeWhale) is explicitly documented to gate **every** shell command behind an approval prompt (config.rs:3725-3736). However, `ExecShellTool::approval_requirement_for(&amp;tool_input)` downgrades the requirement from `Required` to `Auto` for any command the classifier deems "parallel read-only" (shell.rs:2314-2320). `registered_tool_approval_required` returns `false` for `Auto` **before** the `auto_approve` check runs (turn_loop.rs:37-38), so no prompt is shown even for a user who never enabled YOLO. The classifier `is_parallel_readonly_command` (c
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-3mgh-93r5-r7jf
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Remote code execution" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-83817#findings</atom:id>
-    <atom:title>CodeWhale: Automation auto_approve defaults to true, bypassing the task-path hardening fix for silent recurring agent execution</atom:title>
-    <atom:published>2026-11-19T22:47:33Z</atom:published>
-    <atom:updated>2026-11-19T22:47:34Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-83817#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-8hp3-xxrg-v9c8" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Maintainer resolution The CodeWhale maintainers validated this report. CodeWhale 0.8.67 and earlier are affected. Version 0.9.0 contains the fix in commit 208421b9d23d81cea3311a1eeb2a2ea81d637686. Users should upgrade to 0.9.0 or later. The original reporter analysis is preserved below. ## Summary CVE-2026-45374 (GHSA-72w5-pf8h-xfp4) hardened the task path so auto-approval must be opted into explicitly: `add_task` uses `req.auto_approve.unwrap_or(false)` (task_manager.rs:868). The automation subsystem was not hardened in kind. `AutomationRecord::task_auto_approve()` resolves an omitted `auto_approve` to `DEFAULT_AUTOMATION_AUTO_APPROVE = true` (automation_manager.rs:29, 101-103), and `enqueue_run_task` builds the `NewTaskRequest` with `auto_approve: Some(automation.task_auto_approve())`  -  i.e. an explicit `Some(true)` (automation_manager.rs:766). Because the field is `Some`, `unwra
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-8hp3-xxrg-v9c8
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-95839#findings</atom:id>
-    <atom:title>containerd image-triggered daemon crash via malformed digest in subject-annotated descriptor</atom:title>
-    <atom:published>2026-11-19T22:46:24Z</atom:published>
-    <atom:updated>2026-11-19T22:46:25Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-95839#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-vwhp-8p66-mq4f" type="text/html" />
-    <atom:summary type="text">Severity: HIGH
-
-Summary: ### Impact A bug in containerd's image manifest processing causes an unrecovered panic when a child descriptor contains the `io.containerd.manifest.subject` annotation and a malformed digest. Pulling or importing such an image through the transfer service (including default CRI `PullImage` requests) crashes the containerd daemon. In Kubernetes environments, `kubelet` retries failed image pulls with backoff, allowing a pod referencing an untrusted image to repeatedly crash containerd and disrupt container operations on the worker node. ### Patches This bug has been fixed in containerd 2.4.2, 2.3.7, and 2.2.10. Users should update to these versions to resolve the issue. ### Workarounds Restrict pod image references to trusted registries (for example, using a Kubernetes `ValidatingAdmissionPolicy` or admission webhook) and only pull or import images from trusted sources. ### Credits The con
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-vwhp-8p66-mq4f
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Containers &amp; registries" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-115563#findings</atom:id>
-    <atom:title>Model Context Protocol Python SDK: OAuth client could send credentials to an authorization server chosen by the MCP server</atom:title>
-    <atom:published>2026-11-19T22:45:40Z</atom:published>
-    <atom:updated>2026-11-19T22:45:41Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-115563#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-qx49-fqc8-xw99" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary In affected versions, the SDK's OAuth client support (`mcp.client.auth`) let the MCP server a client connected to decide where the client's OAuth credentials were sent: - the authorization server metadata `issuer` was not validated on every discovery path, and - stored or pre-provisioned client credentials were not bound to the authorization server they belong to. A malicious or compromised MCP server could therefore direct them to a token endpoint of its choosing: - by naming its own authorization server in its protected resource metadata, or - by publishing none and serving metadata that presents the user's real authorization server as the `issuer`. It would then receive the `client_secret`, authorization code and PKCE `code_verifier` meant for that real server (or, with `PrivateKeyJWTOAuthProvider`, a signed client assertion). ### Am I affected? Yes, if both of these hold:
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-qx49-fqc8-xw99
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Cloud &amp; identity" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-121707#findings</atom:id>
-    <atom:title>Effect: ReDoS in Schema.TemplateLiteral compiled regex</atom:title>
-    <atom:published>2026-11-19T20:51:01Z</atom:published>
-    <atom:updated>2026-11-19T20:51:02Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-121707#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-7589-6fvf-x4pw" type="text/html" />
-    <atom:summary type="text">Severity: HIGH
-
-Summary: ### Impact `Schema.TemplateLiteral` compiles each `Schema.String` span to the lazy wildcard `[\s\S]*?` and decodes input by running the resulting regular expression against it. When a template has two or more `Schema.String` spans, for example: ```ts Schema.TemplateLiteral(Schema.String, ":", Schema.String, ":", Schema.String, "X") ``` the regex contains several ambiguous wildcards. A non-matching input makes the backtracking engine try combinations across all of them, so matching time grows cubically with input length. A 5,000-character string of `:` characters blocks the event loop for about 15 seconds. Applications that decode untrusted input with such a schema are affected. That includes `Schema.decodeUnknown`, `Schema.decodeUnknownSync` and `Schema.is`, and anything built on them, such as `HttpApi` request payloads and `@effect/rpc` payloads. ### Patches Fixed in `effect@3.22.1` (#6
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-7589-6fvf-x4pw
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-77283#findings</atom:id>
-    <atom:title>obsidian-sync-mcp: Missing Host/Origin validation lets a public website drive a victim's Obsidian vault via DNS rebinding (no-auth mode)</atom:title>
-    <atom:published>2026-11-19T20:41:18Z</atom:published>
-    <atom:updated>2026-11-19T20:41:20Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-77283#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-mx6p-3fg7-v6pj" type="text/html" />
-    <atom:summary type="text">Severity: HIGH
-
-Summary: When obsidian-sync-mcp runs without MCP_AUTH_TOKEN (the documented no-auth mode for local use), the HTTP MCP endpoint does not validate the Host or Origin header before dispatching MCP methods (CWE-350). The no-auth mode's "local network only" assumption therefore does not hold: a malicious web page the operator visits can use DNS rebinding to resolve an attacker-controlled hostname to 127.0.0.1 (or the operator's LAN/VPN/Docker-published address) and issue requests the server accepts as trusted local calls, reaching the full tool surface (read_note, write_note, edit_note, delete_note, move_note, list_notes, list_folders, list_tags, get_note_metadata). Affected versions: &lt;= 0.5.6 Patched version: 0.5.7 ## Impact Any deployment running without MCP_AUTH_TOKEN  -  including the README "Filesystem mode (simplest)" quickstart and the self-hosted docker-compose setup (where MCP_AUTH_TOKEN defa
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-mx6p-3fg7-v6pj
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Containers &amp; registries" />
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-76807#findings</atom:id>
-    <atom:title>Todoist MCP Server: Browser DNS rebinding lets websites write and delete Todoist data through local MCP server</atom:title>
-    <atom:published>2026-11-19T20:38:35Z</atom:published>
-    <atom:updated>2026-11-19T20:38:36Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-76807#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-833v-v58w-294h" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3 (v3.1)
-
-Summary: The self-hosted `todoist-mcp-http` server accepts browser-origin MCP requests with attacker-controlled `Host` and `Origin` headers. A malicious website can use DNS rebinding to route its own origin to a victim's local `127.0.0.1` MCP server, then invoke Todoist MCP tools without a caller credential. This affects `github.com/Doist/todoist-mcp` at commit `d2903e0d945d2a559d71c091337ad6380511e62f`, package version `10.3.1`, when the optional Streamable HTTP server is running. The stdio entrypoint is not browser-reachable. The vulnerable browser-reachable component is `todoist-mcp-http`. The documented HTTP server mode runs all MCP tools with the operator's `TODOIST_API_KEY` and binds to loopback by default: ```bash TODOIST_API_KEY=your-key npx -p @doist/todoist-mcp todoist-mcp-http ``` `src/main-http.ts:28-30` sets the HTTP bind host and port: ```ts const PORT = Number.parseInt(process.env.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-833v-v58w-294h
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Applications" />
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-75522#findings</atom:id>
-    <atom:title>OpenID4VP: X.509 chain validation accepts a forged certificate that reuses a trusted anchor's Subject DN without verifying its signature</atom:title>
-    <atom:published>2026-11-19T20:35:57Z</atom:published>
-    <atom:updated>2026-11-19T20:35:58Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-75522#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-4c2f-96cf-f5fc" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ## Summary `ChainBuilder` (the private RFC 5280 validator behind `TrustEvaluator` and the public credential-parsing API) terminated chain building on **Subject Distinguished Name string equality** rather than on cryptographic closure to a trust anchor. A certificate whose Subject DN string matched a trusted anchor's Subject DN was accepted as the chain terminus **with no signature verification** against the anchor's public key. An attacker who mints a self-signed certificate and copies a trusted anchor's Subject DN string onto it can therefore have that certificate  -  and any credential signed with its private key  -  accepted as issued under a trusted authority. ## Impact A relying party using `@openeudi/openid4vp` to verify OpenID4VP presentations (mdoc / SD-JWT VC) could be induced to accept a **forged credential as genuine**, defeating the trust-anchor model. In an eIDAS / EUDI age-
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-4c2f-96cf-f5fc
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-30793#findings</atom:id>
-    <atom:title>Cross-Site Request Forgery (CSRF) vulnerability in rustdesk-client RustDesk Client rustdesk-client on Windows, MacOS, Linux, iOS, Android (Flutter URI</atom:title>
-    <atom:published>2026-03-05T16:16:20Z</atom:published>
-    <atom:updated>2026-11-19T19:17:30Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-30793#findings" type="text/html" />
-    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-30793" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.3
-
-Summary: Cross-Site Request Forgery (CSRF) vulnerability in rustdesk-client RustDesk Client rustdesk-client on Windows, MacOS, Linux, iOS, Android (Flutter URI scheme handler, FFI bridge modules) allows Privilege Escalation. This vulnerability is associated with program files flutter/lib/common.Dart, src/flutter_ffi.Rs and program routines URI handler for rustdesk://password/, bind.MainSetPermanentPassword(). This issue affects RustDesk Client: through 1.4.5. NOTE: some third parties have indicated that these details do not align with the Supplier's statements.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-30793
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Privilege escalation" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings</atom:id>
-    <atom:title>picomatch vulnerable to ReDoS through single-branch repeated extglobs</atom:title>
-    <atom:published>2026-10-19T18:32:12Z</atom:published>
-    <atom:updated>2026-11-19T16:07:41Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-112366#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-fc5q-39xc-vjpf" type="text/html" />
-    <atom:summary type="text">Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ## Withdrawn Advisory This advisory has been withdrawn because it is not a security issue. See https://github.com/micromatch/picomatch/pull/235#issuecomment-6315749381 for more information. This link is maintained to preserve external references. ## Original Description Picomatch through 4.0.7 contains a regular expression denial of service vulnerability that allows attackers to block the event loop by supplying single-branch repeated extglob patterns. Attackers can provide globs like +(*) or +(*a), which analyzeRepeatedExtglob in lib/parse.js skips, causing exponential backtracking against short crafted strings and denying service to Node.js applications.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-fc5q-39xc-vjpf
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-71536#findings</atom:id>
-    <atom:title>Mareforma: verify_bundle never checks a per-claim signature</atom:title>
-    <atom:published>2026-11-19T16:03:39Z</atom:published>
-    <atom:updated>2026-11-19T16:03:40Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-71536#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-hxh5-gp44-rc6p" type="text/html" />
-    <atom:summary type="text">Severity: HIGH
-
-Summary: ## What's wrong `verify_bundle` documents that it verifies "a bundle's DSSE envelope AND each per-claim signature", lists "per-claim signature failure" among its raised errors, and promises that partial verification never surfaces "an authenticated bundle that contains some invalid claims" as success. The code does not do this. The JSON-LD predicate built by `JSONLDExporter._claim_node` carries no signature material (there is no `signatureBundle` field on the node), so the verify loop has nothing cryptographic to check per claim. It only re-derives each claim's canonical-statement digest from the node fields and compares it to the signed subject list: ```python chain_input = _signing.canonical_statement({...node fields...}, node.get("evidence") or {}) expected = hashlib.sha256(chain_input).hexdigest() if subjects[subject_name] != expected: raise BundleVerificationError(...) ``` That dige
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-hxh5-gp44-rc6p
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Libraries &amp; dependencies" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-99310#findings</atom:id>
-    <atom:title>In the Linux kernel, the following vulnerability has been resolved:
-
-nfsd: hold cl_lock in...</atom:title>
-    <atom:published>2026-11-16T12:31:40Z</atom:published>
-    <atom:updated>2026-11-19T15:32:07Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-99310#findings" type="text/html" />
-    <atom:link rel="related" href="https://github.com/advisories/GHSA-2g5x-xxw3-8949" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: nfsd: hold cl_lock in client_has_openowners() client_has_openowners() walks clp-&gt;cl_openowners and reads so_stateids without clp-&gt;cl_lock. nfs4_put_stateowner() unhashes that openowner under cl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched creds can use-after-free the nfs4_openowner. BUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140 fs/nfsd/nfs4state.c:3718 client_has_openowners() nfsd4_exchange_id nfsd4_proc_compound nfsd_dispatch svc_process Take clp-&gt;cl_lock while client_has_openowners() walks the openowner list.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-2g5x-xxw3-8949
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
   </atom:entry>
 </atom:feed>
