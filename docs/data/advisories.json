@@ -4,51 +4,6 @@
       "Red Hat Quay"
     ],
     "aliases": [
-      "CVE-2026-123710",
-      "GHSA-jw94-v4wp-236w"
-    ],
-    "attention_score": 125,
-    "categories": [
-      "containers"
-    ],
-    "cvss": 9.8,
-    "cvss_version": "3.1",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-13T10:25:09Z",
-    "id": "CVE-2026-123710",
-    "last_seen": "2026-11-22T19:41:14Z",
-    "matched_topics": [
-      "Quay"
-    ],
-    "modified": "2026-11-21T00:32:33Z",
-    "priority": "review",
-    "published": "2026-11-11T14:00:00Z",
-    "security_topics": [
-      "Supply chain"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "Red Hat Security Data API",
-        "url": "https://access.redhat.com/security/cve/CVE-2026-123710"
-      },
-      {
-        "name": "GitHub Advisory Database",
-        "url": "https://github.com/advisories/GHSA-jw94-v4wp-236w"
-      }
-    ],
-    "suggested_next_step": "Review the original advisory and affected build or distribution components. Verify upstream status before changing dependencies.",
-    "summary": "A flaw was found in Red Hat Quay. An unauthenticated client can obtain an anonymous registry token with an audience it controls, present that token to the service key rotation endpoint, and install its own approved signing key with no expiry. Registry tokens signed with that key are accepted for any repository, allowing read and write access to private images and replacement of repository tags.",
-    "title": "Red Hat Quay security advisory CVE-2026-123710",
-    "why_it_matters": "A flaw was found in Red Hat Quay. An unauthenticated client can obtain an anonymous registry token with an audience it controls, present that token to the service key rotation endpoint, and install its own approved signing key with no expiry. Registry tokens signed with that key are accepted for any repository, allowing read and write access to private images and replacement of repository tags."
-  },
-  {
-    "affected": [
-      "Red Hat Quay"
-    ],
-    "aliases": [
       "CVE-2026-110697",
       "GHSA-cxc6-5mg7-78wq"
     ],
@@ -63,11 +18,11 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-110697",
-    "last_seen": "2026-11-22T19:41:14Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Quay"
     ],
-    "modified": "2026-11-21T00:32:33Z",
+    "modified": "2026-11-24T00:31:19Z",
     "priority": "review",
     "published": "2026-11-11T14:00:00Z",
     "security_topics": [
@@ -88,6 +43,51 @@
     "summary": "A flaw was found in Quay where the robot account listing function constructs a SQL LIKE pattern from user-controlled namespace names without escaping wildcard metacharacters. An attacker who creates a namespace containing an underscore character can match and retrieve robot accounts and their decrypted authentication tokens from other tenants' namespaces, leading to cross-tenant credential theft and unauthorized image operations.",
     "title": "Red Hat Quay security advisory CVE-2026-110697",
     "why_it_matters": "A flaw was found in Quay where the robot account listing function constructs a SQL LIKE pattern from user-controlled namespace names without escaping wildcard metacharacters. An attacker who creates a namespace containing an underscore character can match and retrieve robot accounts and their decrypted authentication tokens from other tenants' namespaces, leading to cross-tenant credential theft and unauthorized image operations."
+  },
+  {
+    "affected": [
+      "Red Hat Quay"
+    ],
+    "aliases": [
+      "CVE-2026-123710",
+      "GHSA-jw94-v4wp-236w"
+    ],
+    "attention_score": 125,
+    "categories": [
+      "containers"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-13T10:25:09Z",
+    "id": "CVE-2026-123710",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [
+      "Quay"
+    ],
+    "modified": "2026-11-24T00:31:18Z",
+    "priority": "review",
+    "published": "2026-11-11T14:00:00Z",
+    "security_topics": [
+      "Supply chain"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "Red Hat Security Data API",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-123710"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-jw94-v4wp-236w"
+      }
+    ],
+    "suggested_next_step": "Review the original advisory and affected build or distribution components. Verify upstream status before changing dependencies.",
+    "summary": "A flaw was found in Red Hat Quay. An unauthenticated client can obtain an anonymous registry token with an audience it controls, present that token to the service key rotation endpoint, and install its own approved signing key with no expiry. Registry tokens signed with that key are accepted for any repository, allowing read and write access to private images and replacement of repository tags.",
+    "title": "Red Hat Quay security advisory CVE-2026-123710",
+    "why_it_matters": "A flaw was found in Red Hat Quay. An unauthenticated client can obtain an anonymous registry token with an audience it controls, present that token to the service key rotation endpoint, and install its own approved signing key with no expiry. Registry tokens signed with that key are accepted for any repository, allowing read and write access to private images and replacement of repository tags."
   },
   {
     "affected": [
@@ -154,7 +154,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T07:39:52Z",
     "id": "CVE-2026-134624",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:46Z",
     "priority": "information",
@@ -196,7 +196,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-133968",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:45Z",
     "priority": "information",
@@ -779,7 +779,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-134820",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Quay"
     ],
@@ -817,7 +817,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134366",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Quay"
     ],
@@ -857,7 +857,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134367",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Quay"
     ],
@@ -897,7 +897,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134651",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Quay"
     ],
@@ -1219,7 +1219,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-134364",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Quay"
     ],
@@ -1693,62 +1693,68 @@
     "why_it_matters": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA)."
   },
   {
-    "affected": [],
+    "affected": [
+      "gnome glib",
+      "redhat enterprise linux"
+    ],
     "aliases": [
-      "CVE-2026-70193"
+      "CVE-2025-14087"
     ],
     "attention_score": 75,
     "categories": [
-      "applications"
+      "infrastructure"
     ],
-    "cvss": 9.9,
+    "cvss": 9.8,
     "cvss_version": "",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
-    "first_seen": "2026-11-23T23:54:12Z",
-    "id": "CVE-2026-70193",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "first_seen": "2026-11-13T10:25:09Z",
+    "id": "CVE-2025-14087",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
-      "Microsoft"
+      "Linux"
     ],
-    "modified": "2026-11-23T22:22:36.807",
+    "modified": "2026-11-24T06:17:05.520",
     "priority": "review",
-    "published": "2026-11-23T22:22:36.660",
-    "security_topics": [],
+    "published": "2025-12-10T09:15:47.053",
+    "security_topics": [
+      "Denial of service"
+    ],
     "severity": "critical",
     "sources": [
       {
         "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70193"
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14087"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
-    "title": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute",
-    "why_it_matters": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+    "summary": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
+    "title": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potentia",
+    "why_it_matters": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings."
   },
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-113824"
+      "CVE-2026-113824",
+      "GHSA-vphq-fv8x-4qvf"
     ],
     "attention_score": 75,
     "categories": [
       "unclassified"
     ],
     "cvss": 9.1,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-113824",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Microsoft"
     ],
-    "modified": "2026-11-23T22:19:05.307",
+    "modified": "2026-11-24T00:31:22Z",
     "priority": "review",
     "published": "2026-11-23T22:19:04.970",
     "security_topics": [
@@ -1760,12 +1766,57 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113824"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vphq-fv8x-4qvf"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
     "summary": "Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.",
     "title": "Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.",
     "why_it_matters": "Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-70193",
+      "GHSA-rx7q-73hj-gq9m"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.9,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T23:54:12Z",
+    "id": "CVE-2026-70193",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [
+      "Microsoft"
+    ],
+    "modified": "2026-11-24T00:31:19Z",
+    "priority": "review",
+    "published": "2026-11-23T22:22:36.660",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70193"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rx7q-73hj-gq9m"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
+    "title": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute",
+    "why_it_matters": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
   },
   {
     "affected": [],
@@ -1784,7 +1835,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135211",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Python"
     ],
@@ -1828,7 +1879,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-133469",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "npm"
     ],
@@ -1867,7 +1918,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-59090",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1920,7 +1971,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-58016",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -1969,7 +2020,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-28369",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2018,7 +2069,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-28368",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2055,7 +2106,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135163",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -2094,7 +2145,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-102560",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2131,7 +2182,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-99310",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2168,7 +2219,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-31705",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2205,7 +2256,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2025-40074",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2242,7 +2293,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99680",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2279,7 +2330,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99679",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2316,7 +2367,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99634",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2353,7 +2404,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99590",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2390,7 +2441,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99544",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2427,7 +2478,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99513",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2464,7 +2515,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99366",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2501,7 +2552,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99385",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2538,7 +2589,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99370",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2575,7 +2626,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99362",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2612,7 +2663,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-22T19:41:14Z",
     "id": "CVE-2026-99356",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2649,7 +2700,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-99306",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2686,7 +2737,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-99304",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2723,7 +2774,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-90036",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2760,7 +2811,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-80612",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2797,7 +2848,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-68136",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2834,7 +2885,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T07:39:52Z",
     "id": "CVE-2026-134814",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "Node.js"
     ],
@@ -6876,47 +6927,6 @@
   },
   {
     "affected": [
-      "gnome glib",
-      "redhat enterprise linux"
-    ],
-    "aliases": [
-      "CVE-2025-14087"
-    ],
-    "attention_score": 75,
-    "categories": [
-      "infrastructure"
-    ],
-    "cvss": 9.8,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-13T10:25:09Z",
-    "id": "CVE-2025-14087",
-    "last_seen": "2026-11-13T11:26:54Z",
-    "matched_topics": [
-      "Linux"
-    ],
-    "modified": "2026-11-10T20:17:19.727",
-    "priority": "review",
-    "published": "2025-12-10T09:15:47.053",
-    "security_topics": [
-      "Denial of service"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14087"
-      }
-    ],
-    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
-    "title": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potentia",
-    "why_it_matters": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings."
-  },
-  {
-    "affected": [
       "mongoose"
     ],
     "aliases": [
@@ -7169,6 +7179,47 @@
   },
   {
     "affected": [
+      "langflow"
+    ],
+    "aliases": [
+      "CVE-2026-7700",
+      "GHSA-9fpm-3445-2vx4"
+    ],
+    "attention_score": 55,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 8.8,
+    "cvss_version": "3.1",
+    "ecosystems": [
+      "pip"
+    ],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-7700",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [
+      "Python"
+    ],
+    "modified": "2026-11-24T01:23:39Z",
+    "priority": "review",
+    "published": "2026-10-05T22:30:41Z",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9fpm-3445-2vx4"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "## Summary Langflow versions 1.3.0 through 1.10.2 contain a code-injection vulnerability in the Smart Transform (`LambdaFilterComponent`) component. Smart Transform places flow-author instructions and a preview of its input data into a prompt asking an LLM to generate a Python lambda. It then extracts a one-line lambda from the model response, applies only syntactic format checks, evaluates it with Python's full builtins, and invokes the resulting function inside the Langflow process. A malicious flow author can exploit this directly through the Instructions field. In deployments where an exposed flow passes attacker-controlled content into Smart Transform, an attacker may also exploit it indirectly through prompt injection, subject to the configured model following the injected instruction. ## Vulnerability details **Vulnerable Code Location**: `src/lfx/src/lfx/components/llm_operations",
+    "title": "Langflow: Prompt injection in Langflow Smart Transform can lead to code execution",
+    "why_it_matters": "## Summary Langflow versions 1.3.0 through 1.10.2 contain a code-injection vulnerability in the Smart Transform (`LambdaFilterComponent`) component. Smart Transform places flow-author instructions and a preview of its input data into a prompt asking an LLM to generate a Python lambda. It then extracts a one-line lambda from the model response, applies only syntactic format checks, evaluates it with Python's full builtins, and invokes the resulting function inside the Langflow process. A malicious flow author can exploit this directly through the Instructions field. In deployments where an exposed flow passes attacker-controlled content into Smart Transform, an attacker may also exploit it indirectly through prompt injection, subject to the configured model following the injected instruction. ## Vulnerability details **Vulnerable Code Location**: `src/lfx/src/lfx/components/llm_operations"
+  },
+  {
+    "affected": [
       "@tmlmobilidade/utils"
     ],
     "aliases": [
@@ -7188,7 +7239,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-45325",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [
       "npm"
     ],
@@ -10466,22 +10517,524 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-70305"
+      "CVE-2026-135202",
+      "GHSA-wp95-wh36-9jg7"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications",
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-135202",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:50Z",
+    "priority": "information",
+    "published": "2026-11-24T06:17:08.080",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-wp95-wh36-9jg7"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135202"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Several plugins for WordPress published by WP connect (Orders Sync to Airtable for WooCommerce, Add-On for Contact Form 7 to Notion, WP Sync for Notion – Notion to WordPress, Add-On for Contact Form 7 to Airtable, Add-on Brevo for Gravity Forms, and Air WP Sync – Airtable to WordPress) contain embedded malicious code (a backdoor) in the versions listed. The affected releases unconditionally load a backdoor module (includes/airwp-online.php) that runs on every request via the 'init' hook and on a half-hourly WP-Cron event, sends site information (site URL, PHP, WordPress and OS versions, and the server user) to a remote command-and-control server at tascredit-pay.com with TLS certificate verification disabled, and executes the PHP code returned by that server via eval(). The module also accepts queued commands that run shell commands, read, write and delete arbitrary files, query arbitrar",
+    "title": "Several plugins for WordPress published by WP connect (Orders Sync to Airtable for WooCommerce,...",
+    "why_it_matters": "Several plugins for WordPress published by WP connect (Orders Sync to Airtable for WooCommerce, Add-On for Contact Form 7 to Notion, WP Sync for Notion – Notion to WordPress, Add-On for Contact Form 7 to Airtable, Add-on Brevo for Gravity Forms, and Air WP Sync – Airtable to WordPress) contain embedded malicious code (a backdoor) in the versions listed. The affected releases unconditionally load a backdoor module (includes/airwp-online.php) that runs on every request via the 'init' hook and on a half-hourly WP-Cron event, sends site information (site URL, PHP, WordPress and OS versions, and the server user) to a remote command-and-control server at tascredit-pay.com with TLS certificate verification disabled, and executes the PHP code returned by that server via eval(). The module also accepts queued commands that run shell commands, read, write and delete arbitrary files, query arbitrar"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-128797",
+      "GHSA-6fj8-f9cc-6gxv"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-128797",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:50Z",
+    "priority": "information",
+    "published": "2026-11-24T06:30:43Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-6fj8-f9cc-6gxv"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Web administration panel (port 8080) binds to all network interfaces including public IPv6 addresses, making internal API endpoints reachable over WAN without firewall protection (related to CVE-2026-50224).",
+    "title": "Web administration panel (port 8080) binds to all network interfaces including public IPv6...",
+    "why_it_matters": "Web administration panel (port 8080) binds to all network interfaces including public IPv6 addresses, making internal API endpoints reachable over WAN without firewall protection (related to CVE-2026-50224)."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-9790",
+      "GHSA-hf89-9jvq-vr6f"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-9790",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:50Z",
+    "priority": "information",
+    "published": "2026-11-24T06:30:42Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hf89-9jvq-vr6f"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Endpoints accessible without authentication from any WiFi client (e.g., /user/hasSimCard, /user/pooling, /api/device-info).",
+    "title": "Endpoints accessible without authentication from any WiFi client (e.g., /user/hasSimCard, /user...",
+    "why_it_matters": "Endpoints accessible without authentication from any WiFi client (e.g., /user/hasSimCard, /user/pooling, /api/device-info)."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-135736",
+      "GHSA-ww54-63h3-j24w"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-135736",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:45Z",
+    "priority": "information",
+    "published": "2026-11-24T06:30:40Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-ww54-63h3-j24w"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.",
+    "title": "FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter...",
+    "why_it_matters": "FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-128798",
+      "GHSA-96r6-h69v-rwf6"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-128798",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:44Z",
+    "priority": "information",
+    "published": "2026-11-24T06:30:44Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-96r6-h69v-rwf6"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Any connected WiFi client can fetch device info and meeting recording metadata without credentials.",
+    "title": "Any connected WiFi client can fetch device info and meeting recording metadata without credentials.",
+    "why_it_matters": "Any connected WiFi client can fetch device info and meeting recording metadata without credentials."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-135743",
+      "GHSA-h3g4-39w6-fgf2"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-135743",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:42Z",
+    "priority": "information",
+    "published": "2026-11-24T06:30:41Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-h3g4-39w6-fgf2"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "FFmpeg 4.3 before 9.1 contains a heap out-of-bounds read and write vulnerability in the dynaudnorm filter because cqueue_resize() miscalculates gain history queue element counts when gausssize changes at runtime. Attackers can send gausssize commands via asendcmd scripts or an unauthenticated azmq filter to corrupt heap memory, crashing the process or potentially executing code.",
+    "title": "FFmpeg 4.3 before 9.1 contains a heap out-of-bounds read and write vulnerability in the...",
+    "why_it_matters": "FFmpeg 4.3 before 9.1 contains a heap out-of-bounds read and write vulnerability in the dynaudnorm filter because cqueue_resize() miscalculates gain history queue element counts when gausssize changes at runtime. Attackers can send gausssize commands via asendcmd scripts or an unauthenticated azmq filter to corrupt heap memory, crashing the process or potentially executing code."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-128791",
+      "GHSA-ff2w-p9wc-c8c2"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-128791",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T06:30:34Z",
+    "priority": "information",
+    "published": "2026-11-24T06:30:30Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-ff2w-p9wc-c8c2"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Any WiFi client can send HTTP DELETE to /meeting-recording/delete to permanently delete files without authentication.",
+    "title": "Any WiFi client can send HTTP DELETE to /meeting-recording/delete to permanently delete files...",
+    "why_it_matters": "Any WiFi client can send HTTP DELETE to /meeting-recording/delete to permanently delete files without authentication."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-134401",
+      "GHSA-vcxr-fgjm-43ff"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.6,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-134401",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T03:32:38Z",
+    "priority": "information",
+    "published": "2026-11-24T00:31:22Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vcxr-fgjm-43ff"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Improper input validation in Variations in Google Chrome prior to 158.0.8127.88 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
+    "title": "Improper input validation in Variations in Google Chrome prior to 158.0.8127.88 allowed a remote...",
+    "why_it_matters": "Improper input validation in Variations in Google Chrome prior to 158.0.8127.88 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-114203",
+      "GHSA-w2qv-w884-2f25"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-114203",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T03:31:47Z",
+    "priority": "information",
+    "published": "2026-11-24T03:31:35Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-w2qv-w884-2f25"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "An Improper Neutralization of Special Elements used in an OS Command（'OS Command Injection') in the ASUS GPU Tweak III allows a remote user to execute arbitrary OS commands via a crafted request to an HTTP endpoint of the service. Refer to the ' Security Update for ASUS GPU Tweak III ' section on the ASUS Security Advisory for more information.",
+    "title": "An Improper Neutralization of Special Elements used in an OS Command（'OS Command Injection') in...",
+    "why_it_matters": "An Improper Neutralization of Special Elements used in an OS Command（'OS Command Injection') in the ASUS GPU Tweak III allows a remote user to execute arbitrary OS commands via a crafted request to an HTTP endpoint of the service. Refer to the ' Security Update for ASUS GPU Tweak III ' section on the ASUS Security Advisory for more information."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-135686",
+      "GHSA-qr54-743q-fpq8"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 7.4,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-135686",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T03:31:42Z",
+    "priority": "information",
+    "published": "2026-11-24T03:31:33Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-qr54-743q-fpq8"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Trilium through 0.107.0 contains an sql injection vulnerability in updateNormalEntity() that allows malicious sync partners to inject SQL by supplying crafted entity names and column keys. Attackers can abuse /api/sync/changed or PUT /api/sync/update data to copy sessions, etapi_tokens and user_data into synced rows and write arbitrary database rows.",
+    "title": "Trilium through 0.107.0 contains an sql injection vulnerability in updateNormalEntity() that...",
+    "why_it_matters": "Trilium through 0.107.0 contains an sql injection vulnerability in updateNormalEntity() that allows malicious sync partners to inject SQL by supplying crafted entity names and column keys. Attackers can abuse /api/sync/changed or PUT /api/sync/update data to copy sessions, etapi_tokens and user_data into synced rows and write arbitrary database rows."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-135693",
+      "GHSA-567q-942h-jc5g"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.7,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-135693",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T03:31:42Z",
+    "priority": "information",
+    "published": "2026-11-24T03:31:34Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-567q-942h-jc5g"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "rConfig Core 8.0.0 before 8.2.17 and rConfig Pro before 8.4.0 contain a stored cross-site scripting vulnerability in the Config Search View Matches dialog, which renders configuration context via v-html without escaping. Attackers can place markup in device banners, interface descriptions, ACL remarks or SNMP locations to execute script in a user's session and read stored configurations containing secrets.",
+    "title": "rConfig Core 8.0.0 before 8.2.17 and rConfig Pro before 8.4.0 contain a stored cross-site...",
+    "why_it_matters": "rConfig Core 8.0.0 before 8.2.17 and rConfig Pro before 8.4.0 contain a stored cross-site scripting vulnerability in the Config Search View Matches dialog, which renders configuration context via v-html without escaping. Attackers can place markup in device banners, interface descriptions, ACL remarks or SNMP locations to execute script in a user's session and read stored configurations containing secrets."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-18530",
+      "GHSA-hhpm-rj8g-wgpg"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.9,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-18530",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T03:31:36Z",
+    "priority": "information",
+    "published": "2026-11-24T03:31:36Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hhpm-rj8g-wgpg"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "OS command injection in the a3cli restricted shell in Lantronix S2220 Series 2 allows an authenticated attacker to bypass shell restrictions and execute arbitrary operating system commands via unsanitized command substitution metacharacters, including backticks and $(), in parameters of permitted commands over SSH. This vulnerability is fixed in firmware version 1.3.37.",
+    "title": "OS command injection in the a3cli restricted shell in Lantronix S2220 Series 2 allows an...",
+    "why_it_matters": "OS command injection in the a3cli restricted shell in Lantronix S2220 Series 2 allows an authenticated attacker to bypass shell restrictions and execute arbitrary operating system commands via unsanitized command substitution metacharacters, including backticks and $(), in parameters of permitted commands over SSH. This vulnerability is fixed in firmware version 1.3.37."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-101864",
+      "GHSA-v23r-mghv-hh6p"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 7.7,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-101864",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T00:31:29Z",
+    "priority": "information",
+    "published": "2026-11-24T00:31:20Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-v23r-mghv-hh6p"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "EUSurvey through 1.6, prior to commit a4161a9, contains a weak password recovery mechanism that allows attackers who obtain a still-valid password-reset link to take over accounts that use a local EUSurvey password. The /auth/reset/ flow checks only the age of a reset code and does not invalidate it after the password is changed, and issuing a newer link leaves earlier links active, so a used or superseded link remains valid for up to 24 hours from issuance and can be reused to set a new password, sign in as the affected user, and lock that user out.",
+    "title": "EUSurvey through 1.6, prior to commit a4161a9, contains a weak password recovery mechanism that...",
+    "why_it_matters": "EUSurvey through 1.6, prior to commit a4161a9, contains a weak password recovery mechanism that allows attackers who obtain a still-valid password-reset link to take over accounts that use a local EUSurvey password. The /auth/reset/ flow checks only the age of a reset code and does not invalidate it after the password is changed, and issuing a newer link leaves earlier links active, so a used or superseded link remains valid for up to 24 hours from issuance and can be reused to set a new password, sign in as the affected user, and lock that user out."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-93700",
+      "GHSA-3pmp-pmrx-j48r"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.0,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-24T09:54:41Z",
+    "id": "CVE-2026-93700",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T00:31:29Z",
+    "priority": "information",
+    "published": "2026-11-24T00:31:19Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3pmp-pmrx-j48r"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "An authenticated WHMCS client could potentially leverage this flaw to read sensitive configuration files on the WHMCS host, including database credentials, and to execute code on the server.",
+    "title": "An authenticated WHMCS client could potentially leverage this flaw to read sensitive...",
+    "why_it_matters": "An authenticated WHMCS client could potentially leverage this flaw to read sensitive configuration files on the WHMCS host, including database credentials, and to execute code on the server."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-70305",
+      "GHSA-pr34-9jwf-7xpr"
     ],
     "attention_score": 45,
     "categories": [
       "cloud-identity"
     ],
     "cvss": 9.6,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-70305",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:22:52.337",
+    "modified": "2026-11-24T00:31:22Z",
     "priority": "information",
     "published": "2026-11-23T22:22:50.890",
     "security_topics": [],
@@ -10490,6 +11043,10 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70305"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-pr34-9jwf-7xpr"
       }
     ],
     "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
@@ -10500,58 +11057,23 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-69899"
-    ],
-    "attention_score": 45,
-    "categories": [
-      "cloud-identity"
-    ],
-    "cvss": 9.1,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-23T23:54:12Z",
-    "id": "CVE-2026-69899",
-    "last_seen": "2026-11-23T23:54:12Z",
-    "matched_topics": [],
-    "modified": "2026-11-23T22:22:12.103",
-    "priority": "information",
-    "published": "2026-11-23T22:22:11.980",
-    "security_topics": [
-      "Authentication & authorization"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69899"
-      }
-    ],
-    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
-    "summary": "Authentication bypass by spoofing in Azure DevTest Labs allows an unauthorized attacker to perform spoofing over a network.",
-    "title": "Authentication bypass by spoofing in Azure DevTest Labs allows an unauthorized attacker to perform spoofing over a network.",
-    "why_it_matters": "Authentication bypass by spoofing in Azure DevTest Labs allows an unauthorized attacker to perform spoofing over a network."
-  },
-  {
-    "affected": [],
-    "aliases": [
-      "CVE-2026-62841"
+      "CVE-2026-62841",
+      "GHSA-x9rv-7m3q-wvw2"
     ],
     "attention_score": 45,
     "categories": [
       "cloud-identity"
     ],
     "cvss": 10.0,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-62841",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:20:39.423",
+    "modified": "2026-11-24T00:31:22Z",
     "priority": "information",
     "published": "2026-11-23T22:20:39.293",
     "security_topics": [
@@ -10562,6 +11084,10 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62841"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-x9rv-7m3q-wvw2"
       }
     ],
     "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
@@ -10572,22 +11098,23 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-50691"
+      "CVE-2026-50691",
+      "GHSA-gw5c-fw3v-mrgh"
     ],
     "attention_score": 45,
     "categories": [
       "unclassified"
     ],
     "cvss": 9.9,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-50691",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:20:16.703",
+    "modified": "2026-11-24T00:31:22Z",
     "priority": "information",
     "published": "2026-11-23T22:20:16.553",
     "security_topics": [
@@ -10599,6 +11126,10 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50691"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-gw5c-fw3v-mrgh"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
@@ -10609,22 +11140,23 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-118286"
+      "CVE-2026-118286",
+      "GHSA-p5w7-hr8p-2m98"
     ],
     "attention_score": 45,
     "categories": [
       "cloud-identity"
     ],
     "cvss": 9.1,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-118286",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:19:31.057",
+    "modified": "2026-11-24T00:31:22Z",
     "priority": "information",
     "published": "2026-11-23T22:19:30.903",
     "security_topics": [
@@ -10636,6 +11168,10 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118286"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-p5w7-hr8p-2m98"
       }
     ],
     "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
@@ -10646,7 +11182,8 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-118285"
+      "CVE-2026-118285",
+      "GHSA-3726-7qv6-w947"
     ],
     "attention_score": 45,
     "categories": [
@@ -10655,15 +11192,15 @@
       "ai-ml"
     ],
     "cvss": 9.6,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-118285",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:19:30.860",
+    "modified": "2026-11-24T00:31:22Z",
     "priority": "information",
     "published": "2026-11-23T22:19:30.710",
     "security_topics": [
@@ -10674,6 +11211,10 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118285"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-3726-7qv6-w947"
       }
     ],
     "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
@@ -10684,58 +11225,64 @@
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-109490"
+      "CVE-2026-69899",
+      "GHSA-phcm-jqjr-xf72"
     ],
     "attention_score": 45,
     "categories": [
-      "unclassified"
+      "cloud-identity"
     ],
-    "cvss": 9.3,
-    "cvss_version": "",
+    "cvss": 9.1,
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
-    "id": "CVE-2026-109490",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "id": "CVE-2026-69899",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:18:30.440",
+    "modified": "2026-11-24T00:31:20Z",
     "priority": "information",
-    "published": "2026-11-23T22:18:30.130",
+    "published": "2026-11-23T22:22:11.980",
     "security_topics": [
-      "Privilege escalation"
+      "Authentication & authorization"
     ],
     "severity": "critical",
     "sources": [
       {
         "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109490"
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69899"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-phcm-jqjr-xf72"
       }
     ],
-    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network.",
-    "title": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized",
-    "why_it_matters": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network."
+    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+    "summary": "Authentication bypass by spoofing in Azure DevTest Labs allows an unauthorized attacker to perform spoofing over a network.",
+    "title": "Authentication bypass by spoofing in Azure DevTest Labs allows an unauthorized attacker to perform spoofing over a network.",
+    "why_it_matters": "Authentication bypass by spoofing in Azure DevTest Labs allows an unauthorized attacker to perform spoofing over a network."
   },
   {
     "affected": [],
     "aliases": [
-      "CVE-2026-109480"
+      "CVE-2026-109480",
+      "GHSA-4fff-63rv-6rwc"
     ],
     "attention_score": 45,
     "categories": [
       "infrastructure"
     ],
     "cvss": 9.6,
-    "cvss_version": "",
+    "cvss_version": "3.1",
     "ecosystems": [],
     "exploited": false,
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-109480",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
-    "modified": "2026-11-23T22:18:29.550",
+    "modified": "2026-11-24T00:31:19Z",
     "priority": "information",
     "published": "2026-11-23T22:18:29.133",
     "security_topics": [
@@ -10746,12 +11293,57 @@
       {
         "name": "NIST NVD",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109480"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4fff-63rv-6rwc"
       }
     ],
     "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
     "summary": "Server-side request forgery in Profile Data Roaming Service (PDRS) allows an authorized attacker to elevate privileges over a network.",
     "title": "Server-side request forgery in Profile Data Roaming Service (PDRS) allows an authorized attacker to elevate privileges over a network.",
     "why_it_matters": "Server-side request forgery in Profile Data Roaming Service (PDRS) allows an authorized attacker to elevate privileges over a network."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-109490",
+      "GHSA-5q9c-6x2x-jc62"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T23:54:12Z",
+    "id": "CVE-2026-109490",
+    "last_seen": "2026-11-24T09:54:41Z",
+    "matched_topics": [],
+    "modified": "2026-11-24T00:31:18Z",
+    "priority": "information",
+    "published": "2026-11-23T22:18:30.130",
+    "security_topics": [
+      "Privilege escalation"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109490"
+      },
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5q9c-6x2x-jc62"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network.",
+    "title": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized",
+    "why_it_matters": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network."
   },
   {
     "affected": [],
@@ -10770,7 +11362,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-114022",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:45Z",
     "priority": "information",
@@ -10805,7 +11397,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-132475",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:45Z",
     "priority": "information",
@@ -10840,7 +11432,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-114025",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:45Z",
     "priority": "information",
@@ -10877,7 +11469,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-114021",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:45Z",
     "priority": "information",
@@ -10912,7 +11504,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2025-11919",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:31:38Z",
     "priority": "information",
@@ -10947,7 +11539,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-103788",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T18:31:59Z",
     "priority": "information",
@@ -10984,7 +11576,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135208",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T18:31:59Z",
     "priority": "information",
@@ -11025,7 +11617,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-103782",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T18:31:58Z",
     "priority": "information",
@@ -11060,7 +11652,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135300",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T18:31:58Z",
     "priority": "information",
@@ -11107,7 +11699,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-28367",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T16:17:46.600",
     "priority": "information",
@@ -11142,7 +11734,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135171",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:32:53Z",
     "priority": "information",
@@ -11177,7 +11769,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135174",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:32:48Z",
     "priority": "information",
@@ -11212,7 +11804,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-135161",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:32:47Z",
     "priority": "information",
@@ -11256,7 +11848,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2025-12543",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:17:15.663",
     "priority": "information",
@@ -11292,7 +11884,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2024-3094",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T14:17:21.190",
     "priority": "information",
@@ -11327,7 +11919,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-121613",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T12:30:35Z",
     "priority": "information",
@@ -11362,7 +11954,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-134882",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T09:31:16Z",
     "priority": "information",
@@ -11403,7 +11995,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-120382",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T09:31:11Z",
     "priority": "information",
@@ -11442,7 +12034,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-115899",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T09:31:05Z",
     "priority": "information",
@@ -11477,7 +12069,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T07:39:52Z",
     "id": "CVE-2026-134838",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T00:30:35Z",
     "priority": "information",
@@ -11514,7 +12106,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T07:39:52Z",
     "id": "CVE-2026-134815",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T00:30:26Z",
     "priority": "information",
@@ -11660,7 +12252,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T19:16:15Z",
     "id": "CVE-2026-133993",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-21T18:30:51Z",
     "priority": "information",
@@ -36053,7 +36645,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-63492",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T22:06:29Z",
     "priority": "information",
@@ -36094,7 +36686,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-77423",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:02:06Z",
     "priority": "information",
@@ -36133,7 +36725,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-58262",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T20:55:36Z",
     "priority": "information",
@@ -36172,7 +36764,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-22865",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:41:58Z",
     "priority": "information",
@@ -36211,7 +36803,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-22816",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:39:17Z",
     "priority": "information",
@@ -36250,7 +36842,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-1775",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-23T13:53:59.840",
     "priority": "information",
@@ -36291,7 +36883,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-55621",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-21T05:15:44Z",
     "priority": "information",
@@ -36330,7 +36922,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-33203",
-    "last_seen": "2026-11-23T23:54:12Z",
+    "last_seen": "2026-11-24T09:54:41Z",
     "matched_topics": [],
     "modified": "2026-11-21T05:15:31Z",
     "priority": "information",
