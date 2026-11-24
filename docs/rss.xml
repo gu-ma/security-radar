@@ -7,7 +7,191 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 24 Nov 2026 06:17:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 22:18:52 GMT</lastBuildDate>
+    <item>
+      <title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</guid>
+      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
+    </item>
+    <item>
+      <title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</guid>
+      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
+    </item>
+    <item>
+      <title>Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-112732#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-112732#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 21:31:21 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a network.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-6fg5-w8gh-qg5m
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Applications</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-6fg5-w8gh-qg5m" type="text/html" />
+    </item>
+    <item>
+      <title>ruflo MCP bridge allows unauthenticated remote code execution in default Docker Compose deployments</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-59726#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-59726#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 21:01:10 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 10 (v3.1)
+
+Summary: The MCP bridge shipping in ruflo/docker-compose.yml exposed POST /mcp with no authentication. The docker-compose defaults bound the bridge and MongoDB to all interfaces. Combined, an unauthenticated network attacker could invoke tools/call → terminal_execute inside the bridge container, obtain a shell as node (uid 1000), read every provider API key from the container env, spawn attacker-controlled swarms on the victim's keys, and persist a poisoned pattern into the AgentDB learning store that steers future AI outputs for all users of the instance. The tool blocklist that mentions terminal_execute was enforced only in the autopilot flow. POST /mcp and POST /mcp/:group bypassed it. Fixed in ADR-166 Phase 1-3 (branch security/adr-166-mcp-bridge-rce, PR #2521): - Bind loopback by default; fail-closed on public-bind opt-in without MCP_AUTH_TOKEN - Bearer auth middleware (timingSafeEqual const
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-c4hm-4h84-2cf3
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Containers &amp; registries</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-c4hm-4h84-2cf3" type="text/html" />
+    </item>
+    <item>
+      <title>Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-120002#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-120002#findings</guid>
+      <pubDate>Tue, 10 Nov 2026 19:20:26 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.9
+
+Summary: Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-120002
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Applications</category>
+      <category>Servers &amp; infrastructure</category>
+      <category>Privilege escalation</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-120002" type="text/html" />
+    </item>
+    <item>
+      <title>Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, could...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-123172#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-123172#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 18:30:51 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, could lead to the escalation of privileges to root for Linux installations. The risk is lower for Windows installations.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2659-q7hw-v2fj
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Privilege escalation</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-2659-q7hw-v2fj" type="text/html" />
+    </item>
+    <item>
+      <title>SolarWinds Serv-U is affected by an insufficient 
+validation vulnerability that, when exploited,...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-123168#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-123168#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 18:30:51 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: SolarWinds Serv-U is affected by an insufficient validation vulnerability that, when exploited, could lead to privilege escalation into the root user in Linux installations. The risk is lower for Windows installations.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-wp67-ww48-m7q9
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Privilege escalation</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-wp67-ww48-m7q9" type="text/html" />
+    </item>
+    <item>
+      <title>fastcore through 2.2.44 contains a path traversal vulnerability in the fastcore.xtras.untar_dir()...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-65320#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-65320#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 15:32:16 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 8.1 (v3.1)
+
+Summary: fastcore through 2.2.44 contains a path traversal vulnerability in the fastcore.xtras.untar_dir() archive extraction helper that allows attackers who supply a crafted tar archive to write files outside the intended extraction directory. The internal _unpack() function passes the archive to shutil.unpack_archive() without a tar extraction filter, member path validation, or a containment check, so archive members with absolute paths or ../ traversal sequences are written to arbitrary locations writable by the application process when running on Python versions before 3.14. Applications that extract untrusted archives with untar_dir() can have application files, configuration, or importable code overwritten, which can lead to code execution, data modification, or denial of service.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-f27m-m9m6-cf77
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-f27m-m9m6-cf77" type="text/html" />
+    </item>
+    <item>
+      <title>NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a heap-based...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-65135#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-65135#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 15:32:08 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a heap-based buffer overflow issue. A successful exploit of this vulnerability may lead to code execution, data tampering, and denial of service.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-qqr3-5f8g-fp66
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-qqr3-5f8g-fp66" type="text/html" />
+    </item>
+    <item>
+      <title>A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-111497#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-111497#findings</guid>
+      <pubDate>Thu, 22 Oct 2026 14:17:37 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.2
+
+Summary: A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream. Users need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-111497
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Servers &amp; infrastructure</category>
+      <category>Remote code execution</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497" type="text/html" />
+    </item>
     <item>
       <title>A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potentia</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2025-14087#findings</link>
@@ -742,190 +926,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <category>Remote code execution</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-jrjx-9jjw-747m" type="text/html" />
-    </item>
-    <item>
-      <title>Aedes has Uncaught Exception and Uncontrolled Resource Consumption</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-63341#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-63341#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 23:32:35 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: ### Summary A remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message (via PUBLISH or SUBSCRIBE), or by setting a Will message with such a topic, containing a highly recursive topic string (e.g., with thousands of '/' delimiters). The lack of input validation and error handling leads to an uncaught exception in an internal routing library, terminating the entire Node.js application. ### Details The Aedes broker fails to enforce limits on the depth or structural complexity of MQTT topic strings. When a client publishes to or subscribes to a topic with excessive levels of recursion, the internal routing logic cascading into the qlobber library (via mqemitter) reaches an hard-coded limit within the qlobber._split_words function. This function throws a hard 
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-xxqp-5qx8-gj5q
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-xxqp-5qx8-gj5q" type="text/html" />
-    </item>
-    <item>
-      <title>pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. ...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-133949#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-133949#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 19:12:43 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 6.8
-
-Summary: pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. Upgrading to a secure version of pip should be done either by first upgrading Python to a version that rejects the compromised intermediates (CVE-2026-115557) or use hash pinning with a known-secure version of pip. pip is not vulnerable when using a Python version that rejects the compromised certificates. See the references below for more information.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://github.com/advisories/GHSA-jg88-vh4g-v698
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Containers &amp; registries</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-jg88-vh4g-v698" type="text/html" />
-    </item>
-    <item>
-      <title>A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL cha</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-42010#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-42010#findings</guid>
-      <pubDate>Thu, 07 May 2026 12:16:17 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8
-
-Summary: A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-42010
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Containers &amp; registries</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Authentication &amp; authorization</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-42010" type="text/html" />
-    </item>
-    <item>
-      <title>Traefik versions from v3.7.1 fail to enforce crossProviderNamespaces restrictions on the traefik.ingress.kubernetes.io/service.middlewares Service ann</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-85594#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-85594#findings</guid>
-      <pubDate>Fri, 04 Sep 2026 12:17:22 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7
-
-Summary: Traefik versions from v3.7.1 fail to enforce crossProviderNamespaces restrictions on the traefik.ingress.kubernetes.io/service.middlewares Service annotation in the Kubernetes Ingress provider. A namespace-limited tenant excluded from the allowlist can attach an operator-owned middleware to its Service, and if that middleware injects backend credentials, recover them at a controlled backend.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-85594
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Containers &amp; registries</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85594" type="text/html" />
-    </item>
-    <item>
-      <title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</guid>
-      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
-    </item>
-    <item>
-      <title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</guid>
-      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
-    </item>
-    <item>
-      <title>appium allows unauthenticated arbitrary file/directory deletion in @appium/storage-plugin</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-58192#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-58192#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 14:34:30 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 8.6 (v3.1)
-
-Summary: ## Summary The Appium storage plugin exposes an HTTP endpoint `POST /storage/delete` that takes a user-supplied `name` and deletes it from the server storage folder. The handler passes `name` straight into `path.join(storageRoot, name)` and then `fs.rimraf()` **without any path sanitization**. By sending a `name` containing `../` sequences, an unauthenticated remote client can escape the storage root and **recursively delete arbitrary files and directories** that the Appium process user can write, anywhere on the host filesystem. The same plugin's *upload* path validates the name via `fs.sanitizeName` (`requireValidItemOptions`), but the *delete* path does not an asymmetry that makes the missing validation unambiguous. ### Details Published build (`node_modules/@appium/storage-plugin/build/lib/storage.js`), and source (`packages/storage-plugin/lib/`): - `packages/storage-plugin/lib/stora
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-jwgx-mp9m-jwcr
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-jwgx-mp9m-jwcr" type="text/html" />
-    </item>
-    <item>
-      <title>Traefik versions &gt;= v3.7.0 and &lt; v3.7.11 contain an authentication bypass in the Kubernetes Ingress NGINX provider. The TLS option generated for an In</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-85596#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-85596#findings</guid>
-      <pubDate>Fri, 04 Sep 2026 12:17:23 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 8.2
-
-Summary: Traefik versions &gt;= v3.7.0 and &lt; v3.7.11 contain an authentication bypass in the Kubernetes Ingress NGINX provider. The TLS option generated for an Ingress carrying the nginx.ingress.kubernetes.io/auth-tls-secret annotation was named after the Ingress namespace and name. As a result, two Ingress objects sharing the same host, the same client CA secret, and the same client-authentication mode produced two distinct TLS option names for that host. Traefik treats this as a TLS options conflict and falls back to the entry point's default TLS configuration, which does not request a client certificate, so a route configured with nginx.ingress.kubernetes.io/auth-tls-verify-client: "on" becomes reachable without a client certificate. Only the v3.7 line is affected; the issue is fixed in v3.7.11.
-
-Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-85596
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Containers &amp; registries</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Authentication &amp; authorization</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85596" type="text/html" />
-    </item>
-    <item>
-      <title>Etherpad: Pre-auth arbitrary file read</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-114516#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-114516#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 00:23:45 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: ### Summary An unauthenticated path‑traversal / arbitrary file read vulnerability in Etherpad's /static/* handler allows any remote, unauthenticated user to read any file on the server's filesystem (e.g. GET /static/plugins/ep_etherpad-lite/static/..%5C..%5C..%5C..%5C..%5C..%5C..%5Cetc/passwd returns /etc/passwd) available to the user running the etherpad software. Because the endpoint is mounted before the authentication middleware, no credentials, session, or configuration change are required. The read primitive could escalate to a full server compromise: on a typical deployment by disclosing settings.json / credentials.json / /proc/self/environ, which contain the admin password, giving an attacker an admin session and, through the admin plugin installer, remote code execution. ### Details Etherpad serves plugin static assets through src/node/utils/Minify.ts. The request path is first 
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-mc8w-wjhw-45x5
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-mc8w-wjhw-45x5" type="text/html" />
-    </item>
-    <item>
-      <title>Jupyter MCP Server: Browser DNS rebinding can hijack the Jupyter backend through management routes</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-77359#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-77359#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 00:12:51 GMT</pubDate>
-      <description>Severity: CRITICAL
-
-Summary: Standalone `streamable-http` mode in `datalayer/jupyter-mcp-server` rejects forged `Host` and `Origin` headers on `/mcp`, but custom management routes mounted on the same application do not get the same browser-origin protection. A malicious website can keep an attacker origin while its hostname resolves to `127.0.0.1` or a private target address, then send `PUT /api/connect` to replace the MCP server's active Jupyter backend. The route accepts the browser-shaped request and makes the server start a kernel client against attacker-controlled infrastructure. The protected `/mcp` endpoint shows the intended browser-origin boundary. With `MCP_TOKEN` configured, `/mcp` rejects forged browser headers: ```text POST /mcp with Authorization: Bearer SCAN_MCP_TOKEN Host: attacker.example:8142 Origin: http://attacker.example:8142 HTTP 421 Invalid Host header ``` The vulnerable route is `jupyter_mcp_
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-9x8x-crjq-g64h
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Applications</category>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>AI &amp; ML tooling</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-9x8x-crjq-g64h" type="text/html" />
     </item>
   </channel>
 </rss>

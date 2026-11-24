@@ -1,6 +1,245 @@
 {
-  "alerts": [],
-  "generated_at": "2026-11-24T09:54:41Z",
+  "alerts": [
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-65135",
+        "GHSA-qqr3-5f8g-fp66"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-24T22:27:08Z",
+      "id": "CVE-2026-65135",
+      "last_seen": "2026-11-24T22:27:08Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-24T15:32:09Z",
+      "priority": "review",
+      "published": "2026-11-24T15:32:08Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-qqr3-5f8g-fp66"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a heap-based buffer overflow issue. A successful exploit of this vulnerability may lead to code execution, data tampering, and denial of service.",
+      "title": "NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a heap-based...",
+      "why_it_matters": "NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a heap-based buffer overflow issue. A successful exploit of this vulnerability may lead to code execution, data tampering, and denial of service."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-65320",
+        "GHSA-f27m-m9m6-cf77"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 8.1,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-24T22:27:08Z",
+      "id": "CVE-2026-65320",
+      "last_seen": "2026-11-24T22:27:08Z",
+      "matched_topics": [
+        "Python"
+      ],
+      "modified": "2026-11-24T15:32:23Z",
+      "priority": "review",
+      "published": "2026-11-24T15:32:16Z",
+      "security_topics": [
+        "Denial of service"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-f27m-m9m6-cf77"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "fastcore through 2.2.44 contains a path traversal vulnerability in the fastcore.xtras.untar_dir() archive extraction helper that allows attackers who supply a crafted tar archive to write files outside the intended extraction directory. The internal _unpack() function passes the archive to shutil.unpack_archive() without a tar extraction filter, member path validation, or a containment check, so archive members with absolute paths or ../ traversal sequences are written to arbitrary locations writable by the application process when running on Python versions before 3.14. Applications that extract untrusted archives with untar_dir() can have application files, configuration, or importable code overwritten, which can lead to code execution, data modification, or denial of service.",
+      "title": "fastcore through 2.2.44 contains a path traversal vulnerability in the fastcore.xtras.untar_dir()...",
+      "why_it_matters": "fastcore through 2.2.44 contains a path traversal vulnerability in the fastcore.xtras.untar_dir() archive extraction helper that allows attackers who supply a crafted tar archive to write files outside the intended extraction directory. The internal _unpack() function passes the archive to shutil.unpack_archive() without a tar extraction filter, member path validation, or a containment check, so archive members with absolute paths or ../ traversal sequences are written to arbitrary locations writable by the application process when running on Python versions before 3.14. Applications that extract untrusted archives with untar_dir() can have application files, configuration, or importable code overwritten, which can lead to code execution, data modification, or denial of service."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-123172",
+        "GHSA-2659-q7hw-v2fj"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.1,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-24T22:27:08Z",
+      "id": "CVE-2026-123172",
+      "last_seen": "2026-11-24T22:27:08Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-24T18:30:58Z",
+      "priority": "review",
+      "published": "2026-11-24T18:30:51Z",
+      "security_topics": [
+        "Privilege escalation"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-2659-q7hw-v2fj"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, could lead to the escalation of privileges to root for Linux installations. The risk is lower for Windows installations.",
+      "title": "Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, could...",
+      "why_it_matters": "Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, could lead to the escalation of privileges to root for Linux installations. The risk is lower for Windows installations."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-123168",
+        "GHSA-wp67-ww48-m7q9"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "infrastructure"
+      ],
+      "cvss": 9.1,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-24T22:27:08Z",
+      "id": "CVE-2026-123168",
+      "last_seen": "2026-11-24T22:27:08Z",
+      "matched_topics": [
+        "Linux"
+      ],
+      "modified": "2026-11-24T18:30:58Z",
+      "priority": "review",
+      "published": "2026-11-24T18:30:51Z",
+      "security_topics": [
+        "Privilege escalation"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-wp67-ww48-m7q9"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "SolarWinds Serv-U is affected by an insufficient validation vulnerability that, when exploited, could lead to privilege escalation into the root user in Linux installations. The risk is lower for Windows installations.",
+      "title": "SolarWinds Serv-U is affected by an insufficient \nvalidation vulnerability that, when exploited,...",
+      "why_it_matters": "SolarWinds Serv-U is affected by an insufficient validation vulnerability that, when exploited, could lead to privilege escalation into the root user in Linux installations. The risk is lower for Windows installations."
+    },
+    {
+      "affected": [
+        "ruflo"
+      ],
+      "aliases": [
+        "CVE-2026-59726",
+        "GHSA-c4hm-4h84-2cf3"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies",
+        "containers"
+      ],
+      "cvss": 10.0,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-24T22:27:08Z",
+      "id": "CVE-2026-59726",
+      "last_seen": "2026-11-24T22:27:08Z",
+      "matched_topics": [
+        "Docker",
+        "npm"
+      ],
+      "modified": "2026-11-24T21:01:11Z",
+      "priority": "review",
+      "published": "2026-11-24T21:01:10Z",
+      "security_topics": [
+        "Remote code execution"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-c4hm-4h84-2cf3"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "The MCP bridge shipping in ruflo/docker-compose.yml exposed POST /mcp with no authentication. The docker-compose defaults bound the bridge and MongoDB to all interfaces. Combined, an unauthenticated network attacker could invoke tools/call → terminal_execute inside the bridge container, obtain a shell as node (uid 1000), read every provider API key from the container env, spawn attacker-controlled swarms on the victim's keys, and persist a poisoned pattern into the AgentDB learning store that steers future AI outputs for all users of the instance. The tool blocklist that mentions terminal_execute was enforced only in the autopilot flow. POST /mcp and POST /mcp/:group bypassed it. Fixed in ADR-166 Phase 1-3 (branch security/adr-166-mcp-bridge-rce, PR #2521): - Bind loopback by default; fail-closed on public-bind opt-in without MCP_AUTH_TOKEN - Bearer auth middleware (timingSafeEqual const",
+      "title": "ruflo MCP bridge allows unauthenticated remote code execution in default Docker Compose deployments",
+      "why_it_matters": "The MCP bridge shipping in ruflo/docker-compose.yml exposed POST /mcp with no authentication. The docker-compose defaults bound the bridge and MongoDB to all interfaces. Combined, an unauthenticated network attacker could invoke tools/call → terminal_execute inside the bridge container, obtain a shell as node (uid 1000), read every provider API key from the container env, spawn attacker-controlled swarms on the victim's keys, and persist a poisoned pattern into the AgentDB learning store that steers future AI outputs for all users of the instance. The tool blocklist that mentions terminal_execute was enforced only in the autopilot flow. POST /mcp and POST /mcp/:group bypassed it. Fixed in ADR-166 Phase 1-3 (branch security/adr-166-mcp-bridge-rce, PR #2521): - Bind loopback by default; fail-closed on public-bind opt-in without MCP_AUTH_TOKEN - Bearer auth middleware (timingSafeEqual const"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-112732",
+        "GHSA-6fg5-w8gh-qg5m"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "applications"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-24T22:27:08Z",
+      "id": "CVE-2026-112732",
+      "last_seen": "2026-11-24T22:27:08Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-24T21:31:22Z",
+      "priority": "review",
+      "published": "2026-11-24T21:31:21Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-6fg5-w8gh-qg5m"
+        }
+      ],
+      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+      "summary": "Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a network.",
+      "title": "Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a...",
+      "why_it_matters": "Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a network."
+    }
+  ],
+  "generated_at": "2026-11-24T22:27:08Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }
