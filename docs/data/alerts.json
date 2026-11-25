@@ -1,6 +1,209 @@
 {
-  "alerts": [],
-  "generated_at": "2026-11-25T08:35:22Z",
+  "alerts": [
+    {
+      "affected": [
+        "microsoft azure managed instance for apache cassandra"
+      ],
+      "aliases": [
+        "CVE-2026-65817"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "cloud-identity"
+      ],
+      "cvss": 9.6,
+      "cvss_version": "",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-25T21:43:05Z",
+      "id": "CVE-2026-65817",
+      "last_seen": "2026-11-25T21:43:05Z",
+      "matched_topics": [
+        "Microsoft"
+      ],
+      "modified": "2026-11-25T15:03:53.867",
+      "priority": "review",
+      "published": "2026-11-23T22:20:52.977",
+      "security_topics": [
+        "Remote code execution"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65817"
+        }
+      ],
+      "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+      "summary": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network.",
+      "title": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an un",
+      "why_it_matters": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network."
+    },
+    {
+      "affected": [
+        "@waline/client"
+      ],
+      "aliases": [
+        "CVE-2026-64670",
+        "GHSA-crj3-q72p-ggqm"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 9.3,
+      "cvss_version": "3.1",
+      "ecosystems": [
+        "npm"
+      ],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-25T21:43:05Z",
+      "id": "CVE-2026-64670",
+      "last_seen": "2026-11-25T21:43:05Z",
+      "matched_topics": [
+        "npm"
+      ],
+      "modified": "2026-11-25T15:26:25Z",
+      "priority": "review",
+      "published": "2026-11-25T15:26:23Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-crj3-q72p-ggqm"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "### Summary `@waline/client` renders the comment editor's live preview with `marked` and no sanitizer (`utils/markdown.ts`), and the preview is injected with `v-html`. When a comment is edited, the editor is seeded with the comment's raw, un-sanitized body (`orig`). Only administrators and the comment owner can edit. So an administrator who clicks Edit on an attacker's comment renders that attacker's raw HTML in their own session: an unauthenticated commenter achieves privilege-escalation stored XSS against a moderator with a single Edit click. ### Details `packages/client/src/utils/markdown.ts:18-37` renders markdown with `marked` and returns the raw HTML with no sanitization (the client bundles no DOMPurify): ```ts return marked.parse(parseEmoji(content, emojiMap)) as string; ``` `packages/client/src/components/CommentBox.vue`: ```ts onMounted(() => { if (props.edit?.objectId) editor.v",
+      "title": "@waline/client vulnerable to stored XSS through unsanitized comment edit previews",
+      "why_it_matters": "### Summary `@waline/client` renders the comment editor's live preview with `marked` and no sanitizer (`utils/markdown.ts`), and the preview is injected with `v-html`. When a comment is edited, the editor is seeded with the comment's raw, un-sanitized body (`orig`). Only administrators and the comment owner can edit. So an administrator who clicks Edit on an attacker's comment renders that attacker's raw HTML in their own session: an unauthenticated commenter achieves privilege-escalation stored XSS against a moderator with a single Edit click. ### Details `packages/client/src/utils/markdown.ts:18-37` renders markdown with `marked` and returns the raw HTML with no sanitization (the client bundles no DOMPurify): ```ts return marked.parse(parseEmoji(content, emojiMap)) as string; ``` `packages/client/src/components/CommentBox.vue`: ```ts onMounted(() => { if (props.edit?.objectId) editor.v"
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-112788",
+        "GHSA-v5jh-5xqq-23r2"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies",
+        "containers"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-25T21:43:05Z",
+      "id": "CVE-2026-112788",
+      "last_seen": "2026-11-25T21:43:05Z",
+      "matched_topics": [
+        "Docker",
+        "Kubernetes",
+        "Python"
+      ],
+      "modified": "2026-11-25T21:30:31Z",
+      "priority": "review",
+      "published": "2026-11-24T12:31:56Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-v5jh-5xqq-23r2"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "Missing Authentication for Critical Function in Apache Texera (incubating). The Python virtual environment (PVE) management endpoints of a computing unit are not authenticated by the application itself. In the local JVM and single-node Docker Compose deployments, which place no authenticating gateway in front of the services, these endpoints are reachable without credentials. The Kubernetes deployment gates them at the gateway, so only the Kubernetes deployment provides the full security model described in SECURITY.md. This issue affects Apache Texera (incubating): from 1.1.0 through 1.2.0. Users are recommended to use the Kubernetes deployment, which enforces the full security model, and to upgrade to 1.3.0-incubating, which documents that the local JVM and single-node Docker Compose deployments do not provide the full security model and should only be used by trusted users.",
+      "title": "Missing Authentication for Critical Function in Apache Texera (incubating).\n\n\n\nThe Python virtual...",
+      "why_it_matters": "Missing Authentication for Critical Function in Apache Texera (incubating). The Python virtual environment (PVE) management endpoints of a computing unit are not authenticated by the application itself. In the local JVM and single-node Docker Compose deployments, which place no authenticating gateway in front of the services, these endpoints are reachable without credentials. The Kubernetes deployment gates them at the gateway, so only the Kubernetes deployment provides the full security model described in SECURITY.md. This issue affects Apache Texera (incubating): from 1.1.0 through 1.2.0. Users are recommended to use the Kubernetes deployment, which enforces the full security model, and to upgrade to 1.3.0-incubating, which documents that the local JVM and single-node Docker Compose deployments do not provide the full security model and should only be used by trusted users."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-77230",
+        "GHSA-3r7p-3996-7mrq"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies",
+        "containers"
+      ],
+      "cvss": 8.1,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-25T21:43:05Z",
+      "id": "CVE-2026-77230",
+      "last_seen": "2026-11-25T21:43:05Z",
+      "matched_topics": [
+        "Docker"
+      ],
+      "modified": "2026-11-25T21:30:47Z",
+      "priority": "review",
+      "published": "2026-11-25T21:30:37Z",
+      "security_topics": [],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-3r7p-3996-7mrq"
+        }
+      ],
+      "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+      "summary": "Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1 contain an insecure deserialization vulnerability in the persistent web session feature, which stores session attributes as Java-serialized data in secondary storage and deserializes them via an ObjectInputStream without an ObjectInputFilter. Attackers with write access to the web session index, such as an unauthenticated Elasticsearch cluster deployed via Camunda's docker-compose files, can plant a crafted serialized object and trigger deserialization by presenting a matching session cookie, which combined with a gadget chain like the bundled Commons Collections 3.1-RC1 library can lead to code execution as the Camunda service account.",
+      "title": "Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1...",
+      "why_it_matters": "Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1 contain an insecure deserialization vulnerability in the persistent web session feature, which stores session attributes as Java-serialized data in secondary storage and deserializes them via an ObjectInputStream without an ObjectInputFilter. Attackers with write access to the web session index, such as an unauthenticated Elasticsearch cluster deployed via Camunda's docker-compose files, can plant a crafted serialized object and trigger deserialization by presenting a matching session cookie, which combined with a gadget chain like the bundled Commons Collections 3.1-RC1 library can lead to code execution as the Camunda service account."
+    },
+    {
+      "affected": [],
+      "aliases": [
+        "CVE-2026-137090",
+        "GHSA-hhmx-h2rc-g3pp"
+      ],
+      "attention_score": 75,
+      "categories": [
+        "dependencies"
+      ],
+      "cvss": 9.8,
+      "cvss_version": "3.1",
+      "ecosystems": [],
+      "exploited": false,
+      "exposure": "not assessed",
+      "first_seen": "2026-11-25T21:43:05Z",
+      "id": "CVE-2026-137090",
+      "last_seen": "2026-11-25T21:43:05Z",
+      "matched_topics": [
+        "Node.js"
+      ],
+      "modified": "2026-11-25T21:30:48Z",
+      "priority": "review",
+      "published": "2026-11-25T20:18:46.220",
+      "security_topics": [
+        "Remote code execution"
+      ],
+      "severity": "critical",
+      "sources": [
+        {
+          "name": "GitHub Advisory Database",
+          "url": "https://github.com/advisories/GHSA-hhmx-h2rc-g3pp"
+        },
+        {
+          "name": "NIST NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137090"
+        }
+      ],
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "build-git-clone before 1.0.4 contains an OS command injection vulnerability in the clone() function that allows attackers to execute commands by supplying crafted repository URLs. Attackers can embed shell metacharacters such as ; or $() in the url argument, which is concatenated into a sh -c command, to execute operating system commands with Node.js process privileges.",
+      "title": "build-git-clone before 1.0.4 contains an OS command injection vulnerability in the clone()...",
+      "why_it_matters": "build-git-clone before 1.0.4 contains an OS command injection vulnerability in the clone() function that allows attackers to execute commands by supplying crafted repository URLs. Attackers can embed shell metacharacters such as ; or $() in the url argument, which is concatenated into a sh -c command, to execute operating system commands with Node.js process privileges."
+    }
+  ],
+  "generated_at": "2026-11-25T21:43:05Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }

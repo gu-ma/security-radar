@@ -7,7 +7,119 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 24 Nov 2026 22:18:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 21:31:32 GMT</lastBuildDate>
+    <item>
+      <title>In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: fix use-after-free in...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-80926#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-80926#findings</guid>
+      <pubDate>Fri, 11 Sep 2026 21:31:19 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: In the Linux kernel, the following vulnerability has been resolved: ksmbd: fix use-after-free in oplock break notification smb2_oplock_break_noti() reads opinfo-&gt;conn without any lock and dereferences it after two allocations which may sleep. When the durable handle owning the oplock is disconnected, session_fd_check() clears opinfo-&gt;conn and drops its conn reference under ci-&gt;m_lock, and the last ksmbd_conn_put() frees the connection. A break triggered by another connection that races with the teardown can then resurrect the freed connection: ksmbd_conn_get() is a plain atomic_inc, and the queued break work later dereferences the stale conn via ksmbd_conn_write(), a use-after-free reachable by any authenticated client holding a durable batch oplock. Thread the caller's inode into the notification path instead of taking a new reference on it. Every caller of oplock_break() already holds 
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-4r76-cqqc-v36j
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-4r76-cqqc-v36j" type="text/html" />
+    </item>
+    <item>
+      <title>build-git-clone before 1.0.4 contains an OS command injection vulnerability in the clone()...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-137090#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-137090#findings</guid>
+      <pubDate>Wed, 25 Nov 2026 20:18:46 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: build-git-clone before 1.0.4 contains an OS command injection vulnerability in the clone() function that allows attackers to execute commands by supplying crafted repository URLs. Attackers can embed shell metacharacters such as ; or $() in the url argument, which is concatenated into a sh -c command, to execute operating system commands with Node.js process privileges.
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-hhmx-h2rc-g3pp
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-hhmx-h2rc-g3pp" type="text/html" />
+    </item>
+    <item>
+      <title>Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-77230#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-77230#findings</guid>
+      <pubDate>Wed, 25 Nov 2026 21:30:37 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 8.1 (v3.1)
+
+Summary: Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1 contain an insecure deserialization vulnerability in the persistent web session feature, which stores session attributes as Java-serialized data in secondary storage and deserializes them via an ObjectInputStream without an ObjectInputFilter. Attackers with write access to the web session index, such as an unauthenticated Elasticsearch cluster deployed via Camunda's docker-compose files, can plant a crafted serialized object and trigger deserialization by presenting a matching session cookie, which combined with a gadget chain like the bundled Commons Collections 3.1-RC1 library can lead to code execution as the Camunda service account.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-3r7p-3996-7mrq
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Containers &amp; registries</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-3r7p-3996-7mrq" type="text/html" />
+    </item>
+    <item>
+      <title>Missing Authentication for Critical Function in Apache Texera (incubating).
+
+
+
+The Python virtual...</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-112788#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-112788#findings</guid>
+      <pubDate>Tue, 24 Nov 2026 12:31:56 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: Missing Authentication for Critical Function in Apache Texera (incubating). The Python virtual environment (PVE) management endpoints of a computing unit are not authenticated by the application itself. In the local JVM and single-node Docker Compose deployments, which place no authenticating gateway in front of the services, these endpoints are reachable without credentials. The Kubernetes deployment gates them at the gateway, so only the Kubernetes deployment provides the full security model described in SECURITY.md. This issue affects Apache Texera (incubating): from 1.1.0 through 1.2.0. Users are recommended to use the Kubernetes deployment, which enforces the full security model, and to upgrade to 1.3.0-incubating, which documents that the local JVM and single-node Docker Compose deployments do not provide the full security model and should only be used by trusted users.
+
+Suggested next step: Check affected registry or container software versions against the vendor advisory and its recommended mitigations.
+
+Original advisory: https://github.com/advisories/GHSA-v5jh-5xqq-23r2
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Containers &amp; registries</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-v5jh-5xqq-23r2" type="text/html" />
+    </item>
+    <item>
+      <title>@waline/client vulnerable to stored XSS through unsanitized comment edit previews</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-64670#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-64670#findings</guid>
+      <pubDate>Wed, 25 Nov 2026 15:26:23 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.3 (v3.1)
+
+Summary: ### Summary `@waline/client` renders the comment editor's live preview with `marked` and no sanitizer (`utils/markdown.ts`), and the preview is injected with `v-html`. When a comment is edited, the editor is seeded with the comment's raw, un-sanitized body (`orig`). Only administrators and the comment owner can edit. So an administrator who clicks Edit on an attacker's comment renders that attacker's raw HTML in their own session: an unauthenticated commenter achieves privilege-escalation stored XSS against a moderator with a single Edit click. ### Details `packages/client/src/utils/markdown.ts:18-37` renders markdown with `marked` and returns the raw HTML with no sanitization (the client bundles no DOMPurify): ```ts return marked.parse(parseEmoji(content, emojiMap)) as string; ``` `packages/client/src/components/CommentBox.vue`: ```ts onMounted(() =&gt; { if (props.edit?.objectId) editor.v
+
+Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
+
+Original advisory: https://github.com/advisories/GHSA-crj3-q72p-ggqm
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-crj3-q72p-ggqm" type="text/html" />
+    </item>
+    <item>
+      <title>Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an un</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-65817#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-65817#findings</guid>
+      <pubDate>Mon, 23 Nov 2026 22:20:52 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.6
+
+Summary: Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network.
+
+Suggested next step: Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-65817
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Cloud &amp; identity</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-65817" type="text/html" />
+    </item>
     <item>
       <title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</link>
@@ -818,114 +930,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Libraries &amp; dependencies</category>
       <category>Remote code execution</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-hhq6-2gpv-hrf4" type="text/html" />
-    </item>
-    <item>
-      <title>In the Linux kernel, the following vulnerability has been resolved:
-
-net: restore refcount...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-99676#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-99676#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 06:32:06 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: net: restore refcount ordering for lockless socket access Before commit fb041bb7c0a9 ("locking/refcount: Consolidate implementations of refcount_t"), default builds implemented refcount_inc_not_zero() using atomic_add_unless(), which provided full memory ordering on success. The commit removed that ordering on weakly ordered architectures, allowing accesses after a successful reference acquisition to be reordered before it. Use refcount_inc_not_zero_acquire() in the IPv4 and IPv6 established lookups and in inet_twsk_purge(), where the socket is validated again after taking a reference. bpf_sk_assign() can receive a socket pointer obtained through BTF without a reference. Use acquire ordering when it takes its own reference for a refcounted socket. Use refcount_set_release() when setting refcounts in the SYN cookie, TCP F
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-pw2h-9h4h-hf7q
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-pw2h-9h4h-hf7q" type="text/html" />
-    </item>
-    <item>
-      <title>@tmlmobilidade/utils has prototype pollution in its setValueAtPath</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-45325#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-45325#findings</guid>
-      <pubDate>Mon, 18 May 2026 17:07:04 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 8.2 (v3.1)
-
-Summary: ### Impact Prototype pollution vulnerability in @tmlmobilidade/utils for setValueAtPath(). ### Patches A fix is available in versions 20260509.340.15 and up.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-cmxg-94mg-jq94
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-cmxg-94mg-jq94" type="text/html" />
-    </item>
-    <item>
-      <title>Budibase: Unauthenticated global-admin &amp; database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`)</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-122247#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-122247#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 23:50:01 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 8.2 (v3.1)
-
-Summary: ## Description ### Summary On a self-hosted, single-tenant Budibase instance (`multiTenancy:false`), the public bootstrap endpoint `POST /api/global/users/init` remains fully exploitable **after** the instance has been provisioned. Its "already initialised" guard (`checkAnyUserExists()`) is evaluated inside a **tenant-scoped** database context derived from an **attacker-controlled `tenantId`** in the request body. Because the tenancy layer never constrains that `tenantId` to the only legitimate tenant (`default`) on a single-tenant deployment, an unauthenticated attacker simply supplies any unused tenant name to make the guard see an empty user list, and the endpoint then creates a brand-new CouchDB database (`&lt;tenantId&gt;_global-db`) and a **global-admin** user document (`admin.global = true`, `builder.global = true`) inside it - with no authentication and no CSRF token. This is (a) a byp
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-25qc-m4pw-2w8r
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-25qc-m4pw-2w8r" type="text/html" />
-    </item>
-    <item>
-      <title>Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-122244#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-122244#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 23:49:47 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.7 (v3.1)
-
-Summary: ## Description ### Summary A **low-privileged application end-user** (role `BASIC` - **not** a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ordinary row data. When a **builder or admin** later opens that table in the Budibase Builder and evaluates any Handlebars binding whose Preview surfaces the value (the Data-section **Formula** column editor, or any binding drawer), the stored value is rendered as **raw HTML** and the attacker's JavaScript executes in the Builder's origin. The Builder SPA is served by nginx with **no Content-Security-Policy** (the CSP middleware only decorates the server-rendered *published-app* document, not `/builder/`). The injected script therefore runs unrestricted in the highest-trust surface of the product - the admin/builder session that can create datasources, run server-side Java
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-r2q3-7m4h-63qg
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-r2q3-7m4h-63qg" type="text/html" />
-    </item>
-    <item>
-      <title>svglib: Exponential resource consumption via nested &lt;use&gt; references in svg2rlg</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-132275#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-132275#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 23:47:58 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 7.5 (v3.1)
-
-Summary: # Summary `svg2rlg()` expands `&lt;use&gt;` references without any limit on the total number of expansions. Only direct cycles are rejected (`CircularRefError`). A group containing N `&lt;use&gt;` elements that point to another such group multiplies the work by N per nesting level, so an SVG of about 1.4 KB makes svglib clone and render over 100,000 nodes, taking tens of seconds of CPU time and hundreds of MiB of memory. Each additional level adds about 245 bytes to the document and multiplies time by ~10. This is the SVG `&lt;use&gt;` variant of the XML "billion laughs" attack (the same class as librsvg CVE-2019-20446). # Details `SvgRenderer.renderUse()` in `src/svglib/svglib.py`: ```python try: item = self.xlink_href_target(node, group=group) except CircularRefError: node.parent.etree_element.remove(node.etree_element) return group ... if len(node.getchildren()) == 0: # Append a copy of the referenced 
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-555j-qj3j-c8jv
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-555j-qj3j-c8jv" type="text/html" />
-    </item>
-    <item>
-      <title>AIT-GUI route chain allows unauthenticated Python execution in server process</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-77309#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-77309#findings</guid>
-      <pubDate>Fri, 20 Nov 2026 23:36:41 GMT</pubDate>
-      <description>Severity: HIGH / CVSS 8.8 (v3.1)
-
-Summary: ## Summary A security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, followed by a malicious POST /script/run request containing an absolute file path that bypasses the configured script directory restrictions. ### Patches * 2.5.1 ### Impact This vulnerability allows unauthenticated remote code execution on the AIT-GUI server. Any attacker with network access can execute arbitrary Python code with daemon privileges. ## Details _Chain:_ 1. `POST /tlm/query` writes the user-controlled `fields` value into `fields_in.txt` under the AIT-GUI static directory. * If the supplied `dataDir` has no `.pcap` files, the route returns the expected `400 Bad Request` before deleting that file. 2. `POST /script/run` accepts `scriptPath=../static/fields_in.txt`. * AIT-GUI re
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-jrjx-9jjw-747m
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-jrjx-9jjw-747m" type="text/html" />
     </item>
   </channel>
 </rss>
