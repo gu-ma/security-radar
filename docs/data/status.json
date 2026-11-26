@@ -1,13 +1,13 @@
 {
-  "duration_seconds": 7.54,
+  "duration_seconds": 7.62,
   "failed": false,
-  "finished_at": "2026-11-26T08:18:39Z",
-  "last_run": "2026-11-26T08:18:31Z",
-  "last_successful_run": "2026-11-26T08:18:31Z",
+  "finished_at": "2026-11-26T21:33:08Z",
+  "last_run": "2026-11-26T21:33:00Z",
+  "last_successful_run": "2026-11-26T21:33:00Z",
   "message": "Source outages are displayed and do not erase older records.",
-  "new_relevant_alerts": 3,
+  "new_relevant_alerts": 1,
   "partial": false,
-  "run_url": "https://github.com/gu-ma/security-radar/actions/runs/45782041309",
+  "run_url": "https://github.com/gu-ma/security-radar/actions/runs/45898875862",
   "source_errors": [],
   "sources": {
     "cisa_kev": {
@@ -16,28 +16,28 @@
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-26T08:18:31Z",
-      "last_success": "2026-11-26T08:18:31Z",
+      "last_attempt": "2026-11-26T21:33:00Z",
+      "last_success": "2026-11-26T21:33:00Z",
       "state": "ok"
     },
     "github_advisories": {
+      "consecutive_failures": 0,
+      "count": 95,
+      "error": "",
+      "error_type": "",
+      "first_failure": "",
+      "last_attempt": "2026-11-26T21:33:00Z",
+      "last_success": "2026-11-26T21:33:00Z",
+      "state": "ok"
+    },
+    "nist_nvd": {
       "consecutive_failures": 0,
       "count": 66,
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-26T08:18:31Z",
-      "last_success": "2026-11-26T08:18:31Z",
-      "state": "ok"
-    },
-    "nist_nvd": {
-      "consecutive_failures": 0,
-      "count": 56,
-      "error": "",
-      "error_type": "",
-      "first_failure": "",
-      "last_attempt": "2026-11-26T08:18:31Z",
-      "last_success": "2026-11-26T08:18:31Z",
+      "last_attempt": "2026-11-26T21:33:00Z",
+      "last_success": "2026-11-26T21:33:00Z",
       "state": "ok"
     },
     "redhat_quay": {
@@ -46,10 +46,10 @@
       "error": "",
       "error_type": "",
       "first_failure": "",
-      "last_attempt": "2026-11-26T08:18:31Z",
-      "last_success": "2026-11-26T08:18:31Z",
+      "last_attempt": "2026-11-26T21:33:00Z",
+      "last_success": "2026-11-26T21:33:00Z",
       "state": "ok"
     }
   },
-  "stored_records": 1263
+  "stored_records": 1301
 }

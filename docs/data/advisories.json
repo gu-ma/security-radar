@@ -23,7 +23,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-133469",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "npm"
     ],
@@ -203,7 +203,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-133323",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T05:18:21.963",
     "priority": "information",
@@ -252,7 +252,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-133303",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T05:18:21.160",
     "priority": "information",
@@ -298,7 +298,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2023-25915",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:30:26Z",
     "priority": "information",
@@ -340,7 +340,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-103406",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:30:36Z",
     "priority": "information",
@@ -383,7 +383,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-131914",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T05:18:30.107",
     "priority": "information",
@@ -431,7 +431,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T07:39:52Z",
     "id": "CVE-2026-134624",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T15:32:33Z",
     "priority": "information",
@@ -473,7 +473,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-21T07:08:44Z",
     "id": "CVE-2026-133968",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:32:45Z",
     "priority": "information",
@@ -1498,7 +1498,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2025-41450",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1535,7 +1535,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2023-25914",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1572,7 +1572,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133324",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1609,7 +1609,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133275",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1646,7 +1646,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133311",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1683,7 +1683,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-132224",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T00:00:00Z",
     "priority": "information",
@@ -1720,7 +1720,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-132165",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T00:00:00Z",
     "priority": "information",
@@ -2233,6 +2233,127 @@
   },
   {
     "affected": [
+      "fedoraproject fedora",
+      "redhat enterprise linux",
+      "redhat enterprise linux eus",
+      "redhat storage",
+      "samba samba"
+    ],
+    "aliases": [
+      "CVE-2023-3961"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2023-3961",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [
+      "Linux"
+    ],
+    "modified": "2026-11-26T21:17:03.490",
+    "priority": "review",
+    "published": "2023-11-03T13:15:08.723",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3961"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A path traversal vulnerability was identified in Samba when processing client pipe names connecting to Unix domain sockets within a private directory. Samba typically uses this mechanism to connect SMB clients to remote procedure call (RPC) services like SAMR LSA or SPOOLSS, which Samba initiates on demand. However, due to inadequate sanitization of incoming client pipe names, allowing a client to send a pipe name containing Unix directory traversal characters (../). This could result in SMB clients connecting as root to Unix domain sockets outside the private directory. If an attacker or client managed to send a pipe name resolving to an external service using an existing Unix domain socket, it could potentially lead to unauthorized access to the service and consequential adverse events, including compromise or service crashes.",
+    "title": "A path traversal vulnerability was identified in Samba when processing client pipe names connecting to Unix domain sockets within a private directory.",
+    "why_it_matters": "A path traversal vulnerability was identified in Samba when processing client pipe names connecting to Unix domain sockets within a private directory. Samba typically uses this mechanism to connect SMB clients to remote procedure call (RPC) services like SAMR LSA or SPOOLSS, which Samba initiates on demand. However, due to inadequate sanitization of incoming client pipe names, allowing a client to send a pipe name containing Unix directory traversal characters (../). This could result in SMB clients connecting as root to Unix domain sockets outside the private directory. If an attacker or client managed to send a pipe name resolving to an external service using an existing Unix domain socket, it could potentially lead to unauthorized access to the service and consequential adverse events, including compromise or service crashes."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-126984",
+      "GHSA-x4cr-9jx8-g6ff"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "dependencies",
+      "infrastructure"
+    ],
+    "cvss": 10.0,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-126984",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [
+      "Python"
+    ],
+    "modified": "2026-11-26T18:30:34Z",
+    "priority": "review",
+    "published": "2026-11-26T18:30:26Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-x4cr-9jx8-g6ff"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "A **server-side request forgery** flaw has been found in the get_remote_artifact_url() function in pulp_python/app/models.py of the pull-through caching feature in the **pulp_python** package. The function uses the redirect query parameter from the client request as the URL to download. A network attacker or user who can reach the content app of a Python distribution that has a remote can choose that URL. The content app downloads it and returns the response. When the remote has a username and password, the download sends those credentials to the host in the URL. When the remote policy is immediate, the default, or on_demand, the file is saved into the distribution's repository and later clients are served that file. The project name and version come from the file, and the filename comes from the request path. A filename the repository already stores is served from the stored file.",
+    "title": "A **server-side request forgery** flaw has been found in the get_remote_artifact_url() function...",
+    "why_it_matters": "A **server-side request forgery** flaw has been found in the get_remote_artifact_url() function in pulp_python/app/models.py of the pull-through caching feature in the **pulp_python** package. The function uses the redirect query parameter from the client request as the URL to download. A network attacker or user who can reach the content app of a Python distribution that has a remote can choose that URL. The content app downloads it and returns the response. When the remote has a username and password, the download sends those credentials to the host in the URL. When the remote policy is immediate, the default, or on_demand, the file is saved into the distribution's repository and later clients are served that file. The project name and version come from the file, and the filename comes from the request path. A filename the repository already stores is served from the stored file."
+  },
+  {
+    "affected": [
+      "redhat enterprise linux",
+      "redhat openshift container platform",
+      "samba samba"
+    ],
+    "aliases": [
+      "CVE-2026-4408"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "containers",
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-4408",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [
+      "Linux"
+    ],
+    "modified": "2026-11-26T15:17:33.270",
+    "priority": "review",
+    "published": "2026-05-28T09:16:47.643",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4408"
+      }
+    ],
+    "suggested_next_step": "Check affected registry or container software versions against the vendor advisory and its recommended mitigations.",
+    "summary": "A flaw was found in Samba. A remote attacker can exploit a misconfiguration in Samba file servers and classic domain controllers that use the \"check password script\" feature. If this script is configured with the %u substitution character, the client-controlled username is passed without proper escaping of shell meta-characters. This vulnerability allows an attacker to achieve remote command execution on the affected system. This issue primarily affects non-standard configurations where the \"check password script\" is used with %u and the samba-dcerpcd service is started as a system service.",
+    "title": "A flaw was found in Samba. A remote attacker can exploit a misconfiguration in Samba file servers and classic domain controllers that use the \"check p",
+    "why_it_matters": "A flaw was found in Samba. A remote attacker can exploit a misconfiguration in Samba file servers and classic domain controllers that use the \"check password script\" feature. If this script is configured with the %u substitution character, the client-controlled username is passed without proper escaping of shell meta-characters. This vulnerability allows an attacker to achieve remote command execution on the affected system. This issue primarily affects non-standard configurations where the \"check password script\" is used with %u and the samba-dcerpcd service is started as a system service."
+  },
+  {
+    "affected": [
       "tastyigniter/tastyigniter"
     ],
     "aliases": [
@@ -2253,7 +2374,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-69179",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2297,7 +2418,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-69178",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2336,7 +2457,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-80926",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2373,7 +2494,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-137090",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Node.js"
     ],
@@ -2417,7 +2538,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-77230",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Docker"
     ],
@@ -2455,7 +2576,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-112788",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Docker",
       "Kubernetes",
@@ -2498,7 +2619,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-64670",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "npm"
     ],
@@ -2536,7 +2657,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-65817",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -2584,7 +2705,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-34002",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2632,7 +2753,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-34000",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2713,7 +2834,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-59726",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Docker",
       "npm"
@@ -2755,7 +2876,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-120002",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -3011,7 +3132,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-111497",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux",
       "Microsoft",
@@ -3056,7 +3177,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2025-14087",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -8264,7 +8385,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-69181",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Linux"
     ],
@@ -8305,7 +8426,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T09:54:41Z",
     "id": "CVE-2026-7700",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [
       "Python"
     ],
@@ -11622,6 +11743,1215 @@
     "why_it_matters": "### Summary The `POST /__nuxt_content/:collection/query` endpoint in `@nuxt/content` accepts an attacker-controlled `sql` field from the HTTP request body and executes it against a local SQLite database after passing it through an insufficient validator (`assertSafeQuery`). The validator only blocks a small set of SQL command keywords and does not reject expensive SQLite built-in functions such as `randomblob()`, `zeroblob()`, `hex()`, or `length()`. An unauthenticated remote attacker can craft a single request that forces SQLite to allocate hundreds of megabytes of memory and perform CPU-intensive work, causing server-wide denial of service. This endpoint is enabled by default for every collection and requires no authentication. ### Details The vulnerability spans three source files: **Route registration  -  `src/module.ts:207-208`** The Nuxt Content module registers a public HTTP POST ha"
   },
   {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-120984",
+      "GHSA-2539-2x8g-x597"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "dependencies",
+      "infrastructure",
+      "cloud-identity"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-120984",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T21:32:20Z",
+    "priority": "information",
+    "published": "2026-11-07T15:30:28Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2539-2x8g-x597"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services enabled, the system fails to properly clear an internal session attribute used during the setup process. This allows an authenticated attacker with client management permissions to bypass security controls and upload a malicious JavaScript policy, which is then executed on the server when an authorization request is made. Successful exploitation could allow the attacker to run arbitrary code on the server, potentially compromising the entire system.",
+    "title": "A flaw was found in the Keycloak server's client management component. When a client is created...",
+    "why_it_matters": "A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services enabled, the system fails to properly clear an internal session attribute used during the setup process. This allows an authenticated attacker with client management permissions to bypass security controls and upload a malicious JavaScript policy, which is then executed on the server when an authorization request is made. Successful exploitation could allow the attacker to run arbitrary code on the server, potentially compromising the entire system."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-117691",
+      "GHSA-c85j-3hq2-q6wj"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure",
+      "cloud-identity"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-117691",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T21:31:16Z",
+    "priority": "information",
+    "published": "2026-11-05T15:32:36Z",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c85j-3hq2-q6wj"
+      }
+    ],
+    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+    "summary": "A flaw was found in the SAML HTTP-Redirect binding implementation of Keycloak. The issue occurs because the server processes percent-encoded parameter names (like %53AMLResponse) while the signature verification logic only checks literal parameter names. An attacker can use this discrepancy to provide a crafted, unsigned SAML message that the server processes instead of a legitimately signed one, leading to full account takeover of federated users.",
+    "title": "A flaw was found in the SAML HTTP-Redirect binding implementation of Keycloak. The issue occurs...",
+    "why_it_matters": "A flaw was found in the SAML HTTP-Redirect binding implementation of Keycloak. The issue occurs because the server processes percent-encoded parameter names (like %53AMLResponse) while the signature verification logic only checks literal parameter names. An attacker can use this discrepancy to provide a crafted, unsigned SAML message that the server processes instead of a legitimately signed one, leading to full account takeover of federated users."
+  },
+  {
+    "affected": [
+      "quarkus quarkus",
+      "redhat build of quarkus"
+    ],
+    "aliases": [
+      "CVE-2023-6394"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2023-6394",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T19:17:07.470",
+    "priority": "information",
+    "published": "2023-12-09T02:15:06.747",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6394"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A flaw was found in Quarkus. This issue occurs when receiving a request over websocket with no role-based permission specified on the GraphQL operation, Quarkus processes the request without authentication despite the endpoint being secured. This can allow an attacker to access information and functionality outside of normal granted API permissions.",
+    "title": "A flaw was found in Quarkus. This issue occurs when receiving a request over websocket with no role-based permission specified on the GraphQL operatio",
+    "why_it_matters": "A flaw was found in Quarkus. This issue occurs when receiving a request over websocket with no role-based permission specified on the GraphQL operation, Quarkus processes the request without authentication despite the endpoint being secured. This can allow an attacker to access information and functionality outside of normal granted API permissions."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137550",
+      "GHSA-4f9x-j3mh-m397"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137550",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:46Z",
+    "priority": "information",
+    "published": "2026-11-26T16:18:08.660",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4f9x-j3mh-m397"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137550"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Frappe Framework before 15.122.0 and 16.x before 16.50.0 contains a missing authorization vulnerability in Document.update() that fails to validate whether the caller is permitted to submit or modify the target document. Attackers can invoke document update operations to submit or alter documents they are not authorized to change.",
+    "title": "Frappe Framework before 15.122.0 and 16.x before 16.50.0 contains a missing authorization...",
+    "why_it_matters": "Frappe Framework before 15.122.0 and 16.x before 16.50.0 contains a missing authorization vulnerability in Document.update() that fails to validate whether the caller is permitted to submit or modify the target document. Attackers can invoke document update operations to submit or alter documents they are not authorized to change."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137547",
+      "GHSA-g8gr-3qjg-qvr3"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure",
+      "cloud-identity"
+    ],
+    "cvss": 8.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137547",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:45Z",
+    "priority": "information",
+    "published": "2026-11-26T18:30:36Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-g8gr-3qjg-qvr3"
+      }
+    ],
+    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+    "summary": "Coder before 2.29.27, 2.30.0 before 2.34.19, 2.35.0 before 2.37.11, 2.38.0 before 2.38.7, and 2.39.0 before 2.39.1 returns database connection errors containing a temporary AWS IAM database password in API key middleware responses. During database connection failures, unauthenticated attackers can send a well-formed but invalid API key to obtain the password and access the PostgreSQL database for 15 minutes.",
+    "title": "Coder before 2.29.27, 2.30.0 before 2.34.19, 2.35.0 before 2.37.11, 2.38.0 before 2.38.7, and 2...",
+    "why_it_matters": "Coder before 2.29.27, 2.30.0 before 2.34.19, 2.35.0 before 2.37.11, 2.38.0 before 2.38.7, and 2.39.0 before 2.39.1 returns database connection errors containing a temporary AWS IAM database password in API key middleware responses. During database connection failures, unauthenticated attackers can send a well-formed but invalid API key to obtain the password and access the PostgreSQL database for 15 minutes."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137544",
+      "GHSA-wr7q-h5r6-wf6h"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.4,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137544",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:45Z",
+    "priority": "information",
+    "published": "2026-11-26T16:18:07.603",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-wr7q-h5r6-wf6h"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137544"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "LaraDashboard before 1.5.0 contains a path traversal vulnerability in module.json providers and composer.json psr-4 namespace parsing that derives destination folder names without excluding traversal characters. Attackers with module.create permission can upload a crafted module ZIP to write PHP files into the public directory, achieving unauthenticated remote code execution.",
+    "title": "LaraDashboard before 1.5.0 contains a path traversal vulnerability in module.json providers and...",
+    "why_it_matters": "LaraDashboard before 1.5.0 contains a path traversal vulnerability in module.json providers and composer.json psr-4 namespace parsing that derives destination folder names without excluding traversal characters. Attackers with module.create permission can upload a crafted module ZIP to write PHP files into the public directory, achieving unauthenticated remote code execution."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137536",
+      "GHSA-9gvc-mch8-5f3c"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure",
+      "cloud-identity"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137536",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:39Z",
+    "priority": "information",
+    "published": "2026-11-26T16:18:06.410",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9gvc-mch8-5f3c"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137536"
+      }
+    ],
+    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+    "summary": "ToolJet before 3.21.94-beta contains an authentication bypass in its server OAuth SSO sign-in module, which resolves Google and Git SSO logins solely by the provider-asserted email without checking email_verified or binding the SSO subject. Unauthenticated attackers can submit a trusted-issuer token carrying a victim's unverified email to the SSO callback to obtain the victim's session, including admin accounts.",
+    "title": "ToolJet before 3.21.94-beta contains an authentication bypass in its server OAuth SSO sign-in...",
+    "why_it_matters": "ToolJet before 3.21.94-beta contains an authentication bypass in its server OAuth SSO sign-in module, which resolves Google and Git SSO logins solely by the provider-asserted email without checking email_verified or binding the SSO subject. Unauthenticated attackers can submit a trusted-issuer token carrying a victim's unverified email to the SSO callback to obtain the victim's session, including admin accounts."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137471",
+      "GHSA-rhmr-p79w-78j3"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "dependencies"
+    ],
+    "cvss": 8.3,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137471",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:35Z",
+    "priority": "information",
+    "published": "2026-11-26T18:30:29Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rhmr-p79w-78j3"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "SiYuan before 3.8.10 contains a cross-site scripting vulnerability where WebDAV sync error formatting skips HTML escaping for certain malformed-response errors, passing raw markup to the Electron notification renderer. A network attacker who alters a cleartext HTTP WebDAV response can inject event-handler markup that, when the victim manually starts sync, executes JavaScript with Node integration as the logged-in user.",
+    "title": "SiYuan before 3.8.10 contains a cross-site scripting vulnerability where WebDAV sync error...",
+    "why_it_matters": "SiYuan before 3.8.10 contains a cross-site scripting vulnerability where WebDAV sync error formatting skips HTML escaping for certain malformed-response errors, passing raw markup to the Electron notification renderer. A network attacker who alters a cleartext HTTP WebDAV response can inject event-handler markup that, when the victim manually starts sync, executes JavaScript with Node integration as the logged-in user."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137499",
+      "GHSA-2h3j-mr6x-g97h"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137499",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:33Z",
+    "priority": "information",
+    "published": "2026-11-26T16:18:01.160",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-2h3j-mr6x-g97h"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137499"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Budibase from 3.41.0 before 4.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to take over password-less global Builder accounts via unverified-email OIDC/SSO account linking. Attackers can assert a victim's email with email_verified=false at a trusted IdP, bypassing the isAccountLinkable allowlist to control all apps, datasources, and automations.",
+    "title": "Budibase from 3.41.0 before 4.0.0 contains an authentication bypass vulnerability that allows...",
+    "why_it_matters": "Budibase from 3.41.0 before 4.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to take over password-less global Builder accounts via unverified-email OIDC/SSO account linking. Attackers can assert a victim's email with email_verified=false at a trusted IdP, bypassing the isAccountLinkable allowlist to control all apps, datasources, and automations."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137498",
+      "GHSA-6pcp-h3fh-w9xv"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 10.0,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137498",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:33Z",
+    "priority": "information",
+    "published": "2026-11-26T16:18:01.000",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-6pcp-h3fh-w9xv"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137498"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Budibase Server from 3.39.18 before 4.0.0 contains a prototype pollution vulnerability that allows unauthenticated attackers to erase MongoDB query filters by supplying __proto__ as a dynamic JSON key in PUBLIC queries. Attackers can send a single request to the query execution endpoint, reducing the filter to {} to read, update, or delete every document in the collection.",
+    "title": "Budibase Server from 3.39.18 before 4.0.0 contains a prototype pollution vulnerability that...",
+    "why_it_matters": "Budibase Server from 3.39.18 before 4.0.0 contains a prototype pollution vulnerability that allows unauthenticated attackers to erase MongoDB query filters by supplying __proto__ as a dynamic JSON key in PUBLIC queries. Attackers can send a single request to the query execution endpoint, reducing the filter to {} to read, update, or delete every document in the collection."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137465",
+      "GHSA-47vh-r8p6-c4cj"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 7.4,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137465",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:29Z",
+    "priority": "information",
+    "published": "2026-11-26T18:30:28Z",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-47vh-r8p6-c4cj"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Parse Server 3.10.0 before 8.6.123 and 9.0.0 before 9.11.1-alpha.4 contains an authentication bypass in the Google Play Games authentication adapter, which does not verify that the supplied player ID belongs to the presented access token. Attackers can sign in with their own Google Play Games credential while claiming another user's player ID to take over that account or link that player ID to their own account.",
+    "title": "Parse Server 3.10.0 before 8.6.123 and 9.0.0 before 9.11.1-alpha.4 contains an authentication...",
+    "why_it_matters": "Parse Server 3.10.0 before 8.6.123 and 9.0.0 before 9.11.1-alpha.4 contains an authentication bypass in the Google Play Games authentication adapter, which does not verify that the supplied player ID belongs to the presented access token. Attackers can sign in with their own Google Play Games credential while claiming another user's player ID to take over that account or link that player ID to their own account."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137463",
+      "GHSA-v2m6-69vh-pvwr"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 7.4,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137463",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T18:30:28Z",
+    "priority": "information",
+    "published": "2026-11-26T18:30:28Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-v2m6-69vh-pvwr"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "HKUDS nanobot from 0.1.4 before 0.4.1 contains an improper certificate validation vulnerability in the OpenAI Codex provider that retries authenticated requests without TLS certificate or hostname verification. Attackers able to intercept the connection can trigger a certificate failure and impersonate the endpoint to steal bearer tokens, read request contents, or alter responses.",
+    "title": "HKUDS nanobot from 0.1.4 before 0.4.1 contains an improper certificate validation vulnerability...",
+    "why_it_matters": "HKUDS nanobot from 0.1.4 before 0.4.1 contains an improper certificate validation vulnerability in the OpenAI Codex provider that retries authenticated requests without TLS certificate or hostname verification. Attackers able to intercept the connection can trigger a certificate failure and impersonate the endpoint to steal bearer tokens, read request contents, or alter responses."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-136240",
+      "GHSA-x8rf-g26w-4mf8"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-136240",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:44Z",
+    "priority": "information",
+    "published": "2026-11-26T15:17:26.867",
+    "security_topics": [
+      "Data exposure"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-x8rf-g26w-4mf8"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136240"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.2.0 via deserialization of untrusted input . This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. The incomplete remediation in version 7.2.0 applied escape_pdf_note() only to the customer_note path; the billing address path at woocommerce/shortcodes.php:975–978 remains unpatched, and ",
+    "title": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is...",
+    "why_it_matters": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.2.0 via deserialization of untrusted input . This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. The incomplete remediation in version 7.2.0 applied escape_pdf_note() only to the customer_note path; the billing address path at woocommerce/shortcodes.php:975–978 remains unpatched, and "
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-135641",
+      "GHSA-pj3x-76jj-3vv4"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-135641",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:44Z",
+    "priority": "information",
+    "published": "2026-11-26T15:17:26.100",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-pj3x-76jj-3vv4"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135641"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The WP Job Portal – AI-Powered Recruitment System for Company or Job Board website plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 2.7.2 This is due to a flaw in `WPJOBPORTALuser::__construct()` where the non-empty guard on the `wpjobportal-socialid` cookie is evaluated against the raw cookie value before `sanitize_key()` is applied  -  allowing a value composed entirely of characters outside `[a-z0-9_-]` to pass the guard, be reduced to an empty string by `sanitize_key()`, and be used as the literal value in a `WHERE socialid = ''` database query that matches the first portal account whose `socialid` column is empty. This makes it possible for unauthenticated attackers to be bound to an existing WP Job Portal Employer or Jobseeker account, gaining the ability to create, edit, and delete the victim's companies, j",
+    "title": "The WP Job Portal – AI-Powered Recruitment System for Company or Job Board website plugin for...",
+    "why_it_matters": "The WP Job Portal – AI-Powered Recruitment System for Company or Job Board website plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 2.7.2 This is due to a flaw in `WPJOBPORTALuser::__construct()` where the non-empty guard on the `wpjobportal-socialid` cookie is evaluated against the raw cookie value before `sanitize_key()` is applied  -  allowing a value composed entirely of characters outside `[a-z0-9_-]` to pass the guard, be reduced to an empty string by `sanitize_key()`, and be used as the literal value in a `WHERE socialid = ''` database query that matches the first portal account whose `socialid` column is empty. This makes it possible for unauthenticated attackers to be bound to an existing WP Job Portal Employer or Jobseeker account, gaining the ability to create, edit, and delete the victim's companies, j"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-133951",
+      "GHSA-w934-87pf-cjjr"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-133951",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:44Z",
+    "priority": "information",
+    "published": "2026-11-26T15:17:25.487",
+    "security_topics": [
+      "Privilege escalation"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-w934-87pf-cjjr"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133951"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The Simple Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 4.8.9 This is due to the site-wide signing secret `swpm_private_key_one` being generated at install time with PHP's non-cryptographic `uniqid('', true)` function in `SwpmInstallation::installer()`, whose timestamp-derived keyspace (~10^15 candidates / ~50 bits) can be constrained via the public WordPress REST API date of the plugin's auto-created registration page, combined with a single-MD5 oracle (`md5(key|level)`) that the public registration form prints as `swpm_level_hash` and a non-constant-time `!=` comparison in `SwpmFrontRegistration::register_front_end()` as the sole authorization gate on which membership level a visitor may register into; `SwpmUtils::get_free_level()` then honors an attacker-posted `level_identifier=md5(level)` regardless of the configured free-me",
+    "title": "The Simple Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up...",
+    "why_it_matters": "The Simple Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 4.8.9 This is due to the site-wide signing secret `swpm_private_key_one` being generated at install time with PHP's non-cryptographic `uniqid('', true)` function in `SwpmInstallation::installer()`, whose timestamp-derived keyspace (~10^15 candidates / ~50 bits) can be constrained via the public WordPress REST API date of the plugin's auto-created registration page, combined with a single-MD5 oracle (`md5(key|level)`) that the public registration form prints as `swpm_level_hash` and a non-constant-time `!=` comparison in `SwpmFrontRegistration::register_front_end()` as the sole authorization gate on which membership level a visitor may register into; `SwpmUtils::get_free_level()` then honors an attacker-posted `level_identifier=md5(level)` regardless of the configured free-me"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-134173",
+      "GHSA-pw3g-cr4q-9j9w"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications",
+      "infrastructure"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-134173",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:44Z",
+    "priority": "information",
+    "published": "2026-11-26T15:17:25.647",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-pw3g-cr4q-9j9w"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134173"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The WordPress File Upload plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 5.3.1 via the 'wfu_ajax_action_handshake' and 'wfu_ajax_action_send_email_notification' AJAX Actions. This is due to the unauthenticated handshake accepting a 'sid' parameter sanitized only with sanitize_text_field(), which does not strip '[', ']', '{', or '}', allowing the sid to be crafted as an item name containing embedded delimiter pairs that plant forged records for arbitrary other item names  -  including the per-session file path list and the consent flag  -  in the plugin's shared concatenated user-state option store, combined with the notification handler being gated only by a nonce freely minted by the same nopriv handshake. This makes it possible for unauthenticated attackers to delete arbitrary files on the affected site's server which may make remote code ex",
+    "title": "The WordPress File Upload plugin for WordPress is vulnerable to Arbitrary File Deletion in...",
+    "why_it_matters": "The WordPress File Upload plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 5.3.1 via the 'wfu_ajax_action_handshake' and 'wfu_ajax_action_send_email_notification' AJAX Actions. This is due to the unauthenticated handshake accepting a 'sid' parameter sanitized only with sanitize_text_field(), which does not strip '[', ']', '{', or '}', allowing the sid to be crafted as an item name containing embedded delimiter pairs that plant forged records for arbitrary other item names  -  including the per-session file path list and the consent flag  -  in the plugin's shared concatenated user-state option store, combined with the notification handler being gated only by a nonce freely minted by the same nopriv handshake. This makes it possible for unauthenticated attackers to delete arbitrary files on the affected site's server which may make remote code ex"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-104998",
+      "GHSA-83fc-pp99-24gm"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-104998",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:43Z",
+    "priority": "information",
+    "published": "2026-11-26T15:17:22.833",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-83fc-pp99-24gm"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104998"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.1.0 via the process_file_input_field function. This is due to missing file type validation in the process_file_input_field function, which accepts the client-supplied multipart Content-Type header as the sole type gate and writes the uploaded file to the unprotected pif_temp directory using the verbatim client-supplied filename. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires that an administrator has configured at least one product with a File-type Product Input Field with the \"Show thumbnail\" option enabled, which is a standard use of the feature; additionally, the pif_temp/ upload directory is created without .htaccess or index.php restr",
+    "title": "The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to Arbitrary File...",
+    "why_it_matters": "The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.1.0 via the process_file_input_field function. This is due to missing file type validation in the process_file_input_field function, which accepts the client-supplied multipart Content-Type header as the sole type gate and writes the uploaded file to the unprotected pif_temp directory using the verbatim client-supplied filename. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires that an administrator has configured at least one product with a File-type Product Input Field with the \"Show thumbnail\" option enabled, which is a standard use of the feature; additionally, the pif_temp/ upload directory is created without .htaccess or index.php restr"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137584",
+      "GHSA-j2j5-m93r-v92q"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 7.4,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137584",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:34Z",
+    "priority": "information",
+    "published": "2026-11-26T15:31:32Z",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-j2j5-m93r-v92q"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Twenty through 2.63.0 in multi-workspace mode contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain pending invitation tokens by registering an invitee's email via the signUp GraphQL mutation. Attackers can submit the leaked personalInviteToken to signUpInWorkspace to join the workspace with the invitation's role, including Admin, and obtain a verified email.",
+    "title": "Twenty through 2.63.0 in multi-workspace mode contains an authentication bypass vulnerability...",
+    "why_it_matters": "Twenty through 2.63.0 in multi-workspace mode contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain pending invitation tokens by registering an invitee's email via the signUp GraphQL mutation. Attackers can submit the leaked personalInviteToken to signUpInWorkspace to join the workspace with the invitation's role, including Admin, and obtain a verified email."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-134481",
+      "GHSA-rmc7-cf35-r777"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-134481",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:33Z",
+    "priority": "information",
+    "published": "2026-11-26T15:31:28Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-rmc7-cf35-r777"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Deserialization of Untrusted Data vulnerability in Ultimate Member Ultimate Member ultimate-member allows Object Injection.This issue affects Ultimate Member: from n/a through 2.14.1.",
+    "title": "Deserialization of Untrusted Data vulnerability in Ultimate Member Ultimate Member ultimate...",
+    "why_it_matters": "Deserialization of Untrusted Data vulnerability in Ultimate Member Ultimate Member ultimate-member allows Object Injection.This issue affects Ultimate Member: from n/a through 2.14.1."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-131767",
+      "GHSA-hxjj-338w-9qfj"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-131767",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:33Z",
+    "priority": "information",
+    "published": "2026-11-26T15:31:27Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hxjj-338w-9qfj"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Deserialization of Untrusted Data vulnerability in Aman FunnelKit Automations wp-marketing-automations allows Object Injection.This issue affects FunnelKit Automations: from n/a through 3.9.0.1.",
+    "title": "Deserialization of Untrusted Data vulnerability in Aman FunnelKit Automations wp-marketing...",
+    "why_it_matters": "Deserialization of Untrusted Data vulnerability in Aman FunnelKit Automations wp-marketing-automations allows Object Injection.This issue affects FunnelKit Automations: from n/a through 3.9.0.1."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-124843",
+      "GHSA-wgxf-r47p-25mq"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-124843",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:33Z",
+    "priority": "information",
+    "published": "2026-11-26T15:31:26Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-wgxf-r47p-25mq"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "SEPPmail Secure Email Gateway before 15.1.2 uses a source-visible hard-coded fallback secret for legacy GINA token and Large File Transfer cryptographic operations when expected key material is unavailable or unusable. A remote attacker can forge accepted account tokens while the fallback path is active and can decrypt LFT content protected with the shared fallback.",
+    "title": "SEPPmail Secure Email Gateway before 15.1.2 uses a source-visible hard-coded fallback secret for...",
+    "why_it_matters": "SEPPmail Secure Email Gateway before 15.1.2 uses a source-visible hard-coded fallback secret for legacy GINA token and Large File Transfer cryptographic operations when expected key material is unavailable or unusable. A remote attacker can forge accepted account tokens while the fallback path is active and can decrypt LFT content protected with the shared fallback."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137567",
+      "GHSA-8fqh-8p37-cc5h"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137567",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:30Z",
+    "priority": "information",
+    "published": "2026-11-26T14:17:24.800",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-8fqh-8p37-cc5h"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137567"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "llama.cpp b11450 before b12658 contains an out-of-bounds write vulnerability in the ggml RPC server that allows unauthenticated attackers to write to arbitrary heap addresses via zero-element destination tensors. Attackers can learn buffer bases with BUFFER_GET_BASE, then send RPC_CMD_COPY_TENSOR with a destination pointer below the buffer base to crash the server or execute code.",
+    "title": "llama.cpp b11450 before b12658 contains an out-of-bounds write vulnerability in the ggml RPC...",
+    "why_it_matters": "llama.cpp b11450 before b12658 contains an out-of-bounds write vulnerability in the ggml RPC server that allows unauthenticated attackers to write to arbitrary heap addresses via zero-element destination tensors. Attackers can learn buffer bases with BUFFER_GET_BASE, then send RPC_CMD_COPY_TENSOR with a destination pointer below the buffer base to crash the server or execute code."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-130637",
+      "GHSA-5pph-7rm4-335j"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-130637",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:30Z",
+    "priority": "information",
+    "published": "2026-11-26T15:31:29Z",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5pph-7rm4-335j"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "SEPPMAIL Secure E-Mail Gateway versions before 15.1.2 are affected by a pre-authentication server-side template injection vulnerability that allows unauthenticated remote attackers to disclose sensitive account information and reset account passwords, potentially enabling account takeover.",
+    "title": "SEPPMAIL Secure E-Mail Gateway versions before 15.1.2 are affected by a pre-authentication server...",
+    "why_it_matters": "SEPPMAIL Secure E-Mail Gateway versions before 15.1.2 are affected by a pre-authentication server-side template injection vulnerability that allows unauthenticated remote attackers to disclose sensitive account information and reset account passwords, potentially enabling account takeover."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-124840",
+      "GHSA-7fhr-9jwp-j366"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-124840",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T15:31:26Z",
+    "priority": "information",
+    "published": "2026-11-26T15:31:26Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-7fhr-9jwp-j366"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "SEPPmail Secure Email Gateway before 15.1.2 reuses a broad legacy GINA session purpose across registration and recovery workflows. A remote attacker who knows an account security answer can use a recovery session in a different account workflow to replace credentials and account recovery data, and may delete the account when self-deletion is enabled.",
+    "title": "SEPPmail Secure Email Gateway before 15.1.2 reuses a broad legacy GINA session purpose across...",
+    "why_it_matters": "SEPPmail Secure Email Gateway before 15.1.2 reuses a broad legacy GINA session purpose across registration and recovery workflows. A remote attacker who knows an account security answer can use a recovery session in a different account workflow to replace credentials and account recovery data, and may delete the account when self-deletion is enabled."
+  },
+  {
+    "affected": [
+      "redhat build of apache camel",
+      "redhat data grid",
+      "redhat fuse",
+      "redhat jboss enterprise application platform",
+      "redhat jboss enterprise application platform expansion pack",
+      "redhat process automation",
+      "redhat single sign-on",
+      "redhat undertow"
+    ],
+    "aliases": [
+      "CVE-2025-12543"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "dependencies",
+      "infrastructure"
+    ],
+    "cvss": 9.6,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-23T23:54:12Z",
+    "id": "CVE-2025-12543",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T14:17:14.220",
+    "priority": "information",
+    "published": "2026-01-07T17:15:55.093",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12543"
+      }
+    ],
+    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+    "summary": "A flaw was found in the Undertow HTTP server core, which is used in WildFly, JBoss EAP, and other Java applications. The Undertow library fails to properly validate the Host header in incoming HTTP requests.As a result, requests containing malformed or malicious Host headers are processed without rejection, enabling attackers to poison caches, perform internal network scans, or hijack user sessions.",
+    "title": "A flaw was found in the Undertow HTTP server core, which is used in WildFly, JBoss EAP, and other Java applications. The Undertow library fails to pro",
+    "why_it_matters": "A flaw was found in the Undertow HTTP server core, which is used in WildFly, JBoss EAP, and other Java applications. The Undertow library fails to properly validate the Host header in incoming HTTP requests.As a result, requests containing malformed or malicious Host headers are processed without rejection, enabling attackers to poison caches, perform internal network scans, or hijack user sessions."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-123912",
+      "GHSA-4xvg-6m67-6x39"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-123912",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T12:30:43Z",
+    "priority": "information",
+    "published": "2026-11-26T12:30:35Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4xvg-6m67-6x39"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "VMware ESXi, Workstation, and Fusion contain an out-of-bounds write vulnerability in the XHCI USB controller. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.3. Affected versions: VMware ESX 9.1.x.x: fixed in ESXi-9.1.2.0-25946735 VMware ESX 9.0.x.x: fixed in ESXi-9.0.2.0200-25953133 VMware ESX 8.0: fixed in ESXi80U3m-25926933 VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501 VMware Workstation 25H2: fixed in 26H1u1 VMware Fusion 25H2: fixed in 26H1u1",
+    "title": "VMware ESXi, Workstation, and Fusion contain an out-of-bounds write vulnerability in the XHCI USB...",
+    "why_it_matters": "VMware ESXi, Workstation, and Fusion contain an out-of-bounds write vulnerability in the XHCI USB controller. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.3. Affected versions: VMware ESX 9.1.x.x: fixed in ESXi-9.1.2.0-25946735 VMware ESX 9.0.x.x: fixed in ESXi-9.0.2.0200-25953133 VMware ESX 8.0: fixed in ESXi80U3m-25926933 VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501 VMware Workstation 25H2: fixed in 26H1u1 VMware Fusion 25H2: fixed in 26H1u1"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-123911",
+      "GHSA-c4v3-x2v9-w6g6"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-123911",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T12:30:37Z",
+    "priority": "information",
+    "published": "2026-11-26T12:30:34Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-c4v3-x2v9-w6g6"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "ESX contains a use-after-free vulnerability in the I/O filter service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected versions: VMware ESX 9.1.x.x: fixed in ESXi-9.1.2.0-25946735 VMware ESX 9.0.x.x: fixed in ESXi-9.0.2.0200-25953133 VMware ESX 8.0: fixed in ESXi80U3m-25926933 VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501",
+    "title": "ESX contains a use-after-free vulnerability in the I/O filter service. Broadcom has evaluated the...",
+    "why_it_matters": "ESX contains a use-after-free vulnerability in the I/O filter service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected versions: VMware ESX 9.1.x.x: fixed in ESXi-9.1.2.0-25946735 VMware ESX 9.0.x.x: fixed in ESXi-9.0.2.0200-25953133 VMware ESX 8.0: fixed in ESXi80U3m-25926933 VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-123903",
+      "GHSA-vcq7-f2fm-h6hj"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-123903",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T12:30:37Z",
+    "priority": "information",
+    "published": "2026-11-26T12:30:33Z",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-vcq7-f2fm-h6hj"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected versions: VMware vCenter Server 9.1.x.x: fixed in 9.1.2 VMware vCenter Server 9.0.x.x: fixed in 9.0.2.0300 VMware vCenter Server 8.0: fixed in 8.0 U3m VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 3.0: fixed in KB463501 VMware Telco Cloud Platform 4.x: fixed in KB463501 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501 VMware Telco Cloud Platform 5.2: fixed in KB463501 VMware Telco Cloud Infrastructure 3.0: fixed in KB463501",
+    "title": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service....",
+    "why_it_matters": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected versions: VMware vCenter Server 9.1.x.x: fixed in 9.1.2 VMware vCenter Server 9.0.x.x: fixed in 9.0.2.0300 VMware vCenter Server 8.0: fixed in 8.0 U3m VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 3.0: fixed in KB463501 VMware Telco Cloud Platform 4.x: fixed in KB463501 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501 VMware Telco Cloud Platform 5.2: fixed in KB463501 VMware Telco Cloud Infrastructure 3.0: fixed in KB463501"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-123910",
+      "GHSA-286q-92g9-q2rv"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-123910",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T12:30:35Z",
+    "priority": "information",
+    "published": "2026-11-26T12:30:34Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-286q-92g9-q2rv"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected versions: VMware ESX 9.1.x.x: fixed in ESXi-9.1.2.0-25946735 VMware ESX 9.0.x.x: fixed in ESXi-9.0.2.0200-25953133 VMware ESX 8.0: fixed in ESXi80U3m-25926933 VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501",
+    "title": "ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. Broadcom has...",
+    "why_it_matters": "ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected versions: VMware ESX 9.1.x.x: fixed in ESXi-9.1.2.0-25946735 VMware ESX 9.0.x.x: fixed in ESXi-9.0.2.0200-25953133 VMware ESX 8.0: fixed in ESXi80U3m-25926933 VMware Cloud Foundation 5.x: fixed in 5.2.5 VMware Telco Cloud Platform 5.0.x: fixed in KB463501 VMware Telco Cloud Platform 5.1.x: fixed in KB463501"
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-133336",
+      "GHSA-5rhh-fcq6-86qp"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": null,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-133336",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T09:31:22Z",
+    "priority": "information",
+    "published": "2026-11-26T09:31:18Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-5rhh-fcq6-86qp"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Joomla Extension - chronoengine.com - Unauthenticated arbitrary file upload in ChronoForms extension 8.0.0-8.0.53 - When the Filename Provider option of a file field is used, the file extension check is performed against the original client filename instead of the final stored filename, allowing unauthenticated users to upload files with dangerous extensions. Fixed in 8.0.54.",
+    "title": "Joomla Extension - chronoengine.com - Unauthenticated arbitrary file upload in ChronoForms...",
+    "why_it_matters": "Joomla Extension - chronoengine.com - Unauthenticated arbitrary file upload in ChronoForms extension 8.0.0-8.0.53 - When the Filename Provider option of a file field is used, the file extension check is performed against the original client filename instead of the final stored filename, allowing unauthenticated users to upload files with dangerous extensions. Fixed in 8.0.54."
+  },
+  {
+    "affected": [
+      "acer connect m6e 5g",
+      "acer connect m6e 5g firmware"
+    ],
+    "aliases": [
+      "CVE-2026-50214"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.3,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-50214",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T09:17:12.503",
+    "priority": "information",
+    "published": "2026-06-04T10:16:39.850",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50214"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The /v1/Plan service relies entirely on a shared global API token for full administrative management, allowing arbitrary creation of zero-cost network access plans.",
+    "title": "The /v1/Plan service relies entirely on a shared global API token for full administrative management, allowing arbitrary creation of zero-cost network",
+    "why_it_matters": "The /v1/Plan service relies entirely on a shared global API token for full administrative management, allowing arbitrary creation of zero-cost network access plans."
+  },
+  {
+    "affected": [
+      "acer connect m6e 5g",
+      "acer connect m6e 5g firmware"
+    ],
+    "aliases": [
+      "CVE-2026-50208"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.2,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-50208",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T09:17:11.623",
+    "priority": "information",
+    "published": "2026-06-04T09:16:29.277",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50208"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "High-risk TrustAllCerts routines disable standard TLS certificate validation. Combined with hard-coded DES symmetric encryption keys, a Man-in-the-Middle (MITM) actor could decrypt network traffic.",
+    "title": "High-risk TrustAllCerts routines disable standard TLS certificate validation. Combined with hard-coded DES symmetric encryption keys, a Man-in-the-Mid",
+    "why_it_matters": "High-risk TrustAllCerts routines disable standard TLS certificate validation. Combined with hard-coded DES symmetric encryption keys, a Man-in-the-Middle (MITM) actor could decrypt network traffic."
+  },
+  {
     "affected": [
       "acer connect m6e 5g",
       "acer connect m6e 5g firmware"
@@ -11640,7 +12970,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49191",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:12.543",
     "priority": "information",
@@ -11677,7 +13007,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49185",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:11.740",
     "priority": "information",
@@ -11712,7 +13042,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-137043",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T03:30:37Z",
     "priority": "information",
@@ -11753,7 +13083,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133971",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:32Z",
     "priority": "information",
@@ -11790,7 +13120,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133973",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:31Z",
     "priority": "information",
@@ -11827,7 +13157,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133972",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:31Z",
     "priority": "information",
@@ -11862,7 +13192,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-136823",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:31Z",
     "priority": "information",
@@ -11903,7 +13233,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-96296",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:31:33Z",
     "priority": "information",
@@ -11938,7 +13268,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-137086",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:30:48Z",
     "priority": "information",
@@ -11973,7 +13303,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-132694",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:30:31Z",
     "priority": "information",
@@ -12008,7 +13338,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-20T07:16:33Z",
     "id": "CVE-2026-121481",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:30:29Z",
     "priority": "information",
@@ -12043,7 +13373,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-17T20:55:55Z",
     "id": "CVE-2026-107904",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:30:29Z",
     "priority": "information",
@@ -12080,7 +13410,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-82489",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T20:17:56.077",
     "priority": "information",
@@ -12121,7 +13451,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-95451",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:31:43Z",
     "priority": "information",
@@ -12156,7 +13486,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-95450",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:31:43Z",
     "priority": "information",
@@ -12191,7 +13521,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-95448",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:31:43Z",
     "priority": "information",
@@ -12228,7 +13558,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-134880",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:31:42Z",
     "priority": "information",
@@ -12263,7 +13593,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-136835",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:30:54Z",
     "priority": "information",
@@ -12298,7 +13628,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-82442",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:30:42Z",
     "priority": "information",
@@ -12333,7 +13663,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-128661",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:30:39Z",
     "priority": "information",
@@ -12368,7 +13698,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-128719",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:30:39Z",
     "priority": "information",
@@ -12403,7 +13733,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-59415",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T15:32:23Z",
     "priority": "information",
@@ -12438,7 +13768,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-97180",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T15:31:33Z",
     "priority": "information",
@@ -12475,7 +13805,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-129968",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T15:31:33Z",
     "priority": "information",
@@ -12510,7 +13840,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-114346",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T15:31:29Z",
     "priority": "information",
@@ -12546,7 +13876,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-135888",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T15:31:28Z",
     "priority": "information",
@@ -12581,7 +13911,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-125812",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T15:31:27Z",
     "priority": "information",
@@ -12616,7 +13946,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-136706",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T12:31:57Z",
     "priority": "information",
@@ -12653,7 +13983,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-78114",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T12:31:56Z",
     "priority": "information",
@@ -12688,7 +14018,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-133335",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T12:31:51Z",
     "priority": "information",
@@ -12725,7 +14055,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136553",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T09:30:41Z",
     "priority": "information",
@@ -12764,7 +14094,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136549",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:30:40Z",
     "priority": "information",
@@ -12805,7 +14135,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136548",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:30:40Z",
     "priority": "information",
@@ -12844,7 +14174,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136547",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:30:40Z",
     "priority": "information",
@@ -12883,7 +14213,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-134639",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:30:31Z",
     "priority": "information",
@@ -12919,7 +14249,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-2369",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T03:17:51.340",
     "priority": "information",
@@ -12956,7 +14286,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136136",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:36:26Z",
     "priority": "information",
@@ -12995,7 +14325,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-132669",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:36:23Z",
     "priority": "information",
@@ -13032,7 +14362,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-132726",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:36:23Z",
     "priority": "information",
@@ -13067,7 +14397,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-132697",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:36:19Z",
     "priority": "information",
@@ -13102,7 +14432,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-124284",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:36:18Z",
     "priority": "information",
@@ -13318,7 +14648,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135797",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T21:31:15Z",
     "priority": "information",
@@ -13396,7 +14726,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-136411",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T21:31:11Z",
     "priority": "information",
@@ -13971,7 +15301,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "GHSA-jjpq-qx77-qjwj",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:54:02Z",
     "priority": "information",
@@ -14011,7 +15341,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "GHSA-jrxj-9mhw-55wc",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:52:51Z",
     "priority": "information",
@@ -14589,7 +15919,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135792",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:31:08Z",
     "priority": "information",
@@ -14773,7 +16103,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-123342",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:31:03Z",
     "priority": "information",
@@ -15105,7 +16435,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-123987",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -15146,7 +16476,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-125717",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -15188,7 +16518,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-125718",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -15227,7 +16557,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-136184",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -15303,7 +16633,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-123986",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:58Z",
     "priority": "information",
@@ -15604,7 +16934,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T09:54:41Z",
     "id": "CVE-2026-135736",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:26:04.777",
     "priority": "information",
@@ -15866,7 +17196,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-119582",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T15:26:18.530",
     "priority": "information",
@@ -15905,7 +17235,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-117593",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T15:26:18.530",
     "priority": "information",
@@ -15972,7 +17302,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-109618",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T14:27:42.290",
     "priority": "information",
@@ -16049,7 +17379,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-105192",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T09:58:59Z",
     "priority": "information",
@@ -17300,50 +18630,6 @@
     "summary": "Interstellar before 6.3.0 contains a server-side request forgery vulnerability that allows unauthenticated attackers to reach internal services by enabling allow_loopback_ips and allow_private_ips in wisp-js at startup. Attackers can open a wisp WebSocket that bypasses the Express password middleware and create TCP streams to loopback, internal hosts, or cloud metadata services.",
     "title": "Interstellar before 6.3.0 contains a server-side request forgery vulnerability that allows...",
     "why_it_matters": "Interstellar before 6.3.0 contains a server-side request forgery vulnerability that allows unauthenticated attackers to reach internal services by enabling allow_loopback_ips and allow_private_ips in wisp-js at startup. Attackers can open a wisp WebSocket that bypasses the Express password middleware and create TCP streams to loopback, internal hosts, or cloud metadata services."
-  },
-  {
-    "affected": [
-      "redhat build of apache camel",
-      "redhat data grid",
-      "redhat fuse",
-      "redhat jboss enterprise application platform",
-      "redhat jboss enterprise application platform expansion pack",
-      "redhat process automation",
-      "redhat single sign-on",
-      "redhat undertow"
-    ],
-    "aliases": [
-      "CVE-2025-12543"
-    ],
-    "attention_score": 45,
-    "categories": [
-      "dependencies",
-      "infrastructure"
-    ],
-    "cvss": 9.6,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-23T23:54:12Z",
-    "id": "CVE-2025-12543",
-    "last_seen": "2026-11-26T08:18:31Z",
-    "matched_topics": [],
-    "modified": "2026-11-23T15:17:15.663",
-    "priority": "information",
-    "published": "2026-01-07T17:15:55.093",
-    "security_topics": [],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12543"
-      }
-    ],
-    "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
-    "summary": "A flaw was found in the Undertow HTTP server core, which is used in WildFly, JBoss EAP, and other Java applications. The Undertow library fails to properly validate the Host header in incoming HTTP requests.As a result, requests containing malformed or malicious Host headers are processed without rejection, enabling attackers to poison caches, perform internal network scans, or hijack user sessions.",
-    "title": "A flaw was found in the Undertow HTTP server core, which is used in WildFly, JBoss EAP, and other Java applications. The Undertow library fails to pro",
-    "why_it_matters": "A flaw was found in the Undertow HTTP server core, which is used in WildFly, JBoss EAP, and other Java applications. The Undertow library fails to properly validate the Host header in incoming HTTP requests.As a result, requests containing malformed or malicious Host headers are processed without rejection, enabling attackers to poison caches, perform internal network scans, or hijack user sessions."
   },
   {
     "affected": [
@@ -41752,6 +43038,150 @@
     "why_it_matters": "Traefik is an HTTP reverse proxy and load balancer. Prior to 2.11.46, 3.6.17, and 3.7.1, Traefik's Kubernetes Gateway API provider allows a tenant with HTTPRoute creation permissions to expose the REST provider handler, bypassing the providers.rest.insecure=false setting. The Gateway provider accepts any TraefikService backend reference whose name ends with @internal, making it possible to route traffic to rest@internal in addition to the intended api@internal. In shared Gateway deployments where the REST provider is enabled, this allows a low-privileged actor to gain live dynamic configuration write access to Traefik, enabling unauthorized reconfiguration of routers and services. This vulnerability is fixed in 2.11.46, 3.6.17, and 3.7.1."
   },
   {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137494"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.5,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137494",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T16:17:59.980",
+    "priority": "information",
+    "published": "2026-11-26T16:17:59.980",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137494"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Budibase before 4.0.0 contains a broken object-level authorization vulnerability that allows authenticated users with table write access to reference other tenants' files by supplying arbitrary attachment keys on row save. Attackers can inject a victim app's attachment key into a row, then update or delete the row to delete that object from the shared APPS bucket or read it via presigned URLs.",
+    "title": "Budibase before 4.0.0 contains a broken object-level authorization vulnerability that allows authenticated users with table write access to reference",
+    "why_it_matters": "Budibase before 4.0.0 contains a broken object-level authorization vulnerability that allows authenticated users with table write access to reference other tenants' files by supplying arbitrary attachment keys on row save. Attackers can inject a victim app's attachment key into a row, then update or delete the row to delete that object from the shared APPS bucket or read it via presigned URLs."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137481"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 7.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-137481",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T16:17:57.797",
+    "priority": "information",
+    "published": "2026-11-26T16:17:57.673",
+    "security_topics": [
+      "Authentication & authorization"
+    ],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137481"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Traefik before 2.11.62, 3.x before 3.7.18, and 3.8.0-rc.1 contain an authorization bypass because the sanitizePath entry point option leaves dot-segments carrying path parameters, such as /..;x/, unresolved when matching routers and applying middlewares. Unauthenticated attackers can send requests like /public/..;x/admin to a parameter-stripping backend shared with a protected router, bypassing authentication or authorization middlewares to reach protected resources.",
+    "title": "Traefik before 2.11.62, 3.x before 3.7.18, and 3.8.0-rc.1 contain an authorization bypass because the sanitizePath entry point option leaves dot-segme",
+    "why_it_matters": "Traefik before 2.11.62, 3.x before 3.7.18, and 3.8.0-rc.1 contain an authorization bypass because the sanitizePath entry point option leaves dot-segments carrying path parameters, such as /..;x/, unresolved when matching routers and applying middlewares. Unauthenticated attackers can send requests like /public/..;x/admin to a parameter-stripping backend shared with a protected router, bypassing authentication or authorization middlewares to reach protected resources."
+  },
+  {
+    "affected": [
+      "acer connect m6e 5g",
+      "acer connect m6e 5g firmware"
+    ],
+    "aliases": [
+      "CVE-2026-50225"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-50225",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T09:17:12.780",
+    "priority": "information",
+    "published": "2026-06-04T10:16:40.123",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50225"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The registration path /v1/account/register provides no bot mitigation mechanisms, allowing malicious automated systems to flood the database.",
+    "title": "The registration path /v1/account/register provides no bot mitigation mechanisms, allowing malicious automated systems to flood the database.",
+    "why_it_matters": "The registration path /v1/account/register provides no bot mitigation mechanisms, allowing malicious automated systems to flood the database."
+  },
+  {
+    "affected": [
+      "acer connect m6e 5g",
+      "acer connect m6e 5g firmware"
+    ],
+    "aliases": [
+      "CVE-2026-50211"
+    ],
+    "attention_score": 25,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 8.8,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-26T21:33:00Z",
+    "id": "CVE-2026-50211",
+    "last_seen": "2026-11-26T21:33:00Z",
+    "matched_topics": [],
+    "modified": "2026-11-26T09:17:12.057",
+    "priority": "information",
+    "published": "2026-06-04T09:16:29.700",
+    "security_topics": [],
+    "severity": "high",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50211"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "Leftover engineering diagnostics and factory-level diagnostic software remain exposed on retail builds, giving malicious apps write privileges to internal NVRAM registers.",
+    "title": "Leftover engineering diagnostics and factory-level diagnostic software remain exposed on retail builds, giving malicious apps write privileges to inte",
+    "why_it_matters": "Leftover engineering diagnostics and factory-level diagnostic software remain exposed on retail builds, giving malicious apps write privileges to internal NVRAM registers."
+  },
+  {
     "affected": [
       "acer connect m6e 5g",
       "acer connect m6e 5g firmware"
@@ -41770,7 +43200,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49188",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:12.140",
     "priority": "information",
@@ -41807,7 +43237,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49186",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:11.890",
     "priority": "information",
@@ -41843,7 +43273,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-136822",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:17:19.997",
     "priority": "information",
@@ -41879,7 +43309,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-136821",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:17:19.803",
     "priority": "information",
@@ -41920,7 +43350,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-68539",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T19:46:46Z",
     "priority": "information",
@@ -41961,7 +43391,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-65971",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T19:44:58Z",
     "priority": "information",
@@ -42002,7 +43432,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2025-10492",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T13:32:56.273",
     "priority": "information",
@@ -42074,7 +43504,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136550",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:17:15.960",
     "priority": "information",
@@ -42115,7 +43545,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-64855",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T22:41:47Z",
     "priority": "information",
@@ -42189,7 +43619,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "GHSA-jp3c-6v3g-mpxv",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T21:13:37Z",
     "priority": "information",
@@ -42231,7 +43661,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-63492",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:54:45Z",
     "priority": "information",
@@ -42272,7 +43702,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-63305",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:53:29Z",
     "priority": "information",
@@ -42308,7 +43738,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135796",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T19:18:14.583",
     "priority": "information",
@@ -42344,7 +43774,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135794",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T19:18:14.383",
     "priority": "information",
@@ -42380,7 +43810,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135791",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:19:03.090",
     "priority": "information",
@@ -42416,7 +43846,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135790",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:18:43.890",
     "priority": "information",
@@ -42452,7 +43882,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135789",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:18:43.660",
     "priority": "information",
@@ -42488,7 +43918,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135788",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:18:43.427",
     "priority": "information",
@@ -42529,7 +43959,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-77423",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-23T21:02:06Z",
     "priority": "information",
@@ -42568,7 +43998,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-58262",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-23T20:55:36Z",
     "priority": "information",
@@ -42607,7 +44037,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-22865",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:41:58Z",
     "priority": "information",
@@ -42646,7 +44076,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-22816",
-    "last_seen": "2026-11-26T08:18:31Z",
+    "last_seen": "2026-11-26T21:33:00Z",
     "matched_topics": [],
     "modified": "2026-11-23T15:39:17Z",
     "priority": "information",

