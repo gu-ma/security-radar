@@ -7,7 +7,63 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 25 Nov 2026 21:31:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 22:54:30 GMT</lastBuildDate>
+    <item>
+      <title>TastyIgniter permits Path Traversal in Media Upload</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-69181#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-69181#findings</guid>
+      <pubDate>Wed, 25 Nov 2026 22:54:30 GMT</pubDate>
+      <description>Severity: HIGH / CVSS 7.6 (v3.1)
+
+Summary: ### Summary Arbitrary file write outside `media/uploads/` ### Details It is possible to perform Path Traversal in Media Manager file upload function as admin. ### PoC - login as admin - upload a image but in the request, change the path from `/` to `/../../`. Request ```http POST /admin/media_manager HTTP/1.1 Host: localhost:8888 Content-Length: 302 sec-ch-ua-platform: "Linux" X-CSRF-TOKEN: 2vv3ZKpvfj2SkbbJzqmf8G053mNXqPLktxqd5eMx Cache-Control: no-cache Accept-Language: en-US,en;q=0.9 sec-ch-ua: "Not-A.Brand";v="24", "Chromium";v="146" sec-ch-ua-mobile: ?0 X-IGNITER-FILEUPLOAD: mediamanager X-Requested-With: XMLHttpRequest User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Accept: application/json Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryN13ytndlhtodIsbE Origin: http://localhost:8888 Sec-Fetch-Site: 
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-rj59-9f77-mvg5
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Applications</category>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-rj59-9f77-mvg5" type="text/html" />
+    </item>
+    <item>
+      <title>TastyIgniter allows Remote Code Execution (RCE) via Unrestricted file upload in Media Manager</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-69179#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-69179#findings</guid>
+      <pubDate>Wed, 25 Nov 2026 22:24:36 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: ### Summary Media manager accepts `.htaccess` file which can be used to perform RCE. ### Details The file upload functionality from media manager somehow accepts `.htaccess` file. This file could be used to allow any extension to run PHP command. By doing so, it is possible to perform RCE. ### PoC - Login as Admin - Create a `.htaccess` file with the following code. ``` &lt;FilesMatch "\.jpg$"&gt; SetHandler application/x-httpd-php &lt;/FilesMatch&gt; ``` - Upload the `.htaccess` file via the Media Manager. Request ``` POST /admin/media_manager HTTP/1.1 Host: localhost:8888 Content-Length: 357 sec-ch-ua-platform: "Linux" X-CSRF-TOKEN: 2vv3ZKpvfj2SkbbJzqmf8G053mNXqPLktxqd5eMx Cache-Control: no-cache Accept-Language: en-US,en;q=0.9 sec-ch-ua: "Not-A.Brand";v="24", "Chromium";v="146" sec-ch-ua-mobile: ?0 X-IGNITER-FILEUPLOAD: mediamanager X-Requested-With: XMLHttpRequest User-Agent: Mozilla/5.0 (X11; L
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-7wwv-x6mc-pxqx
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Applications</category>
+      <category>Servers &amp; infrastructure</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-7wwv-x6mc-pxqx" type="text/html" />
+    </item>
+    <item>
+      <title>TastyIgniter mail template editor allows remote code execution via server-side template injection</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-69178#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-69178#findings</guid>
+      <pubDate>Wed, 25 Nov 2026 22:24:13 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1 (v3.1)
+
+Summary: ### Summary **Where:** `POST /admin/mail_templates/edit/{id}` → body field **Who can trigger:** Any admin user with `Admin.MailTemplates` permission **Impact:** Arbitrary PHP execution on the server  -  full RCE ### Details The Mail templates is vulnerable to SSTI and did not perform an validation and sanitization. ### PoC - login as admin - create new mail template with following command ``` @php echo shell_exec('echo "RCE Executed";id'); @endphp ``` - save the request - execute the request using `X-IGNITER-REQUEST-HANDLER: onTestTemplate` Request ```http POST /admin/mail_templates/edit/20 HTTP/1.1 Host: localhost:8888 Content-Length: 47 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 sec-ch-ua-platform: "Linux" X-CSRF-TOKEN: L22Pxu6L5hHmHgoC4RB1Zz5Py16muXvsRIOBtxuY Accept-Language: en-US,en;q=0.9 sec-ch-ua: "Not-A.Brand"
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-743w-g9pf-8p94
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Applications</category>
+      <category>Servers &amp; infrastructure</category>
+      <category>Remote code execution</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-743w-g9pf-8p94" type="text/html" />
+    </item>
     <item>
       <title>In the Linux kernel, the following vulnerability has been resolved:
 
@@ -119,6 +175,24 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Cloud &amp; identity</category>
       <category>Remote code execution</category>
       <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-65817" type="text/html" />
+    </item>
+    <item>
+      <title>Xen Orchestra: Empty-object login token</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-133469#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-133469#findings</guid>
+      <pubDate>Mon, 23 Nov 2026 17:29:29 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
+
+Summary: ### Summary REST cookie parsing turns `authenticationToken=j:%7B%7D` into `{}`. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats `{}` as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated `/rest/v0/users/me/authentication_tokens` route then returns reusable login token IDs. ### Details 1. In `packages/xo-server/src/api/session.mjs`, function `signIn(credentials)` has **no `params` schema** (unlike the deprecated `signInWithToken`, which declares `token: { type: 'string' }`), so `credentials.token` can be any JSON value. 2. `packages/xo-server/src/xo-mixins/authentication.mjs`, token provider: ```js this.registerAuthenticationProvider(async ({ token: tokenId }, { ip } = {}) =&gt; { if (!tokenId) return // {} is truthy → passes const toke
+
+Suggested next step: Review the vendor advisory promptly. Check relevant installed product versions and follow the vendor's mitigation guidance.
+
+Original advisory: https://github.com/advisories/GHSA-2r3w-c2vx-fv5g
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Libraries &amp; dependencies</category>
+      <category>Servers &amp; infrastructure</category>
+      <atom:link rel="related" href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g" type="text/html" />
     </item>
     <item>
       <title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</title>
@@ -428,24 +502,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Libraries &amp; dependencies</category>
       <category>Remote code execution</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-c77f-gpj5-jhq5" type="text/html" />
-    </item>
-    <item>
-      <title>Xen Orchestra: Empty-object login token</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-133469#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-133469#findings</guid>
-      <pubDate>Mon, 23 Nov 2026 17:29:29 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: ### Summary REST cookie parsing turns `authenticationToken=j:%7B%7D` into `{}`. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats `{}` as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated `/rest/v0/users/me/authentication_tokens` route then returns reusable login token IDs. ### Details 1. In `packages/xo-server/src/api/session.mjs`, function `signIn(credentials)` has **no `params` schema** (unlike the deprecated `signInWithToken`, which declares `token: { type: 'string' }`), so `credentials.token` can be any JSON value. 2. `packages/xo-server/src/xo-mixins/authentication.mjs`, token provider: ```js this.registerAuthenticationProvider(async ({ token: tokenId }, { ip } = {}) =&gt; { if (!tokenId) return // {} is truthy → passes const toke
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-2r3w-c2vx-fv5g
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g" type="text/html" />
     </item>
     <item>
       <title>A flaw was found in GIMP's PSD file format plugin. This vulnerability, an unsigned integer underflow in the `block_rem` variable, occurs when a user o</title>
@@ -874,62 +930,6 @@ Original advisory: https://github.com/advisories/GHSA-j6h5-vv56-hq58
 Watchlist match only. Local exposure has not been assessed.</description>
       <category>Servers &amp; infrastructure</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-j6h5-vv56-hq58" type="text/html" />
-    </item>
-    <item>
-      <title>In the Linux kernel, the following vulnerability has been resolved:
-
-net: lwtunnel: Drop skb...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-80612#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-80612#findings</guid>
-      <pubDate>Fri, 28 Aug 2026 09:31:46 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: net: lwtunnel: Drop skb metadata before LWT encapsulation skb metadata is meant for passing information between XDP and TC. It lives in the skb headroom, immediately before skb-&gt;data. LWT programs cannot access the __sk_buff-&gt;data_meta pseudo-pointer to metadata. However, LWT encapsulation prepends outer headers, moving skb-&gt;data back over the headroom where the metadata sits. On an RX-originated (forwarded) packet that still carries XDP metadata this goes wrong in two different ways, depending on the encap type: 1. Non-BPF LWT encaps (mpls, seg6, ioam6 ...) call skb_push()/skb_pull() and silently overwrite the metadata that sits in the headroom. 2) BPF LWT xmit calls bpf_skb_change_head(), which uses skb_data_move(). That helper expects metadata immediately before skb-&gt;data. But since the IP output path runs LWT xmit be
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-gcxj-phfp-fv28
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-gcxj-phfp-fv28" type="text/html" />
-    </item>
-    <item>
-      <title>In the Linux kernel, the following vulnerability has been resolved:
-
-net: gro: fix double...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-68136#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-68136#findings</guid>
-      <pubDate>Mon, 10 Aug 2026 15:33:37 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.8 (v3.1)
-
-Summary: In the Linux kernel, the following vulnerability has been resolved: net: gro: fix double aggregation of flush-marked skbs Commit 0ab03f353d36 ("net-gro: Fix GRO flush when receiving a GSO packet.") added a flush check to skb_gro_receive(), but skb_gro_receive_list() lacks the same validation. As a result, packets marked with NAPI_GRO_CB(skb)-&gt;flush may still be re-aggregated. This allows already-GRO'd packets with existing frag_list to be re-aggregated into a new GRO session, corrupting the frag_list chain structure. When skb_segment() attempts to unpack these malformed packets, it encounters invalid state and triggers a kernel panic. Scenario (Tethering/Device forwarding): 1. Driver: Generated aggregated packet P1 via LRO with frag_list 2. Dev A: Receives aggregated fraglist packet and flush flag set 3. Dev A: Re-enters GRO, skb_gro_receive_list() is called 4. Missing flush check allows
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://github.com/advisories/GHSA-p4gp-483j-wr28
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-p4gp-483j-wr28" type="text/html" />
-    </item>
-    <item>
-      <title>binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers...</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-134814#findings</guid>
-      <pubDate>Mon, 23 Nov 2026 00:30:25 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 8.1 (v3.1)
-
-Summary: binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled.
-
-Suggested next step: Check whether affected package versions are present in your dependencies and review the maintainer's fix guidance.
-
-Original advisory: https://github.com/advisories/GHSA-hhq6-2gpv-hrf4
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Libraries &amp; dependencies</category>
-      <category>Remote code execution</category>
-      <atom:link rel="related" href="https://github.com/advisories/GHSA-hhq6-2gpv-hrf4" type="text/html" />
     </item>
   </channel>
 </rss>

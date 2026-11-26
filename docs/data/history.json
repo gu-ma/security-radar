@@ -1,5 +1,53 @@
 [
   {
+    "duration_seconds": 7.54,
+    "finished_at": "2026-11-26T08:18:39Z",
+    "new_relevant_alerts": 3,
+    "result": "healthy",
+    "run_url": "https://github.com/gu-ma/security-radar/actions/runs/45782041309",
+    "source_errors": [],
+    "sources": {
+      "cisa_kev": {
+        "consecutive_failures": 0,
+        "count": 15,
+        "error": "",
+        "error_type": "",
+        "last_attempt": "2026-11-26T08:18:31Z",
+        "last_success": "2026-11-26T08:18:31Z",
+        "state": "ok"
+      },
+      "github_advisories": {
+        "consecutive_failures": 0,
+        "count": 66,
+        "error": "",
+        "error_type": "",
+        "last_attempt": "2026-11-26T08:18:31Z",
+        "last_success": "2026-11-26T08:18:31Z",
+        "state": "ok"
+      },
+      "nist_nvd": {
+        "consecutive_failures": 0,
+        "count": 56,
+        "error": "",
+        "error_type": "",
+        "last_attempt": "2026-11-26T08:18:31Z",
+        "last_success": "2026-11-26T08:18:31Z",
+        "state": "ok"
+      },
+      "redhat_quay": {
+        "consecutive_failures": 0,
+        "count": 0,
+        "error": "",
+        "error_type": "",
+        "last_attempt": "2026-11-26T08:18:31Z",
+        "last_success": "2026-11-26T08:18:31Z",
+        "state": "ok"
+      }
+    },
+    "started_at": "2026-11-26T08:18:31Z",
+    "stored_records": 1263
+  },
+  {
     "duration_seconds": 9.58,
     "finished_at": "2026-11-25T21:43:15Z",
     "new_relevant_alerts": 5,
