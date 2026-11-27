@@ -23,7 +23,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-133469",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "npm"
     ],
@@ -203,7 +203,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-133323",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T05:18:21.963",
     "priority": "information",
@@ -252,7 +252,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T20:38:33Z",
     "id": "CVE-2026-133303",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T05:18:21.160",
     "priority": "information",
@@ -298,7 +298,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2023-25915",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:30:26Z",
     "priority": "information",
@@ -340,7 +340,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-103406",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T18:30:36Z",
     "priority": "information",
@@ -383,7 +383,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-19T07:26:36Z",
     "id": "CVE-2026-131914",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T05:18:30.107",
     "priority": "information",
@@ -1498,7 +1498,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2025-41450",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1535,7 +1535,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2023-25914",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1572,7 +1572,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133324",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1609,7 +1609,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133275",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1646,7 +1646,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133311",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:00:00Z",
     "priority": "information",
@@ -1683,7 +1683,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-132224",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T00:00:00Z",
     "priority": "information",
@@ -1720,7 +1720,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-132165",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T00:00:00Z",
     "priority": "information",
@@ -2233,6 +2233,102 @@
   },
   {
     "affected": [
+      "redhat codeready linux builder eus",
+      "redhat enterprise linux",
+      "redhat enterprise linux aus",
+      "redhat enterprise linux eus",
+      "redhat enterprise linux server",
+      "redhat enterprise linux tus",
+      "redhat enterprise linux update services for sap solutions",
+      "x.org x server",
+      "x.org xwayland"
+    ],
+    "aliases": [
+      "CVE-2026-34002"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-20T07:16:33Z",
+    "id": "CVE-2026-34002",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [
+      "Linux"
+    ],
+    "modified": "2026-11-26T22:17:57.313",
+    "priority": "review",
+    "published": "2026-05-05T16:16:11.787",
+    "security_topics": [
+      "Denial of service"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34002"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.",
+    "title": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at",
+    "why_it_matters": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service."
+  },
+  {
+    "affected": [
+      "redhat codeready linux builder eus",
+      "redhat enterprise linux",
+      "redhat enterprise linux aus",
+      "redhat enterprise linux eus",
+      "redhat enterprise linux server",
+      "redhat enterprise linux tus",
+      "redhat enterprise linux update services for sap solutions",
+      "x.org x server",
+      "x.org xwayland"
+    ],
+    "aliases": [
+      "CVE-2026-34000"
+    ],
+    "attention_score": 75,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.1,
+    "cvss_version": "",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-20T07:16:33Z",
+    "id": "CVE-2026-34000",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [
+      "Linux"
+    ],
+    "modified": "2026-11-26T22:17:56.983",
+    "priority": "review",
+    "published": "2026-05-05T16:16:11.647",
+    "security_topics": [
+      "Denial of service"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34000"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.",
+    "title": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`",
+    "why_it_matters": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server."
+  },
+  {
+    "affected": [
       "fedoraproject fedora",
       "redhat enterprise linux",
       "redhat enterprise linux eus",
@@ -2253,7 +2349,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2023-3961",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2291,7 +2387,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-126984",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Python"
     ],
@@ -2332,7 +2428,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-4408",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2374,7 +2470,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-69179",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2418,7 +2514,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-69178",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Linux"
     ],
@@ -2494,7 +2590,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-137090",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Node.js"
     ],
@@ -2619,7 +2715,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-64670",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "npm"
     ],
@@ -2657,7 +2753,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-65817",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -2678,102 +2774,6 @@
     "summary": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network.",
     "title": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an un",
     "why_it_matters": "Improper neutralization of special elements used in an os command ('os command injection') in Azure Managed Instance for Apache Cassandra allows an unauthorized attacker to execute code over an adjacent network."
-  },
-  {
-    "affected": [
-      "redhat codeready linux builder eus",
-      "redhat enterprise linux",
-      "redhat enterprise linux aus",
-      "redhat enterprise linux eus",
-      "redhat enterprise linux server",
-      "redhat enterprise linux tus",
-      "redhat enterprise linux update services for sap solutions",
-      "x.org x server",
-      "x.org xwayland"
-    ],
-    "aliases": [
-      "CVE-2026-34002"
-    ],
-    "attention_score": 75,
-    "categories": [
-      "infrastructure"
-    ],
-    "cvss": 9.1,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-20T07:16:33Z",
-    "id": "CVE-2026-34002",
-    "last_seen": "2026-11-26T21:33:00Z",
-    "matched_topics": [
-      "Linux"
-    ],
-    "modified": "2026-11-24T22:18:52.033",
-    "priority": "review",
-    "published": "2026-05-05T16:16:11.787",
-    "security_topics": [
-      "Denial of service"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34002"
-      }
-    ],
-    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.",
-    "title": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at",
-    "why_it_matters": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service."
-  },
-  {
-    "affected": [
-      "redhat codeready linux builder eus",
-      "redhat enterprise linux",
-      "redhat enterprise linux aus",
-      "redhat enterprise linux eus",
-      "redhat enterprise linux server",
-      "redhat enterprise linux tus",
-      "redhat enterprise linux update services for sap solutions",
-      "x.org x server",
-      "x.org xwayland"
-    ],
-    "aliases": [
-      "CVE-2026-34000"
-    ],
-    "attention_score": 75,
-    "categories": [
-      "infrastructure"
-    ],
-    "cvss": 9.1,
-    "cvss_version": "",
-    "ecosystems": [],
-    "exploited": false,
-    "exposure": "not assessed",
-    "first_seen": "2026-11-20T07:16:33Z",
-    "id": "CVE-2026-34000",
-    "last_seen": "2026-11-26T21:33:00Z",
-    "matched_topics": [
-      "Linux"
-    ],
-    "modified": "2026-11-24T22:18:51.627",
-    "priority": "review",
-    "published": "2026-05-05T16:16:11.647",
-    "security_topics": [
-      "Denial of service"
-    ],
-    "severity": "critical",
-    "sources": [
-      {
-        "name": "NIST NVD",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34000"
-      }
-    ],
-    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
-    "summary": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.",
-    "title": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`",
-    "why_it_matters": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server."
   },
   {
     "affected": [],
@@ -2834,7 +2834,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-59726",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Docker",
       "npm"
@@ -2876,7 +2876,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-120002",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Microsoft"
     ],
@@ -3132,7 +3132,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:25:09Z",
     "id": "CVE-2026-111497",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Linux",
       "Microsoft",
@@ -8385,7 +8385,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-69181",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Linux"
     ],
@@ -8426,7 +8426,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T09:54:41Z",
     "id": "CVE-2026-7700",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [
       "Python"
     ],
@@ -11745,6 +11745,274 @@
   {
     "affected": [],
     "aliases": [
+      "CVE-2026-137738",
+      "GHSA-v49f-q363-3644"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-137738",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T06:31:21Z",
+    "priority": "information",
+    "published": "2026-11-27T06:31:12Z",
+    "security_topics": [
+      "Denial of service"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-v49f-q363-3644"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "In RealVNC Server before 7.19.1, UDP-based connections could potentially be exploited without authentication to execute code remotely or cause the software to crash. This could allow an attacker to remotely execute code as root on certain platforms or perform a denial of service attack. This issue affects RealVNC Viewer: from 8.4.0 through 8.6.1; RealVNC Classic Viewer: from 6.4.0 through 7.18.2; RealVNC Server: from 6.4.0 through 7.19.0; RealVNC Connect App: through 8.6.1; RealVNC iOS Viewer: from 3.7.0 through 4.9.5; RealVNC Android Viewer: from 3.5.0 through 4.9.5; RealVNC iOS Server: through 2.8.1; RealVNC Android Server: through 2.8.3; On-Demand Assist: through 3.4.1.",
+    "title": "In RealVNC Server before 7.19.1, UDP-based connections could potentially be exploited without...",
+    "why_it_matters": "In RealVNC Server before 7.19.1, UDP-based connections could potentially be exploited without authentication to execute code remotely or cause the software to crash. This could allow an attacker to remotely execute code as root on certain platforms or perform a denial of service attack. This issue affects RealVNC Viewer: from 8.4.0 through 8.6.1; RealVNC Classic Viewer: from 6.4.0 through 7.18.2; RealVNC Server: from 6.4.0 through 7.19.0; RealVNC Connect App: through 8.6.1; RealVNC iOS Viewer: from 3.7.0 through 4.9.5; RealVNC Android Viewer: from 3.5.0 through 4.9.5; RealVNC iOS Server: through 2.8.1; RealVNC Android Server: through 2.8.3; On-Demand Assist: through 3.4.1."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137724",
+      "GHSA-hvf3-26xf-hfh8"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 10.0,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-137724",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T06:31:16Z",
+    "priority": "information",
+    "published": "2026-11-27T06:31:12Z",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-hvf3-26xf-hfh8"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability in the Platform component of Mitel OpenScape 4000, and OpenScape 4000 Manager could allow an unauthenticated attacker to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information and gain unauthorized access to system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1785.",
+    "title": "A vulnerability in the Platform component of Mitel OpenScape 4000, and OpenScape 4000 Manager...",
+    "why_it_matters": "A vulnerability in the Platform component of Mitel OpenScape 4000, and OpenScape 4000 Manager could allow an unauthenticated attacker to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information and gain unauthorized access to system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1785."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137721",
+      "GHSA-4g83-h7wv-jrf9"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 10.0,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-137721",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T06:31:13Z",
+    "priority": "information",
+    "published": "2026-11-27T06:31:12Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4g83-h7wv-jrf9"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability in the Platform component of Mitel OpenScape 4000 and OpenScape 4000 Manager could allow an attacker to conduct a command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1786.",
+    "title": "A vulnerability in the Platform component of Mitel OpenScape 4000 and OpenScape 4000 Manager...",
+    "why_it_matters": "A vulnerability in the Platform component of Mitel OpenScape 4000 and OpenScape 4000 Manager could allow an attacker to conduct a command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1786."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137723",
+      "GHSA-4mrf-9g4c-fgw6"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "unclassified"
+    ],
+    "cvss": 9.6,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-137723",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T06:31:13Z",
+    "priority": "information",
+    "published": "2026-11-27T06:31:12Z",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-4mrf-9g4c-fgw6"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "A vulnerability in the Platform component of Mitel OpenScape 4000 and OpenScape 4000 Manager could allow an attacker to conduct a command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1793.",
+    "title": "A vulnerability in the Platform component of Mitel OpenScape 4000 and OpenScape 4000 Manager...",
+    "why_it_matters": "A vulnerability in the Platform component of Mitel OpenScape 4000 and OpenScape 4000 Manager could allow an attacker to conduct a command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1793."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-115867",
+      "GHSA-9gh8-6c4m-779j"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications",
+      "infrastructure"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-115867",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T03:30:31Z",
+    "priority": "information",
+    "published": "2026-11-27T02:16:43.770",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-9gh8-6c4m-779j"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115867"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.5.5 via the copy_files function. This is due to missing file extension validation in the copy_files function, which accepts attacker-controlled stream wrapper URIs as the file source and derives the destination filename without restricting executable extensions. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The plugin places an .htaccess file in its uploads directory to block PHP execution, but this mitigation is ineffective on Nginx, LiteSpeed in certain configurations, and Apache servers with AllowOverride None, and the file is not restored if deleted.",
+    "title": "The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to...",
+    "why_it_matters": "The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.5.5 via the copy_files function. This is due to missing file extension validation in the copy_files function, which accepts attacker-controlled stream wrapper URIs as the file source and derives the destination filename without restricting executable extensions. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The plugin places an .htaccess file in its uploads directory to block PHP execution, but this mitigation is ineffective on Nginx, LiteSpeed in certain configurations, and Apache servers with AllowOverride None, and the file is not restored if deleted."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-106125",
+      "GHSA-g42p-qjpj-27pm"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "applications"
+    ],
+    "cvss": 9.8,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-106125",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T03:30:31Z",
+    "priority": "information",
+    "published": "2026-11-27T02:16:43.460",
+    "security_topics": [
+      "Remote code execution"
+    ],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-g42p-qjpj-27pm"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106125"
+      }
+    ],
+    "suggested_next_step": "Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.",
+    "summary": "The Sneeit Framework plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 8.7 via the 'callback' parameter of the sneeit_compact_menu_mega_content AJAX action. The handler sneeit_compact_menu_mega_content_callback() is registered on the wp_ajax_nopriv_ hook and passes the attacker-supplied 'callback' value directly into call_user_func() after only a function_exists() check, with the single argument also attacker-controlled via a JSON-decoded 'args' parameter. There is no authentication, no capability check, no nonce, and no allow-list of callable functions. This makes it possible for unauthenticated attackers to execute arbitrary existing PHP/WordPress functions with controlled arguments.",
+    "title": "The Sneeit Framework plugin for WordPress is vulnerable to Remote Code Execution in versions up...",
+    "why_it_matters": "The Sneeit Framework plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 8.7 via the 'callback' parameter of the sneeit_compact_menu_mega_content AJAX action. The handler sneeit_compact_menu_mega_content_callback() is registered on the wp_ajax_nopriv_ hook and passes the attacker-supplied 'callback' value directly into call_user_func() after only a function_exists() check, with the single argument also attacker-controlled via a JSON-decoded 'args' parameter. There is no authentication, no capability check, no nonce, and no allow-list of callable functions. This makes it possible for unauthenticated attackers to execute arbitrary existing PHP/WordPress functions with controlled arguments."
+  },
+  {
+    "affected": [],
+    "aliases": [
+      "CVE-2026-137706",
+      "GHSA-gv4x-p8c7-vq63"
+    ],
+    "attention_score": 45,
+    "categories": [
+      "cloud-identity"
+    ],
+    "cvss": 9.9,
+    "cvss_version": "3.1",
+    "ecosystems": [],
+    "exploited": false,
+    "exposure": "not assessed",
+    "first_seen": "2026-11-27T08:34:56Z",
+    "id": "CVE-2026-137706",
+    "last_seen": "2026-11-27T08:34:56Z",
+    "matched_topics": [],
+    "modified": "2026-11-27T03:30:28Z",
+    "priority": "information",
+    "published": "2026-11-27T03:17:04.263",
+    "security_topics": [],
+    "severity": "critical",
+    "sources": [
+      {
+        "name": "GitHub Advisory Database",
+        "url": "https://github.com/advisories/GHSA-gv4x-p8c7-vq63"
+      },
+      {
+        "name": "NIST NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137706"
+      }
+    ],
+    "suggested_next_step": "Identify any relevant service or identity-product versions and consult the vendor's remediation instructions.",
+    "summary": "Smart Portal developed by Direk Tech has a Missing Authorization vulnerability. Authenticated remote attackers can add a specified account to the Active Directory Domain Admins group, thereby obtaining domain administrator privileges.",
+    "title": "Smart Portal developed by Direk Tech has a Missing Authorization vulnerability. Authenticated...",
+    "why_it_matters": "Smart Portal developed by Direk Tech has a Missing Authorization vulnerability. Authenticated remote attackers can add a specified account to the Active Directory Domain Admins group, thereby obtaining domain administrator privileges."
+  },
+  {
+    "affected": [],
+    "aliases": [
       "CVE-2026-120984",
       "GHSA-2539-2x8g-x597"
     ],
@@ -11761,7 +12029,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-120984",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T21:32:20Z",
     "priority": "information",
@@ -11797,7 +12065,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-117691",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T21:31:16Z",
     "priority": "information",
@@ -11836,7 +12104,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2023-6394",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T19:17:07.470",
     "priority": "information",
@@ -11871,7 +12139,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137550",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:46Z",
     "priority": "information",
@@ -11911,7 +12179,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137547",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:45Z",
     "priority": "information",
@@ -11946,7 +12214,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137544",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:45Z",
     "priority": "information",
@@ -11988,7 +12256,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137536",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:39Z",
     "priority": "information",
@@ -12029,7 +12297,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137471",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:35Z",
     "priority": "information",
@@ -12064,7 +12332,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137499",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:33Z",
     "priority": "information",
@@ -12105,7 +12373,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137498",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:33Z",
     "priority": "information",
@@ -12144,7 +12412,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137465",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:29Z",
     "priority": "information",
@@ -12181,7 +12449,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137463",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T18:30:28Z",
     "priority": "information",
@@ -12216,7 +12484,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-136240",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:44Z",
     "priority": "information",
@@ -12257,7 +12525,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-135641",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:44Z",
     "priority": "information",
@@ -12298,7 +12566,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-133951",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:44Z",
     "priority": "information",
@@ -12340,7 +12608,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-134173",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:44Z",
     "priority": "information",
@@ -12379,7 +12647,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-104998",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:43Z",
     "priority": "information",
@@ -12420,7 +12688,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137584",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:34Z",
     "priority": "information",
@@ -12457,7 +12725,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-134481",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:33Z",
     "priority": "information",
@@ -12492,7 +12760,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-131767",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:33Z",
     "priority": "information",
@@ -12527,7 +12795,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-124843",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:33Z",
     "priority": "information",
@@ -12562,7 +12830,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137567",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:30Z",
     "priority": "information",
@@ -12601,7 +12869,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-130637",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:30Z",
     "priority": "information",
@@ -12638,7 +12906,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-124840",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T15:31:26Z",
     "priority": "information",
@@ -12682,7 +12950,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2025-12543",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T14:17:14.220",
     "priority": "information",
@@ -12717,7 +12985,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-123912",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T12:30:43Z",
     "priority": "information",
@@ -12752,7 +13020,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-123911",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T12:30:37Z",
     "priority": "information",
@@ -12787,7 +13055,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-123903",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T12:30:37Z",
     "priority": "information",
@@ -12824,7 +13092,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-123910",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T12:30:35Z",
     "priority": "information",
@@ -12859,7 +13127,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-133336",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T09:31:22Z",
     "priority": "information",
@@ -12896,7 +13164,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-50214",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T09:17:12.503",
     "priority": "information",
@@ -12933,7 +13201,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-50208",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T09:17:11.623",
     "priority": "information",
@@ -12970,7 +13238,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49191",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:12.543",
     "priority": "information",
@@ -13007,7 +13275,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49185",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:11.740",
     "priority": "information",
@@ -13042,7 +13310,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-137043",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T03:30:37Z",
     "priority": "information",
@@ -13083,7 +13351,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133971",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:32Z",
     "priority": "information",
@@ -13120,7 +13388,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133973",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:31Z",
     "priority": "information",
@@ -13157,7 +13425,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-133972",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:31Z",
     "priority": "information",
@@ -13192,7 +13460,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-136823",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T00:30:31Z",
     "priority": "information",
@@ -13410,7 +13678,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-82489",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T20:17:56.077",
     "priority": "information",
@@ -14055,7 +14323,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136553",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T09:30:41Z",
     "priority": "information",
@@ -14094,7 +14362,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136549",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:30:40Z",
     "priority": "information",
@@ -14135,7 +14403,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136548",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:30:40Z",
     "priority": "information",
@@ -14249,7 +14517,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-2369",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T03:17:51.340",
     "priority": "information",
@@ -14286,7 +14554,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136136",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T00:36:26Z",
     "priority": "information",
@@ -14648,7 +14916,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135797",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T21:31:15Z",
     "priority": "information",
@@ -14726,7 +14994,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-136411",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T21:31:11Z",
     "priority": "information",
@@ -15301,7 +15569,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "GHSA-jjpq-qx77-qjwj",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:54:02Z",
     "priority": "information",
@@ -15341,7 +15609,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "GHSA-jrxj-9mhw-55wc",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:52:51Z",
     "priority": "information",
@@ -15919,7 +16187,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135792",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:31:08Z",
     "priority": "information",
@@ -16103,7 +16371,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-123342",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:31:03Z",
     "priority": "information",
@@ -16435,7 +16703,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-123987",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -16476,7 +16744,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-125717",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -16518,7 +16786,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-125718",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -16557,7 +16825,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-136184",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:59Z",
     "priority": "information",
@@ -16633,7 +16901,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-123986",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:30:58Z",
     "priority": "information",
@@ -16934,7 +17202,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T09:54:41Z",
     "id": "CVE-2026-135736",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:26:04.777",
     "priority": "information",
@@ -17196,7 +17464,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-119582",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T15:26:18.530",
     "priority": "information",
@@ -17235,7 +17503,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-117593",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T15:26:18.530",
     "priority": "information",
@@ -17302,7 +17570,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-15T18:51:54Z",
     "id": "CVE-2026-109618",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T14:27:42.290",
     "priority": "information",
@@ -17379,7 +17647,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-13T10:26:52Z",
     "id": "CVE-2026-105192",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T09:58:59Z",
     "priority": "information",
@@ -43053,7 +43321,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137494",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T16:17:59.980",
     "priority": "information",
@@ -43087,7 +43355,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-137481",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T16:17:57.797",
     "priority": "information",
@@ -43126,7 +43394,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-50225",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T09:17:12.780",
     "priority": "information",
@@ -43163,7 +43431,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T21:33:00Z",
     "id": "CVE-2026-50211",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T09:17:12.057",
     "priority": "information",
@@ -43200,7 +43468,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49188",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:12.140",
     "priority": "information",
@@ -43237,7 +43505,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-26T08:18:31Z",
     "id": "CVE-2026-49186",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-26T04:17:11.890",
     "priority": "information",
@@ -43273,7 +43541,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-136822",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:17:19.997",
     "priority": "information",
@@ -43309,7 +43577,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-136821",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T21:17:19.803",
     "priority": "information",
@@ -43350,7 +43618,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-68539",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T19:46:46Z",
     "priority": "information",
@@ -43391,7 +43659,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2026-65971",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T19:44:58Z",
     "priority": "information",
@@ -43432,7 +43700,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T21:43:05Z",
     "id": "CVE-2025-10492",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T13:32:56.273",
     "priority": "information",
@@ -43504,7 +43772,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-136550",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-25T06:17:15.960",
     "priority": "information",
@@ -43545,7 +43813,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-25T08:35:22Z",
     "id": "CVE-2026-64855",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T22:41:47Z",
     "priority": "information",
@@ -43619,7 +43887,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "GHSA-jp3c-6v3g-mpxv",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T21:13:37Z",
     "priority": "information",
@@ -43661,7 +43929,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-23T23:54:12Z",
     "id": "CVE-2026-63492",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:54:45Z",
     "priority": "information",
@@ -43702,7 +43970,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-63305",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T20:53:29Z",
     "priority": "information",
@@ -43738,7 +44006,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135796",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T19:18:14.583",
     "priority": "information",
@@ -43774,7 +44042,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135794",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T19:18:14.383",
     "priority": "information",
@@ -43810,7 +44078,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135791",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T18:19:03.090",
     "priority": "information",
@@ -43846,7 +44114,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135790",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:18:43.890",
     "priority": "information",
@@ -43882,7 +44150,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135789",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:18:43.660",
     "priority": "information",
@@ -43918,7 +44186,7 @@
     "exposure": "not assessed",
     "first_seen": "2026-11-24T22:27:08Z",
     "id": "CVE-2026-135788",
-    "last_seen": "2026-11-26T21:33:00Z",
+    "last_seen": "2026-11-27T08:34:56Z",
     "matched_topics": [],
     "modified": "2026-11-24T17:18:43.427",
     "priority": "information",

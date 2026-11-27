@@ -7,7 +7,43 @@
     <language>en</language>
     <ttl>360</ttl>
     <atom:link href="https://apps.massol.me/security-radar/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 26 Nov 2026 21:17:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 22:17:57 GMT</lastBuildDate>
+    <item>
+      <title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</guid>
+      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
+    </item>
+    <item>
+      <title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</title>
+      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</link>
+      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</guid>
+      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
+      <description>Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
+
+Watchlist match only. Local exposure has not been assessed.</description>
+      <category>Servers &amp; infrastructure</category>
+      <category>Denial of service</category>
+      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
+    </item>
     <item>
       <title>A path traversal vulnerability was identified in Samba when processing client pipe names connecting to Unix domain sockets within a private directory.</title>
       <link>https://apps.massol.me/security-radar/?q=CVE-2023-3961#findings</link>
@@ -246,42 +282,6 @@ Watchlist match only. Local exposure has not been assessed.</description>
       <category>Libraries &amp; dependencies</category>
       <category>Servers &amp; infrastructure</category>
       <atom:link rel="related" href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g" type="text/html" />
-    </item>
-    <item>
-      <title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</guid>
-      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
-    </item>
-    <item>
-      <title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</title>
-      <link>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</link>
-      <guid isPermaLink="true">https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</guid>
-      <pubDate>Tue, 05 May 2026 16:16:11 GMT</pubDate>
-      <description>Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
-
-Watchlist match only. Local exposure has not been assessed.</description>
-      <category>Servers &amp; infrastructure</category>
-      <category>Denial of service</category>
-      <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
     </item>
     <item>
       <title>Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a...</title>

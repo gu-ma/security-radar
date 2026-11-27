@@ -8,7 +8,45 @@
   <atom:author>
     <atom:name>Security Radar</atom:name>
   </atom:author>
-  <atom:updated>2026-11-26T21:17:03Z</atom:updated>
+  <atom:updated>2026-11-26T22:17:57Z</atom:updated>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</atom:id>
+    <atom:title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</atom:title>
+    <atom:published>2026-05-05T16:16:11Z</atom:published>
+    <atom:updated>2026-11-26T22:17:57Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
+  <atom:entry>
+    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</atom:id>
+    <atom:title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</atom:title>
+    <atom:published>2026-05-05T16:16:11Z</atom:published>
+    <atom:updated>2026-11-26T22:17:56Z</atom:updated>
+    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings" type="text/html" />
+    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
+    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
+
+Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
+
+Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
+
+Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
+
+Watchlist match only. Local exposure has not been assessed.</atom:summary>
+    <atom:category term="Servers &amp; infrastructure" />
+    <atom:category term="Denial of service" />
+  </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2023-3961#findings</atom:id>
     <atom:title>A path traversal vulnerability was identified in Samba when processing client pipe names connecting to Unix domain sockets within a private directory.</atom:title>
@@ -260,44 +298,6 @@ Original advisory: https://github.com/advisories/GHSA-2r3w-c2vx-fv5g
 Watchlist match only. Local exposure has not been assessed.</atom:summary>
     <atom:category term="Libraries &amp; dependencies" />
     <atom:category term="Servers &amp; infrastructure" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings</atom:id>
-    <atom:title>A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An at</atom:title>
-    <atom:published>2026-05-05T16:16:11Z</atom:published>
-    <atom:updated>2026-11-24T22:18:52Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34002#findings" type="text/html" />
-    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34002" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34002
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Denial of service" />
-  </atom:entry>
-  <atom:entry>
-    <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings</atom:id>
-    <atom:title>A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()`</atom:title>
-    <atom:published>2026-05-05T16:16:11Z</atom:published>
-    <atom:updated>2026-11-24T22:18:51Z</atom:updated>
-    <atom:link rel="alternate" href="https://apps.massol.me/security-radar/?q=CVE-2026-34000#findings" type="text/html" />
-    <atom:link rel="related" href="https://nvd.nist.gov/vuln/detail/CVE-2026-34000" type="text/html" />
-    <atom:summary type="text">Severity: CRITICAL / CVSS 9.1
-
-Summary: A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.
-
-Suggested next step: Check whether the named product and affected versions are in use; follow the original vendor's remediation guidance.
-
-Original advisory: https://nvd.nist.gov/vuln/detail/CVE-2026-34000
-
-Watchlist match only. Local exposure has not been assessed.</atom:summary>
-    <atom:category term="Servers &amp; infrastructure" />
-    <atom:category term="Denial of service" />
   </atom:entry>
   <atom:entry>
     <atom:id>https://apps.massol.me/security-radar/?q=CVE-2026-112732#findings</atom:id>
